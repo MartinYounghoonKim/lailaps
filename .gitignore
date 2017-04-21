@@ -1,0 +1,34 @@
+# Created by https://www.gitignore.io/api/microsoftoffice
+
+### MicrosoftOffice ###
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+*.pptx
+
+# Visio autosave temporary files
+*.~vsdx
+*.dcu
+*.~*
+*.dproj.local
+*.identcache
+__history
+*.drc
+*.map
+*.zip
+*.exe
+*.dll
+*.elf
+
+# Except
+web.config
