@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TRhtml4/loose.dtd">
+<html lang="ko-KR">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta http-equiv="content-type" content="texthtml; charset=utf-8">
+		<title>코딩리스트</title>
+	</head>
+	<body>
+		<script type="text/javascript">document.body.className += ' js';</script>
+		<div class="header">
+			<h1>라일랍스</h1>
+		</div>
+		<div class="page">
+			<p>총 : <strong>00</strong>  page / 완료: <strong>00</strong>  page / 미완료 : <strong>00</strong> page</p>
+		</div>
+		<!--
+		<div class="Jump">
+			<a href="#"></a>
+		</div>
+		-->
+		<!--
+		<div class="modify_history">
+			<table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<td colspan="2">수정이력</td>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>-->
+		<div class="section">
+			<h2 class="title">공통</h2>
+			<div class="content">
+				<table>
+					<caption></caption>
+					<thead>
+						<tr>
+							<th scope="col" width="8%">1depth</th>
+							<th scope="col" width="10%">2depth</th>
+							<th scope="col" width="10%">3depth</th>
+							<th scope="col" width="10%">4depth</th>
+							<th scope="col" width="10%">pop</th>
+							<th scope="col" width="15%">path</th>
+							<th scope="col" width="13%">file</th>
+							<th scope="col" width="3%">stat</th>
+							<th scope="col" width="7%">date</th>
+							<th scope="col" width="*">note</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>메인</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>html</td>
+							<td><a href="html/index.html" target="_blank">html/index.html</a></td>
+							<td class="stat">○</td>
+							<td class="date"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+<style type="text/css">
+	html, body {margin:0; padding:0;}
+	html {overflow-y:scroll;}
+	body {width:100%; color:#666; background-color:#fff; font:12px/1.5 Dotum, '돋움', Verdana, sans-serif;}
+	a {color:#27e; text-decoration:none;}
+	a:focus, a:hover, a:active {text-decoration:underline;}
+	.header {padding:.5em;}
+	.header h1 {display:inline; margin-right:1em; color:#000; font-size:2em;}
+	.header ul {display:inline; font-size:1.5em; list-style:none;}
+	.header ul li {display:inline;}
+	.page p {text-align:right;}
+	.page p strong {color:#f00;}
+	table {width:100%; border-collapse:collapse; border-spacing:0;}
+	table caption {display:none;}
+	table thead th {color:#333; background-color:#eee;}
+	table th, table td {padding:0 .5em; border:1px solid #ddd; text-align:left; font-weight:normal;}
+	table td.stat, table td.date {text-align:center;}
+	.section {margin:3em 0;}
+	body.js .section {margin:0;}
+	.section .title {margin:0; padding:0; color:#000; font-weight:600; font-size:100%;}
+	body.js .section .title {padding:.5em; border:1px solid #ccc; background-color:#ddd; cursor:pointer;}
+	body.js .section + .section .title {border-top:0;}
+	body.js .section .content {display:none;}
+	table tr:hover {background-color:#f1f1f1;}
+	table tr.yday td {background-color:#FFA460;}
+	table tr.today td {background-color:#fdd7dd;}
+	table tr.modify td {background-color:#ffd9c4;}
+	table tr.point td {background-color:#fff68d;} /*f0fff2 */
+	table tr.point2 td {background-color:#71f5af;}
+	table tr.nouse td {color:#ccc;}
+	.Jump	{margin:0 0 20px;}
+	.modify	{color:red; margin:0;}
+	.modify_history	{margin:0 0 10px;}
+	.modify_history table	{width:100%;}
+	.modify_history table thead td	{text-align:center; background:#555; color:#fff; height:30px; font-weight:600;}
+	.modify_history table tbody tr th	{background:#eee; font-weight:600;}
+	.modify_history table tbody tr td	{padding:5px 10px 4px;}
+</style>
+<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	function status(options) {
+		var settings = jQuery.extend({
+			section: 'div.section',
+			title: 'h2.title',
+			content: 'div.content',
+			files: 'table tbody tr',
+			stat: 'td.stat',
+			speed: 'fast',
+			index: 0,
+			length : 0,
+			completed : 0,
+			openAll: false
+		}, options),
+			sections = $(settings.section);
+		sections.each(function () {
+			var $this = $(this),
+				title = $this.find(settings.title),
+				text = title.text(),
+				content = $this.find(settings.content),
+				files = content.find(settings.files),
+				completed = 0;
+			files.each(function () {
+				var stat = $(this).find(settings.stat);
+				stat.each(function () {
+					var text = $(this).text();
+					if (text && (text === '●')) {
+						completed++;
+					}
+				});
+				settings.length++;
+			});
+			settings.completed += completed;
+
+			title.text((text + ' (' + completed + '/' + files.length + ')'));
+			title.bind('click', function () {
+				content.slideToggle(settings.speed);
+			});
+			if (settings.openAll || (settings.index === sections.index(this))) {
+				content.css('display', 'block');
+			}
+		});
+		$("body > .page strong").eq(0).html(settings.length);
+		$("body > .page strong").eq(1).html(settings.completed);
+		$("body > .page strong").eq(2).html(settings.length - settings.completed);
+	}
+	//$(document).ready(function () {
+		status({ openAll:true });
+	//});
+
+function popUp(str,w,h) {
+var tarUrl = str;
+var h_to = h+"," + "scrollbars=no";
+if(h > 800){
+	w = w + 21;
+	h_to = 800+"," + "scrollbars=yes";
+}
+var popInfo = "width="+w+",height="+ h_to;
+window.open(tarUrl,'',popInfo);
+}
+function popUp2(str,w,h) {
+var tarUrl = str;
+var popInfo = "width="+w+",height="+h+",scrollbars=yes";
+window.open(tarUrl,'',popInfo);
+}
+</script>
+	</body>
+</html>

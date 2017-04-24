@@ -1,0 +1,174 @@
+/*
+*********************************************************************************
+    ※ 해당 파일에는 절대 작업하지 말 것
+    basic.scss 작성
+    작성일 : 2017.04.21
+    작성자 : 김영훈
+*********************************************************************************
+*/
+
+/**********************************************************************************
+    각 scss 파일 import 설정
+    1. layout.scss : header 영역, contents 영역, footer 영역에 대한 스타일 정의
+    2. common.scss : 공통 모듈 스타일에 대한 정의
+    3. sub.scs : 서브 페이지의 컨텐츠 영역에 대한 스타일 정의
+**********************************************************************************/
+@import "layout.scss";
+@import "common.scss";
+@import "sub.scss";
+/**********************************************************************************
+                        각 브라우저 Hack 에 대한 기본 설정
+**********************************************************************************/
+
+$mz: -moz-;
+$wk: -webkit-;
+$o : -o-;
+// <style>
+//         /* IE6 브라우저 핵 (_ 추가)*/
+//         div { _background-color:red; }
+//         /* IE7 브라우저 핵 (* 추가) */
+//         div{ *background-color:blue; }
+//         /* IE6, IE7 브라우저 동시적용 핵 (. 추가) */
+//         div{ .background-color:purple; }
+//         /* IE8 브라우저 핵 (\0\IE8 추가) */
+//         div{ background-color:green\0\IE8; }
+//         /* IE9 브라우저 핵 (\0\IE9 추가) */
+//         div{ background-color:black\0\IE9; }
+// </style>
+
+/**********************************************************************************
+                            font 에 대한 기본 설정
+**********************************************************************************/
+
+$fontFamily: "Nanum Gothic", dotum,"돋움";
+$fontColor: #000;
+@mixin basicFont{
+    font: normal 400 14px/16px $fontFamily;
+    color: $fontColor;
+}
+
+
+/**********************************************************************************
+                            css 태그별 default 설정
+**********************************************************************************/
+
+html{
+    @include basicFont;
+    margin:0;
+    padding:0;
+    body{
+        @include basicFont;
+        margin:0;
+        padding:0;
+    }
+}
+a{
+    color: $fontColor;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+button{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    border:0;
+    background:none;
+    cursor:pointer;
+    text-align:center;
+    vertical-align:middle;
+    white-space:nowrap;
+    @include basicFont;
+    span, img{
+        position:relative;
+    }
+    &.disalbed{
+        cursor:default;
+    }
+    &::-moz-focus-inner{
+        padding:0;
+        border:0;
+    }
+}
+.btn{
+    &__list{}
+}
+dl{
+    margin:0;
+    padding: 0;
+    dt{
+        margin:0;
+        padding:0;
+    }
+    dd{
+        margin:0;
+        padding:0;
+    }
+}
+em{
+    font-style:normal;
+}
+form{
+    legend{
+        position:absolute;
+        visibility:hidden;
+        height:0;
+        overflow:hidden;
+        font-size:0;
+        line-height:0;
+    }
+}
+img{
+    vertical-align:top;
+}
+input{
+    @include basicFont;
+    vertical-align:top;
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+hr{
+    display:none;
+}
+ul{
+    margin:0;
+    padding:0;
+    li{
+        list-style:none;
+    }
+}
+
+ol{
+    margin:0;
+    padding:0;
+    li{
+        list-style:none;
+    }
+}
+p{
+    margin:0;
+}
+table{
+    width:100%;
+    table-layout:fixed;
+    border-collapse:collapse;
+    caption{
+        position:absolute;
+        height:0;
+        visibility:hidden;
+        font-size:0;
+        line-height:0;
+    }
+    th, td{
+        padding:0;
+    }
+
+}
+textarea{
+    padding:0;
+    resize:none;
+    @include basicFont;
+}
