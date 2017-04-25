@@ -28,8 +28,10 @@ __history
 *.zip
 *.exe
 *.dll
-*.css
 *.elf
+
+# style steet
+*.css
 
 # Except
 web.config
