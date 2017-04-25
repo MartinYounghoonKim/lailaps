@@ -188,6 +188,7 @@ $btnColor04: #2FC600;
     }
     &-color-type01{
         background-color: $btnColor01;
+        @include fontStyle(noto-regular, 600);
         &.disabled{
 
         }
@@ -200,6 +201,7 @@ $btnColor04: #2FC600;
     &-color-type02{
         color: $mainColor;
         background-color: $btnColor02;
+        @include fontStyle(noto-regular, 600);
         &.btn-line{
             border:2px solid $btnColor02;
             color:$btnColor02;
@@ -209,6 +211,7 @@ $btnColor04: #2FC600;
     }
     &-color-type03{
         background-color: $btnColor03;
+        @include fontStyle(noto-regular, 600);
         &.btn-line{
             border:2px solid $btnColor03;
             color:$btnColor03;
@@ -217,6 +220,7 @@ $btnColor04: #2FC600;
     }
     &-color-type04{
         background-color: $btnColor04;
+        @include fontStyle(noto-regular, 600);
         &.btn-line{
             border:2px solid $btnColor04;
             color:$btnColor04;

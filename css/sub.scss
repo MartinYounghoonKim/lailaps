@@ -70,11 +70,11 @@ $borderColor: #e2e2e2;
             overflow:hidden;
             padding:30px 19px 30px 14px;
             .thumbnail_img{
-              position:relative;
+              position:absolute;
               float:left;
             }
             dl {
-              position:absolute;
+              position:relative;
               overflow:hidden;
               padding-left:203px;
               dt{
@@ -137,7 +137,7 @@ $borderColor: #e2e2e2;
         padding:60px 35px 0 35px;
         .tit{
           text-align:center;
-          font-family:'noto-bold';
+          @include fontStyle(noto-bold, 600);
           font-style:italic;
           font-weight:600;
           font-size:24px;
@@ -156,12 +156,7 @@ $borderColor: #e2e2e2;
           margin-bottom:35px;
           text-align:center;
           font-size:14px;
-          font-family:'noto-regular';
-          font-weight:600;
           color:#444;
-        }
-        a {
-          @include fontStyle(noto-regular, 600);
         }
       }
       .btn_wrap {
@@ -171,9 +166,6 @@ $borderColor: #e2e2e2;
         a {
           /*border:0;*/
           margin-right:20px;
-          background-color:#fff;
-          color:#00afff;
-          @include fontStyle(noto-regular, 600);
         }
         &:last-child {
           margin-right:0;
