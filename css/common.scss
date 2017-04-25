@@ -111,10 +111,9 @@ $guide : ".guide";
 .btn-color-type04.disabled{ background-color:#a7baa0; color:#e1e1e1; }
 /* 버튼 색상 */
 $btnColor01: #00afff;
-$btnColor02: #1985F2;
+$btnColor02: #fff;
 $btnColor03: #E70B2F;
 $btnColor04: #2FC600;
-$transform: "transform";
 /* 버튼 사이즈 */
 @mixin btnXS{
     height:11px;
@@ -199,6 +198,7 @@ $transform: "transform";
         }
     }
     &-color-type02{
+        color: $mainColor;
         background-color: $btnColor02;
         &.btn-line{
             border:2px solid $btnColor02;
