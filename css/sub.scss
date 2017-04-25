@@ -41,8 +41,7 @@ $mainColor: #00afff;
     overflow:hidden;
     &__leftBox{
       float:left;
-      width:50%;
-      margin-right:25px;
+      width:calc(50% - 25px);
       li {
         position:relative;
         overflow:hidden;
@@ -109,7 +108,7 @@ $mainColor: #00afff;
       }
     }
     &__rightBox{
-
+      float:right;
     }
   }
 }
