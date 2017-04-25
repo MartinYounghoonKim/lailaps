@@ -8,6 +8,11 @@
 /**********************************************************************************
     공통 함수
 **********************************************************************************/
+$basicColor: #00afff;
+@mixin basicFontSize{
+    font-size:18px;
+    line-height:20px;
+}
 @mixin crossBrowsing($parameter, $value) {
     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
         #{$prefix}#{$parameter}: $value;
@@ -18,6 +23,29 @@
     display:block;
     clear:both;
 }
+@mixin horizonCenter($w, $h) {
+    position:absolute;
+    left:50%;
+    margin-left:-($w/2);
+}
+@mixin verticalCenter($w, $h) {
+    position:absolute;
+    top:50%;
+    margin:-($h/2) 0 0 -($w/2);
+}
+@mixin fontStyle($parameter, $weight, $style){
+  font-family :$parameter;
+  font-weight:$weight;
+  @if $style{
+      font-style:$style;
+  }
+}
+
+/**********************************************************************************
+    레이아웃 스타일
+**********************************************************************************/
+
+/* 공통 wrap */
 @mixin wraping{
     width:1040px;
     margin:0 auto;
@@ -55,9 +83,11 @@ $borderColor: #e2e2e2;
     background-image:url("../images/bg/gnb_bg.png");
     background-position:0 0;
     background-repeat:repeat-x;
+    //logo, util 스타일
     .outer_wrap{
         position:relative;
         @include outerWrap;
+        margin-bottom:48px;
         text-align:center;
         .h_logo{
             padding-top:34px;
@@ -79,9 +109,220 @@ $borderColor: #e2e2e2;
             }
         }
     }
+    //gnb 스타일
     .wrap{
         @include wraping;
+        #gnb{
+            > ul{
+                text-align:center;
+                > li{
+                    position:relative;
+                    display:inline-block;
+                    margin-right:30px;
+                    > a{
+                        display:block;
+                        font-size:17px;
+                        line-height:19px;
+                        > span{
+                            display:block;
+                            font-size:17px;
+                            line-height:19px;
+                            color:#fff;
+                            @include crossBrowsing("transform", translate(0,0%));
+                            transition:all 0.3s;
+                        }
+                        &:hover > span {
+                            @include crossBrowsing("transform", translate(0,30px));
+                            opacity:0;
+                        }
+                        &:after{
+                            content:attr(data-gnb-hover);
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            @include crossBrowsing("transform", translate(0,-30px));
+                            opacity:0;
+                            transition:all 0.3s;
+                        }
+                        &:hover:after{
+                            @include crossBrowsing("transform", translate(0,0));
+                            color:$basicColor;
+                            opacity:1;
+                        }
 
+                    }
+                    .dept2{
+                        @include horizonCenter(190px,0px);
+                        top:30px;
+                        width:190px;
+                        height:0;
+                        overflow:hidden;
+                        li{
+                            margin-bottom:4px;
+                            text-align:left;
+                            a{
+                                display:block;
+                                padding:18px 0 15px 24px;
+                                font-size:17px;
+                                line-height:19px;
+                                color:#fff;
+                                background-color: $basicColor;
+                                @include crossBrowsing("transform", skew(-12deg));
+                            }
+                            $listinit: list01 list02 list03 list04 list05 list06;
+                            @for $i from 0 through length($listinit){
+                                &:nth-child(#{$i}) {
+                                    @include crossBrowsing("transform", translateX(-8px * $i + 8px ));
+                                    @include crossBrowsing("transition-delay", .1s * $i);
+                                }
+                            }
+                        }
+                        &:after{
+                            @include afterClear;
+                        }
+                    }
+                }
+                &:after{
+                    @include afterClear;
+                }
+            }
+        }
+    }
+}
+
+.contents__key-visual	{min-width:1004px; width:100%; height:500px; position:relative; overflow:hidden;}
+.contents__key-visual .show_img	 {position:relative; max-width:100%; margin:0 auto; z-index:1;}
+.contents__key-visual .show_img ul	{}
+.contents__key-visual .show_img ul li	{position:absolute; top:0; left:50%; margin-left:-960px;}
+.contents__key-visual .show_img ul li img	{height:500px;}
+.contents__key-visual .tabs	{position:absolute; bottom:31px; width:100%; z-index:2; text-align:center;}
+.contents__key-visual .tabs ul	{display:inline-block; vertical-align:middle;}
+.contents__key-visual .tabs ul li	{display:inline-block; margin:0 2px;}
+.contents__key-visual .tabs ul li button	{ display:inline-block; width:60px; height:3px; background:url("../images/btn/slide_btn_off.png") no-repeat 0 0; vertical-align:middle;}
+.contents__key-visual .tabs ul li.on	{}
+.contents__key-visual .tabs ul li.on button	{ background:url("../images/btn/slide_btn_on.png") no-repeat 0 0; }
+.contents__key-visual .tabs .stop	 {display:inline-block; background:url("../images/btn/slide_pause_btn.png") no-repeat 0 0; width:9px; height:14px; vertical-align:middle;}
+.contents__key-visual .tabs .play	 {display:inline-block; background:url("../images/btn/slide_play_btn.png") no-repeat 0 0; width:10px; height:12px; vertical-align:middle;}
+.contents__key-visual .tabs .prev {display:inline-block; background:url("visual_indicator.png") no-repeat 0 0; width:12px; height:20px; vertical-align:middle; margin-right:17px;}
+.contents__key-visual .tabs .next {display:inline-block; background:url("visual_indicator.png") no-repeat -134px 0; width:12px; height:20px; vertical-align:middle; margin-left:17px;}
+.contents__key-visual .tabs button span	{display:block; width:0; height:0; overflow:hidden;}
+.contents__key-visual .summaries	{position:absolute; top:0; left:0; width:100%; z-index:3;}
+.contents__key-visual .summaries .ctrl	{position:relative; width:100%; height:0; margin:0 auto; z-index:1;}
+.contents__key-visual .summaries .ctrl .sale_state img	{width:50px;}
+.contents__key-visual .summaries .ctrl .prev	{position:absolute; top:225px; left:250px; display:inline-block; vertical-align:middle; background:url("prev.png") no-repeat 0 0; width:36px; height:55px;}
+.contents__key-visual .summaries .ctrl .prev span	 {display:block; overflow:hidden; width:0; text-indent:100%; font-size:0;}
+.contents__key-visual .summaries .ctrl .stop	{display:none; vertical-align:middle;}
+.contents__key-visual .summaries .ctrl .stop span	 {display:block; overflow:hidden; width:0; text-indent:100%; font-size:0;}
+.contents__key-visual .summaries .ctrl .next	{position:absolute; top:225px; right:250px; display:inline-block; vertical-align:middle; background:url("next.png") no-repeat 0 0; width:36px; height:55px;}
+.contents__key-visual .summaries .ctrl .next span	 {display:block; overflow:hidden; text-indent:100%; font-size:0;}
+
+/* footer */
+#footer{
+    .footer__banner-wrap{
+        box-sizing:border-box;
+        height:62px;
+        padding:26px 0 19px;
+        background-color:#222;
+        .outer_wrap{
+            .link{
+                float:left;
+                padding-left:130px;
+                @include fontStyle(noto-bold, 600,italic);
+                p{
+                    float:left;
+                    margin-right:8px;
+                    color:#999;
+                }
+                ul{
+                    float:left;
+                    li{
+                        float:left;
+                        a{
+                            color: $basicColor;
+                        }
+                        &:after{
+                            content:"|";
+                            display:inline-block;
+                            margin-right:6px;
+                            padding-left:6px;
+                            color:#999;
+                            font-style:normal;
+                        }
+                        &:last-child:after{
+                            content:"";
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                    &:after{
+                        @include afterClear;
+                    }
+                }
+                @include afterClear;
+            }
+            .sns{
+                ul{
+                    float:right;
+                    padding-right:133px;
+                    li{
+                        float:left;
+                        margin-right:10px;
+                    }
+                    &:after{
+                        @include afterClear;
+                    }
+                }
+            }
+            &:after{
+                @include afterClear;
+            }
+        }
+    }
+    .footer__bottom_wrap{
+        padding:60px 0;
+        text-align:center;
+        background-color:#f5f5f5;
+        ul {
+            margin-bottom:35px;
+            font-size:0;
+            line-height:0;
+            li{
+                display:inline-block;
+                margin-right:52px;
+                a{
+                    @include fontStyle(noto-regular,600,normal);
+                    @include basicFontSize;
+                }
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        dl{
+            margin-bottom:12px;
+            font-size:0;
+            line-height:0;
+            dt{
+                display:inline-block;
+                margin-right:5px;
+                font-size:16px;
+                line-height:18px;
+                color:$basicColor;
+                @include fontStyle(noto-light, 100, normal);
+            }
+            dd{
+                display:inline-block;
+                margin-right:30px;
+                font-size:16px;
+                line-height:18px;
+                @include fontStyle(noto-light, 100, normal);
+            }
+        }
+        p{
+            font-size:16px;
+            line-height:18px;
+            @include fontStyle(noto-light, 100, normal);
+        }
     }
 }
 
