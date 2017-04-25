@@ -60,6 +60,9 @@ $mainColor: #00afff;
         border-top:1px solid $mainColor;
         border-bottom:1px solid #e2e2e2;
         background-color:#fff;
+        &:last-child{
+          margin-bottom:0;
+        }
         .thumbnail_img{
           position:relative;
           float:left;
@@ -93,6 +96,7 @@ $mainColor: #00afff;
             &.date{
               float:left;
               margin-bottom:0;
+              margin-right:15px;
               color:#222;
               font-style:normal;
             }
