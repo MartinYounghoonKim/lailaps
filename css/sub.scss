@@ -64,7 +64,7 @@ $borderColor: #e2e2e2;
           position:relative;
           margin-bottom:20px;
           border-top:1px solid $mainColor;
-          border-bottom:1px solid #e2e2e2;
+          border-bottom:1px solid $borderColor;
           background-color:#fff;
           &:last-child{
             margin-bottom:0;
@@ -132,9 +132,10 @@ $borderColor: #e2e2e2;
     }
     &__rightBox{
       float:right;
-      width:calc(50% - 13px);
+      width:calc(50% - 15px);
       margin-left:25px;
       background-color:#fff;
+      border:1px solid $borderColor;
       border-top:1px solid $mainColor;
       text-align:center;
       &_wrap{
@@ -218,6 +219,76 @@ $borderColor: #e2e2e2;
       @include fontStyle(noto-regular, 600);
       font-size:14px;
       text-align:left;
+    }
+  }
+}
+
+/*
+*********************************************************************************
+    promotion.scss 작성
+    작성일 : 2017.04.24
+    작성자 : 정진배
+*********************************************************************************
+*/
+.promotion_box{
+  position:relative;
+  background-color:#fff;
+  border-top:1px solid $mainColor;
+  border-bottom:1px solid $borderColor;
+  a{
+    display:block;
+    overflow:hidden;
+    padding:28px 0 28px 25px;
+    .thumbnail_img {
+      float:left;
+      position:relative;
+    }
+    dl {
+      position:absolute;
+      padding-left:376px;
+      dt {
+        margin-bottom:25px;
+        @include fontStyle(noto-bold, 600);
+        font-size: 18px;
+      }
+      dd {
+        margin-bottom:63px;
+        @include fontStyle(noto-regular, 600);
+        font-size: 14px;
+        &.date {
+          margin-right:15px;
+        }
+        &.date, &.hits{
+          display:inline-block;
+          margin-bottom:0;
+        }
+      }
+    }
+    .arrow {
+      position:absolute;
+      bottom:28px;
+      right:17px;
+    }
+  }
+}
+.promotion_contents{
+  padding:40px 18px;
+  border-top:1px solid $mainColor;
+  background-color:#fff;
+  text-align:center;
+  .promotion_view{
+    margin-bottom:40px;
+  }
+  .txt {
+    margin-bottom:25px;
+    @include fontStyle(noto-bold, 600);
+    font-size:18px;
+    color:#444;
+    span{
+      display:block;
+      @include fontStyle(noto-regular, 600);
+      font-size:14px;
+      color:#555;
     }
   }
 }
