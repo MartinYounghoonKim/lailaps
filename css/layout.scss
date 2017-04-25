@@ -153,9 +153,20 @@ $borderColor: #e2e2e2;
                         width:190px;
                         height:0;
                         overflow:hidden;
+                        z-index:10000;
                         li{
                             margin-bottom:4px;
                             text-align:left;
+                            /*추가*/
+                            -moz-transition: none;
+                            transition: none;
+                            -webkit-transform: translateY(30px) skew(-8deg);
+                            -moz-transform: translateY(30px) skew(-8deg);
+                            -ms-transform: translateY(30px) skew(-8deg);
+                            -o-transform: translateY(30px) skew(-8deg);
+                            transform: translateY(30px) skew(-8deg);
+                            opacity: 0;
+                            /*추가*/
                             a{
                                 display:block;
                                 padding:18px 0 15px 24px;
@@ -165,16 +176,42 @@ $borderColor: #e2e2e2;
                                 background-color: $basicColor;
                                 @include crossBrowsing("transform", skew(-12deg));
                             }
+                            @mixin test($index, $effect, $value){
+                                &:nth-child(#{$index}){
+                                    @include crossBrowsing($effect, $value);
+                                }
+                            }
                             $listinit: list01 list02 list03 list04 list05 list06;
-                            @for $i from 0 through length($listinit){
+                            @for $i from 1 through length($listinit){
                                 &:nth-child(#{$i}) {
-                                    @include crossBrowsing("transform", translateX(-8px * $i + 8px ));
-                                    @include crossBrowsing("transition-delay", .1s * $i);
+                                    @include test($i, transition-delay, .2s * $i);
+                                    @include test($i, transform, translateX(-8px * $i + 8px ));
                                 }
                             }
                         }
                         &:after{
                             @include afterClear;
+                        }
+                    }
+                    &:hover{
+                        .dept2{
+                            overflow:visible;
+                            height:auto;
+                            li{
+                                padding-left: 1em;
+                                margin-left: -1em;
+                                width: 25em;
+                                opacity:1;
+                            }
+                            li:nth-child(1){
+                                transition:width .2s, margin .2s, padding .2s, transform .2s cubic-bezier(0, 0, 0, 1) 0.25s, opacity .2s cubic-bezier(0, 0, 0, 1) 0.25s;
+                            }
+                            li:nth-child(2){
+                                transition:width .2s, margin .2s, padding .2s, transform .2s cubic-bezier(0, 0, 0, 1) 0.4s, opacity .2s cubic-bezier(0, 0, 0, 1) 0.4s;
+                            }
+                            li:nth-child(3){
+                                transition:width .2s, margin .2s, padding .2s, transform .2s cubic-bezier(0, 0, 0, 1) 0.55s, opacity .2s cubic-bezier(0, 0, 0, 1) 0.55s;
+                            }
                         }
                     }
                 }
