@@ -44,6 +44,24 @@ $basicColor: #00afff;
     margin:0 auto;
 }
 
+
+/* 공통 컬러 함수 선언 */
+$mainColor: #00afff;
+$borderColor: #e2e2e2;
+
+
+
+/**********************************************************************************
+    레이아웃 스타일
+**********************************************************************************/
+
+/* 공통 wrap */
+.wrap{
+  @include wraping;
+}
+.outer_wrap{
+  @include outerWrap;
+}
 /* header */
 #header{
     height:180px;
@@ -216,4 +234,10 @@ $basicColor: #00afff;
             }
         }
     }
+}
+
+/* contents*/
+.sub {
+  padding-top: 80px;
+  background-color:#f6f6f6;
 }
