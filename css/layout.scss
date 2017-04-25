@@ -18,12 +18,6 @@
     display:block;
     clear:both;
 }
-
-/**********************************************************************************
-    레이아웃 스타일
-**********************************************************************************/
-
-/* 공통 wrap */
 @mixin wraping{
     width:1040px;
     margin:0 auto;
@@ -33,6 +27,17 @@
     margin:0 auto;
 }
 
+/**********************************************************************************
+    레이아웃 스타일
+**********************************************************************************/
+
+/* 공통 wrap */
+.wrap{
+  @include wraping;
+}
+.outer_wrap{
+  @include outerWrap;
+}
 /* header */
 #header{
     height:180px;
@@ -67,4 +72,51 @@
         @include wraping;
 
     }
+}
+
+/* contents*/
+.sub {
+  padding-top: 80px;
+  background-color:#f6f6f6;
+  .wrap {
+    .tit01 {
+        font-size:46px;
+        line-height:48px;
+        margin-bottom:60px;
+    }
+  }
+}
+
+/* paging */
+.paging {
+  text-align:center;
+    div {
+      display:inline-block;
+    a {
+      display:inline-block;
+      float:left;
+      margin-right:5px;
+    }
+    ul {
+      float:left;
+      &:after{
+        @include afterClear;
+      }
+      li {
+        float:left;
+        &.first a{
+          margin-left:12px;
+        }
+        &.last a {
+          margin-right:17px;
+        }
+        a {
+          width:31px;
+          border:1px solid #e2e2e2;
+          background-color:#fff;
+          padding:8px 0 7px;
+        }
+      }
+    }
+  }
 }
