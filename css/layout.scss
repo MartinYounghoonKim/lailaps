@@ -26,6 +26,10 @@
     width:1400px;
     margin:0 auto;
 }
+@mixin innerWrap{
+    width:800px;
+    margin:0 auto;
+}
 
 
 /* 공통 컬러 함수 선언 */

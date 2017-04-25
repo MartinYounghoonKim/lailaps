@@ -25,6 +25,10 @@
     width:1400px;
     margin:0 auto;
 }
+@mixin innerWrap{
+    width:800px;
+    margin:0 auto;
+}
 @mixin fontStyle($parameter, $weight){
   font-family :$parameter;
   font-weight:$weight;
@@ -184,9 +188,36 @@ $borderColor: #e2e2e2;
 */
 
 .news__view__box {
-  border-top:1px solid $mainColor;
+  padding:60px 0 40px;
+  border-top:8px solid $mainColor;
+  border-bottom:1px solid #e4e4e4;
+  background-color:#fff;
   text-align:center;
-  .tit{
-    @include fontStyle(noto-bold, 600);
+  .innerWrap{
+    @include innerWrap;
+    .tit{
+      margin-bottom:30px;
+      @include fontStyle(noto-bold, 600);
+      font-size:24px;
+      line-height:27px;
+    }
+    .date{
+      display:block;
+      margin-bottom:50px;
+      @include fontStyle(note-regular, 600);
+      font-size:15px;
+      line-height:18px;
+    }
+    .thumbnail_view {
+      width:100%;
+      height:auto;
+      margin-bottom:50px;
+    }
+    .list_view_text {
+      margin-bottom:68px;
+      @include fontStyle(noto-regular, 600);
+      font-size:14px;
+      text-align:left;
+    }
   }
 }
