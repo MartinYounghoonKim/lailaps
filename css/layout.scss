@@ -9,6 +9,10 @@
     공통 함수
 **********************************************************************************/
 $basicColor: #00afff;
+@mixin basicFontSize{
+    font-size:18px;
+    line-height:20px;
+}
 @mixin crossBrowsing($parameter, $value) {
     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
         #{$prefix}#{$parameter}: $value;
@@ -28,6 +32,13 @@ $basicColor: #00afff;
     position:absolute;
     top:50%;
     margin:-($h/2) 0 0 -($w/2);
+}
+@mixin fontStyle($parameter, $weight, $style){
+  font-family :$parameter;
+  font-weight:$weight;
+  @if $style{
+      font-style:$style;
+  }
 }
 
 /**********************************************************************************
@@ -212,9 +223,38 @@ $borderColor: #e2e2e2;
             .link{
                 float:left;
                 padding-left:130px;
+                @include fontStyle(noto-bold, 600,italic);
                 p{
                     float:left;
+                    margin-right:8px;
+                    color:#999;
                 }
+                ul{
+                    float:left;
+                    li{
+                        float:left;
+                        a{
+                            color: $basicColor;
+                        }
+                        &:after{
+                            content:"|";
+                            display:inline-block;
+                            margin-right:6px;
+                            padding-left:6px;
+                            color:#999;
+                            font-style:normal;
+                        }
+                        &:last-child:after{
+                            content:"";
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                    &:after{
+                        @include afterClear;
+                    }
+                }
+                @include afterClear;
             }
             .sns{
                 ul{
@@ -232,6 +272,52 @@ $borderColor: #e2e2e2;
             &:after{
                 @include afterClear;
             }
+        }
+    }
+    .footer__bottom_wrap{
+        padding:60px 0;
+        text-align:center;
+        background-color:#f5f5f5;
+        ul {
+            margin-bottom:35px;
+            font-size:0;
+            line-height:0;
+            li{
+                display:inline-block;
+                margin-right:52px;
+                a{
+                    @include fontStyle(noto-regular,600,normal);
+                    @include basicFontSize;
+                }
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        dl{
+            margin-bottom:12px;
+            font-size:0;
+            line-height:0;
+            dt{
+                display:inline-block;
+                margin-right:5px;
+                font-size:16px;
+                line-height:18px;
+                color:$basicColor;
+                @include fontStyle(noto-light, 100, normal);
+            }
+            dd{
+                display:inline-block;
+                margin-right:30px;
+                font-size:16px;
+                line-height:18px;
+                @include fontStyle(noto-light, 100, normal);
+            }
+        }
+        p{
+            font-size:16px;
+            line-height:18px;
+            @include fontStyle(noto-light, 100, normal);
         }
     }
 }
