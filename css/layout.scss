@@ -5,12 +5,30 @@
     작성자 : 김영훈
 *********************************************************************************
 */
+/**********************************************************************************
+    공통 함수
+**********************************************************************************/
+@mixin crossBrowsing($parameter, $value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$parameter}: $value;
+    }
+}
+@mixin afterClear {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/**********************************************************************************
+    레이아웃 스타일
+**********************************************************************************/
+
 /* 공통 wrap */
-.wrap{
+@mixin wraping{
     width:1040px;
     margin:0 auto;
 }
-.outer_wrap{
+@mixin outerWrap{
     width:1400px;
     margin:0 auto;
 }
@@ -21,6 +39,32 @@
     background-image:url("../images/bg/gnb_bg.png");
     background-position:0 0;
     background-repeat:repeat-x;
+    .outer_wrap{
+        position:relative;
+        @include outerWrap;
+        text-align:center;
+        .h_logo{
+            padding-top:34px;
+            text-align:center;
+        }
+        .util{
+            position:absolute;
+            top:40px;
+            right:50px;
+            li{
+                float:left;
+                margin-right:2px;
+                &:nth-child(last){
+                    margin-right:0;
+                }
+            }
+            &:after{
+                @include afterClear;
+            }
+        }
+    }
     .wrap{
+        @include wraping;
+
     }
 }

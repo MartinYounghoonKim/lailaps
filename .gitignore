@@ -30,5 +30,8 @@ __history
 *.dll
 *.elf
 
+# style steet
+*.css
+
 # Except
 web.config
