@@ -13,10 +13,84 @@
         <hr/>
         <!-- 헤더 영역 -->
         <div id="header">
+            <div class="outer_wrap">
+                <h1 class="h_logo"><a href="#none"><img src="../images/logo/h_logo.png" alt="Lailaps(Advanced Carbon Bike)"/></a></h1>
+                <ul class="util">
+                    <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>LOGIN</span></span></a></li>
+                    <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>JOIN</span></span></a></li>
+                    <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>MYPAGE</span></span></a></li>
+                </ul>
+            </div>
             <div class="wrap">
+                <!-- gnb 시작 -->
                 <div id="gnb">
-
+                    <ul>
+                        <li>
+                            <a href="#none" data-gnb-hover="BRAND"><span>BRAND</span></a>
+                            <ul class="dept2">
+                                <li><a href="#none">브랜드 소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" data-gnb-hover="PRODUCTS"><span>PRODUCTS</span></a>
+                            <ul class="dept2">
+                                <li><a href="#none">전체모델</a></li>
+                                <li><a href="#none">ROAD BIKE</a></li>
+                                <li><a href="#none">MOUNTAIN BIKE</a></li>
+                                <li><a href="#none">LIFE STYLE</a></li>
+                                <li><a href="#none">BIKE 부품</a></li>
+                                <li><a href="#none">BIKE 용품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" data-gnb-hover="NEWS&amp;PROMOTION"><span>NEWS&amp;PROMOTION</span></a>
+                            <ul class="dept2">
+                                <li><a href="#none">NEWS</a></li>
+                                <li><a href="#none">PROMOTION</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" data-gnb-hover="COMMUNITY"><span>COMMUNITY</span></a>
+                            <ul class="dept2">
+                                <li class="dept2__list"><a href="#none">WINNERS</a></li>
+                                <li class="dept2__list"><a href="#none">추천길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" data-gnb-hover="REPAIR"><span>REPAIR</span></a>
+                            <ul class="dept2">
+                                <li><a href="#none">서비스 안내</a></li>
+                                <li><a href="#none">신청현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" data-gnb-hover="TECHNOLOGY"><span>TECHNOLOGY</span></a>
+                            <ul class="dept2 on">
+                                <li class="dept2__list"><a href="#none">탄소섬유</a></li>
+                                <li class="dept2__list"><a href="#none">브레이딩 시스템</a></li>
+                                <li class="dept2__list"><a href="#none">제조기술</a></li>
+                                <li class="dept2__list"><a href="#none">기술인증</a></li>
+                                <li class="dept2__list"><a href="#none">리페어 시스템</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" data-gnb-hover="ABOUT US"><span>ABOUT US</span></a>
+                            <ul class="dept2">
+                                <li><a href="#none">회사소개</a></li>
+                                <li><a href="#none">글로벌 파트너</a></li>
+                                <li><a href="#none">특허</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" data-gnb-hover="SUPPORT"><span>SUPPORT</span></a>
+                            <ul class="dept2">
+                                <li><a href="#none">A/S 정책</a></li>
+                                <li><a href="#none">문의하기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
+                <!-- gnb 시작 -->
             </div>
         </div>
         <!--// 헤더 영역 -->
@@ -25,6 +99,38 @@
         <hr/>
         <!-- 컨텐츠 영역 -->
         <div id="contents">
+            <!-- 메인 키비쥬얼 영역 -->
+            <div class="contents__key-visual" data-ui-name="visual_rolling" data-ctrl="> .summaries, .tabs" data-list="> .show_img" data-delay="4000">
+        		<div class="show_img">
+        			<ul>
+        				<li><a href="#"><img src="visual_image1.png" alt="홈플러스 문화센터 겨울학기 회원모집!"></a></li>
+        				<li><a href="#"><img src="visual_image2.png" alt="많은 사람들이 기다리던 바로 그 소식! 2015.10.15 인천 송도점 오픈!"></a></li>
+        				<li><a href="#"><img src="visual_image3.png" alt="많은 사람들이 기다리던 바로 그 소식! 2015.10.15 인천 송도점 오픈!"></a></li>
+        			</ul>
+        		</div>
+        		<div class="summaries">
+        			<p class="ctrl">
+        				<button type="button" class="prev"><span>이전</span></button>
+        				<button type="button" class="next"><span>다음</span></button>
+        			</p>
+        		</div>
+        		<div class="tabs">
+        			<button type="button" class="prev"><span>이전</span></button>
+        			<ul>
+        				<li class="on"><button type="button"><span>홈플러스 문화센터 겨울학기 회원모집!</span></button></li>
+        				<li><button type="button"><span>많은 사람들이 기다리던 바로 그 소식! 2015.10.15 인천 송도점 오픈!</span></button></li>
+        				<li><button type="button"><span>많은 사람들이 기다리던 바로 그 소식! 2015.10.15 인천 송도점 오픈!</span></button></li>
+        			</ul>
+        			<button type="button" class="stop"><span>정지/재생 토글버튼</span></button>
+        			<button type="button" class="next"><span>다음</span></button>
+        		</div>
+        	</div>
+            <!-- 메인 키비쥬얼 영역 -->
+            <div class="wrap">
+                <div class="contents__features-wrap">
+                    <h2>Laillaps<b>features</b></h2>
+                </div>
+            </div>
         </div>
         <!--// 컨텐츠 영역 -->
         <hr/>
@@ -32,10 +138,44 @@
         <hr/>
         <!-- 푸터 영역 -->
         <div id="footer">
+            <div class="footer__banner-wrap">
+                <div class="outer_wrap">
+                    <div class="link">
+                        <p>2016 © Lailaps, All Rights Reserved.</p>
+                        <ul>
+                            <li><a href="#none">Privacy Policy</a></li>
+                            <li><a href="#none">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#none"><img src="../images/btn/facebook_btn.png" alt="facebook"/></a></li>
+                            <li><a href="#none"><img src="../images/btn/skype_btn.png" alt="Skype"/></a></li>
+                            <li><a href="#none"><img src="../images/btn/google_btn.png" alt="Google"/></a></li>
+                            <li><a href="#none"><img src="../images/btn/insta_btn.png" alt="Insta"/></a></li>
+                            <li><a href="#none"><img src="../images/btn/pinterest_btn.png" alt="Pinterest"/></a></li>
+                            <li><a href="#none"><img src="../images/btn/twitter_btn.png" alt="Twitter"/></a></li>
+                            <li><a href="#none"><img src="../images/btn/safari_btn.png" alt="facebook"/></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom_wrap">
+                <ul>
+                    <li><a href="#none">NEWS</a></li>
+                    <li><a href="#none">특허 및 인증</a></li>
+                    <li><a href="#none">회사소개</a></li>
+                    <li><a href="#none">A/S정책</a></li>
+                    <li><a href="#none">문의하기</a></li>
+                </ul>
+            </div>
         </div>
         <!--// 푸터 영역 -->
         <hr/>
     </div>
-     <script data-main="../js/main" src="../js/require.js"></script>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.easing.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+     <script src="../js/common.js"></script>
  </body>
 </html>
