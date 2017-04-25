@@ -1,11 +1,115 @@
+/**********************************************************************************
+                            font 에 대한 기본 설정
+**********************************************************************************/
+
+$fontFamily: "noto-regular", dotum,"돋움";
+$fontColor: #000;
+@mixin basicFont{
+    font: normal 400 14px/16px $fontFamily;
+    color: $fontColor;
+}
+
+
+/**********************************************************************************
+                            공통 함수에 대한 기본 설정
+**********************************************************************************/
+
+
+/* 공통 컬러 함수 선언 */
+$mainColor: #00afff;
+
+
 /*
 *********************************************************************************
-    basic.scss 작성
-    작성일 : 2017.04.07
-    작성자 : 김영훈
+    news.scss 작성
+    작성일 : 2017.04.24
+    작성자 : 정진배
 *********************************************************************************
 */
 
-/**********************************************************************************
-                            각 scss 파일 import 설정
-**********************************************************************************/
+.news{
+  &__wrap{
+    padding-top:80px;
+    background-color:#f6f6f6;
+  }
+  &__tit{
+    font-size:46px;
+    line-height:48px;
+    margin-bottom:60px;
+  }
+  &__contents{
+    overflow:hidden;
+    &__leftBox{
+      float:left;
+      width:50%;
+      margin-right:25px;
+      li {
+        position:relative;
+        overflow:hidden;
+        padding:30px 19px 30px 14px;
+        margin-bottom:20px;
+        border-top:1px solid $mainColor;
+        border-bottom:1px solid #e2e2e2;
+        background-color:#fff;
+        &:last-child{
+          margin-bottom:0;
+        }
+        .thumbnail_img{
+          position:relative;
+          float:left;
+        }
+        dl {
+          position:relative;
+          overflow:hidden;
+          padding-left:20px;
+          dt{
+            margin-bottom:22px;
+            font-size:18px;
+            line-height:20px;
+            letter-spacing:-1px;
+            font-weight:bold;
+            font-style:italic;
+            color:#444;
+            span {
+              display:block;
+            }
+          }
+          dd{
+            margin-bottom:46px;
+            color:#555;
+            font-style:italic;
+            font-weight:600;
+            span{
+              display:block;
+            }
+            &.date{
+              float:left;
+              margin-bottom:0;
+              margin-right:15px;
+              color:#222;
+              font-style:normal;
+            }
+            &.hits{
+              margin-bottom:0;
+              float:left;
+              color:#222;
+              span{
+                display:inline-block;
+              }
+            }
+          }
+          .arrow{
+            position:absolute;
+            bottom:0;
+            right:0;
+            width:30px;
+            text-align:right;
+          }
+        }
+      }
+    }
+    &__rightBox{
+
+    }
+  }
+}
