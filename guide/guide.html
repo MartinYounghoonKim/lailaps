@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>버튼가이드</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="../css/index.min.css"/>
+	<!--// 실제 적용시 가져가야할 파일 -->
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="../js/html5.js"></script>?
+	<![endif]-->
+</head>
+
+<body>
+	<div class="guide_wrap">
+		<h1 class="guide_title">버튼에 대한 가이드</h1>
+		<ul class="guide_info">
+			<li>· 현 가이드에 맞춰, 버튼 색상, 버튼 사이즈 등을 수정하면 됩니다.</li>
+		</ul>
+		<textarea class="guide_textarea" readonly="readonly" data-show="text">각 버튼을 클릭하면 해당 소스를 볼 수 있습니다.</textarea>
+		<table class="guide_table" data-btn-guide="table">
+			<caption>버튼 종류 가이드</caption>
+			<colgroup>
+				<col/>
+				<col/>
+				<col/>
+				<col/>
+				<col/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">&nbsp;</th>
+					<th scope="col">버튼종류2</th>
+					<th scope="col">버튼종류3</th>
+					<th scope="col">버튼종류4</th>
+					<th scope="col">버튼종류5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="5">
+						<label data-btn-option="btn-line"><input type="checkbox"/>라인</label>
+						<label data-btn-option="disabled"><input type="checkbox"/>disabled</label>
+						<label data-btn-option="btn-radius"><input type="checkbox"/>버튼 둥글기</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">XS</th>
+					<td><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-xs btn-color-type02" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-xs btn-color-type03" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-xs btn-color-type04" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+				</tr>
+				<tr>
+					<th scope="row">S</th>
+					<td><a class="btn btn-s btn-color-type01" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-s btn-color-type02" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-s btn-color-type03" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-s btn-color-type04" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+				</tr>
+				<tr>
+					<th scope="row">M</th>
+					<td><a class="btn btn-m btn-color-type01" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-m btn-color-type02" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-m btn-color-type03" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-m btn-color-type04" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+				</tr>
+				<tr>
+					<th scope="row">L</th>
+					<td><a class="btn btn-l btn-color-type01" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-l btn-color-type02" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-l btn-color-type03" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-l btn-color-type04" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+				</tr>
+				<tr>
+					<th scope="row">XL</th>
+					<td><a class="btn btn-xl btn-color-type01" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-xl btn-color-type02" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-xl btn-color-type03" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+					<td><a class="btn btn-xl btn-color-type04" href="#none"><span class="btn-inner"><span>클릭</span></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="https://use.fontawesome.com/f8389ee17b.js"></script>
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		var txt = $("[data-show='text']");
+		var table = $("[data-btn-guide='table']");
+		var btn = $("a", table);
+		var option = $("[data-btn-option]");
+		var input = $("input", option);
+		var temp;
+		btn.each( function(){
+			$(this).click( showing)
+		})
+		function showing(){
+			txt.text( $(this).parent().html() );
+		}
+		option.click(chkOption);
+		function chkOption(){
+			temp = $(this).attr("data-btn-option");
+			if($(this).find("input:checked").size()>0){
+				btn.addClass(temp);
+			} else {
+				btn.removeClass(temp);
+			}
+		}
+
+	</script>
+</body>
+</html>
