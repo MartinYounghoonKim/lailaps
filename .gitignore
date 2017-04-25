@@ -28,6 +28,7 @@ __history
 *.zip
 *.exe
 *.dll
+*.css
 *.elf
 
 # Except
