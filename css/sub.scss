@@ -2,21 +2,41 @@
                             font 에 대한 기본 설정
 **********************************************************************************/
 
-$fontFamily: "noto-regular", dotum,"돋움";
-$fontColor: #000;
-@mixin basicFont{
-    font: normal 400 14px/16px $fontFamily;
-    color: $fontColor;
-}
-
 
 /**********************************************************************************
                             공통 함수에 대한 기본 설정
 **********************************************************************************/
 
+@mixin crossBrowsing($parameter, $value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$parameter}: $value;
+    }
+}
+@mixin afterClear {
+    content:"";
+    display:block;
+    clear:both;
+}
+@mixin wraping{
+    width:1040px;
+    margin:0 auto;
+}
+@mixin outerWrap{
+    width:1400px;
+    margin:0 auto;
+}
+@mixin fontStyle($parameter, $weight){
+  font-family :$parameter;
+  font-weight:$weight;
+}
 
 /* 공통 컬러 함수 선언 */
 $mainColor: #00afff;
+$borderColor: #e2e2e2;
+
+/* 공통 컬러 함수 선언 */
+$mainColor: #00afff;
+$borderColor: #e2e2e2;
 
 
 /*
@@ -28,6 +48,7 @@ $mainColor: #00afff;
 */
 
 .news{
+  padding-bottom:145px;
   &__contents{
     overflow:hidden;
     &__leftBox{
@@ -61,10 +82,9 @@ $mainColor: #00afff;
                 font-size:18px;
                 line-height:20px;
                 letter-spacing:-1px;
-                font-weight:bold;
+                @include fontStyle(noto-bold, bold);
                 font-style:italic;
                 color:#444;
-                font-family:'noto-bold';
                 span {
                   display:block;
                 }
@@ -73,8 +93,7 @@ $mainColor: #00afff;
                 margin-bottom:46px;
                 color:#555;
                 font-style:italic;
-                font-weight:600;
-                font-family:'noto-regular';
+                @include fontStyle(noto-regular, 600);
                 span{
                   display:block;
                 }
@@ -97,7 +116,7 @@ $mainColor: #00afff;
               .arrow{
                 position:absolute;
                 bottom:0;
-                right:0;
+                right:19px;
                 width:10px;
                 height:22px;
                 text-align:right;
@@ -111,15 +130,71 @@ $mainColor: #00afff;
       float:right;
       width:calc(50% - 13px);
       margin-left:25px;
+      background-color:#fff;
+      border-top:1px solid $mainColor;
+      text-align:center;
       &_wrap{
         padding:60px 35px 0 35px;
         .tit{
           text-align:center;
+          font-family:'noto-bold';
+          font-style:italic;
+          font-weight:600;
+          font-size:24px;
+          line-height:27px;
+          padding:0 15px 22px 15px;
+          border-bottom:1px solid $borderColor;
+          margin-bottom:25px;
           span{
             display:block;
           }
         }
+        .thumbnail_view {
+          margin-bottom:40px;
+        }
+        .list_view_text {
+          margin-bottom:35px;
+          text-align:center;
+          font-size:14px;
+          font-family:'noto-regular';
+          font-weight:600;
+          color:#444;
+        }
+        a {
+          @include fontStyle(noto-regular, 600);
+        }
+      }
+      .btn_wrap {
+        margin-top:32px;
+        padding:10px 0;
+        background-color: $mainColor;
+        a {
+          /*border:0;*/
+          margin-right:20px;
+          background-color:#fff;
+          color:#00afff;
+          @include fontStyle(noto-regular, 600);
+        }
+        &:last-child {
+          margin-right:0;
+        }
       }
     }
+  }
+}
+
+/*
+*********************************************************************************
+    news_view.scss 작성
+    작성일 : 2017.04.24
+    작성자 : 정진배
+*********************************************************************************
+*/
+
+.news__view__box {
+  border-top:1px solid $mainColor;
+  text-align:center;
+  .tit{
+    @include fontStyle(noto-bold, 600);
   }
 }
