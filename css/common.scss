@@ -245,7 +245,7 @@ $btnColor04: #2FC600;
   text-align:center;
     div {
       display:inline-block;
-    a {
+    >a {
       display:inline-block;
       float:left;
       margin-right:5px;
@@ -257,13 +257,16 @@ $btnColor04: #2FC600;
       }
       li {
         float:left;
-        &.first a{
+        margin-right:5px;
+        &.first {
           margin-left:12px;
         }
-        &.last a {
+        &.last {
           margin-right:17px;
         }
         a {
+          display:inline-block;
+          float:left;
           width:31px;
           border:1px solid $borderColor;
           background-color:#fff;

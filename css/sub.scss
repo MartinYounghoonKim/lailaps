@@ -245,11 +245,18 @@ $borderColor: #e2e2e2;
           overflow:hidden;
           padding:28px 0 28px 25px;
           .thumbnail_img {
+            width:331px;
+            height:140px;
+            overflow:hidden;
             float:left;
-            position:relative;
+            position:absolute;;
+            img {
+                width:100%;
+                height: auto;
+            }
           }
           dl {
-            position:absolute;
+            position:relative;
             padding-left:376px;
             dt {
               margin-bottom:25px;
@@ -292,19 +299,21 @@ $borderColor: #e2e2e2;
           box-shadow:1px 1px 1px 1px #f0f0f0;
         }
         .promotion_view{
-          margin-bottom:40px;
+            width:100%;
+            height:auto;
+            margin-bottom:40px;
         }
-        .txt {
-          @include fontStyle(noto-bold, 600);
-          font-size:18px;
-          color:#444;
-          span{
-            margin-top:25px;
+        strong {
             display:block;
-            @include fontStyle(noto-regular, 600);
-            font-size:14px;
-            color:#555;
-          }
+            @include fontStyle(noto-bold, 600);
+            font-size:18px;
+            color:#444;
+            margin-bottom:25px;
+        }
+        span{
+          @include fontStyle(noto-regular, 600);
+          font-size:14px;
+          color:#555;
         }
       }
     }
