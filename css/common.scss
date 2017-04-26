@@ -1,3 +1,5 @@
+@import "module";
+
 /*
 *********************************************************************************
     basic.scss 작성
@@ -5,35 +7,6 @@
     작성자 : 김영훈
 *********************************************************************************
 */
-/**********************************************************************************
-    공통 함수
-**********************************************************************************/
-@mixin crossBrowsing($parameter, $value) {
-    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
-        #{$prefix}#{$parameter}: $value;
-    }
-}
-@mixin afterClear {
-    content:"";
-    display:block;
-    clear:both;
-}
-@mixin wraping{
-    width:1040px;
-    margin:0 auto;
-}
-@mixin outerWrap{
-    width:1400px;
-    margin:0 auto;
-}
-@mixin fontStyle($parameter, $weight){
-  font-family :$parameter;
-  font-weight:$weight;
-}
-
-/* 공통 컬러 함수 선언 */
-$mainColor: #00afff;
-$borderColor: #e2e2e2;
 
 /**********************************************************************************
     가이드 스타일
@@ -128,10 +101,10 @@ $btnColor04: #2FC600;
     line-height:16px;
 }
 @mixin btnM{
-    height:19px;
-    padding:8px 20px 11px;
-    font-size:16px;
-    line-height:18px;
+    height:20px;
+    padding:7px 64px 4px;
+    font-size:14px;
+    line-height:16px;
 }
 @mixin btnL{
     height:22px;
@@ -168,7 +141,7 @@ $btnColor04: #2FC600;
         @include btnM;
         &.btn-line{
             height:20px;
-            padding:5px 20px 11px;
+            padding:7px 64px 4px;
         }
     }
     &-l{
@@ -245,10 +218,13 @@ $btnColor04: #2FC600;
   text-align:center;
     div {
       display:inline-block;
-    a {
+    >a {
       display:inline-block;
       float:left;
       margin-right:5px;
+      &.next {
+          margin-right:0;
+      }
     }
     ul {
       float:left;
@@ -257,17 +233,23 @@ $btnColor04: #2FC600;
       }
       li {
         float:left;
-        &.first a{
+        margin-right:5px;
+        &.first {
           margin-left:12px;
         }
-        &.last a {
+        &.last {
           margin-right:17px;
         }
         a {
+          display:inline-block;
+          float:left;
           width:31px;
           border:1px solid $borderColor;
           background-color:#fff;
           padding:8px 0 7px;
+          &.on {
+              color: $mainColor;
+          }
         }
       }
     }

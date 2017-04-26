@@ -1,47 +1,4 @@
-/**********************************************************************************
-                            font 에 대한 기본 설정
-**********************************************************************************/
-
-
-/**********************************************************************************
-                            공통 함수에 대한 기본 설정
-**********************************************************************************/
-
-@mixin crossBrowsing($parameter, $value) {
-    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
-        #{$prefix}#{$parameter}: $value;
-    }
-}
-@mixin afterClear {
-    content:"";
-    display:block;
-    clear:both;
-}
-@mixin wraping{
-    width:1040px;
-    margin:0 auto;
-}
-@mixin outerWrap{
-    width:1400px;
-    margin:0 auto;
-}
-@mixin innerWrap{
-    width:800px;
-    margin:0 auto;
-}
-@mixin fontStyle($parameter, $weight){
-  font-family :$parameter;
-  font-weight:$weight;
-}
-
-/* 공통 컬러 함수 선언 */
-$mainColor: #00afff;
-$borderColor: #e2e2e2;
-
-/* 공통 컬러 함수 선언 */
-$mainColor: #00afff;
-$borderColor: #e2e2e2;
-
+@import "module";
 
 /*
 *********************************************************************************
@@ -63,9 +20,7 @@ $borderColor: #e2e2e2;
         li {
           position:relative;
           margin-bottom:20px;
-          border-top:1px solid $mainColor;
-          border-bottom:1px solid $borderColor;
-          background-color:#fff;
+          @include boxStyle;
           &:last-child{
             margin-bottom:0;
           }
@@ -134,9 +89,7 @@ $borderColor: #e2e2e2;
       float:right;
       width:calc(50% - 15px);
       margin-left:25px;
-      background-color:#fff;
-      border:1px solid $borderColor;
-      border-top:1px solid $mainColor;
+      @include boxStyle;
       text-align:center;
       &_wrap{
         padding:60px 35px 0 35px;
@@ -190,9 +143,8 @@ $borderColor: #e2e2e2;
 
 .news__view__box {
   padding:60px 0 40px;
+  @include boxStyle;
   border-top:8px solid $mainColor;
-  border-bottom:1px solid #e4e4e4;
-  background-color:#fff;
   text-align:center;
   .innerWrap{
     @include innerWrap;
@@ -230,65 +182,93 @@ $borderColor: #e2e2e2;
     작성자 : 정진배
 *********************************************************************************
 */
-.promotion_box{
-  position:relative;
-  background-color:#fff;
-  border-top:1px solid $mainColor;
-  border-bottom:1px solid $borderColor;
-  a{
-    display:block;
-    overflow:hidden;
-    padding:28px 0 28px 25px;
-    .thumbnail_img {
-      float:left;
-      position:relative;
-    }
-    dl {
-      position:absolute;
-      padding-left:376px;
-      dt {
-        margin-bottom:25px;
-        @include fontStyle(noto-bold, 600);
-        font-size: 18px;
-      }
-      dd {
-        margin-bottom:63px;
-        @include fontStyle(noto-regular, 600);
-        font-size: 14px;
-        &.date {
-          margin-right:15px;
+.promotion{
+    padding:80px 0 145px 0;
+    .promotion_wrap{
+      margin-bottom:20px;
+      &.last{margin-bottom:35px;}
+      .promotion_box{
+        position:relative;
+        background-color:#fff;
+        border-top:1px solid $mainColor;
+        border-bottom:1px solid $borderColor;
+        a{
+          display:block;
+          overflow:hidden;
+          padding:28px 0 28px 25px;
+          .thumbnail_img {
+            width:331px;
+            height:140px;
+            overflow:hidden;
+            float:left;
+            position:absolute;;
+            img {
+                width:100%;
+                height: auto;
+            }
+          }
+          dl {
+            position:relative;
+            padding-left:376px;
+            dt {
+              margin-bottom:25px;
+              @include fontStyle(noto-bold, 600);
+              font-size: 18px;
+            }
+            dd {
+              margin-bottom:63px;
+              @include fontStyle(noto-regular, 600);
+              font-size: 14px;
+              &.date {
+                margin-right:15px;
+              }
+              &.date, &.hits{
+                display:inline-block;
+                margin-bottom:0;
+              }
+            }
+          }
+          .arrow {
+            position:absolute;
+            bottom:28px;
+            right:17px;
+          }
         }
-        &.date, &.hits{
-          display:inline-block;
-          margin-bottom:0;
+        .promotion_ing, .promotion_end {
+            position:absolute;
+            top:0;
+            right:0;
+        }
+      }
+      .promotion_contents{
+        display:none;
+        padding:40px 18px;
+        border-top:1px solid $mainColor;
+        background-color:#fff;
+        text-align:center;
+        &.on {
+          display:block;
+          box-shadow:1px 1px 1px 1px #f0f0f0;
+        }
+        .promotion_view{
+            width:100%;
+            height:auto;
+            margin-bottom:40px;
+        }
+        strong {
+            display:block;
+      @include fontStyle(noto-bold, 600);
+      font-size:18px;
+      color:#444;
+      margin-bottom:25px;
+        }
+        span{
+          margin-top:25px;
+          display:block;
+          @include fontStyle(noto-regular, 600);
+          font-size:14px;
+          color:#555;
         }
       }
     }
-    .arrow {
-      position:absolute;
-      bottom:28px;
-      right:17px;
-    }
-  }
-}
-.promotion_contents{
-  padding:40px 18px;
-  border-top:1px solid $mainColor;
-  background-color:#fff;
-  text-align:center;
-  .promotion_view{
-    margin-bottom:40px;
-  }
-  .txt {
-    margin-bottom:25px;
-    @include fontStyle(noto-bold, 600);
-    font-size:18px;
-    color:#444;
-    span{
-      display:block;
-      @include fontStyle(noto-regular, 600);
-      font-size:14px;
-      color:#555;
-    }
-  }
 }
