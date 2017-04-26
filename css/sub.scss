@@ -41,8 +41,7 @@
                 font-size:18px;
                 line-height:20px;
                 letter-spacing:-1px;
-                @include fontStyle(noto-bold, bold);
-                font-style:italic;
+                @include fontStyle(noto-bold, bold, italic);
                 color:#444;
                 span {
                   display:block;
@@ -51,8 +50,7 @@
               dd{
                 margin-bottom:46px;
                 color:#555;
-                font-style:italic;
-                @include fontStyle(noto-regular, 600);
+                @include fontStyle(noto-regular, 600, italic);
                 span{
                   display:block;
                 }
@@ -95,8 +93,7 @@
         padding:60px 35px 0 35px;
         .tit{
           text-align:center;
-          @include fontStyle(noto-bold, 600);
-          font-style:italic;
+          @include fontStyle(noto-bold, 600, italic);
           font-weight:600;
           font-size:24px;
           line-height:27px;
@@ -150,14 +147,14 @@
     @include innerWrap;
     .tit{
       margin-bottom:30px;
-      @include fontStyle(noto-bold, 600);
+      @include fontStyle(noto-bold, 600, normal);
       font-size:24px;
       line-height:27px;
     }
     .date{
       display:block;
       margin-bottom:50px;
-      @include fontStyle(note-regular, 600);
+      @include fontStyle(note-regular, 600, normal);
       font-size:15px;
       line-height:18px;
     }
@@ -168,7 +165,7 @@
     }
     .list_view_text {
       margin-bottom:68px;
-      @include fontStyle(noto-regular, 600);
+      @include fontStyle(noto-regular, 600, normal);
       font-size:14px;
       text-align:left;
     }
@@ -212,12 +209,12 @@
             padding-left:376px;
             dt {
               margin-bottom:25px;
-              @include fontStyle(noto-bold, 600);
+              @include fontStyle(noto-bold, 600, normal);
               font-size: 18px;
             }
             dd {
               margin-bottom:63px;
-              @include fontStyle(noto-regular, 600);
+              @include fontStyle(noto-regular, 600, normal);
               font-size: 14px;
               &.date {
                 margin-right:15px;
@@ -257,7 +254,7 @@
         }
         strong {
             display:block;
-      @include fontStyle(noto-bold, 600);
+      @include fontStyle(noto-bold, 600, normal);
       font-size:18px;
       color:#444;
       margin-bottom:25px;
@@ -265,7 +262,7 @@
         span{
           margin-top:25px;
           display:block;
-          @include fontStyle(noto-regular, 600);
+          @include fontStyle(noto-regular, 600, normal);
           font-size:14px;
           color:#555;
         }

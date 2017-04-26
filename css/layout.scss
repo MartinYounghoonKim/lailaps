@@ -312,6 +312,18 @@ $product-link : ".contents__product-link";
                 @include afterClear;
             }
         }
+        &__bottom-banner{
+            ul{
+                li{
+                    float:left;
+                    width:25%;
+                    @include crossBrowsing("transform", skew(-12deg));
+                }
+                &:after{
+                    @include afterClear;
+                }
+            }
+        }
     }
 
 }
