@@ -230,65 +230,78 @@ $borderColor: #e2e2e2;
     작성자 : 정진배
 *********************************************************************************
 */
-.promotion_box{
-  position:relative;
-  background-color:#fff;
-  border-top:1px solid $mainColor;
-  border-bottom:1px solid $borderColor;
-  a{
-    display:block;
-    overflow:hidden;
-    padding:28px 0 28px 25px;
-    .thumbnail_img {
-      float:left;
-      position:relative;
-    }
-    dl {
-      position:absolute;
-      padding-left:376px;
-      dt {
-        margin-bottom:25px;
-        @include fontStyle(noto-bold, 600);
-        font-size: 18px;
-      }
-      dd {
-        margin-bottom:63px;
-        @include fontStyle(noto-regular, 600);
-        font-size: 14px;
-        &.date {
-          margin-right:15px;
-        }
-        &.date, &.hits{
-          display:inline-block;
-          margin-bottom:0;
-        }
-      }
-    }
-    .arrow {
-      position:absolute;
-      bottom:28px;
-      right:17px;
-    }
-  }
-}
-.promotion_contents{
-  padding:40px 18px;
-  border-top:1px solid $mainColor;
-  background-color:#fff;
-  text-align:center;
-  .promotion_view{
-    margin-bottom:40px;
-  }
-  .txt {
-    margin-bottom:25px;
-    @include fontStyle(noto-bold, 600);
-    font-size:18px;
-    color:#444;
-    span{
+.promotion_wrap{
+  margin-bottom:20px;
+  .promotion_box{
+    position:relative;
+    background-color:#fff;
+    border-top:1px solid $mainColor;
+    border-bottom:1px solid $borderColor;
+    a{
       display:block;
-      @include fontStyle(noto-regular, 600);
-      font-size:14px;
-      color:#555;
+      overflow:hidden;
+      padding:28px 0 28px 25px;
+      .thumbnail_img {
+        float:left;
+        position:relative;
+      }
+      dl {
+        position:absolute;
+        padding-left:376px;
+        dt {
+          margin-bottom:25px;
+          @include fontStyle(noto-bold, 600);
+          font-size: 18px;
+        }
+        dd {
+          margin-bottom:63px;
+          @include fontStyle(noto-regular, 600);
+          font-size: 14px;
+          &.date {
+            margin-right:15px;
+          }
+          &.date, &.hits{
+            display:inline-block;
+            margin-bottom:0;
+          }
+        }
+      }
+      .arrow {
+        position:absolute;
+        bottom:28px;
+        right:17px;
+      }
+    }
+    .promotion_ing, .promotion_end {
+        position:absolute;
+        top:0;
+        right:0;
+    }
+  }
+  .promotion_contents{
+    display:none;
+    padding:40px 18px;
+    border-top:1px solid $mainColor;
+    background-color:#fff;
+    text-align:center;
+    &.on {
+      display:block;
+      box-shadow:1px 1px 1px 1px #f0f0f0;
+    }
+    .promotion_view{
+      margin-bottom:40px;
+    }
+    .txt {
+      @include fontStyle(noto-bold, 600);
+      font-size:18px;
+      color:#444;
+      span{
+        margin-top:25px;
+        display:block;
+        @include fontStyle(noto-regular, 600);
+        font-size:14px;
+        color:#555;
+      }
     }
   }
 }
