@@ -41,6 +41,7 @@ $basicColor: #00afff;
   }
 }
 
+
 /**********************************************************************************
     레이아웃 스타일
 **********************************************************************************/
@@ -119,6 +120,7 @@ $borderColor: #e2e2e2;
                     position:relative;
                     display:inline-block;
                     margin-right:30px;
+                    padding-bottom:28px;
                     > a{
                         display:block;
                         font-size:17px;
@@ -161,16 +163,9 @@ $borderColor: #e2e2e2;
                         li{
                             margin-bottom:4px;
                             text-align:left;
-                            /*추가*/
-                            -moz-transition: none;
-                            transition: none;
-                            -webkit-transform: translateY(30px) skew(-8deg);
-                            -moz-transform: translateY(30px) skew(-8deg);
-                            -ms-transform: translateY(30px) skew(-8deg);
-                            -o-transform: translateY(30px) skew(-8deg);
-                            transform: translateY(30px) skew(-8deg);
                             opacity: 0;
-                            /*추가*/
+                            @include crossBrowsing("transition",none);
+                            @include crossBrowsing("transform",translateY(30px) skew(-8deg));
                             a{
                                 display:block;
                                 padding:18px 0 15px 24px;
@@ -180,19 +175,21 @@ $borderColor: #e2e2e2;
                                 background-color: $basicColor;
                                 @include crossBrowsing("transform", skew(-12deg));
                             }
-                            @mixin test($index, $effect, $value){
+                            $listinit: list01 list02 list03 list04 list05 list06;
+                            @mixin eachFunction($index, $effect, $value){
                                 &:nth-child(#{$index}){
                                     @include crossBrowsing($effect, $value);
                                 }
                             }
-                            $listinit: list01 list02 list03 list04 list05 list06;
                             @for $i from 1 through length($listinit){
                                 &:nth-child(#{$i}) {
-                                    @include test($i, transition-delay, .2s * $i);
-                                    @include test($i, transform, translateX(-8px * $i + 8px ));
+                                    @include eachFunction($i, transition-delay, .2s * $i);
+                                    @include eachFunction($i, transform, translateX(-8px * $i + 8px ));
                                 }
                             }
+
                         }
+
                         &:after{
                             @include afterClear;
                         }
@@ -215,6 +212,15 @@ $borderColor: #e2e2e2;
                             }
                             li:nth-child(3){
                                 transition:width .2s, margin .2s, padding .2s, transform .2s cubic-bezier(0, 0, 0, 1) 0.55s, opacity .2s cubic-bezier(0, 0, 0, 1) 0.55s;
+                            }
+                            li:nth-child(4){
+                                transition:width .2s, margin .2s, padding .2s, transform .2s cubic-bezier(0, 0, 0, 1) 0.70s, opacity .2s cubic-bezier(0, 0, 0, 1) 0.70s;
+                            }
+                            li:nth-child(5){
+                                transition:width .2s, margin .2s, padding .2s, transform .2s cubic-bezier(0, 0, 0, 1) 0.85s, opacity .2s cubic-bezier(0, 0, 0, 1) 0.85s;
+                            }
+                            li:nth-child(6){
+                                transition:width .2s, margin .2s, padding .2s, transform .2s cubic-bezier(0, 0, 0, 1) 1s, opacity .2s cubic-bezier(0, 0, 0, 1) 1s;
                             }
                         }
                     }
