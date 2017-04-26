@@ -1,0 +1,40 @@
+/**********************************************************************************
+                            공통 함수에 대한 기본 설정
+**********************************************************************************/
+
+@mixin crossBrowsing($parameter, $value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$parameter}: $value;
+    }
+}
+@mixin afterClear {
+    content:"";
+    display:block;
+    clear:both;
+}
+@mixin wraping{
+    width:1040px;
+    margin:0 auto;
+}
+@mixin outerWrap{
+    width:1400px;
+    margin:0 auto;
+}
+@mixin innerWrap{
+    width:800px;
+    margin:0 auto;
+}
+@mixin fontStyle($parameter, $weight){
+  font-family :$parameter;
+  font-weight:$weight;
+}
+
+@mixin boxStyle{
+    border-top:1px solid $mainColor;
+    border-bottom:1px solid $borderColor;
+    background-color: #fff;
+}
+
+/* 공통 컬러 함수 선언 */
+$mainColor: #00afff;
+$borderColor: #e2e2e2;

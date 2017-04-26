@@ -1,47 +1,4 @@
-/**********************************************************************************
-                            font 에 대한 기본 설정
-**********************************************************************************/
-
-
-/**********************************************************************************
-                            공통 함수에 대한 기본 설정
-**********************************************************************************/
-
-@mixin crossBrowsing($parameter, $value) {
-    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
-        #{$prefix}#{$parameter}: $value;
-    }
-}
-@mixin afterClear {
-    content:"";
-    display:block;
-    clear:both;
-}
-@mixin wraping{
-    width:1040px;
-    margin:0 auto;
-}
-@mixin outerWrap{
-    width:1400px;
-    margin:0 auto;
-}
-@mixin innerWrap{
-    width:800px;
-    margin:0 auto;
-}
-@mixin fontStyle($parameter, $weight){
-  font-family :$parameter;
-  font-weight:$weight;
-}
-
-/* 공통 컬러 함수 선언 */
-$mainColor: #00afff;
-$borderColor: #e2e2e2;
-
-/* 공통 컬러 함수 선언 */
-$mainColor: #00afff;
-$borderColor: #e2e2e2;
-
+@import "module";
 
 /*
 *********************************************************************************
@@ -63,9 +20,7 @@ $borderColor: #e2e2e2;
         li {
           position:relative;
           margin-bottom:20px;
-          border-top:1px solid $mainColor;
-          border-bottom:1px solid $borderColor;
-          background-color:#fff;
+          @include boxStyle;
           &:last-child{
             margin-bottom:0;
           }
@@ -134,9 +89,7 @@ $borderColor: #e2e2e2;
       float:right;
       width:calc(50% - 15px);
       margin-left:25px;
-      background-color:#fff;
-      border:1px solid $borderColor;
-      border-top:1px solid $mainColor;
+      @include boxStyle;
       text-align:center;
       &_wrap{
         padding:60px 35px 0 35px;
@@ -190,9 +143,8 @@ $borderColor: #e2e2e2;
 
 .news__view__box {
   padding:60px 0 40px;
+  @include boxStyle;
   border-top:8px solid $mainColor;
-  border-bottom:1px solid #e4e4e4;
-  background-color:#fff;
   text-align:center;
   .innerWrap{
     @include innerWrap;
@@ -305,12 +257,14 @@ $borderColor: #e2e2e2;
         }
         strong {
             display:block;
-            @include fontStyle(noto-bold, 600);
-            font-size:18px;
-            color:#444;
-            margin-bottom:25px;
+      @include fontStyle(noto-bold, 600);
+      font-size:18px;
+      color:#444;
+      margin-bottom:25px;
         }
         span{
+          margin-top:25px;
+          display:block;
           @include fontStyle(noto-regular, 600);
           font-size:14px;
           color:#555;
