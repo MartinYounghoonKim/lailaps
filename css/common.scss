@@ -101,10 +101,10 @@ $btnColor04: #2FC600;
     line-height:16px;
 }
 @mixin btnM{
-    height:19px;
-    padding:8px 20px 11px;
-    font-size:16px;
-    line-height:18px;
+    height:20px;
+    padding:7px 64px 4px;
+    font-size:14px;
+    line-height:16px;
 }
 @mixin btnL{
     height:22px;
@@ -141,7 +141,7 @@ $btnColor04: #2FC600;
         @include btnM;
         &.btn-line{
             height:20px;
-            padding:5px 20px 11px;
+            padding:7px 64px 4px;
         }
     }
     &-l{
