@@ -1,3 +1,5 @@
+@import "module";
+
 /*
 *********************************************************************************
     basic.scss 작성
@@ -5,35 +7,6 @@
     작성자 : 김영훈
 *********************************************************************************
 */
-/**********************************************************************************
-    공통 함수
-**********************************************************************************/
-@mixin crossBrowsing($parameter, $value) {
-    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
-        #{$prefix}#{$parameter}: $value;
-    }
-}
-@mixin afterClear {
-    content:"";
-    display:block;
-    clear:both;
-}
-@mixin wraping{
-    width:1040px;
-    margin:0 auto;
-}
-@mixin outerWrap{
-    width:1400px;
-    margin:0 auto;
-}
-@mixin fontStyle($parameter, $weight){
-  font-family :$parameter;
-  font-weight:$weight;
-}
-
-/* 공통 컬러 함수 선언 */
-$mainColor: #00afff;
-$borderColor: #e2e2e2;
 
 /**********************************************************************************
     가이드 스타일
@@ -249,6 +222,9 @@ $btnColor04: #2FC600;
       display:inline-block;
       float:left;
       margin-right:5px;
+      &.next {
+          margin-right:0;
+      }
     }
     ul {
       float:left;
@@ -271,6 +247,9 @@ $btnColor04: #2FC600;
           border:1px solid $borderColor;
           background-color:#fff;
           padding:8px 0 7px;
+          &.on {
+              color: $mainColor;
+          }
         }
       }
     }
