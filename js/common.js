@@ -221,7 +221,7 @@ $(function(){
         e.preventDefault();
         if($(this).parent().hasClass("on")){
             $(this).parent().removeClass("on");
-            $(this).parent().next().slideUp("fast");
+            $(this).parent().next().slideUp("slow");
             promotionArrow.attr("src", "../images/arrow/arrow02.png")
         } else {
             promotionBtn.parent().next().slideUp();
