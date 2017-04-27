@@ -265,6 +265,7 @@ $certification : ".contents_certification";
                 height:12px;
                 vertical-align:middle;
             }
+            /* 2017-04-27 해당 기능 안씀으로 인해 삭제
             .prev {
                 display:inline-block;
                 width:12px;
@@ -280,7 +281,7 @@ $certification : ".contents_certification";
                 margin-left:17px;
                 background:url("visual_indicator.png") no-repeat -134px 0;
                 vertical-align:middle;
-            }
+            }*/
             button span	{
                 display:block;
                 width:0;
@@ -303,6 +304,7 @@ $certification : ".contents_certification";
                 .sale_state img	{
                     width:50px;
                 }
+                /* 2017-04-27 prev 기능 안씀으로 인해 삭제
                 .prev {
                     position:absolute;
                     top:225px;
@@ -319,7 +321,7 @@ $certification : ".contents_certification";
                         text-indent:100%;
                         font-size:0;
                     }
-                }
+                }*/
                 .stop {
                     display:none;
                     vertical-align:middle;
@@ -331,6 +333,7 @@ $certification : ".contents_certification";
                         font-size:0;
                     }
                 }
+                /* 2017-04-27 next 기능 안씀으로 인해 삭제
                 .next	{
                     position:absolute;
                     top:225px;
@@ -346,7 +349,7 @@ $certification : ".contents_certification";
                         text-indent:100%;
                         font-size:0;
                     }
-                }
+                }*/
             }
         }
     }
