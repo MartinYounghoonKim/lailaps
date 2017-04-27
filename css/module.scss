@@ -63,6 +63,10 @@ $basicColor: #00afff;
 @mixin letterCut{
     display:-webkit-box;
     -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    word-wrap: break-word;
 }
 
 /* 공통 컬러 함수 선언 */
