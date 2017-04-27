@@ -31,6 +31,8 @@
             .thumbnail_img{
               position:absolute;
               float:left;
+              width:183px;
+              height:155px;
             }
             dl {
               position:relative;
@@ -43,8 +45,7 @@
                 font-size:18px;
                 line-height:23px;
                 letter-spacing:-1px;
-                @include fontStyle(noto-bold, bold);
-                font-style:italic;
+                @include fontStyle(noto-bold, bold, italic);
                 color:#444;
                 span {
                   display:block;
@@ -55,9 +56,8 @@
                 margin-bottom:41px;
                 height:36px;
                 color:#555;
-                font-style:italic;
-                @include fontStyle(noto-regular, 600);
                 line-height:18px;
+                @include fontStyle(noto-regular, 100, italic);
                 span{
                   display:block;
                 }
@@ -104,8 +104,7 @@
         padding:60px 35px 0 35px;
         .tit{
           text-align:center;
-          @include fontStyle(noto-medium, 100);
-          font-style:italic;
+          @include fontStyle(noto-medium, 100, italic);
           font-size:24px;
           line-height:30px;
           padding:0 15px 22px 15px;
@@ -122,8 +121,9 @@
           margin-bottom:35px;
           text-align:center;
           font-size:14px;
-          line-height:20px;
+          line-height:21px;
           color:#444;
+          @include fontStyle(noto-regular, 100, normal);
         }
       }
       .btn_wrap {
@@ -159,14 +159,14 @@
     @include innerWrap;
     .tit{
       margin-bottom:30px;
-      @include fontStyle(noto-bold, 600);
+      @include fontStyle(noto-bold, 600, normal);
       font-size:24px;
       line-height:27px;
     }
     .date{
       display:block;
       margin-bottom:50px;
-      @include fontStyle(note-light, 100);
+      @include fontStyle(note-light, 100, normal);
       font-size:15px;
       line-height:18px;
     }
@@ -181,7 +181,7 @@
     }
     .list_view_text {
       margin-bottom:68px;
-      @include fontStyle(noto-regular, 100);
+      @include fontStyle(noto-regular, 100, normal);
       font-size:14px;
       line-height:21px;
       text-align:left;
@@ -225,13 +225,13 @@
             position:relative;
             padding-left:376px;
             dt {
-              margin-bottom:25px;
-              @include fontStyle(noto-bold, 600);
+              margin-bottom:19px;
+              @include fontStyle(noto-bold, 600, normal);
               font-size: 18px;
             }
             dd {
               margin-bottom:63px;
-              @include fontStyle(noto-regular, 600);
+              @include fontStyle(noto-regular, 100, italic);
               font-size: 14px;
               color:#555;
               &.date {
@@ -272,15 +272,14 @@
         }
         strong {
             display:block;
-      @include fontStyle(noto-bold, 600);
+      @include fontStyle(noto-bold, 600, italic);
       font-size:18px;
       color:#444;
       margin-bottom:25px;
         }
         span{
-          margin-top:25px;
           display:block;
-          @include fontStyle(noto-regular, 600);
+          @include fontStyle(noto-regular, 100, italic);
           font-size:14px;
           line-heighT:17px;
           color:#555;

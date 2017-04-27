@@ -1,6 +1,28 @@
 /**********************************************************************************
                             공통 함수에 대한 기본 설정
 **********************************************************************************/
+/**********************************************************************************
+    공통 함수
+**********************************************************************************/
+$basicColor: #00afff;
+@mixin basicFontSize{
+    font-size:18px;
+    line-height:20px;
+}
+@mixin removeBetween{
+    font-size:0;
+    line-height:0;
+}
+@mixin horizonCenter($w, $h) {
+    position:absolute;
+    left:50%;
+    margin-left:-($w/2);
+}
+@mixin verticalCenter($w, $h) {
+    position:absolute;
+    top:50%;
+    margin:-($h/2) 0 0 -($w/2);
+}
 
 @mixin crossBrowsing($parameter, $value) {
     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
@@ -24,9 +46,12 @@
     width:800px;
     margin:0 auto;
 }
-@mixin fontStyle($parameter, $weight){
+@mixin fontStyle($parameter, $weight, $style){
   font-family :$parameter;
   font-weight:$weight;
+  @if $style{
+      font-style:$style;
+  }
 }
 
 @mixin boxStyle{
