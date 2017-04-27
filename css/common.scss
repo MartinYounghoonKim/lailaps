@@ -162,7 +162,6 @@ $btnColor04: #2FC600;
     }
     &-color-type01{
         background-color: $btnColor01;
-        @include fontStyle(noto-regular, 600, normal);
         &.disabled{
 
         }
