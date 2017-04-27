@@ -209,7 +209,7 @@
         a{
           display:block;
           overflow:hidden;
-          padding:28px 0 28px 25px;
+          padding:28px 130px 28px 25px;
           .thumbnail_img {
             width:331px;
             height:140px;
@@ -228,6 +228,7 @@
               margin-bottom:19px;
               @include fontStyle(noto-bold, 600, normal);
               font-size: 18px;
+              line-height:21px;
             }
             dd {
               margin-bottom:63px;
