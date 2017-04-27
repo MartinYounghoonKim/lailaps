@@ -200,9 +200,13 @@ $borderColor: #e2e2e2;
 /********** contents **********/
 $features : ".contents__features-wrap";
 $product-link : ".contents__product-link";
+$winner : ".contents__winner";
+$repair : ".contents__repair";
+$certification : ".contents_certification";
 #contents.main{
+    margin-bottom:70px;
     #{$features} {
-        padding:85px 0 185px;
+        padding:85px 0 90px;
         h2{
             margin-bottom:38px;
             font-size:46px;
@@ -213,6 +217,7 @@ $product-link : ".contents__product-link";
             @include fontStyle("noto-light", 100, normal);
         }
         ul{
+            margin-bottom:50px;
             @include removeBetween;
             text-align:center;
             li{
@@ -276,6 +281,7 @@ $product-link : ".contents__product-link";
         }
     }
     #{$product-link} {
+        margin-bottom:90px;
         &__top-banner{
             &__left{
                 position:relative;
@@ -313,17 +319,199 @@ $product-link : ".contents__product-link";
             }
         }
         &__bottom-banner{
+            overflow:hidden;
+            margin-bottom:50px;
+            text-align:center;
             ul{
+                display:inline-block;
+                width:110%;
+                margin-left:-5%;
+                @include removeBetween;
                 li{
+                    &:before{
+                        content:"";
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:100%;
+                        height:100%;
+                        background:rgba(0,0,0, 0.3);
+                        z-index:2;
+                        @include crossBrowsing("transition",all 2s ease);
+                    }
+                    &:hover:before{
+                        background:rgba(0,0,0, 0.5);
+                    }
+                    position:relative;
+                    overflow:hidden;
                     float:left;
-                    width:25%;
+                    width:18%;
+                    height:489px;
+                    font-size:18px;
+                    line-height:20px;
                     @include crossBrowsing("transform", skew(-12deg));
+                    div{
+                        position:relative;
+                        box-sizing:border-box;
+                        width:100%;
+                        height:100%;
+                        padding-top:190px;
+                        z-index:3;
+                        @include crossBrowsing("transform", skew(12deg));
+                        dfn{
+                            display:block;
+                            text-transform:uppercase;
+                            font-style:normal;
+                            color:#fff;
+                            font-size:36px;
+                            line-height:38px;
+                            @include fontStyle("noto-bold", 600, normal);
+                            padding-top:74px;
+                            background-position:center top;
+                            background-repeat:no-repeat;
+                            @include crossBrowsing("transition",all 1s cubic-bezier(0.25,0.1,0.25,1));
+                        }
+                        .btn{
+                            opacity:0;
+                            @include crossBrowsing("transition", all 1s cubic-bezier(0.25,0.1,0.75,1));
+                            @include crossBrowsing(transform, translateX(-16px) translateY(20px) skew(-8deg));
+                        }
+                    }
+                    &:after{
+                        content:"";
+                        position:absolute;
+                        left:-52px;
+                        top:0;
+                        width:138%;
+                        height:100%;
+                        background-repeat:no-repeat;
+                        background-position:center 0;
+                        @include crossBrowsing("transform", skew(12deg));
+                        z-index:1;
+                    }
+                    &:nth-child(1){
+                        width:23%;
+                        div{
+                            @include crossBrowsing("transform", translateX(27px) skew(12deg));
+                            dfn{
+                                background-image:url("../images/icon/main_product_icon01.png");
+                            }
+                        }
+                        &:after{
+                            background-image:url("../images/img/product_banner_img01.png");
+                        }
+                    }
+                    &:nth-child(2){
+                        div dfn{
+                            background-image:url("../images/icon/main_product_icon02.png");
+                        }
+                        &:after{
+                            background-image:url("../images/img/product_banner_img02.png");
+                        }
+                    }
+                    &:nth-child(3){
+                        div dfn{
+                            background-image:url("../images/icon/main_product_icon03.png");
+                        }
+                        &:after{
+                            background-image:url("../images/img/product_banner_img03.png");
+                        }
+                    }
+                    &:nth-child(4){
+                        div dfn{
+                            background-image:url("../images/icon/main_product_icon04.png");
+                        }
+                        &:after{
+                            background-image:url("../images/img/product_banner_img04.png");
+                        }
+                    }
+                    &:nth-child(5){
+                        width:23%;
+                        div{
+                            @include crossBrowsing("transform", translateX(-34px) skew(12deg));
+                             dfn{
+                                 background-image:url("../images/icon/main_product_icon05.png");
+                             }
+                        }
+                        &:after{
+                            background-image:url("../images/img/product_banner_img05.png");
+                        }
+                    }
+                    &:hover{
+                        dfn{
+                            @include crossBrowsing(transition-delay, .1s);
+                            @include crossBrowsing(transform, translateY(-50px));
+                        }
+                        .btn{
+                            @include crossBrowsing(transition-delay, .3s);
+                            @include crossBrowsing(transform,translateX(-16px) translateY(-10px) skew(-8deg));
+                            opacity:1;
+                        }
+                    }
                 }
                 &:after{
                     @include afterClear;
                 }
             }
         }
+    }
+    #{$winner} {
+        height:500px;
+        background:url("../images/bg/main_winner_bg.png") center top no-repeat;
+    }
+    #{$repair} {
+        padding:90px 0 85px;
+        .outer_wrap{
+            .contents__repair__paragraph{
+                width:447px;
+                float:right;
+                h2{
+                    margin-bottom:56px;
+                    font-size:46px;
+                    line-height:48px;
+                    color:$basicColor;
+                    @include fontStyle("noto-bold", 600, normal);
+                }
+                > p{
+                    font-size:14px;
+                    line-height:21px;
+                    margin-bottom:19px;
+                    &.last{
+                        margin-bottom:110px;
+                    }
+                }
+                .contents__repair__paragraph__app-wrap{
+                    position:relative;
+                    height:116px;
+                    padding:15px 15px 15px 210px;
+                    background-color:$basicColor;
+                    img{
+                        position:absolute;
+                        left:15px;
+                        top:15px;
+                    }
+                    div{
+                        color:#fff;
+                        p{
+                            font-size:14px;
+                            line-height:21px;
+                            margin-bottom:20px;
+                        }
+                    }
+                    &:after{
+                        @include afterClear;
+                    }
+                }
+            }
+            &:after{
+                @include afterClear;
+            }
+        }
+
+    }
+    #{$certification} {
+        height:500px;
+        background:#f5f5f5 url("../images/bg/main_certification_bg.png") center bottom no-repeat;
     }
 
 }
