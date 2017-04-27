@@ -223,33 +223,31 @@ $certification : ".contents_certification";
                     top:0;
                     left:50%;
                     margin-left:-960px;
-                    img	{
-                        height:500px;
-                    }
                 }
             }
         }
         .tabs	{
             position:absolute;
-            bottom:31px;
+            bottom:53px;
             width:100%;
             z-index:2;
             text-align:center;
             ul	{
                 display:inline-block;
                 vertical-align:middle;
+                @include removeBetween;
                 li	{
                     display:inline-block;
-                    margin:0 2px;
+                    margin:0 6px;
                     button	{
                         display:inline-block;
                         width:60px;
-                        height:3px;
-                        background:url("../images/btn/slide_btn_off.png") no-repeat 0 0;
+                        height:20px;
+                        background:url("../images/btn/slide_btn_off.png") no-repeat 0 center;
                         vertical-align:middle;
                     }
                     &.on button	{
-                        background:url("../images/btn/slide_btn_on.png") no-repeat 0 0;
+                        background:url("../images/btn/slide_btn_on.png") no-repeat 0 center;
                     }
                 }
             }
@@ -805,7 +803,7 @@ $certification : ".contents_certification";
             }
         }
     }
-    
+
 /* contents*/
 .sub {
   padding: 80px 0 145px 0;
