@@ -35,6 +35,11 @@
     background-color: #fff;
 }
 
+@mixin letterCut{
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+}
+
 /* 공통 컬러 함수 선언 */
 $mainColor: #00afff;
 $borderColor: #e2e2e2;

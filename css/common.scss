@@ -161,7 +161,7 @@ $btnColor04: #2FC600;
     }
     &-color-type01{
         background-color: $btnColor01;
-        @include fontStyle(noto-regular, 600);
+        @include fontStyle(noto-medium, 100);
         &.disabled{
 
         }
@@ -174,7 +174,7 @@ $btnColor04: #2FC600;
     &-color-type02{
         color: $mainColor;
         background-color: $btnColor02;
-        @include fontStyle(noto-regular, 600);
+        @include fontStyle(noto-medium, 100);
         &.btn-line{
             border:2px solid $btnColor02;
             color:$btnColor02;
@@ -206,7 +206,7 @@ $btnColor04: #2FC600;
 **********************************************************************************/
 
 .tit01 {
-    @include fontStyle(noto-light, 100);
+    @include fontStyle(noto-demilight, 100);
     font-size:46px;
     line-height:48px;
     margin-bottom:60px;
@@ -261,4 +261,11 @@ $btnColor04: #2FC600;
 **********************************************************************************/
 .box_shadow {
   box-shadow:1px 1px 1px 1px #f0f0f0;
+}
+
+
+@media all and (max-width:800px){
+    .tit01 {
+        margin-bottom:30px;
+    }
 }

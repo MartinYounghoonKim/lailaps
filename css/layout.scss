@@ -374,3 +374,17 @@ $borderColor: #e2e2e2;
   padding-top: 80px;
   background-color:#f6f6f6;
 }
+
+
+@media all and (max-width:800px){
+    #header {
+        display:none;
+    }
+    .wrap {
+        width:auto;
+        padding:16px;
+    }
+}
+@media all and (max-width:640px){
+
+}
