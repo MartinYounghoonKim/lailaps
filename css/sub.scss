@@ -31,40 +31,49 @@
             .thumbnail_img{
               position:absolute;
               float:left;
+              width:183px;
+              height:155px;
             }
             dl {
               position:relative;
               overflow:hidden;
               padding-left:203px;
               dt{
-                margin-bottom:22px;
+                height:46px;
+                overflow:hidden;
+                margin-bottom:16px;
                 font-size:18px;
-                line-height:20px;
+                line-height:23px;
                 letter-spacing:-1px;
-                @include fontStyle(noto-bold, bold);
-                font-style:italic;
+                @include fontStyle(noto-bold, bold, italic);
                 color:#444;
                 span {
                   display:block;
                 }
               }
               dd{
-                margin-bottom:46px;
+                overflow:hidden;
+                margin-bottom:41px;
+                height:36px;
                 color:#555;
-                font-style:italic;
-                @include fontStyle(noto-regular, 600);
+                line-height:18px;
+                @include fontStyle(noto-regular, 100, italic);
                 span{
                   display:block;
                 }
                 &.date{
+                    overflow:visible;
                   float:left;
+                  height:auto;
                   margin-bottom:0;
                   margin-right:15px;
                   color:#222;
                   font-style:normal;
                 }
                 &.hits{
+                    overflow:visible;
                   margin-bottom:0;
+                  height:auto;
                   float:left;
                   color:#222;
                   span{
@@ -95,11 +104,9 @@
         padding:60px 35px 0 35px;
         .tit{
           text-align:center;
-          @include fontStyle(noto-bold, 600);
-          font-style:italic;
-          font-weight:600;
+          @include fontStyle(noto-medium, 100, italic);
           font-size:24px;
-          line-height:27px;
+          line-height:30px;
           padding:0 15px 22px 15px;
           border-bottom:1px solid $borderColor;
           margin-bottom:25px;
@@ -114,7 +121,9 @@
           margin-bottom:35px;
           text-align:center;
           font-size:14px;
+          line-height:21px;
           color:#444;
+          @include fontStyle(noto-regular, 100, normal);
         }
       }
       .btn_wrap {
@@ -150,26 +159,31 @@
     @include innerWrap;
     .tit{
       margin-bottom:30px;
-      @include fontStyle(noto-bold, 600);
+      @include fontStyle(noto-bold, 600, normal);
       font-size:24px;
       line-height:27px;
     }
     .date{
       display:block;
       margin-bottom:50px;
-      @include fontStyle(note-regular, 600);
+      @include fontStyle(note-light, 100, normal);
       font-size:15px;
       line-height:18px;
     }
-    .thumbnail_view {
-      width:100%;
-      height:auto;
-      margin-bottom:50px;
+    .img_wrap{
+        width:596px;
+        margin:0 auto;
+        margin-bottom:50px;
+        .thumbnail_view {
+          width:100%;
+          height:auto;
+        }
     }
     .list_view_text {
       margin-bottom:68px;
-      @include fontStyle(noto-regular, 600);
+      @include fontStyle(noto-regular, 100, normal);
       font-size:14px;
+      line-height:21px;
       text-align:left;
     }
   }
@@ -195,7 +209,7 @@
         a{
           display:block;
           overflow:hidden;
-          padding:28px 0 28px 25px;
+          padding:28px 130px 28px 25px;
           .thumbnail_img {
             width:331px;
             height:140px;
@@ -211,14 +225,16 @@
             position:relative;
             padding-left:376px;
             dt {
-              margin-bottom:25px;
-              @include fontStyle(noto-bold, 600);
+              margin-bottom:19px;
+              @include fontStyle(noto-bold, 600, normal);
               font-size: 18px;
+              line-height:21px;
             }
             dd {
               margin-bottom:63px;
-              @include fontStyle(noto-regular, 600);
+              @include fontStyle(noto-regular, 100, italic);
               font-size: 14px;
+              color:#555;
               &.date {
                 margin-right:15px;
               }
@@ -257,18 +273,51 @@
         }
         strong {
             display:block;
-      @include fontStyle(noto-bold, 600);
+      @include fontStyle(noto-bold, 600, italic);
       font-size:18px;
       color:#444;
       margin-bottom:25px;
         }
         span{
-          margin-top:25px;
           display:block;
-          @include fontStyle(noto-regular, 600);
+          @include fontStyle(noto-regular, 100, italic);
           font-size:14px;
+          line-heighT:17px;
           color:#555;
         }
       }
     }
+}
+
+@media all and (max-width:800px){
+    #header{
+        display:none;
+    }
+
+    /*
+    *********************************************************************************
+        news.scss 반응형 작성
+        작성일 : 2017.04.26
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    .news {
+        padding-top:0;
+        padding-bottom:40px;
+        &__contents {
+            &__leftBox {
+                width:100%;
+
+            }
+            &__rightBox {
+                display:none;
+            }
+        }
+    }
+
+}
+
+@media all and (max-width:640px){
+
 }

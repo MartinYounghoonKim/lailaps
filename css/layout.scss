@@ -5,42 +5,7 @@
     작성자 : 김영훈
 *********************************************************************************
 */
-/**********************************************************************************
-    공통 함수
-**********************************************************************************/
-$basicColor: #00afff;
-@mixin basicFontSize{
-    font-size:18px;
-    line-height:20px;
-}
-@mixin crossBrowsing($parameter, $value) {
-    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
-        #{$prefix}#{$parameter}: $value;
-    }
-}
-@mixin afterClear {
-    content:"";
-    display:block;
-    clear:both;
-}
-@mixin horizonCenter($w, $h) {
-    position:absolute;
-    left:50%;
-    margin-left:-($w/2);
-}
-@mixin verticalCenter($w, $h) {
-    position:absolute;
-    top:50%;
-    margin:-($h/2) 0 0 -($w/2);
-}
-@mixin fontStyle($parameter, $weight, $style){
-  font-family :$parameter;
-  font-weight:$weight;
-  @if $style{
-      font-style:$style;
-  }
-}
-
+@import "module";
 
 /**********************************************************************************
     레이아웃 스타일
@@ -71,14 +36,14 @@ $borderColor: #e2e2e2;
     레이아웃 스타일
 **********************************************************************************/
 
-/* 공통 wrap */
+/********** 공통 wrap **********/
 .wrap{
   @include wraping;
 }
 .outer_wrap{
   @include outerWrap;
 }
-/* header */
+/********** header **********/
 #header{
     height:180px;
     background-image:url("../images/bg/gnb_bg.png");
@@ -232,6 +197,136 @@ $borderColor: #e2e2e2;
         }
     }
 }
+/********** contents **********/
+$features : ".contents__features-wrap";
+$product-link : ".contents__product-link";
+#contents.main{
+    #{$features} {
+        padding:85px 0 185px;
+        h2{
+            margin-bottom:38px;
+            font-size:46px;
+            line-height:48px;
+            color: $basicColor;
+            text-transform:uppercase;
+            text-align:center;
+            @include fontStyle("noto-light", 100, normal);
+        }
+        ul{
+            @include removeBetween;
+            text-align:center;
+            li{
+                overflow:hidden;
+                position:relative;
+                display:inline-block;
+                box-sizing:border-box;
+                width:330px;
+                height:380px;
+                padding:0 12px;
+                > div {
+                    position:relative;
+                    display:table;
+                    width:100%;
+                    height:100%;
+                    z-index:1;
+                    text-transform:uppercase;
+                    div{
+                        display:table-cell;
+                        vertical-align:middle;
+                        color:#fff;
+                        dfn{
+                            display:block;
+                            margin-bottom:16px;
+                            font-size:24px;
+                            line-height:26px;
+                            @include fontStyle("noto-bold", 600, italic);
+                        }
+                        p{
+                            font-size:14px;
+                            line-height:20px;
+                            @include fontStyle("noto-regular", 300, italic);
+                        }
+                    }
+                }
+                &:after{
+                    content:"";
+                    display:block;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    width:100%;
+                    height:100%;
+                    background-repeat:no-repeat;
+                    background-position:0 0;
+                    transition:all 1.2s ease;
+                }
+                &:nth-child(1):after{
+                    background-image:url("../images/bg/main_feature_banner_bg01.png");
+                }
+                &:nth-child(2):after{
+                    background-image:url("../images/bg/main_feature_banner_bg02.png");
+                }
+                &:nth-child(3):after{
+                    background-image:url("../images/bg/main_feature_banner_bg03.png");
+                }
+                &:hover:after{
+                    transform:scale(1.1);
+                }
+            }
+        }
+    }
+    #{$product-link} {
+        &__top-banner{
+            &__left{
+                position:relative;
+                float:left;
+            }
+            &__right{
+                position:relative;
+                display:table;
+                float:right;
+                box-sizing:border-box;
+                width:675px;
+                height:344px;
+                padding-left:57px;
+                background:url("../images/bg/main_product_bg02.png") 0 0 no-repeat;
+                > div{
+                    display:table-cell;
+                    vertical-align:middle;
+                    font-size:20px;
+                    line-height:25px;
+                    @include fontStyle("noto-regular", 300, italic);
+                    div{
+                        margin-bottom:23px;
+                        > strong{
+                            color:$basicColor;
+                        }
+                        > span{
+                            display:block;
+                        }
+                    }
+
+                }
+            }
+            &:after {
+                @include afterClear;
+            }
+        }
+        &__bottom-banner{
+            ul{
+                li{
+                    float:left;
+                    width:25%;
+                    @include crossBrowsing("transform", skew(-12deg));
+                }
+                &:after{
+                    @include afterClear;
+                }
+            }
+        }
+    }
+
+}
 
 .contents__key-visual	{min-width:1004px; width:100%; height:500px; position:relative; overflow:hidden;}
 .contents__key-visual .show_img	 {position:relative; max-width:100%; margin:0 auto; z-index:1;}
@@ -373,4 +468,49 @@ $borderColor: #e2e2e2;
 .sub {
   padding-top: 80px;
   background-color:#f6f6f6;
+}
+
+
+@media all and (max-width:800px){
+    #header, #footer {
+        display:none;
+    }
+    .wrap {
+        width:auto;
+        padding:16px;
+    }
+}
+@media all and (max-width:640px){
+/********** float_navi **********/
+    .float_navi{
+        position:fixed;
+        top:50%;
+        right:20px;
+        height:250px;
+        margin:-125px 0 0 0;
+        z-index:100;
+        ul {
+            li{
+                margin-bottom:5px;
+                padding-bottom:25px;
+                background:url("../images/bar/froat_navi_bar.png") center bottom no-repeat;
+                a{
+                    display:block;
+                    width:24px;
+                    height:17px;
+                    background:url("../images/btn/float_navi_btn_off.png") 0 0 no-repeat;
+                    overflow:hidden;
+                    text-indent:-10000em;
+                }
+                &.on a{
+                    background:url("../images/btn/float_navi_btn_on.png") 0 0 no-repeat;
+                }
+                &:last-child{
+                    margin:0;
+                    padding:0;
+                    background:none;
+                }
+            }
+        }
+    }
 }

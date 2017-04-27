@@ -8,10 +8,12 @@
 */
 $(document).ready( function(){
     responsive.init();
+    parellax.init();
     Rolling_transition($("[data-ui-name='visual_rolling']"));
 })
 $(window).resize(function(){
     responsive.init();
+    parellax.sizing();
 })
 /*
 *********************************************************************************
@@ -55,6 +57,74 @@ var responsive ={
 
     }
 }
+/*
+*********************************************************************************
+    parellax 작성
+    작성일 : 2017.04.26
+    작성자 : 김영훈
+    내용 : 메인 페렐렉스 기능
+*********************************************************************************
+*/
+var parellax = {
+    init: function(){
+        this.screenSizeX = screen.availWidth;
+        this.screenSizeY = window.innerHeight;
+        this.wrap = $("[data-parellax-ui='wrapper']");
+        this.contents = $("[data-parellax-ui='contents']", this.wrap);
+        this.navi=$("[data-parellax-ui='navigation']");
+        this.cnt=0;
+        this.arr =[];
+        this.state=true;
+
+        //this.sizing();
+        //this.scrolling();
+        this.location();
+    },
+    location:function(){
+
+    },
+    sizing:function(){
+        this.screenSizeY = window.innerHeight;
+        this.contents.css({
+            "height" : this.screenSizeY + "px"
+        });
+    },
+    scrolling:function(){
+        var that = this;
+        this.contents.each( function(){
+            that.arr.push($(this).offset().top);
+        })
+        $("html, body").on("mousewheel", function(event, dir){
+            if(that.state == false){
+                return false;
+            }
+            that.state=false;
+            if(dir == -1){
+                that.cnt > that.arr.length ? false : that.cnt++;
+            } else {
+                that.cnt < 0 ? false : that.cnt--;
+            }
+            that.moving();
+        })
+    },
+    moving:function(){
+        var that =this;
+        if(this.arr[this.cnt]){
+            $("html, body").stop().animate({
+                "scrollTop" : this.arr[this.cnt] + "px"
+            },{
+                easing : "easeInOutCubic",
+    			duration : 700,
+                complete:function(){
+                    that.state=true;
+                }
+            })
+        } else {
+            this.state=true;
+        }
+    }
+}
+
 /*
 *********************************************************************************
     reponsive 작성
@@ -205,7 +275,6 @@ function Rolling_transition(obj){
 		inst.init();
 	}
 }
-
 /*********************************************************************************
     reponsive 작성
     작성일 : 2017.04.26
@@ -234,3 +303,22 @@ $(function(){
         }
     })
 })
+/*
+*********************************************************************************
+    show animation 작성
+    작성일 : 2017.04.26
+    작성자 : 김영훈
+    내용 : 컨텐츠가 화면에 보일 시 컨텐츠가 날라오는 기능
+*********************************************************************************
+*/
+var showAnimation=function(){
+    this.wrap = $("[data-show-ui='wrapper']");
+    this.left = $("[data-show-ui='left']", this.wrap);
+    this.right = $("[data-show-ui='right']", this.wrap);
+}
+showAnimation.prototype={
+    init:function(){
+
+    }
+}
+new showAnimation().init();
