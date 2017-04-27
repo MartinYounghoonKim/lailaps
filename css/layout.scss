@@ -652,27 +652,6 @@ $certification : ".contents_certification";
     }
 }
 
-/* contents*/
-.sub {
-  padding: 80px 0 145px 0;
-  background-color:#f6f6f6;
-}
-
-
-@media all and (max-width:800px){
-    #header, #footer {
-        display:none;
-    }
-    .sub{
-        padding-top:0;
-        padding-bottom:25px;
-    }
-    .wrap {
-        width:auto;
-        padding:16px;
-    }
-}
-@media all and (max-width:640px){
 /********** float_navi **********/
     .float_navi{
         position:fixed;
@@ -705,4 +684,26 @@ $certification : ".contents_certification";
             }
         }
     }
+    
+/* contents*/
+.sub {
+  padding: 80px 0 145px 0;
+  background-color:#f6f6f6;
+}
+
+
+@media all and (max-width:800px){
+    #header, #footer {
+        display:none;
+    }
+    .sub{
+        padding-top:0;
+        padding-bottom:25px;
+    }
+    .wrap {
+        width:auto;
+        padding:16px;
+    }
+}
+@media all and (max-width:640px){
 }
