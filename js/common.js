@@ -13,7 +13,6 @@ $(document).ready( function(){
 })
 $(window).resize(function(){
     responsive.init();
-    parellax.sizing();
 })
 /*
 *********************************************************************************
