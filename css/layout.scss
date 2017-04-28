@@ -915,7 +915,7 @@ $certification : ".contents_certification";
 
 
 @media all and (max-width:800px){
-    #header, #footer {
+    #header{
         display:none;
     }
     .sub{
@@ -925,6 +925,51 @@ $certification : ".contents_certification";
     .wrap {
         width:auto;
         padding:16px;
+    }
+    .outer_wrap{
+        width:auto;
+        padding:0 16px;
+    }
+    #footer{
+        .footer__banner-wrap{
+            height:auto;
+            padding:21px 0 20px;
+            .outer_wrap{
+                font-size:11px;
+                line-height:13px;
+                text-align:center;
+                .link{
+                     float:none;
+                     padding:0;
+                     margin-bottom:14px;
+                     p{
+                         float:none;
+                         display:inline-block;
+                     }
+                     ul{
+                         float:none;
+                         display:inline-block;
+                         li{
+                             float:none;
+                             display:inline-block;
+                         }
+                     }
+                     &:after{
+                         @include afterClear
+                     }
+                 }
+                .sns{
+                    ul{
+                        float:none;
+                        padding:0;
+                        li{
+                            float:none;
+                            display:inline-block;
+                        }
+                    }
+                 }
+            }
+        }
     }
 }
 @media all and (max-width:640px){
