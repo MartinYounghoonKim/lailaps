@@ -169,6 +169,11 @@ $btnColor04: #2FC600;
             border:2px solid $btnColor01;
             color:$btnColor01;
             background:none;
+            @include crossBrowsing("transition", all .5s ease);
+            &:hover{
+                background-color:$btnColor01;
+                color:#fff;
+            }
         }
     }
     &-color-type02{
