@@ -197,6 +197,79 @@ $borderColor: #e2e2e2;
         }
     }
 }
+/********** 서브키비쥬얼 **********/
+#sub-keyvisual{
+    height:433px;
+    .sub-keyvisual__title{
+        > div{
+            position:relative;
+            left:0;
+            color:#fff;
+            opacity:0;
+            text-transform:uppercase;
+            dfn{
+                display:block;
+                margin-bottom:11px;
+                font-size:32px;
+                line-height:34px;
+                @include fontStyle("noto-regular", 100, normal);
+            }
+            strong{
+                display:block;
+                font-size:46px;
+                line-height:48px;
+                @include fontStyle("noto-bold", 600, normal);
+            }
+            p{
+                font-size:14px;
+                line-height:16px;
+                @include fontStyle("noto-regular", 100, normal);
+            }
+            &.sub-keyvisual__title_tit{
+                padding:15px 0 18px;
+                margin-bottom:13px;
+                background:url("../images/bg/sub_keyvisual_title_bg.png") left center no-repeat;
+            }
+        }
+    }
+    &.sub-keyvisual__news{
+        background:url("../images/bg/sub_keyvisual_news.png") center 0 no-repeat;
+
+    }
+    .sub-keyvisual__navigation{
+        margin-bottom:140px;
+        text-align:right;
+        background:url("../images/bg/sub_keyvisual_navi_bg.png") right bottom no-repeat;
+        .outer_wrap{
+            ul{
+                padding:15px 50px 15px 0;
+                text-align:right;
+                li{
+                    display:inline-block;
+                    text-transform:uppercase;
+                    *{
+                        color:#fff;
+                        font-size:13px;
+                        line-height:15px;
+                    }
+                    &:after{
+                        color:#fff;
+                        content:"/";
+                        display:inline-block;
+                        margin:0 5px;
+                    }
+                    &:last-child:after{
+                        content:"";
+                        margin:0;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
 /********** contents **********/
 $keyvisual : ".contents__key-visual";
 $features : ".contents__features-wrap";
