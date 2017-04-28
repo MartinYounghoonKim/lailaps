@@ -252,7 +252,7 @@ $btnColor04: #2FC600;
         &.last {
           margin-right:17px;
         }
-        a {
+        a{
           display:inline-block;
           float:left;
           width:31px;
@@ -265,6 +265,15 @@ $btnColor04: #2FC600;
           &:hover {
               color: $mainColor;
           }
+        }
+        strong{
+            display:inline-block;
+            float:left;
+            width:31px;
+            border:1px solid $borderColor;
+            background-color:#fff;
+            padding:8px 0 7px;
+            color: $mainColor;
         }
       }
     }
@@ -325,16 +334,9 @@ $btnColor04: #2FC600;
             &.last {
               margin-right:10px;
             }
-            a {
-              display:inline-block;
-              float:left;
+            a,strong {
               width:23px;
-              border:1px solid $borderColor;
-              background-color:#fff;
               padding:4px 0 3px;
-              &.on {
-                  color: $mainColor;
-              }
             }
           }
         }
