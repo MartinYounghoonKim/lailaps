@@ -498,6 +498,7 @@ $certification : ".contents_certification";
                     font-size:18px;
                     line-height:20px;
                     @include crossBrowsing("transform", skew(-12deg));
+                    @include crossBrowsing("transition",all 1s ease);
                     div{
                         position:relative;
                         box-sizing:border-box;
@@ -517,11 +518,11 @@ $certification : ".contents_certification";
                             padding-top:74px;
                             background-position:center top;
                             background-repeat:no-repeat;
-                            @include crossBrowsing("transition",all 1s cubic-bezier(0.25,0.1,0.25,1));
+                            @include crossBrowsing("transition",all 0.5s cubic-bezier(0.25,0.1,0.25,1));
                         }
                         .btn{
                             opacity:0;
-                            @include crossBrowsing("transition", all 1s cubic-bezier(0.25,0.1,0.75,1));
+                            @include crossBrowsing("transition", all 0.7s cubic-bezier(0.25,0.1,0.75,1));
                             @include crossBrowsing(transform, translateX(-16px) translateY(20px) skew(-8deg));
                         }
                     }
