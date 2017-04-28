@@ -25,7 +25,8 @@ define([],function () {
         'showAnimation'
     ], function(showAnimation){
         new showAnimation({
-            "wrap" : "[data-ui-show-animation='wrap']"
+            "wrap" : "[data-ui-show-animation='wrap']",
+            "child" : "> img"
         }).init();
     });
 });

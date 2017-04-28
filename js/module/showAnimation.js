@@ -13,7 +13,7 @@ define([
 ],function ($) {
 	var showAnimation = function(element){
 		this.wrap = $(element.wrap);
-		this.child = this.wrap.children();
+		this.child = $(element.child, this.wrap);
 		this.direction = this.wrap.data("ui-show-animation-direction");
 		this.screenWidth = Math.max(document.body.clientWidth, document.documentElement.clientWidth);
 		this.wrap.play=false;

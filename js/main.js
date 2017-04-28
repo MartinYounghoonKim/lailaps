@@ -10,6 +10,7 @@ require.config({
         ,'wheel': 'lib/wheel'
         //controller
         ,'Main':'controller/Main'
+        ,'News':'controller/News'
 
     	//Function Module
         ,'checkDevice':'constant/device'
