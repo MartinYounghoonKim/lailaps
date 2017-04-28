@@ -11,6 +11,7 @@ require.config({
         //controller
         ,'Main':'controller/Main'
         ,'News':'controller/News'
+        ,'NewsView':'controller/NewsView'
 
     	//Function Module
         ,'checkDevice':'constant/device'

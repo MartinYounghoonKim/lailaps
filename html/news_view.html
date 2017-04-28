@@ -5,7 +5,7 @@
   <meta name="Author" content="Madeweb">
   <meta name="Keywords" content="라일랍스, ">
   <meta name="Description" content="">
-  <title>라일랍스</title>
+  <title>NEWS | 라일랍스</title>
   <link rel="stylesheet" href="../css/index.min.css"/>
  </head>
  <body data-reference="Main">
@@ -95,6 +95,28 @@
         </div>
         <!--// 헤더 영역 -->
         <hr/>
+        <!-- 서브 키비쥬얼 영역 -->
+        <div id="sub-keyvisual" class="sub-keyvisual__news">
+            <div class="sub-keyvisual__navigation">
+                <div class="outer_wrap">
+                    <ul>
+                        <li><a href="#none">home</a></li>
+                        <li><a href="#none">news &amp; promotion</a></li>
+                        <li><strong>news</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-keyvisual__title" data-ui-show-animation="wrap" data-ui-show-animation-direction="left">
+                <div class="wrap">
+                    <dfn>news &amp; promotion</dfn>
+                </div>
+                <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>NEWS</strong></div></div>
+                <div class="wrap">
+                    <p>THE TIME TO BE HAPPY IS NOW</p>
+                </div>
+            </div>
+        </div>
+        <!--// 서브 키비쥬얼 영역 -->
 
         <hr/>
         <!-- 컨텐츠 영역 -->
@@ -166,9 +188,11 @@
         <!--// 푸터 영역 -->
         <hr/>
     </div>
-    <script src="../js/jquery-1.9.1.min.js"></script>
-    <script src="../js/jquery.easing.min.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-     <script src="../js/common.js"></script>
+    <script data-main="../js/main" src="../js/require.js"></script>
+    <script>
+        //Controller 변수 선언
+        var CONTROLLER_TYPE = "NewsView";
+        console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
+    </script>
  </body>
 </html>
