@@ -22,6 +22,7 @@ require.config({
         ,'navigation' :'module/navigation'
         ,'showAnimation' :'module/showAnimation'
         ,'accodian' :'module/accodian'
+        ,'productBannerAnimation' :'module/productBannerAnimation'
     },
     shim:{
         'jquery':{

@@ -29,4 +29,12 @@ define([],function () {
             "child" : "> img"
         }).init();
     });
+    require([
+        'productBannerAnimation'
+    ], function(productBannerAnimation){
+        new productBannerAnimation({
+            "wrap" : "[data-ui-banner-animation='wrap']",
+            "child" : "> li"
+        }).init();
+    });
 });
