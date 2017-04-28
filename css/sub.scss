@@ -257,6 +257,11 @@
             position:absolute;
             bottom:28px;
             right:17px;
+            width:32px;
+            height:15px;
+            background:url("../images/arrow/arrow02.png") 0 0 no-repeat;
+            text-indent:-10000em;
+            overflow:hidden;
           }
         }
         .promotion_ing, .promotion_end {
@@ -264,6 +269,7 @@
             top:0;
             right:0;
         }
+
       }
       .promotion_contents{
         display:none;
@@ -294,6 +300,11 @@
           line-heighT:17px;
           color:#555;
         }
+      }
+      &.on{
+          .promotion_box a .arrow{
+              background:url("../images/arrow/arrow02_on.png") 0 0 no-repeat;
+          }
       }
     }
 }

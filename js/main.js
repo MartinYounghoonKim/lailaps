@@ -12,6 +12,7 @@ require.config({
         ,'Main':'controller/Main'
         ,'News':'controller/News'
         ,'NewsView':'controller/NewsView'
+        ,'Promotion':'controller/Promotion'
 
     	//Function Module
         ,'checkDevice':'constant/device'
@@ -20,6 +21,7 @@ require.config({
         ,'slide' :'module/slide'
         ,'navigation' :'module/navigation'
         ,'showAnimation' :'module/showAnimation'
+        ,'accodian' :'module/accodian'
     },
     shim:{
         'jquery':{
