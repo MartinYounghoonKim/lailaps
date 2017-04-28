@@ -1,7 +1,10 @@
 require.config({
     baseUrl: '../js',
     paths:{
-        'jquery': 'lib/jquery-1.9.1.min'
+        'jquery': [
+            'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min'
+            ,'lib/jquery-1.9.1.min'
+        ]
         ,'jqueryEasing': 'lib/jquery.easing.min'
         ,'jqueryUI': 'lib/jquery-ui'
         ,'wheel': 'lib/wheel'
