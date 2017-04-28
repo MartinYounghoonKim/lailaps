@@ -21,4 +21,11 @@ define([],function () {
             }).init();
         }
     });
+    require([
+        'showAnimation'
+    ], function(showAnimation){
+        new showAnimation({
+            "wrap" : "[data-ui-show-animation='wrap']"
+        }).init();
+    });
 });

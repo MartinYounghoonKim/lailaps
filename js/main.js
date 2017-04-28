@@ -17,6 +17,7 @@ require.config({
         ,'gnb' :'module/gnb'
         ,'slide' :'module/slide'
         ,'navigation' :'module/navigation'
+        ,'showAnimation' :'module/showAnimation'
     },
     shim:{
         'jquery':{

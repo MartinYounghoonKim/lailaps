@@ -611,8 +611,32 @@ $certification : ".contents_certification";
     #{$repair} {
         padding:90px 0 85px;
         .outer_wrap{
+            .contents__repair__img{
+                position:relative;
+                width:560px;
+                padding-left:85px;
+                float:left;
+                img{
+                    position:absolute;
+                    top:23px;
+                    opacity:0;
+                }
+                img:nth-child(1){
+                    right:0;
+                }
+                img:nth-child(2){
+                    top:0;
+                    left:240px;
+                    z-index:1;
+
+                }
+                img:nth-child(3){
+                    left:85px;
+                }
+            }
             .contents__repair__paragraph{
                 width:447px;
+                padding-right:180px;
                 float:right;
                 h2{
                     margin-bottom:56px;
