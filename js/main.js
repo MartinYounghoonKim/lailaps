@@ -13,6 +13,7 @@ require.config({
         ,'News':'controller/News'
         ,'NewsView':'controller/NewsView'
         ,'Promotion':'controller/Promotion'
+        ,'Winners':'controller/Winners'
 
     	//Function Module
         ,'checkDevice':'constant/device'
@@ -23,6 +24,7 @@ require.config({
         ,'showAnimation' :'module/showAnimation'
         ,'accodian' :'module/accodian'
         ,'productBannerAnimation' :'module/productBannerAnimation'
+        ,'tab' :'module/tab'
     },
     shim:{
         'jquery':{

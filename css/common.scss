@@ -223,6 +223,7 @@ $btnColor04: #2FC600;
     font-size:46px;
     line-height:48px;
     margin-bottom:60px;
+    text-transform:uppercase;
 }
 /**********************************************************************************
     공통 페이징 가이드
@@ -346,5 +347,75 @@ $btnColor04: #2FC600;
           }
         }
       }
+    }
+}
+/**********************************************************************************
+    공통 테이블 가이드
+**********************************************************************************/
+.table-contents__title{
+    margin-bottom:20px;
+    text-align:center;
+    background:url("../images/bar/table_tit_bg.png") 0 center repeat-x;
+    span{
+        display:inline-block;
+        padding:0 35px;
+        background-color:#f6f6f6;
+        font-size:24px;
+        line-height:26px;
+        @include fontStyle("noto-bold", 600, italic);
+    }
+}
+.table-contents__select{
+    margin-bottom:23px;
+    text-align:right;
+    span{
+        display:inline-block;
+        border-bottom:1px solid #c5c5c5;
+        select{
+            width:112px;
+            height:47px;
+            padding:0 8px;
+            border:0;
+            background:none;
+            font-size:18px;
+            line-height:20px;
+            color:#444;
+            @include fontStyle("noto-regular", 100, normal);
+        }
+    }
+}
+
+.table-contents__table-wrap{
+    padding-bottom:30px;
+    background-color:#fff;
+    .table01{
+        width:100%;
+        margin-bottom:20px;
+        table-layout:fixed;
+        text-align:center;
+        thead{
+            th{
+                padding:20px 0;
+                border-right:1px solid #fff;
+                color:#000;
+                background-color:#e5e5e5;
+                @include basicFontSize;
+                @include fontStyle("noto-regular", 100, italic);
+                &:last-child{
+                    border-right:0;
+                }
+            }
+        }
+        tbody{
+            td{
+                padding:20px 0;
+                border-bottom:1px solid #e5e5e5;
+                @include basicFontSize;
+                @include fontStyle("noto-regular", 100, italic);
+                img{
+                    vertical-align:middle;
+                }
+            }
+        }
     }
 }
