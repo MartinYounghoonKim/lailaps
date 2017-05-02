@@ -772,3 +772,92 @@ $winner : ".winners";
         }
     }
 }
+.winners__profile-wrap{
+    margin-bottom:75px;
+    padding:37px 47px 35px 35px;
+    border-top:8px solid $basicColor;
+    overflow:hidden;
+    background-color:#fff;
+    .winners__profile-wrap__img{
+        float:left;
+        box-sizing:border-box;
+        height:391px;
+        margin-right:34px;
+        padding:27px 34px 30px 0;
+        border-right:1px solid #e5e5e5;
+        overflow:hidden;
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+    .winners__profile-wrap__profile{
+        float:left;
+        width:439px;
+        box-sizing:border-box;
+        padding:27px 0 35px;
+        > strong{
+            display:block;
+            margin-bottom:35px;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            font-size:24px;
+            line-height:26px;
+            @include fontStyle("noto-bold", 600, italic);
+            em{
+                @include fontStyle("noto-bold", 600, italic);
+            }
+        }
+        p{
+            height:148px;
+            overflow:hidden;
+            font-size:14px;
+            line-height:21px;
+        }
+        ul{
+            @include removeBetween;
+            text-align:center;
+            li{
+                display:inline-block;
+                width:136px;
+                dfn{
+                    display:block;
+                    margin-bottom:10px;
+                    @include basicFontSize;
+                }
+                div{
+                    box-sizing:border-box;
+                    height:101px;
+                    padding-top:56px;
+                    color:#fff;
+                    font-size:14px;
+                    line-height:16px;
+                    background-color:$basicColor;
+                    background-position:center 15px;
+                    background-repeat:no-repeat;
+                    @include crossBrowsing("transform", skew(-10deg));
+                    strong{
+                        display:block;
+                        margin-bottom:4px;
+                    }
+                }
+                &:nth-child(1){
+                    div{
+                        background-image:url("../images/icon/winner_profile_icon01.png");
+                    }
+                }
+                &:nth-child(2){
+                    margin:0 8px;
+                    div{
+                        background-image:url("../images/icon/winner_profile_icon02.png");
+                    }
+                }
+                &:nth-child(3){
+                    div{
+                        background-image:url("../images/icon/winner_profile_icon03.png");
+                    }
+                }
+            }
+        }
+    }
+}
