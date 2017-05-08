@@ -668,9 +668,12 @@
 *********************************************************************************
 */
 $winner : ".winners";
-@keyframs tabAnimation{
-    from{
-        transform:translateY()
+@keyframes tabAnimation{
+    50%{
+        transform:translateY(-6px) skew(12deg);
+    }
+    100%{
+        transform:translateY(0) skew(12deg);
     }
 }
 #{$winner} {
@@ -687,6 +690,7 @@ $winner : ".winners";
                 width:33%;
                 @include crossBrowsing("transform", skew(-12deg));
                 background-color:#777;
+                vertical-align:top;
                 button{
                     display:block;
                     width:100%;
@@ -698,9 +702,17 @@ $winner : ".winners";
                         vertical-align:middle;
                     }
                     img {
+                        display:inline-block;
                         vertical-align:middle;
                         @include crossBrowsing("transform", skew(12deg));
                     }
+                    &:hover{
+                        img {
+                            @include crossBrowsing("transform",translateY(0px) skew(12deg) );
+                            animation:tabAnimation 2s ease-in-out infinite;
+                        }
+                    }
+
                 }
                 &.on{
                     background-color: $basicColor;
