@@ -861,3 +861,78 @@ $winner : ".winners";
         }
     }
 }
+/*
+*********************************************************************************
+    recommend 페이지
+    작성일 : 2017.05.02
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$recommend : ".recommend";
+#{$recommend} {
+    .recommend__thumnail-list-wrap{
+        margin-bottom:40px;
+        text-align:center;
+        @include removeBetween;
+        .recommend__thumnail-list-wrap__list{
+            display:inline-block;
+            width:329px;
+            .recommend__thumnail-list-wrap__list__img{
+                width:100%;
+                height:184px;
+                overflow:hidden;
+                img{
+                    width:100%;
+                    height:auto;
+                }
+            }
+            .recommend__thumnail-list-wrap__list__detail{
+                background-color:#fff;
+                .recommend__thumnail-list-wrap__list__detail__tit{
+                    padding:22px 20px 27px;
+                    text-align:left;
+                    strong{
+                        display:block;
+                        height:42px;
+                        margin-bottom:12px;
+                        font-size:18px;
+                        line-height:20px;
+                        overflow:hidden;
+                        @include fontStyle("noto-regular", 100, italic);
+                    }
+                    em{
+                        font-size:14px;
+                        line-height:16px;
+                        color:#7e7e7e;
+                    }
+                }
+                .recommend__thumnail-list-wrap__list__detail__info{
+                    overflow:hidden;
+                    padding:10px 20px;
+                    border-top:1px solid #e2e2e2;
+                    a{
+                        float:left;
+                        padding-left:22px;
+                        font-size:14px;
+                        line-height:16px;
+                        background:url("../images/icon/recommend_icon01.png") left center no-repeat;
+                        @include fontStyle("noto-regular", 100, italic);
+                    }
+                    dfn{
+                        float:right;
+                        font-size:14px;
+                        line-height:16px;
+                        color:#999;
+                        @include fontStyle("noto-regular", 100, normal);
+                    }
+                }
+            }
+            &:nth-child(3n-1){
+                margin:0 26px;
+            }
+            &:nth-child(1),&:nth-child(2),&:nth-child(3){
+                margin-bottom:27px;
+            }
+        }
+    }
+}
