@@ -924,11 +924,6 @@ $recommend : ".recommend";
                     border-top:1px solid #e2e2e2;
                     a{
                         float:left;
-                        padding-left:22px;
-                        font-size:14px;
-                        line-height:16px;
-                        background:url("../images/icon/recommend_icon01.png") left center no-repeat;
-                        @include fontStyle("noto-regular", 100, italic);
                     }
                     dfn{
                         float:right;
@@ -945,6 +940,113 @@ $recommend : ".recommend";
             &:nth-child(1),&:nth-child(2),&:nth-child(3){
                 margin-bottom:27px;
             }
+        }
+    }
+}
+/*
+*********************************************************************************
+    recommend view 페이지
+    작성일 : 2017.05.08
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$recommend-view : ".recommend-view";
+#{$recommend-view}{
+    .recommend-view__wrap__list-contents{
+        margin-bottom:12px;
+        padding:34px 17px 54px 16px;
+        border-top:8px solid $basicColor;
+        background-color:#fff;
+        .recommend-view__wrap__list-contents__map{
+            margin-bottom:40px;
+        }
+        .recommend-view__wrap__list-contents__info{
+            overflow:hidden;
+            .recommend-view__wrap__list-contents__info__left{
+                position:relative;
+                float:left;
+                box-sizing:border-box;
+                width:503px;
+                padding-left:103px;
+                .recommend-view__wrap__list-contents__info__left__user-img{
+                    position:absolute;
+                    left:34px;
+                    top:0;
+                    width:54px;
+                    height:54px;
+                    border-radius:50%;
+                    overflow:hidden;
+                    img{
+                        width:100%;
+                    }
+                }
+                .recommend-view__wrap__list-contents__info__left__title{
+                    overflow:hidden;
+                    display:block;
+                    height:57px;
+                    margin-bottom:20px;
+                    font-size:24px;
+                    line-height:30px;
+                    @include fontStyle("noto-bold",600,italic);
+                }
+                .recommend-view__wrap__list-contents__info__left__user-name{
+                    display:block;
+                    margin-bottom:50px;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    overflow:hidden;
+                }
+                .recommend-view__wrap__list-contents__info__left__icon{
+                    .icon{
+                        margin-right:16px;
+                        padding-top:4px;
+                        &.chatting{
+                            margin-right:20px;
+                            background-position:left 5px;
+                        }
+                    }
+                    a{
+                        margin-right:5px;
+                    }
+                }
+            }
+            .recommend-view__wrap__list-contents__info__right{
+                float:left;
+                box-sizing:border-box;
+                width:503px;
+                padding-left:50px;
+                border-left:1px solid #ddd;
+                dl{
+                    position:relative;
+                    margin-bottom:15px;
+                    padding-left:90px;
+                    dt{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        font-size:14px;
+                        line-height:16px;
+                        color:#999;
+                    }
+                }
+            }
+        }
+    }
+    .recommend-view__wrap__list-thumnail{
+        margin-bottom:10px;
+        padding:40px 17px 57px 16px;
+        background-color:#fff;
+        .recommend-view__wrap__list-thumnail__img{
+            margin-bottom:38px;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+        .recommend-view__wrap__list-thumnail__paragraph{
+            margin-bottom:57px;
+            padding:0 50px;
+            text-align:center;
         }
     }
 }

@@ -15,6 +15,8 @@ require.config({
         ,'Promotion':'controller/Promotion'
         ,'Winners':'controller/Winners'
         ,'WinnersView':'controller/WinnersView'
+        ,'Recommend':'controller/Recommend'
+        ,'RecommendView':'controller/RecommendView'
 
     	//Function Module
         ,'checkDevice':'constant/device'
