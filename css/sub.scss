@@ -996,6 +996,71 @@ $recommend-view : ".recommend-view";
         }
     }
 
+    /*
+    *********************************************************************************
+        recommend 페이지
+        작성일 : 2017.05.10
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$recommend : ".recommend";
+    #{$recommend} {
+        .recommend__thumnail-list-wrap{
+            margin-bottom:20px;
+            .recommend__thumnail-list-wrap__list{
+                width:49%;
+                float:left;
+                &:nth-child(3n-1){
+                    margin:0;
+                }
+                &:nth-child(2n){
+                    float:right;
+                }
+                margin-bottom:15px;
+                &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                    margin-bottom:15px;
+                }
+                .recommend__thumnail-list-wrap__list__img{
+                    position:relative;
+                    height:0;
+                    padding-top:40%;
+                    img{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                .recommend__thumnail-list-wrap__list__detail{
+                    .recommend__thumnail-list-wrap__list__detail__tit{
+                        padding:10px;
+                        strong{
+                            height:39px;
+                            margin-bottom:8px;
+                            font-size:14px;
+                            line-height:16px;
+                        }
+                        em{
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                    }
+                    .recommend__thumnail-list-wrap__list__detail__info{
+                        padding:8px;
+                        dfn{
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                    }
+                }
+
+            }
+            &:after{
+                @include afterClear;
+            }
+        }
+    }
 
 }
 
