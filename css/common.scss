@@ -701,6 +701,14 @@ $btnColor04: #2FC600;
             }
         }
     }
+    .icon{
+        padding-left:16px;
+        font-size:12px;
+        line-height:14px;
+        &.favorite{
+            background-size:12px auto;
+        }
+    }
     /**********************************************************************************
         공통 테이블 가이드
     **********************************************************************************/
@@ -715,6 +723,20 @@ $btnColor04: #2FC600;
     }
     .contents-filter{
         margin-bottom:15px;
+        .filter-contents-wrap{
+            width:185px;
+            .filter-contents-wrap__text {
+                button{
+                    width:37px;
+                    height:37px;
+                }
+                input[type="text"]{
+                    height:37px;
+                    font-size:12px;
+                    line-height:14px;
+                }
+            }
+        }
         .table-contents__select{
             width:85px;
             height:37px;
@@ -753,4 +775,7 @@ $btnColor04: #2FC600;
              }
         }
     }
+    /**********************************************************************************
+        공통 입력폼 가이드
+    **********************************************************************************/
 }
