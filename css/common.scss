@@ -776,6 +776,45 @@ $btnColor04: #2FC600;
         }
     }
     /**********************************************************************************
-        공통 입력폼 가이드
+        공통 댓글 입력폼 가이드
     **********************************************************************************/
+    .reply-wrap{
+        .reply-wrap__text-area{
+            padding-right:60px;
+            div{
+                padding:5px;
+                height:50px;
+                textarea{
+                    font-size:12px;
+                    line-height:14px;
+                }
+            }
+            button{
+                width:50px;
+                height:50px;
+                font-size:12px;
+                line-height:14px;
+            }
+        }
+        .reply-wrap__reply-area{
+            .reply-wrap__reply-area__list{
+                padding:10px;
+                strong{
+                    position:relative;
+                    left:auto;
+                    top:auto;
+                    display:block;
+                    margin-top:0;
+                    margin-bottom:8px;
+                }
+                .reply-wrap__reply-area__list__edit-btn{
+                    position:relative;
+                    right:auto;
+                    top:auto;
+                    margin-top:12px;
+                }
+            }
+        }
+    }
+
 }

@@ -1062,6 +1062,66 @@ $recommend-view : ".recommend-view";
         }
     }
 
+    /*
+    *********************************************************************************
+        recommend-view 페이지
+        작성일 : 2017.05.10
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$recommend-view : ".recommend-view";
+    #{$recommend-view}{
+        .recommend-view__wrap__list-contents{
+            padding:10px;
+            .recommend-view__wrap__list-contents__map{
+                margin-bottom:20px;
+                overflow:hidden;
+            }
+            .recommend-view__wrap__list-contents__info{
+                .recommend-view__wrap__list-contents__info__left{
+                    float:none;
+                    width:auto;
+                    margin-bottom:20px;
+                    padding-left:80px;
+                    .recommend-view__wrap__list-contents__info__left__user-img{
+                        left:5px;
+                    }
+                    .recommend-view__wrap__list-contents__info__left__title{
+                        margin-bottom:8px;
+                        font-size:18px;
+                        line-height:20px;
+                        height:auto;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
+                    }
+                    .recommend-view__wrap__list-contents__info__left__user-name{
+                        margin-bottom:20px;
+                    }
+                }
+                .recommend-view__wrap__list-contents__info__right{
+                    float:none;
+                    width:auto;
+                    padding-left:0;
+                    border-left:0;
+                }
+            }
+        }
+        .recommend-view__wrap__list-thumnail{
+            padding:10px;
+            .recommend-view__wrap__list-thumnail__img{
+                margin-bottom:10px;
+            }
+            .recommend-view__wrap__list-thumnail__paragraph{
+                margin-bottom:20px;
+                padding:0 10px;
+                font-size:12px;
+                line-heiht:16px;
+            }
+        }
+        .reply-wrap{
+            padding:10px;
+        }
+    }
 }
 
 @media all and (max-width:640px){
