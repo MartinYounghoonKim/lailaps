@@ -948,7 +948,54 @@ $recommend-view : ".recommend-view";
                 }
             }
         }
+        .winners__profile-wrap{
+            margin-bottom:40px;
+            padding:20px 18px;
+            .winners__profile-wrap__img{
+                float:none;
+                height:auto;
+                margin-right:0;
+                padding:10px;
+                border-right:0;
+            }
+            .winners__profile-wrap__profile{
+                float:none;
+                width:auto;
+                padding:10px;
+                strong{
+                    margin-bottom:12px;
+                    font-size:18px;
+                    line-height:20px;
+                }
+                p{
+                    height:auto;
+                    font-size:12px;
+                    line-height:18px;
+                }
+                ul{
+                    li{
+                        width:29%;
+                        dfn{
+                            margin-bottom:5px;
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                        div{
+                            height:auto;
+                            min-height:101px;
+                            strong{
+                                margin-bottom:5px;
+                                font-size:12px;
+                                line-height:14px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
     }
+
 
 }
 
