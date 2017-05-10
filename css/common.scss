@@ -7,7 +7,12 @@
     작성자 : 김영훈
 *********************************************************************************
 */
-
+/**********************************************************************************
+    반응형 공통 스타일
+**********************************************************************************/
+.mobile-version{
+    display:none;
+}
 /**********************************************************************************
     가이드 스타일
 **********************************************************************************/
@@ -559,6 +564,140 @@ $btnColor04: #2FC600;
             &.no-reply{
                 padding:20px 0;
                 text-align:center;
+            }
+        }
+    }
+}
+/**********************************************************************************
+    공통 레이아웃 스타일 Device : Tablet
+**********************************************************************************/
+@media all and (max-width:800px){
+
+    /**********************************************************************************
+        반응형 공통 스타일
+    **********************************************************************************/
+    .pc-version{
+        display:none;
+    }
+    .mobile-version{
+        display:block;
+    }
+    /**********************************************************************************
+        공통 버튼 가이드
+    **********************************************************************************/
+
+    /* 버튼 사이즈 */
+    @mixin MbtnXS{
+        height:11px;
+        padding:11px 34px 15px;
+        font-size:14px;
+        line-height:16px;
+    }
+    @mixin MbtnS{
+        height:15px;
+        padding:7px 15px 11px;
+        font-size:14px;
+        line-height:16px;
+    }
+    @mixin MbtnM{
+        height:20px;
+        padding:7px 64px 4px;
+        font-size:14px;
+        line-height:16px;
+    }
+    @mixin MbtnL{
+        height:22px;
+        padding:10px 30px 11px;
+        font-size:18px;
+        line-height:20px;
+    }
+    @mixin MbtnXL{
+        height:10px;
+        padding:9px 33px 11px;
+        font-size:12px;
+        line-height:14px;
+    }
+    /* 버튼 컴파일 */
+    .btn{
+        &-xs{
+            @include MbtnXS;
+            &.btn-line{
+                height:13px;
+            }
+        }
+        &-s{
+            @include MbtnS;
+            &.btn-line{
+                height:14px;
+                padding:6px 15px 11px;
+            }
+        }
+        &-m{
+            @include MbtnM;
+            &.btn-line{
+                height:20px;
+                padding:7px 64px 4px;
+            }
+        }
+        &-l{
+            @include MbtnL;
+            &.btn-line{
+                height:23px;
+                padding:8px 30px 11px;
+            }
+
+        }
+        &-xl{
+            @include MbtnXL;
+            &.btn-line{
+                min-width:auto;
+                height:11px;
+                padding:9px 65px 11px;
+            }
+        }
+        &-color-type01{
+            background-color: $btnColor01;
+            &.disabled{
+
+            }
+            &.btn-line{
+                border:2px solid $btnColor01;
+                color:$btnColor01;
+                background:none;
+                @include crossBrowsing("transition", all .5s ease);
+                &:hover{
+                    background-color:$btnColor01;
+                    color:#fff;
+                }
+            }
+        }
+        &-color-type02{
+            color: $mainColor;
+            background-color: $btnColor02;
+            @include fontStyle(noto-medium, 100, normal);
+            &.btn-line{
+                border:2px solid $btnColor02;
+                color:$btnColor02;
+                background:none;
+            }
+
+        }
+        &-color-type03{
+            background-color: $btnColor03;
+            @include fontStyle(noto-regular, 600, normal);
+            &.btn-line{
+                border:2px solid $btnColor03;
+                color:$btnColor03;
+                background:none;
+            }
+        }
+        &-color-type04{
+            background-color: $btnColor04;
+            @include fontStyle(noto-regular, 600, normal);
+            &.btn-line{
+                border:2px solid $btnColor04;
+                color:$btnColor04;
+                background:none;
             }
         }
     }
