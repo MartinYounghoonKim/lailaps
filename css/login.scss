@@ -330,3 +330,62 @@
         margin-top:20px;
     }
 }
+/**********************************************************************************
+    로그인 페이지 로그인 페이지
+    작성일 : 2017.05.10
+    작성자 : 김영훈
+**********************************************************************************/
+.login__login{
+    .login-contents__paragraph{
+        margin-bottom:56px;
+    }
+    .login-btn-wrap{
+        margin:20px 0 28px;
+    }
+    .login__customer-btn{
+        margin-bottom:44px;
+        .login__customer-btn__prev{
+            float:left;
+            padding-left:42px;
+            font-size:20px;
+            line-height:33px;
+            color:#444;
+            @include fontStyle("noto-light", 100, normal);
+            background:url("../images/btn/login_prev_btn.png") 0 0 no-repeat;
+        }
+        ul{
+            float:right;
+            li{
+                float:left;
+                a{
+                    font-size:20px;
+                    line-height:33px;
+                    color:#444;
+                    @include fontStyle("noto-light", 100, normal);
+                }
+                &:after{
+                    content:"|";
+                    margin:0 12px;
+                    line-height:33px;
+                    vertical-align:top;
+                }
+                &:nth-child(3):after{
+                    content:"";
+                    margin:0;
+                }
+            }
+        }
+        &:after{
+            @include afterClear;
+        }
+    }
+    .login__sns-login{
+        overflow:hidden;
+        a:nth-child(1){
+            float:left;
+        }
+        a:nth-child(2){
+            float:right;
+        }
+    }
+}
