@@ -308,353 +308,6 @@
       }
     }
 }
-
-@media all and (max-width:800px){
-    /*
-    *********************************************************************************
-        news.scss 반응형 작성
-        작성일 : 2017.04.27
-        작성자 : 정진배
-    *********************************************************************************
-    */
-    .news {
-        &__contents {
-            &__leftBox {
-                width:100%;
-                .thumbnail_list {
-                    li {
-                        a {
-                            .thumbnail_img {
-                                width:135px;
-                            }
-                            dl {
-                                padding-left:155px;
-                                dt {
-                                    height:40px;
-                                    font-size:16px;
-                                    line-height:19px;
-                                }
-                                dd {
-                                    font-size:14px;
-                                    line-height:17px;
-                                    margin-bottom:18px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            &__rightBox {
-                display:none;
-            }
-        }
-    }
-
-    /*
-    *********************************************************************************
-        news_view.scss 작성
-        작성일 : 2017.04.27
-        작성자 : 정진배
-    *********************************************************************************
-    */
-
-    .news__view__box {
-        padding: 20px 0 10px;
-        .innerWrap {
-            width:auto;
-            padding:16px;
-            .tit {
-                font-size:16px;
-                line-height:19px;
-                margin-bottom:21px;
-            }
-            .date {
-                font-size:14px;
-                line-height:17px;
-                margin-bottom:19px;
-            }
-            .img_wrap {
-                width:auto;
-                margin-bottom:19px;
-            }
-            .list_view_text {
-                font-size:13px;
-                line-height:16px;
-                margin-bottom:25px;
-            }
-        }
-    }
-
-    /*
-    *********************************************************************************
-        promotion.scss 작성
-        작성일 : 2017.04.24
-        작성자 : 정진배
-    *********************************************************************************
-    */
-    .promotion{
-        .promotion_wrap{
-          margin-bottom:20px;
-          &.last{margin-bottom:35px;}
-          .promotion_box{
-            position:relative;
-            background-color:#fff;
-            border-top:1px solid $mainColor;
-            border-bottom:1px solid $borderColor;
-            a{
-              display:block;
-              overflow:hidden;
-              padding:28px 100px 28px 25px;
-              .thumbnail_img {
-                width:280px;
-                height:110px;
-                overflow:hidden;
-                float:left;
-                position:absolute;;
-                img {
-                    width:100%;
-                    height: auto;
-                }
-              }
-              dl {
-                position:relative;
-                padding-left:300px;
-                dt {
-                    height:38px;
-                  margin-bottom:19px;
-                  @include fontStyle(noto-bold, 600, normal);
-                  @include letterCut;
-                  font-size: 16px;
-                  line-height:19px;
-                }
-                dd {
-                  margin-bottom:25px;
-                  @include fontStyle(noto-regular, 100, italic);
-                  @include letterCut;
-                  font-size: 12px;
-                  line-height:15px;
-                  color:#555;
-                  &.date {
-                    margin-right:15px;
-                  }
-                  &.date, &.hits{
-                    display:inline-block;
-                    margin-bottom:0;
-                  }
-                }
-              }
-              .arrow {
-                position:absolute;
-                bottom:28px;
-                right:17px;
-              }
-            }
-            > img {
-                width:75px;
-            }
-            .promotion_ing, .promotion_end {
-                position:absolute;
-                top:0;
-                right:0;
-            }
-          }
-          .promotion_contents{
-            display:none;
-            padding:40px 18px;
-            border-top:1px solid $mainColor;
-            background-color:#fff;
-            text-align:center;
-            &.on {
-              display:block;
-              box-shadow:1px 1px 1px 1px #f0f0f0;
-            }
-            .promotion_view{
-                width:100%;
-                height:auto;
-                margin-bottom:40px;
-            }
-            strong {
-                display:block;
-          @include fontStyle(noto-bold, 600, italic);
-          font-size:18px;
-          color:#444;
-          margin-bottom:25px;
-            }
-            span{
-              display:block;
-              @include fontStyle(noto-regular, 100, italic);
-              font-size:14px;
-              line-heighT:17px;
-              color:#555;
-            }
-          }
-        }
-    }
-}
-
-@media all and (max-width:640px){
-
-    /*
-    *********************************************************************************
-        news.scss 작성
-        작성일 : 2017.04.27
-        작성자 : 정진배
-    *********************************************************************************
-    */
-
-    .news {
-        padding-top:0;
-        padding-bottom:40px;
-        &__contents {
-            &__leftBox {
-                width:100%;
-                .thumbnail_list {
-                    li {
-                        a {
-                            padding:20px 19px 20px 14px;
-                            .thumbnail_img {
-                                width:90px;
-                            }
-                            dl {
-                                padding-left:110px;
-                                dt {
-                                    height:17px;
-                                    margin-bottom:10px;
-                                    font-size:14px;
-                                    line-height:17px;
-                                    @include letterCut;
-                                    -webkit-line-clamp: 1;
-                                }
-                                dd {
-                                    height:26px;
-                                    font-size:11px;
-                                    line-height:14px;
-                                    margin-bottom:9px;
-                                }
-                                .arrow {
-                                    width:5px;
-                                    height:15px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            &__rightBox {
-                display:none;
-            }
-        }
-    }
-
-    /*
-    *********************************************************************************
-        promotion.scss 작성
-        작성일 : 2017.04.24
-        작성자 : 정진배
-    *********************************************************************************
-    */
-
-    .promotion{
-        .promotion_wrap{
-          margin-bottom:20px;
-          &.last{margin-bottom:35px;}
-          .promotion_box{
-            position:relative;
-            background-color:#fff;
-            border-top:1px solid $mainColor;
-            border-bottom:1px solid $borderColor;
-            a{
-              display:block;
-              overflow:hidden;
-              padding:28px 15px 28px 15px;
-              .thumbnail_img {
-                width:160px;
-                height:70px;
-                overflow:hidden;
-                float:left;
-                position:absolute;;
-                img {
-                    width:100%;
-                    height: auto;
-                }
-              }
-              dl {
-                position:relative;
-                padding-left:180px;
-                dt {
-                    height:35px;
-                  margin-bottom:10px;
-                  @include fontStyle(noto-bold, 600, normal);
-                  font-size: 14px;
-                  line-height:17px;
-                }
-                dd {
-                  margin-bottom:4px;
-                  @include fontStyle(noto-regular, 100, italic);
-                  font-size: 11px;
-                  line-height:14px;
-                  color:#555;
-                  &.date {
-                      height:auto;
-                    margin-right:15px;
-                  }
-                  &.date, &.hits{
-                    display:inline-block;
-                    margin-bottom:0;
-                  }
-                }
-              }
-              .arrow {
-                position:absolute;
-                bottom:28px;
-                right:17px;
-                width:20px;
-                height:10px;
-              }
-            }
-            > img {
-                width:75px;
-            }
-            .promotion_ing, .promotion_end {
-                position:absolute;
-                top:0;
-                right:0;
-                width:55px;
-            }
-          }
-          .promotion_contents{
-            display:none;
-            padding:40px 18px;
-            border-top:1px solid $mainColor;
-            background-color:#fff;
-            text-align:center;
-            &.on {
-              display:block;
-              box-shadow:1px 1px 1px 1px #f0f0f0;
-            }
-            .promotion_view{
-                width:100%;
-                height:auto;
-                margin-bottom:40px;
-            }
-            strong {
-                display:block;
-          @include fontStyle(noto-bold, 600, italic);
-          font-size:18px;
-          color:#444;
-          margin-bottom:25px;
-            }
-            span{
-              display:block;
-              @include fontStyle(noto-regular, 100, italic);
-              font-size:14px;
-              line-heighT:17px;
-              color:#555;
-            }
-          }
-        }
-    }
-}
 /*
 *********************************************************************************
     winner 페이지
@@ -1042,6 +695,361 @@ $recommend-view : ".recommend-view";
             margin-bottom:57px;
             padding:0 50px;
             text-align:center;
+        }
+    }
+}
+@media all and (max-width:800px){
+    /*
+    *********************************************************************************
+        반응형 공통 레이아웃
+    *********************************************************************************
+    */
+    #sub-keyvisual{
+        display:none;
+    }
+
+    /*
+    *********************************************************************************
+        news.scss 반응형 작성
+        작성일 : 2017.04.27
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    .news {
+        &__contents {
+            &__leftBox {
+                width:100%;
+                .thumbnail_list {
+                    li {
+                        a {
+                            .thumbnail_img {
+                                width:135px;
+                            }
+                            dl {
+                                padding-left:155px;
+                                dt {
+                                    height:40px;
+                                    font-size:16px;
+                                    line-height:19px;
+                                }
+                                dd {
+                                    font-size:14px;
+                                    line-height:17px;
+                                    margin-bottom:18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__rightBox {
+                display:none;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        news_view.scss 작성
+        작성일 : 2017.04.27
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    .news__view__box {
+        padding: 20px 0 10px;
+        .innerWrap {
+            width:auto;
+            padding:16px;
+            .tit {
+                font-size:16px;
+                line-height:19px;
+                margin-bottom:21px;
+            }
+            .date {
+                font-size:14px;
+                line-height:17px;
+                margin-bottom:19px;
+            }
+            .img_wrap {
+                width:auto;
+                margin-bottom:19px;
+            }
+            .list_view_text {
+                font-size:13px;
+                line-height:16px;
+                margin-bottom:25px;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        promotion.scss 작성
+        작성일 : 2017.04.24
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    .promotion{
+        .promotion_wrap{
+          margin-bottom:20px;
+          &.last{margin-bottom:35px;}
+          .promotion_box{
+            position:relative;
+            background-color:#fff;
+            border-top:1px solid $mainColor;
+            border-bottom:1px solid $borderColor;
+            a{
+              display:block;
+              overflow:hidden;
+              padding:28px 100px 28px 25px;
+              .thumbnail_img {
+                width:280px;
+                height:110px;
+                overflow:hidden;
+                float:left;
+                position:absolute;;
+                img {
+                    width:100%;
+                    height: auto;
+                }
+              }
+              dl {
+                position:relative;
+                padding-left:300px;
+                dt {
+                    height:38px;
+                  margin-bottom:19px;
+                  @include fontStyle(noto-bold, 600, normal);
+                  @include letterCut;
+                  font-size: 16px;
+                  line-height:19px;
+                }
+                dd {
+                  margin-bottom:25px;
+                  @include fontStyle(noto-regular, 100, italic);
+                  @include letterCut;
+                  font-size: 12px;
+                  line-height:15px;
+                  color:#555;
+                  &.date {
+                    margin-right:15px;
+                  }
+                  &.date, &.hits{
+                    display:inline-block;
+                    margin-bottom:0;
+                  }
+                }
+              }
+              .arrow {
+                position:absolute;
+                bottom:28px;
+                right:17px;
+              }
+            }
+            > img {
+                width:75px;
+            }
+            .promotion_ing, .promotion_end {
+                position:absolute;
+                top:0;
+                right:0;
+            }
+          }
+          .promotion_contents{
+            display:none;
+            padding:40px 18px;
+            border-top:1px solid $mainColor;
+            background-color:#fff;
+            text-align:center;
+            &.on {
+              display:block;
+              box-shadow:1px 1px 1px 1px #f0f0f0;
+            }
+            .promotion_view{
+                width:100%;
+                height:auto;
+                margin-bottom:40px;
+            }
+            strong {
+                display:block;
+          @include fontStyle(noto-bold, 600, italic);
+          font-size:18px;
+          color:#444;
+          margin-bottom:25px;
+            }
+            span{
+              display:block;
+              @include fontStyle(noto-regular, 100, italic);
+              font-size:14px;
+              line-heighT:17px;
+              color:#555;
+            }
+          }
+        }
+    }
+}
+
+@media all and (max-width:640px){
+
+    /*
+    *********************************************************************************
+        news.scss 작성
+        작성일 : 2017.04.27
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    .news {
+        padding-top:0;
+        padding-bottom:40px;
+        &__contents {
+            &__leftBox {
+                width:100%;
+                .thumbnail_list {
+                    li {
+                        a {
+                            padding:20px 19px 20px 14px;
+                            .thumbnail_img {
+                                width:90px;
+                            }
+                            dl {
+                                padding-left:110px;
+                                dt {
+                                    height:17px;
+                                    margin-bottom:10px;
+                                    font-size:14px;
+                                    line-height:17px;
+                                    @include letterCut;
+                                    -webkit-line-clamp: 1;
+                                }
+                                dd {
+                                    height:26px;
+                                    font-size:11px;
+                                    line-height:14px;
+                                    margin-bottom:9px;
+                                }
+                                .arrow {
+                                    width:5px;
+                                    height:15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__rightBox {
+                display:none;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        promotion.scss 작성
+        작성일 : 2017.04.24
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    .promotion{
+        .promotion_wrap{
+          margin-bottom:20px;
+          &.last{margin-bottom:35px;}
+          .promotion_box{
+            position:relative;
+            background-color:#fff;
+            border-top:1px solid $mainColor;
+            border-bottom:1px solid $borderColor;
+            a{
+              display:block;
+              overflow:hidden;
+              padding:28px 15px 28px 15px;
+              .thumbnail_img {
+                width:160px;
+                height:70px;
+                overflow:hidden;
+                float:left;
+                position:absolute;;
+                img {
+                    width:100%;
+                    height: auto;
+                }
+              }
+              dl {
+                position:relative;
+                padding-left:180px;
+                dt {
+                    height:35px;
+                  margin-bottom:10px;
+                  @include fontStyle(noto-bold, 600, normal);
+                  font-size: 14px;
+                  line-height:17px;
+                }
+                dd {
+                  margin-bottom:4px;
+                  @include fontStyle(noto-regular, 100, italic);
+                  font-size: 11px;
+                  line-height:14px;
+                  color:#555;
+                  &.date {
+                      height:auto;
+                    margin-right:15px;
+                  }
+                  &.date, &.hits{
+                    display:inline-block;
+                    margin-bottom:0;
+                  }
+                }
+              }
+              .arrow {
+                position:absolute;
+                bottom:28px;
+                right:17px;
+                width:20px;
+                height:10px;
+              }
+            }
+            > img {
+                width:75px;
+            }
+            .promotion_ing, .promotion_end {
+                position:absolute;
+                top:0;
+                right:0;
+                width:55px;
+            }
+          }
+          .promotion_contents{
+            display:none;
+            padding:40px 18px;
+            border-top:1px solid $mainColor;
+            background-color:#fff;
+            text-align:center;
+            &.on {
+              display:block;
+              box-shadow:1px 1px 1px 1px #f0f0f0;
+            }
+            .promotion_view{
+                width:100%;
+                height:auto;
+                margin-bottom:40px;
+            }
+            strong {
+                display:block;
+          @include fontStyle(noto-bold, 600, italic);
+          font-size:18px;
+          color:#444;
+          margin-bottom:25px;
+            }
+            span{
+              display:block;
+              @include fontStyle(noto-regular, 100, italic);
+              font-size:14px;
+              line-heighT:17px;
+              color:#555;
+            }
+          }
         }
     }
 }
