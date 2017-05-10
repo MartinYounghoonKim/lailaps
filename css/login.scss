@@ -201,6 +201,18 @@
                             font-style:normal;
                         }
                     }
+                    &.is-save-id{
+                        .login-contents__put-area__text__save-id{
+                            position:absolute;
+                            right:0;
+                            top:0;
+                            box-sizing:border-box;
+                            width:118px;
+                            height:100%;
+                            padding:18px 0 0 20px;
+                            border-left:1px solid #ccc;
+                        }
+                    }
                     &.have-email-select{
                         padding:0 111px 0 0;
                     }
@@ -265,9 +277,30 @@
     작성일 : 2017.05.10
     작성자 : 김영훈
 **********************************************************************************/
-
 .login__put-information{
     .login-btn-wrap{
         margin-top:40px;
+    }
+}
+/**********************************************************************************
+    로그인 페이지 회원가입 완료 페이지
+    작성일 : 2017.05.10
+    작성자 : 김영훈
+**********************************************************************************/
+.login__join-complete{
+    .join-complete__paragraph{
+        margin-bottom:40px;
+        padding:30px 0 86px;
+        border-bottom:1px solid #ddd;
+        text-align:center;
+        font-size:32px;
+        line-height:34px;
+        @include fontStyle("noto-regular", 100, italic);
+    }
+    .login-contents__paragraph{
+        margin-bottom:18px;
+    }
+    .login-btn-wrap{
+        margin-top:20px;
     }
 }
