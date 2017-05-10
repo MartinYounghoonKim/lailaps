@@ -701,4 +701,56 @@ $btnColor04: #2FC600;
             }
         }
     }
+    /**********************************************************************************
+        공통 테이블 가이드
+    **********************************************************************************/
+    .table-contents__title{
+        margin-bottom:12px;
+        background:none;
+        span{
+            padding:0;
+            font-size:18px;
+            line-height:20px;
+        }
+    }
+    .contents-filter{
+        margin-bottom:15px;
+        .table-contents__select{
+            width:85px;
+            height:37px;
+            span{
+                select{
+                    font-size:13px;
+                    line-height:15px;
+                }
+            }
+        }
+    }
+    .table-contents__table-wrap{
+        .table01{
+            word-break:break-all;
+             thead{
+                 th{
+                     padding:8px 5px;
+                     font-size:12px;
+                     line-height:14px;
+                 }
+             }
+             tbody{
+                 td{
+                     padding:8px 5px;
+                     font-size:12px;
+                     line-height:14px;
+                     .trophy-icon{
+                         width:18px;
+                         height:auto;
+                     }
+                     .btn-xl{
+                         height:auto;
+                         padding:9px 5px 11px;
+                     }
+                 }
+             }
+        }
+    }
 }
