@@ -9,7 +9,18 @@
 define([
 	'jquery'
 	,'jqueryEasing'
-],function ($) {
+	,'responsive'
+],function ($,easing, responsive) {
+	// TODO: 해상도(PC와 모바일)에 맞춰 기능 분리하기
+	var DEVICE_TEMP = responsive.getDeviceSize();
+	var DEVICE = DEVICE_TEMP;
+	$(window).resize( function(){
+		DEVICE_TEMP = responsive.getDeviceSize();
+		if(DEVICE !==DEVICE_TEMP ){
+			DEVICE = DEVICE_TEMP;
+			console.log(bannerAnimation)
+		}
+	});
 	var bannerAnimation = function(element){
 		this.wrap=$(element.wrap);
 		this.child=$(element.child, this.wrap);
