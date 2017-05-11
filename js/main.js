@@ -1,11 +1,8 @@
 require.config({
     baseUrl: '../js',
     paths:{
-        'jquery': [
-            'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min'
-            ,'lib/jquery-1.9.1.min'
-        ]
-        ,'jqueryEasing': 'lib/jquery.easing.min'
+        'jquery': 'lib/jquery-1.9.1.min'
+        ,'jqueryEasing':'lib/jquery.easing.min'
         ,'jqueryUI': 'lib/jquery-ui'
         ,'wheel': 'lib/wheel'
         //controller
@@ -49,7 +46,7 @@ require.config({
 			exports :'jqueryEasing'
 		},
         'wheel':{
-			deps: ['jquery'],
+			deps: ['jquery','jqueryEasing'],
 			exports :'wheel'
 		},
     },
