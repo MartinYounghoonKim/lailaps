@@ -414,6 +414,9 @@
                 .login-contents__paragraph{
                     font-size:14px;
                     line-height:16px;
+                    br{
+                        display:none;
+                    }
                 }
                 .login-contents__put-area{
                     .login-contents__put-area__text{
@@ -459,6 +462,7 @@
                     }
                 }
                 .login-check-box{
+                    width:21px;
                     height:21px;
                     label{
                         background-position:0 -36px;
@@ -523,5 +527,30 @@
             }
         }
     }
+    /**********************************************************************************
+        로그인 페이지 약관 동의 페이지
+        작성일 : 2017.05.11
+        작성자 : 김영훈
+    **********************************************************************************/
+    .login__policy{
+        .login__policy-contents{
+            dl{
+                margin-bottom:15px;
+                dt{
+                    font-size:14px;
+                    line-height:16px;
+                }
+                dd{
+                    padding:15px;
+                    font-size:12px;
+                    line-height:14px;
+                }
+            }
+        }
+        .login-btn-wrap{
+            margin-bottom:20px;
+        }
+    }
+
 
 }
