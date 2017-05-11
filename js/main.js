@@ -20,6 +20,7 @@ require.config({
         ,'ProfileView':'controller/ProfileView'
         ,'ProfileWrite':'controller/ProfileWrite'
         ,'RunningRecord':'controller/RunningRecord'
+        ,'RunningRecordView':'controller/RunningRecordView'
 
     	//Function Module
         ,'checkDevice':'constant/device'
