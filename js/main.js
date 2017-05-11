@@ -21,6 +21,7 @@ require.config({
         ,'ProfileWrite':'controller/ProfileWrite'
         ,'RunningRecord':'controller/RunningRecord'
         ,'RunningRecordView':'controller/RunningRecordView'
+        ,'MyRepairList':'controller/MyRepairList'
 
     	//Function Module
         ,'checkDevice':'constant/device'
