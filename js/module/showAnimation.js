@@ -12,6 +12,11 @@ define([
 	,'jqueryEasing'
 ],function ($) {
 	var showAnimation = function(element){
+		/* TODO:
+			1. scrollY IE 크로스 브라우징 체크
+			2. 에니메이션의 [that.direction] 크로스 브라우징 체크 ->해결법) 객체로 return
+		*/
+
 		this.wrap = $(element.wrap);
 		this.child = $(element.child, this.wrap);
 		this.direction = this.wrap.data("ui-show-animation-direction");
