@@ -19,6 +19,7 @@ require.config({
         ,'RecommendView':'controller/RecommendView'
         ,'ProfileView':'controller/ProfileView'
         ,'ProfileWrite':'controller/ProfileWrite'
+        ,'RunningRecord':'controller/RunningRecord'
 
     	//Function Module
         ,'checkDevice':'constant/device'
