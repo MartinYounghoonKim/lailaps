@@ -12,7 +12,7 @@
 #contents.login-form{
     padding:100px 0 95px;;
     background-image:url("../images/bg/login_page_bg.png");
-    background-repeaet:no-repeat;
+    background-repeat:no-repeat;
     background-position:center center;
     .login-wrap{
         width:640px;
@@ -101,7 +101,7 @@
                 }
                 &.have-one{
                     a{
-                        flaot:none;
+                        float:none;
                         width:100%;
                     }
                 }
@@ -388,4 +388,119 @@
             float:right;
         }
     }
+}
+/**********************************************************************************
+    반응형 작업 Tablet
+**********************************************************************************/
+@media all and (max-width:800px){
+
+    /**********************************************************************************
+        로그인 페이지 공통 스타일
+    **********************************************************************************/
+    #contents.login-form{
+        padding:80px 15px 60px;
+        .login-wrap{
+            width:100%;
+            .login-contents{
+                padding:15px;
+                .login-contents__title{
+                    margin-bottom:20px;
+                    font-size:30px;
+                    line-height:32px;
+                }
+                .login-contents__tab{
+                    margin-bottom:20px;
+                    li{
+                        a{
+                            padding-bottom:8px;
+                            font-size:14px;
+                            line-height:16px;
+                        }
+                    }
+                }
+                .login-contents__paragraph{
+                    font-size:14px;
+                    line-height:16px;
+                }
+                .login-contents__put-area{
+                    .login-contents__put-area__text{
+                        height:45px;
+                        padding:5px;
+                        input[type="text"], input[type="password"], select{
+                            font-size:14px;
+                            line-height:16px;
+                        }
+                        .login-contents__put-area__text__btn{
+                            width:90px;
+                            height:43px;
+                            padding-top:14px;
+                            font-size:14px;
+                            line-height:16px;
+                            &.have-line{
+                                margin-top:0;
+                            }
+                        }
+                        &.have-phone-select{
+                            padding-left:100px;
+                            select{
+                                width:90px;
+                            }
+                        }
+                        &.have-button{
+                            padding-right:100px;
+                        }
+                        &.is-save-id{
+                            .login-contents__put-area__text__save-id{
+                                width:90px;
+                                padding:12px 0 0 15px;
+                            }
+                        }
+                        &.is-email{
+                            i{
+                                right:17px;
+                                top:14px;
+                                font-size:14px;
+                                line-height:16px;
+                            }
+                        }
+                    }
+                }
+                .login-check-box{
+                    height:21px;
+                    label{
+                        background-position:0 -36px;
+                        background-size:20px auto;
+                    }
+                    &.have-text{
+                        label{
+                            padding-left:29px;
+                            font-size:14px;
+                            line-height:18px;
+                        }
+                    }
+                }
+                .login-btn-wrap{
+                    a{
+                        padding:12px 0 10px;
+                        font-size:16px;
+                        line-height:21px;
+                        &.is-white{
+                            padding:11px 0 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /**********************************************************************************
+        로그인 페이지 로그인 페이지
+        작성일 : 2017.05.11
+        작성자 : 김영훈
+    **********************************************************************************/
+    .login__login{
+        .login-contents__paragraph{
+            margin-bottom:20px;
+        }
+    }
+
 }
