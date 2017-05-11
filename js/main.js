@@ -23,6 +23,7 @@ require.config({
         ,'RunningRecordView':'controller/RunningRecordView'
         ,'MyRepairList':'controller/MyRepairList'
         ,'MyRepairView':'controller/MyRepairView'
+        ,'EditMyInformation':'controller/EditMyInformation'
 
     	//Function Module
         ,'checkDevice':'constant/device'
