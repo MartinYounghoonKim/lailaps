@@ -2,10 +2,13 @@ define([],function () {
     require([
         'gnb'
 	],function(gnb){
-        // TODO: GNB 기능 해상도 (PC와 모바일) 에 맞춰 기능 분리하기
         gnb().init({
-            "menuActiveBtn" : ".gnb-active-btn"
-        });
+            "menuActiveBtn" : ".gnb-active-btn",
+            "wrapper" : "#header .wrap",
+            "menuCloseBtn" : ".gnb-exit_btn",
+            "gnbWrap" : "#gnb > ul",
+            "gnbOneDeptBtn" : "[data-gnb-hover]"
+        }).divideDeviceEvent();
     });
     require([
         'jquery'
