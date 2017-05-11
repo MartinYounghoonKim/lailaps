@@ -1189,6 +1189,7 @@ $runningRecord : ".runningRecord";
         }
         .last {
             margin-bottom:0;
+        }
         span {
             display:inline-block;
             padding:15px;
@@ -1204,7 +1205,7 @@ $runningRecord : ".runningRecord";
             border-left:1px solid #e5e5e5;
             color:#999;
         }
-    }
+    
 }
 
 .runningRecord {
