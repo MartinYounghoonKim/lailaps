@@ -13,12 +13,12 @@ define([
 	var currentSize= "";
 	var responsive ={
 		init : function(){
-			this.windowSize = Math.max( document.documentElement.clientWidth | window.innerWidth | window.availWidth);
+			this.windowSize = Math.max( document.documentElement.clientWidth, window.innerWidth);
 			this.resolution;
 			this.oldSize;
 			this.newSize;
+
 			//start function
-			this.checkSize();
 			this.callSize();
 		},
 		checkSize:function(){
@@ -30,16 +30,18 @@ define([
 			} else if ( this.resolution <= device.MOBILE_SIZE){
 				this.resolution="Mobile";
 			}
+
+			return this.resolution;
 		},
 		callSize:function(){
-			this.newSize = this.resolution;
+			this.newSize = this.checkSize();
 			if(this.newSize !== this.oldSize){
 				this.oldSize = this.newSize;
 				currentSize = this.oldSize;
 				//Check Device size;
 				console.log(":::: Device Size Check : " + currentSize + " ::::");
 			}
-
+			return currentSize;
 		}
 	}
 	responsive.init();
