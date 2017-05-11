@@ -12,11 +12,13 @@
     1. layout.scss : header 영역, contents 영역, footer 영역에 대한 스타일 정의
     2. common.scss : 공통 모듈 스타일에 대한 정의
     3. sub.scs : 서브 페이지의 컨텐츠 영역에 대한 스타일 정의
+    4. login.scs : 로그인 페이지의 컨텐츠 영역에 대한 스타일 정의
 **********************************************************************************/
 @import "font.css";
 @import "layout.scss";
 @import "common.scss";
 @import "sub.scss";
+@import "login.scss";
 /**********************************************************************************
                         각 브라우저 Hack 에 대한 기본 설정
 **********************************************************************************/
@@ -61,6 +63,7 @@ html{
         @include basicFont;
         margin:0;
         padding:0;
+        min-width:320px;
     }
 }
 a{
@@ -118,6 +121,11 @@ form{
         overflow:hidden;
         font-size:0;
         line-height:0;
+    }
+    fieldset{
+        margin:0;
+        padding:0;
+        border:0;
     }
 }
 img{
