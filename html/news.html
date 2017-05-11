@@ -5,7 +5,7 @@
   <meta name="Author" content="Madeweb">
   <meta name="Keywords" content="라일랍스, ">
   <meta name="Description" content="">
-  <title>라일랍스</title>
+  <title>NEWS | 라일랍스</title>
   <link rel="stylesheet" href="../css/index.min.css"/>
  </head>
  <body data-reference="Main">
@@ -15,13 +15,33 @@
       <div id="header">
           <div class="outer_wrap">
               <h1 class="h_logo"><a href="#none"><img src="../images/logo/h_logo.png" alt="Lailaps(Advanced Carbon Bike)"/></a></h1>
+          </div>
+          <button class="gnb-active-btn" type="button"><img src="../images/btn/gnb_menu_active_btn.png" alt="메뉴 열기"/></button>
+          <div class="wrap">
+              <h1 class="gnb-menu-logo"><img src="../images/logo/mobile_gnb_logo.png" alt="Lailaps 로고"/></h1>
+              <div class="gnb__user-info">
+                  <div class="gnb__user-info__inner-wrap">
+                      <div class="gnb__user-info__inner-wrap__user-img">
+                          <img src="../images/temp/temp06.png"/>
+                      </div>
+                      <div class="gnb__user-info__inner-wrap__user-info">
+                          <!-- 사용자가 로그인을 했을시-->
+                          <strong>홍길동</strong>
+                          <span>madeweb</span>
+                          <!-- 사용자가 로그인을 안했을시
+                          <p>로그인 해주세요.</p>-->
+                      </div>
+                  </div>
+              </div>
               <ul class="util">
+                  <!-- 로그인이 안되어 있을 때 활성화 -->
                   <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>LOGIN</span></span></a></li>
                   <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>JOIN</span></span></a></li>
-                  <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>MYPAGE</span></span></a></li>
+                  <!-- 로그인시 활성화
+                  <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>LOGIN</span></span></a></li>
+                  <li><a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>JOIN</span></span></a></li>
+                  -->
               </ul>
-          </div>
-          <div class="wrap">
               <!-- gnb 시작 -->
               <div id="gnb">
                   <ul>
@@ -90,13 +110,35 @@
                       </li>
                   </ul>
               </div>
-              <!-- gnb 시작 -->
+              <!--// gnb 시작 -->
+              <button type="button" class="gnb-exit_btn"><img src="../images/img/gnb_exit_btn.png" alt="메뉴 닫기"/></button>
           </div>
       </div>
       <!--// 헤더 영역 -->
       <hr/>
-
-        <hr/>
+      <!-- 서브 키비쥬얼 영역 -->
+      <div id="sub-keyvisual" class="sub-keyvisual__news">
+          <div class="sub-keyvisual__navigation">
+              <div class="outer_wrap">
+                  <ul>
+                      <li><a href="#none">home</a></li>
+                      <li><a href="#none">news &amp; promotion</a></li>
+                      <li><strong>news</strong></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="sub-keyvisual__title" data-ui-show-animation="wrap" data-ui-show-animation-direction="left">
+              <div class="wrap">
+                  <dfn>news &amp; promotion</dfn>
+              </div>
+              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>NEWS</strong></div></div>
+              <div class="wrap">
+                  <p>THE TIME TO BE HAPPY IS NOW</p>
+              </div>
+          </div>
+      </div>
+      <!--// 서브 키비쥬얼 영역 -->
+      <hr/>
         <!-- 컨텐츠 영역 -->
         <div id="contents" class="sub news">
           <div class="wrap">
@@ -170,7 +212,7 @@
                       <img src="../images/btn/prev.png" alt="이전으로 이동">
                     </a>
                     <ul>
-                      <li class="first"><a href="#none" class="on">1</a></li>
+                      <li class="first"><strong>1</strong></li>
                       <li><a href="#none">2</a></li>
                       <li><a href="#none">3</a></li>
                       <li><a href="#none">4</a></li>
@@ -187,7 +229,7 @@
               </div>
               <div class="news__contents__rightBox">
                 <div class="news__contents__rightBox_wrap">
-                  <div class="tit">오스트리아 APEX ENGINEERING社. (주) 티포엘과 MOU를 체결</div>
+                  <div class="tit"><span>오스트리아 APEX ENGINEERING社. (주) 티포엘과 MOU를 체결</span></div>
                   <img src="../images/img/news_list_view.png" class="thumbnail_view" alt="썸네일 자세히 보기">
                   <p class="list_view_text">KOTRA가 국내중소기업 수출지원을 위해 오스트리아 글로벌기업과<br />연계를 주관하였으며 자동차, 조선, 항공 부품뿐만 아니라 신소재<br />분야 등 다양한 소재부품분야 국내기업의 글로벌밸류체인(GVC)<br />지원을 위해 타기관과 협력으로 글로벌파트너링 사업을 지속적으로<br />확대해 나갈계획입니다.<br />다양한 소재부품분야 국내기업의 글로벌밸류체인(GVC) 지원을<br />위해 타기관과 협력으로 글로벌파트너링 사업을 지속적으로 확대해<br />나갈계획입니다.</p>
                   <a class="btn btn-m btn-color-type01 btn-line" href="#none"><span class="btn-inner"><span>자세히보기</span></span></a>
@@ -239,10 +281,16 @@
                 <dl>
                     <dt>주소</dt>
                     <dd>경북 경산시 진량읍 공단5로 82</dd>
+                </dl>
+                <dl>
                     <dt>연락처</dt>
                     <dd>053-523-5760~1</dd>
+                </dl>
+                <dl>
                     <dt>팩스</dt>
                     <dd><a href="telto:053-523-5763">053-523-5763</a>
+                </dl>
+                <dl>
                     <dt>이메일</dt>
                     <dd><a href="mail:master@t4l.co.kr">master@t4l.co.kr</a></dd>
                 </dl>
@@ -252,9 +300,11 @@
         <!--// 푸터 영역 -->
         <hr/>
     </div>
-    <script src="../js/jquery-1.9.1.min.js"></script>
-    <script src="../js/jquery.easing.min.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-     <script src="../js/common.js"></script>
+    <script data-main="../js/main" src="../js/require.js"></script>
+    <script>
+        //Controller 변수 선언
+        var CONTROLLER_TYPE = "News";
+        console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
+    </script>
  </body>
 </html>

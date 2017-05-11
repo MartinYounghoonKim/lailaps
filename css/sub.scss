@@ -106,16 +106,18 @@
       &_wrap{
         padding:60px 35px 0 35px;
         .tit{
-          text-align:center;
-          @include fontStyle(noto-medium, 100, italic);
-          font-size:24px;
-          line-height:30px;
-          padding:0 15px 22px 15px;
-          border-bottom:1px solid $borderColor;
-          margin-bottom:25px;
-          span{
-            display:block;
-          }
+            span{
+                display:block;
+                @include fontStyle(noto-medium, 100, italic);
+                @include letterCut;
+            }
+            margin-bottom:25px;
+            padding:0 15px 22px 15px;
+            text-align:center;
+            overflow:hidden;
+            font-size:24px;
+            line-height:30px;
+            border-bottom:1px solid $borderColor;
         }
         .thumbnail_view {
           margin-bottom:40px;
@@ -255,6 +257,11 @@
             position:absolute;
             bottom:28px;
             right:17px;
+            width:32px;
+            height:15px;
+            background:url("../images/arrow/arrow02.png") 0 0 no-repeat;
+            text-indent:-10000em;
+            overflow:hidden;
           }
         }
         .promotion_ing, .promotion_end {
@@ -262,6 +269,7 @@
             top:0;
             right:0;
         }
+
       }
       .promotion_contents{
         display:none;
@@ -293,11 +301,410 @@
           color:#555;
         }
       }
+      &.on{
+          .promotion_box a .arrow{
+              background:url("../images/arrow/arrow02_on.png") 0 0 no-repeat;
+          }
+      }
     }
 }
+/*
+*********************************************************************************
+    winner 페이지
+    작성일 : 2017.05.02
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$winner : ".winners";
+@keyframes tabAnimation{
+    50%{
+        transform:translateY(-6px) skew(12deg);
+    }
+    100%{
+        transform:translateY(0) skew(12deg);
+    }
+}
+#{$winner} {
+    .winners_tab-list{
+        overflow:hidden;
+        ul{
+            width:110%;
+            margin-bottom:73px;
+            text-align:center;
+            @include removeBetween;
+            @include crossBrowsing("transform", translateX(-5%));
+            li{
+                display:inline-block;
+                width:33%;
+                @include crossBrowsing("transform", skew(-12deg));
+                background-color:#777;
+                vertical-align:top;
+                button{
+                    display:block;
+                    width:100%;
+                    padding:15px 0;
+                    color:#fff;
+                    span{
+                        display:inline-block;
+                        margin-left:8px;
+                        vertical-align:middle;
+                    }
+                    img {
+                        display:inline-block;
+                        vertical-align:middle;
+                        @include crossBrowsing("transform", skew(12deg));
+                    }
+                    &:hover{
+                        img {
+                            @include crossBrowsing("transform",translateY(0px) skew(12deg) );
+                            animation:tabAnimation 2s ease-in-out infinite;
+                        }
+                    }
 
+                }
+                &.on{
+                    background-color: $basicColor;
+                }
+            }
+        }
+    }
+    .winners_tab-contents{
+        >div{
+            display:none;
+            .winners__contents-title{
+                padding-top:61px;
+                margin-bottom:34px;
+                background:url("../images/icon/winner_title_icon.png") center top no-repeat;
+                text-align:center;
+                font-size:24px;
+                line-height:26px;
+                text-transform:uppercase;
+                @include fontStyle("noto-bold",600, italic);
+            }
+            .winner_thumnail-list-wrap{
+                padding:0 75px;
+                margin-bottom:83px;
+                ol{
+                    @include removeBetween;
+                    li{
+                        position:relative;
+                        display:inline-block;
+                        width:280px;
+                        height:330px;
+                        overflow:hidden;
+                        > img{
+                            width:100%;
+                            height:auto;
+                        }
+                        div{
+                            position:absolute;
+                            left:0;
+                            top:0;
+                            box-sizing:border-box;
+                            width:100%;
+                            height:100%;
+                            padding:200px 20px 0;
+                            text-align:center;
+                            color:#fff;
+                            background:url("../images/bg/winner_thumnail_bg01.png") 0 bottom no-repeat;
+                            strong{
+                                display:block;
+                                margin:10px 0 5px;
+                                font-size:24px;
+                                line-height:26px;
+                                @include fontStyle("noto-bold", 600, italic);
+                            }
+                            span{
+                                font-size:14px;
+                                line-height:16px;
+                                @include fontStyle("noto-regular", 100, italic);
+                            }
+                        }
+                        &:nth-child(2){
+                            margin:0 25px;
+                        }
+                    }
+                }
+            }
+            &.on{
+                display:block;
+            }
+        }
+    }
+}
+.winners__profile-wrap{
+    margin-bottom:75px;
+    padding:37px 47px 35px 35px;
+    border-top:8px solid $basicColor;
+    overflow:hidden;
+    background-color:#fff;
+    .winners__profile-wrap__img{
+        float:left;
+        box-sizing:border-box;
+        height:391px;
+        margin-right:34px;
+        padding:27px 34px 30px 0;
+        border-right:1px solid #e5e5e5;
+        overflow:hidden;
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+    .winners__profile-wrap__profile{
+        float:left;
+        width:439px;
+        box-sizing:border-box;
+        padding:27px 0 35px;
+        > strong{
+            display:block;
+            margin-bottom:35px;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            font-size:24px;
+            line-height:26px;
+            @include fontStyle("noto-bold", 600, italic);
+            em{
+                @include fontStyle("noto-bold", 600, italic);
+            }
+        }
+        p{
+            height:148px;
+            overflow:hidden;
+            font-size:14px;
+            line-height:21px;
+        }
+        ul{
+            @include removeBetween;
+            text-align:center;
+            li{
+                display:inline-block;
+                width:136px;
+                dfn{
+                    display:block;
+                    margin-bottom:10px;
+                    @include basicFontSize;
+                }
+                div{
+                    box-sizing:border-box;
+                    height:101px;
+                    padding-top:56px;
+                    color:#fff;
+                    font-size:14px;
+                    line-height:16px;
+                    background-color:$basicColor;
+                    background-position:center 15px;
+                    background-repeat:no-repeat;
+                    @include crossBrowsing("transform", skew(-10deg));
+                    strong{
+                        display:block;
+                        margin-bottom:4px;
+                    }
+                }
+                &:nth-child(1){
+                    div{
+                        background-image:url("../images/icon/winner_profile_icon01.png");
+                    }
+                }
+                &:nth-child(2){
+                    margin:0 8px;
+                    div{
+                        background-image:url("../images/icon/winner_profile_icon02.png");
+                    }
+                }
+                &:nth-child(3){
+                    div{
+                        background-image:url("../images/icon/winner_profile_icon03.png");
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+*********************************************************************************
+    recommend 페이지
+    작성일 : 2017.05.02
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$recommend : ".recommend";
+#{$recommend} {
+    .recommend__thumnail-list-wrap{
+        margin-bottom:40px;
+        text-align:center;
+        @include removeBetween;
+        .recommend__thumnail-list-wrap__list{
+            display:inline-block;
+            width:329px;
+            .recommend__thumnail-list-wrap__list__img{
+                width:100%;
+                height:184px;
+                overflow:hidden;
+                img{
+                    width:100%;
+                    height:auto;
+                }
+            }
+            .recommend__thumnail-list-wrap__list__detail{
+                background-color:#fff;
+                .recommend__thumnail-list-wrap__list__detail__tit{
+                    padding:22px 20px 27px;
+                    text-align:left;
+                    strong{
+                        display:block;
+                        height:42px;
+                        margin-bottom:12px;
+                        font-size:18px;
+                        line-height:20px;
+                        overflow:hidden;
+                        @include fontStyle("noto-regular", 100, italic);
+                    }
+                    em{
+                        font-size:14px;
+                        line-height:16px;
+                        color:#7e7e7e;
+                    }
+                }
+                .recommend__thumnail-list-wrap__list__detail__info{
+                    overflow:hidden;
+                    padding:10px 20px;
+                    border-top:1px solid #e2e2e2;
+                    a{
+                        float:left;
+                    }
+                    dfn{
+                        float:right;
+                        font-size:14px;
+                        line-height:16px;
+                        color:#999;
+                        @include fontStyle("noto-regular", 100, normal);
+                    }
+                }
+            }
+            &:nth-child(3n-1){
+                margin:0 26px;
+            }
+            &:nth-child(1),&:nth-child(2),&:nth-child(3){
+                margin-bottom:27px;
+            }
+        }
+    }
+}
+/*
+*********************************************************************************
+    recommend view 페이지
+    작성일 : 2017.05.08
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$recommend-view : ".recommend-view";
+#{$recommend-view}{
+    .recommend-view__wrap__list-contents{
+        margin-bottom:12px;
+        padding:34px 17px 54px 16px;
+        border-top:8px solid $basicColor;
+        background-color:#fff;
+        .recommend-view__wrap__list-contents__map{
+            margin-bottom:40px;
+        }
+        .recommend-view__wrap__list-contents__info{
+            overflow:hidden;
+            .recommend-view__wrap__list-contents__info__left{
+                position:relative;
+                float:left;
+                box-sizing:border-box;
+                width:503px;
+                padding-left:103px;
+                .recommend-view__wrap__list-contents__info__left__user-img{
+                    position:absolute;
+                    left:34px;
+                    top:0;
+                    width:54px;
+                    height:54px;
+                    border-radius:50%;
+                    overflow:hidden;
+                    img{
+                        width:100%;
+                    }
+                }
+                .recommend-view__wrap__list-contents__info__left__title{
+                    overflow:hidden;
+                    display:block;
+                    height:57px;
+                    margin-bottom:20px;
+                    font-size:24px;
+                    line-height:30px;
+                    @include fontStyle("noto-bold",600,italic);
+                }
+                .recommend-view__wrap__list-contents__info__left__user-name{
+                    display:block;
+                    margin-bottom:50px;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    overflow:hidden;
+                }
+                .recommend-view__wrap__list-contents__info__left__icon{
+                    .icon{
+                        margin-right:16px;
+                        padding-top:4px;
+                        &.chatting{
+                            margin-right:20px;
+                            background-position:left 5px;
+                        }
+                    }
+                    a{
+                        margin-right:5px;
+                    }
+                }
+            }
+            .recommend-view__wrap__list-contents__info__right{
+                float:left;
+                box-sizing:border-box;
+                width:503px;
+                padding-left:50px;
+                border-left:1px solid #ddd;
+                dl{
+                    position:relative;
+                    margin-bottom:15px;
+                    padding-left:90px;
+                    dt{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        font-size:14px;
+                        line-height:16px;
+                        color:#999;
+                    }
+                }
+            }
+        }
+    }
+    .recommend-view__wrap__list-thumnail{
+        margin-bottom:10px;
+        padding:40px 17px 57px 16px;
+        background-color:#fff;
+        .recommend-view__wrap__list-thumnail__img{
+            margin-bottom:38px;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+        .recommend-view__wrap__list-thumnail__paragraph{
+            margin-bottom:57px;
+            padding:0 50px;
+            text-align:center;
+        }
+    }
+}
 @media all and (max-width:800px){
-    #header{
+    /*
+    *********************************************************************************
+        반응형 공통 레이아웃
+    *********************************************************************************
+    */
+    #sub-keyvisual{
         display:none;
     }
 
@@ -308,7 +715,6 @@
         작성자 : 정진배
     *********************************************************************************
     */
-
     .news {
         &__contents {
             &__leftBox {
@@ -480,6 +886,240 @@
               color:#555;
             }
           }
+        }
+    }
+    /*
+    *********************************************************************************
+        winner 페이지
+        작성일 : 2017.05.02
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$winner : ".winners";
+    #{$winner} {
+        .winners_tab-list{
+            ul{
+                margin-bottom:40px;
+                li{
+                    button{
+                        padding:10px 0;
+                        font-size:12px;
+                        line-height:14px;
+                        img{
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+        .winners_tab-contents{
+            >div{
+                .winners__contents-title{
+                    margin-bottom:20px;
+                    padding-top:40px;
+                    font-size:18px;
+                    line-height:20px;
+                    background-size:38px auto;
+                }
+                .winner_thumnail-list-wrap{
+                    margin-bottom:40px;
+                    padding:0 45px;
+                     ol{
+                         li{
+                             width:100%;
+                             height:auto;
+                             margin-bottom:20px;
+                             div{
+                                 padding-top:50%;
+                                 background-size:100% 100%;
+                                 img{
+                                     width:35px;
+                                 }
+                                 strong{
+                                     font-size:18px;
+                                     line-height:20px;
+                                 }
+                             }
+                             &:nth-child(2){
+                                 margin:0 0 20px;
+                             }
+                         }
+                     }
+                }
+            }
+        }
+        .winners__profile-wrap{
+            margin-bottom:40px;
+            padding:20px 18px;
+            .winners__profile-wrap__img{
+                float:none;
+                height:auto;
+                margin-right:0;
+                padding:10px;
+                border-right:0;
+            }
+            .winners__profile-wrap__profile{
+                float:none;
+                width:auto;
+                padding:10px;
+                strong{
+                    margin-bottom:12px;
+                    font-size:18px;
+                    line-height:20px;
+                }
+                p{
+                    height:auto;
+                    font-size:12px;
+                    line-height:18px;
+                }
+                ul{
+                    li{
+                        width:29%;
+                        dfn{
+                            margin-bottom:5px;
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                        div{
+                            height:auto;
+                            min-height:101px;
+                            strong{
+                                margin-bottom:5px;
+                                font-size:12px;
+                                line-height:14px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        recommend 페이지
+        작성일 : 2017.05.10
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$recommend : ".recommend";
+    #{$recommend} {
+        .recommend__thumnail-list-wrap{
+            margin-bottom:20px;
+            .recommend__thumnail-list-wrap__list{
+                width:49%;
+                float:left;
+                &:nth-child(3n-1){
+                    margin:0;
+                }
+                &:nth-child(2n){
+                    float:right;
+                }
+                margin-bottom:15px;
+                &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                    margin-bottom:15px;
+                }
+                .recommend__thumnail-list-wrap__list__img{
+                    position:relative;
+                    height:0;
+                    padding-top:40%;
+                    img{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                .recommend__thumnail-list-wrap__list__detail{
+                    .recommend__thumnail-list-wrap__list__detail__tit{
+                        padding:10px;
+                        strong{
+                            height:39px;
+                            margin-bottom:8px;
+                            font-size:14px;
+                            line-height:16px;
+                        }
+                        em{
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                    }
+                    .recommend__thumnail-list-wrap__list__detail__info{
+                        padding:8px;
+                        dfn{
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                    }
+                }
+
+            }
+            &:after{
+                @include afterClear;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        recommend-view 페이지
+        작성일 : 2017.05.10
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$recommend-view : ".recommend-view";
+    #{$recommend-view}{
+        .recommend-view__wrap__list-contents{
+            padding:10px;
+            .recommend-view__wrap__list-contents__map{
+                margin-bottom:20px;
+                overflow:hidden;
+            }
+            .recommend-view__wrap__list-contents__info{
+                .recommend-view__wrap__list-contents__info__left{
+                    float:none;
+                    width:auto;
+                    margin-bottom:20px;
+                    padding-left:80px;
+                    .recommend-view__wrap__list-contents__info__left__user-img{
+                        left:5px;
+                    }
+                    .recommend-view__wrap__list-contents__info__left__title{
+                        margin-bottom:8px;
+                        font-size:18px;
+                        line-height:20px;
+                        height:auto;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
+                    }
+                    .recommend-view__wrap__list-contents__info__left__user-name{
+                        margin-bottom:20px;
+                    }
+                }
+                .recommend-view__wrap__list-contents__info__right{
+                    float:none;
+                    width:auto;
+                    padding-left:0;
+                    border-left:0;
+                }
+            }
+        }
+        .recommend-view__wrap__list-thumnail{
+            padding:10px;
+            .recommend-view__wrap__list-thumnail__img{
+                margin-bottom:10px;
+            }
+            .recommend-view__wrap__list-thumnail__paragraph{
+                margin-bottom:20px;
+                padding:0 10px;
+                font-size:12px;
+                line-heiht:16px;
+            }
+        }
+        .reply-wrap{
+            padding:10px;
         }
     }
 }

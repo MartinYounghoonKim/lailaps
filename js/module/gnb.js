@@ -8,9 +8,39 @@ define([
 		DEVICE_TEMP = responsive.getDeviceSize();
 		if(DEVICE !==DEVICE_TEMP ){
 			DEVICE = DEVICE_TEMP;
-			//실행될 기능
+			mobileGnbFunc.checkDeviceSize(DEVICE);
 		}
-	})
+	});
 
+	function checkDeviceSize(device){
+		console.log(device)
+		if(device !== "PC"){
+			//mobileGnbFunc();
+		}
+	}
+	
+	var mobileGnbFunc = function (){
+		function setSelector(selector){
+			return {
+				"menuActiveBtn" : $(selector.menuActiveBtn)
+			}
+		}
+
+		function init(options){
+			var dom = setSelector(options);
+			activeGnbMenu(dom.menuActiveBtn);
+		}
+		function activeGnbMenu(btn){
+			btn.click( function(){
+
+			});
+		}
+
+		return {
+			checkDeviceSize :checkDeviceSize,
+			init : init
+		}
+	};
+	return mobileGnbFunc;
 
 });
