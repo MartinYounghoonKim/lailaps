@@ -344,19 +344,11 @@
     }
     .login__customer-btn{
         margin-bottom:44px;
-        .login__customer-btn__prev{
-            float:left;
-            padding-left:42px;
-            font-size:20px;
-            line-height:33px;
-            color:#444;
-            @include fontStyle("noto-light", 100, normal);
-            background:url("../images/btn/login_prev_btn.png") 0 0 no-repeat;
-        }
+        text-align:center;
         ul{
-            float:right;
+            @include removeBetween;
             li{
-                float:left;
+                display:inline-block;
                 a{
                     font-size:20px;
                     line-height:33px;
@@ -366,6 +358,7 @@
                 &:after{
                     content:"|";
                     margin:0 12px;
+                    font-size:14px;
                     line-height:33px;
                     vertical-align:top;
                 }
@@ -500,6 +493,34 @@
     .login__login{
         .login-contents__paragraph{
             margin-bottom:20px;
+        }
+        .login-btn-wrap{
+            margin-bottom:20px;
+        }
+        .login__customer-btn{
+            margin-bottom:20px;
+            ul{
+                li{
+                    a{
+                        font-size:14px;
+                        line-height:16px;
+                    }
+                    &:after{
+                        font-size:8px;
+                        line-height:16px;
+                    }
+                }
+            }
+        }
+        .login__sns-login{
+            a:nth-child(1),a:nth-child(2){
+                width:49%;
+                height:auto;
+                img{
+                    width:100%;
+                    height:auto;
+                }
+            }
         }
     }
 
