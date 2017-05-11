@@ -17,6 +17,8 @@ require.config({
         ,'WinnersView':'controller/WinnersView'
         ,'Recommend':'controller/Recommend'
         ,'RecommendView':'controller/RecommendView'
+        ,'ProfileView':'controller/ProfileView'
+        ,'ProfileWrite':'controller/ProfileWrite'
 
     	//Function Module
         ,'checkDevice':'constant/device'
