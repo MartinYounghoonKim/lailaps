@@ -23,6 +23,7 @@ require.config({
         ,'EditMyInformation':'controller/EditMyInformation'
         ,'RepairServiceInformation':'controller/RepairServiceInformation'
         ,'CommonLogin':'controller/CommonLogin'
+        ,'RepairView':'controller/RepairView'
 
     	//Function Module
         ,'checkDevice':'constant/device'
