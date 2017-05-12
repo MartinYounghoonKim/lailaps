@@ -252,6 +252,12 @@ $borderColor: #e2e2e2;
     &.sub-keyvisual__recommend{
         background:url("../images/bg/sub_keyvisual_recommend.png") center 0 no-repeat;
     }
+    &.sub-keyvisual__profile{
+        background:url("../images/bg/sub_keyvisual_profile.png") center 0 no-repeat;
+    }
+    &.sub-keyvisual__repair-service{
+        background:url("../images/bg/sub_keyvisual_repair-service.png") center 0 no-repeat;
+    }
     .sub-keyvisual__navigation{
         margin-bottom:140px;
         text-align:right;
@@ -775,7 +781,7 @@ $certification : ".contents_certification";
                     opacity:0;
                 }
                 img:nth-child(1){
-                    right:0;
+                    left:420px;
                 }
                 img:nth-child(2){
                     top:0;

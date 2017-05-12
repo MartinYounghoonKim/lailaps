@@ -1522,6 +1522,101 @@ $my-repair-list_view : ".my-repair-list_view";
         }
     }
 }
+/*
+*********************************************************************************
+    리페어 서비스 작성
+    작성일 : 2017.05.11
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$repair-service : ".repair-service";
+#{$repair-service} {
+    .repair-service__contents{
+        padding:40px 54px 40px 53px;
+        border-top:7px solid $basicColor;
+        background-color:#fff;
+        .repair-service__contents__title-information{
+            margin-bottom:52px;
+            padding-bottom:40px;
+            border-bottom:1px solid #ccc;
+            .repair-service__contents__title-information__title{
+                text-align:center;
+                font-size:24px;
+                line-height:26px;
+                @include fontStyle("noto-bold", 600, italic);
+                dt{
+                    display:inline-block;
+                }
+                dd{
+                    display:inline-block;
+                }
+                &:nth-child(1){
+                    margin-bottom:8px;
+                }
+                &:nth-child(2){
+                    margin-bottom:25px;
+                }
+            }
+            .repair-service__contents__title-information__date{
+                font-size:14px;
+                line-height:16px;
+                text-align:center;
+                @include fontStyle("noto-light", 100, normal);
+                *{
+                    display:inline-block;
+                }
+            }
+        }
+        .repair-service__contents__detail-information{
+            .repair-service__contents__detail-information__img{
+                margin-bottom:40px;
+                > div{
+                    box-sizing:border-box;
+                    width:50%;
+                    padding:0 43px;
+                    float:left;
+                    text-align:center;
+                    strong{
+                        display:block;
+                        margin-bottom:25px;
+                        font-size:24px;
+                        line-height:26px;
+                        @include fontStyle("noto-bold", 600, italic);
+                    }
+                    div{
+                        position:relative;
+                        height:0;
+                        padding-top:86%;
+                        overflow:hidden;
+                        border:3px solid #ccc;
+                        img{
+                            position:absolute;
+                            left:0;
+                            top:0;
+                            width:100%;
+                            height:auto;
+                        }
+                    }
+                    &:nth-child(1){
+                        border-right:1px solid #ececec;
+                    }
+                }
+                &:after{
+                    @include afterClear;
+                }
+            }
+            .repair-service__contents__detail-information__paragraph{
+                margin-bottom:65px;
+                padding:0 45px;
+                font-size:14px;
+                line-height:21px;
+                color:#222;
+                text-align:center;
+            }
+        }
+    }
+}
+
 
 
 /*
@@ -2087,6 +2182,58 @@ $edit-my-information : ".edit-my-information";
         }
         .reply-wrap{
             padding:10px;
+        }
+    }
+    /*
+    *********************************************************************************
+        리페어 서비스 작성
+        작성일 : 2017.05.11
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$repair-service : ".repair-service";
+    #{$repair-service} {
+        .repair-service__contents{
+            padding:20px 15px;
+            .repair-service__contents__title-information{
+                padding-bottom:20px;
+                margin-bottom:12px;
+                .repair-service__contents__title-information__title{
+                    font-size:16px;
+                    line-height:18px;
+                    &:nth-child(2){
+                        margin-bottom:12px;
+                    }
+                }
+                .repair-service__contents__title-information__date{
+                    font-size:12px;
+                    line-height:14px;
+                }
+            }
+            .repair-service__contents__detail-information{
+                .repair-service__contents__detail-information__img{
+                    margin-bottom:28px;
+                    >div{
+                        width:100%;
+                        padding:0 20px;
+                        strong{
+                            margin-bottom:15px;
+                            font-size:16px;
+                            line-height:18px;
+                        }
+                        &:nth-child(1){
+                            margin-bottom:15px;
+                            border-right:0;
+                        }
+                    }
+                }
+                .repair-service__contents__detail-information__paragraph{
+                    margin-bottom:35px;
+                    padding:0 20px;
+                    font-size:12px;
+                    line-height:14px;
+                }
+            }
         }
     }
 }

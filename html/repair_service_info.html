@@ -5,15 +5,9 @@
   <meta name="Author" content="Madeweb">
   <meta name="Keywords" content="라일랍스, ">
   <meta name="Description" content="">
-  <title>서브페이지 레이아웃 | 라일랍스</title>
+  <title>서비스 안내 | 리페어 서비스 | 라일랍스</title>
   <link rel="stylesheet" href="../css/index.min.css"/>
  </head>
- <!--
-    서브페이지 작성시 유의 사항
-    1. title 태그의 제목 변경 ex) 서비스 안내 | Repair | 라일랍스
-    2. 비쥬얼 영역의 navigation 및 제목 변경
-    3. 페이지의 Controller 변경
- -->
  <body data-reference="Main">
     <div id="wrapper">
       <hr/>
@@ -128,18 +122,18 @@
               <div class="outer_wrap">
                   <ul>
                       <li><a href="#none">home</a></li>
-                      <li><a href="#none">서브 Dept1</a></li>
-                      <li><strong>컨텐츠 제목</strong></li>
+                      <li><a href="#none">repair</a></li>
+                      <li><strong>서비스 안내</strong></li>
                   </ul>
               </div>
           </div>
           <div class="sub-keyvisual__title" data-ui-show-animation="wrap" data-ui-show-animation-direction="left">
               <div class="wrap">
-                  <dfn>서브 Title</dfn>
+                  <dfn>리페어 서비스</dfn>
               </div>
-              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>메인 Title</strong></div></div>
+              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>서비스안내</strong></div></div>
               <div class="wrap">
-                  <p>페이지 간략 설명 문구</p>
+                  <p>FORGET HOW MUCH IT HURTS AND TRY AGAIN</p>
               </div>
           </div>
       </div>
@@ -148,7 +142,7 @@
         <!-- 컨텐츠 영역 -->
         <div id="contents" class="sub news">
           <div class="wrap">
-            <h2 class="tit01">컨텐츠 내용</h2>
+            <h2 class="tit01">NEWS</h2>
             <div class="news__contents">
                 <!-- 컨텐츠 작업 시작 -->
             </div>
@@ -215,7 +209,7 @@
     <script data-main="../js/main" src="../js/require.js"></script>
     <script>
         //Controller 변수 선언
-        var CONTROLLER_TYPE = "MyRepairList";
+        var CONTROLLER_TYPE = "RepairServiceInformation";
         console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
     </script>
  </body>
