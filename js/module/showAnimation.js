@@ -12,11 +12,6 @@ define([
 	,'jqueryEasing'
 ],function ($) {
 	var showAnimation = function(element){
-		/* TODO:
-			1. scrollY IE 크로스 브라우징 체크
-			2. 에니메이션의 [that.direction] 크로스 브라우징 체크 ->해결법) 객체로 return
-		*/
-
 		this.wrap = $(element.wrap);
 		this.child = $(element.child, this.wrap);
 		this.direction = this.wrap.data("ui-show-animation-direction");
@@ -24,11 +19,11 @@ define([
 		this.wrap.play=false;
 		this.arr = [];
 		var that =this;
-		this.scrollY =  document.body.scrollTop;
-		this.play = false;
+		this.scrollY =  document.body.scrollTop || document.documentElement.scrollTop;
+		this.play = true;
 
 		$(document).scroll( function(){
-			that.scrollY =  document.body.scrollTop;
+			that.scrollY =  document.body.scrollTop || document.documentElement.scrollTop;
 			that.chkPoint();
 		})
 	}
@@ -37,18 +32,16 @@ define([
 			var that = this;
 			this.child.each( function(){
 				that.arr.push(parseInt($(this).css(that.direction)));	//초기 left 값 arr에 대입
-				$(this).css({
-					[that.direction] : -($(this).width() + that.wrap.offset().left) + "px"
-				})
+				$(this)[0].style[that.direction] = -($(this).width() + that.wrap.offset().left) + "px"
 			})
 			this.chkPoint();
 		},
 		chkPoint: function(){
 			var limit = 500;
 			if( this.wrap.offset().top - this.scrollY <= limit){
-				this.play = true;
 				if(this.play == true){
 					this.showFunc();
+					this.play= false;
 				} else {
 					return false;
 				}
@@ -59,16 +52,29 @@ define([
 			var cnt = 0;
 			var limit = this.child.size()-1;
 			var duration = 200;
+
 			var interval = setInterval( function(){
-				that.child.eq(cnt).animate({
-					[that.direction] : that.arr[cnt] + "px",
-					"opacity" : 1
-				},{
+				that.child.eq(cnt).animate(
+					that.renderingDirection(that.direction, cnt),
+				{
 					"duration" : 1000,
 					"easing" : "easeOutBack"
-				});
+				})
 				cnt >= limit ? clearInterval(interval) : cnt++;
-			},duration)
+			}, duration)
+		},
+		renderingDirection:function(direct,cnt){
+			if(direct == "left"){
+				return {
+					"left" : this.arr[cnt] + "px",
+					"opacity" : 1
+				}
+			} else {
+				return {
+					"right" : this.arr[cnt] + "px",
+					"opacity" : 1
+				}
+			}
 		}
 
 	}
