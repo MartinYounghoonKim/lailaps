@@ -330,6 +330,16 @@ $btnColor04: #2FC600;
             @include crossBrowsing("transform", skew(-12deg));
             background-color:#777;
             vertical-align:top;
+            &:first-child{
+                a{
+                    @include crossBrowsing("transform",translateX(27px));
+                }
+            }
+            &:last-child{
+                a{
+                    @include crossBrowsing("transform",translateX(-22px));
+                }
+            }
             a{
                 display:block;
                 width:100%;
