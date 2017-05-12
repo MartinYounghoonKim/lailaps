@@ -1205,7 +1205,7 @@ $runningRecord : ".runningRecord";
             border-left:1px solid #e5e5e5;
             color:#999;
         }
-    
+
 }
 
 .runningRecord {
@@ -1215,6 +1215,101 @@ $runningRecord : ".runningRecord";
         .profileView_modify {
             color:#999;
             border:2px solid #999;
+        }
+    }
+}
+
+
+/*
+*********************************************************************************
+    myRepairList.scss 작성
+    작성일 : 2017.05.11
+    작성자 : 정진배
+*********************************************************************************
+*/
+
+$myRepairList : ".myRepairList";
+@keyframes tabAnimation{
+    50%{
+        transform:translateY(-6px) skew(12deg);
+    }
+    100%{
+        transform:translateY(0) skew(12deg);
+    }
+}
+#{$myRepairList} {
+    .myRepairList_tab-list{
+        overflow:hidden;
+        ul{
+            width:110%;
+            margin-bottom:30px;
+            text-align:center;
+            @include removeBetween;
+            @include crossBrowsing("transform", translateX(-5%));
+            li{
+                display:inline-block;
+                width:25%;
+                @include crossBrowsing("transform", skew(-12deg));
+                background-color:#777;
+                vertical-align:top;
+                a{
+                    display:block;
+                    width:100%;
+                    padding:15px 0;
+                    color:#fff;
+                    span{
+                        display:inline-block;
+                        margin-left:8px;
+                        vertical-align:middle;
+                        font-size:18px;
+                        line-height:20px;
+                    }
+                    img {
+                        display:inline-block;
+                        vertical-align:middle;
+                        @include crossBrowsing("transform", skew(12deg));
+                    }
+                    &:hover{
+                        img {
+                            @include crossBrowsing("transform",translateY(0px) skew(12deg) );
+                            animation:tabAnimation 2s ease-in-out infinite;
+                        }
+                    }
+
+                }
+                &.on{
+                    background-color: $basicColor;
+                }
+            }
+        }
+    }
+}
+
+.myRepairList{
+    .table-contents__table-wrap{
+        border-top:8px solid $mainColor;
+        .table_tit{
+            display:block;
+            padding:45px 0 40px 0;
+            text-align:center;
+            font-size:24px;
+            line-height:26px;
+            font-weight:bold;
+            span{
+                color:$mainColor;
+            }
+        }
+        .table01{
+            tbody{
+                td{
+                    font-size:14px;
+                    line-height:16px;
+                }
+            }
+        }
+        .photo{
+            width:115px;
+            height:68px;
         }
     }
 }
