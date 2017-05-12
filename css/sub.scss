@@ -1288,7 +1288,7 @@ $my-repair-list : ".my-repair-list";
 .my-repair-list{
     .table-contents__table-wrap{
         border-top:8px solid $mainColor;
-        .table_tit{
+        .table-tit{
             display:block;
             padding:45px 0 40px 0;
             text-align:center;
@@ -1383,10 +1383,11 @@ $my-repair-list_view : ".my-repair-list_view";
 
 .my-repair-list_view{
     .table-contents__table-wrap{
+        padding:45px 52px 30px;
         border-top:8px solid $mainColor;
-        .table_tit{
+        .table-tit{
             display:block;
-            padding:45px 0 40px 0;
+            padding-bottom:40px;
             text-align:center;
             font-size:24px;
             line-height:26px;
@@ -1395,17 +1396,129 @@ $my-repair-list_view : ".my-repair-list_view";
                 color:$mainColor;
             }
         }
-        .table01{
-            tbody{
-                td{
-                    font-size:14px;
-                    line-height:16px;
+        &__photo{
+            overflow:hidden;
+            margin-bottom:30px;
+            .photo-left{
+                float:left;
+                width:685px;
+                height:454px;
+            }
+            .photo-right{
+                float:right;
+                img{
+                    display:block;
+                    width:245px;
+                    height:148px;
+                    margin-bottom:5px;
+                    &:last-child{
+                        margin-bottom:0;
+                    }
                 }
             }
         }
-        .photo{
-            width:115px;
-            height:68px;
+        &__table{
+            border:1px solid #bcbcbc;
+            border-top:1px solid #212121;
+            margin-bottom:30px;
+            .table01{
+                margin-bottom:0;
+                td,th{
+                    border-right:1px solid #bcbcbc;
+                    border-bottom:1px solid #bcbcbc;
+                    font-family:'noto-medium';
+                    &:last-child{
+                        border-right:0;
+                    }
+                }
+                th{
+                    color:#000;
+                }
+                td{
+                    color:#444;
+                }
+                .total,.total_price{
+                    color:$mainColor;
+                    border-bottom:0;
+                }
+            }
+        }
+        &__request{
+            margin-bottom:30px;
+            .tit{
+                margin-bottom:10px;
+                font-size:18px;
+                line-height:20px;
+                font-weight:bold;
+            }
+            textarea{
+                width:100%;
+                height:64px;
+                padding:18px;
+            }
+        }
+        &__process{
+            margin-bottom:50px;
+            .tit{
+                margin-bottom:30px;
+                font-size:18px;
+                line-height:20px;
+                font-weight:bold;
+            }
+            .process-list{
+                padding:0 27px;
+                span{
+                    display:inline-block;
+                    width:143px;
+                    height:25px;
+                    padding:12px 0 11px;
+                    padding-right:100px;
+                    background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
+                    background-size:143px 48px, 100px 21px;
+                    font-size:17px;
+                    line-height:19px;
+                    text-align:center;
+                    color:#fff;
+                    &.last{
+                        padding-right:0;
+                        background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0;
+                        background-size:143px 48px;
+                    }
+                    &.on{
+                        background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
+                        background-size:143px 48px, 100px 21px;
+                    }
+                }
+            }
+        }
+        &__send-number{
+            .tit{
+                margin-bottom:10px;
+                font-size:18px;
+                line-height:20px;
+                font-weight:bold;
+            }
+            input{
+                padding:0 22px;
+                border:1px solid #ccc;
+                width:250px;
+                height:42px;
+                &.last{
+                    width:150px;
+                }
+            }
+            .number-search{
+                width:130px;
+                height:44px;
+                background-color:#32b44a;
+                color:#fff;
+            }
+            .txt{
+                display:block;
+                margin-top:15px;
+                padding-left:7px;
+                color:#555;
+            }
         }
     }
 }
