@@ -814,8 +814,8 @@ $btnColor04: #2FC600;
     @mixin MbtnXL{
         height:10px;
         padding:9px 33px 11px;
-        font-size:12px;
-        line-height:14px;
+        font-size:14px;
+        line-height:16px;
     }
     /* 버튼 컴파일 */
     .btn{
@@ -954,15 +954,15 @@ $btnColor04: #2FC600;
              thead{
                  th{
                      padding:8px 5px;
-                     font-size:12px;
-                     line-height:14px;
+                     font-size:14px;
+                     line-height:16px;
                  }
              }
              tbody{
                  td{
                      padding:8px 5px;
-                     font-size:12px;
-                     line-height:14px;
+                     font-size:14px;
+                     line-height:16px;
                      .trophy-icon{
                          width:18px;
                          height:auto;
@@ -1053,4 +1053,79 @@ $btnColor04: #2FC600;
         }
     }
 
+}
+
+@media all and (max-width:640px){
+
+
+    /**********************************************************************************
+        공통 버튼 가이드
+    **********************************************************************************/
+
+    /* 버튼 사이즈 */
+    @mixin MbtnXL{
+        height:10px;
+        padding:9px 33px 11px;
+        font-size:11px;
+        line-height:13px;
+    }
+    /* 버튼 컴파일 */
+    .btn{
+        &-xl{
+            @include MbtnXL;
+            &.btn-line{
+                min-width:auto;
+                height:11px;
+                padding:9px 65px 11px;
+            }
+        }
+    }
+
+    /**********************************************************************************
+        공통 테이블 가이드
+    **********************************************************************************/
+
+    .table-contents__table-wrap{
+        .table01{
+            word-break:break-all;
+             thead{
+                 th{
+                     padding:8px 4px;
+                     font-size:11px;
+                     line-height:13px;
+                 }
+             }
+             tbody{
+                 td{
+                     padding:8px 4px;
+                     font-size:11px;
+                     line-height:13px;
+                     .trophy-icon{
+                         width:18px;
+                         height:auto;
+                     }
+                     .btn-xl{
+                         height:auto;
+                         padding:9px 4px 11px;
+                     }
+                 }
+             }
+        }
+        .table02{
+            font-size:15px;
+            line-height:17px;
+            word-break:break-all;
+            thead {
+                th{
+                    padding:10px 0;
+                }
+            }
+            tbody {
+                td {
+                    padding:10px 5px;
+                }
+            }
+        }
+
+    }
 }
