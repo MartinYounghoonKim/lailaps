@@ -421,7 +421,7 @@ $btnColor04: #2FC600;
     }
     .table02{
         width:100%;
-        border-top:3px solid #212121;
+        border-top:3px solid $basicColor;
         font-size:17px;
         line-height:19px;
         thead th{
@@ -429,6 +429,7 @@ $btnColor04: #2FC600;
             background-color:#fff;
             border-bottom:1px solid #bcbcbc;
             border-right:1px solid #bcbcbc;
+            background-color:#fff;
             &.last{
                 border-right:0;
             }
