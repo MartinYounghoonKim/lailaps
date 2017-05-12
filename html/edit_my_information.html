@@ -122,29 +122,105 @@
               <div class="outer_wrap">
                   <ul>
                       <li><a href="#none">home</a></li>
-                      <li><a href="#none">news &amp; promotion</a></li>
-                      <li><strong>news</strong></li>
+                      <li><a href="#none">MY PAGE</a></li>
                   </ul>
               </div>
           </div>
           <div class="sub-keyvisual__title" data-ui-show-animation="wrap" data-ui-show-animation-direction="left">
               <div class="wrap">
-                  <dfn>news &amp; promotion</dfn>
+                  <dfn>LAILAPS</dfn>
               </div>
-              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>NEWS</strong></div></div>
+              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>MY PAGE</strong></div></div>
               <div class="wrap">
-                  <p>THE TIME TO BE HAPPY IS NOW</p>
+                  <p>LEARN TO MAKE YOURSELF HAPPY</p>
               </div>
           </div>
       </div>
       <!--// 서브 키비쥬얼 영역 -->
       <hr/>
         <!-- 컨텐츠 영역 -->
-        <div id="contents" class="sub news">
+        <div id="contents" class="sub edit-my-information">
           <div class="wrap">
-            <h2 class="tit01">NEWS</h2>
-            <div class="news__contents">
-                <!-- 컨텐츠 작업 시작 -->
+            <h2 class="tit01">MY PAGE</h2>
+            <div data-module-tab="wrap">
+                <div class="edit-my-information_tab-list">
+                    <ul data-module-tabBtn="wrap">
+                        <li><a href="profile_view.html"><img src="../images/icon/profileView_tab_icon01.png" alt=""/><span>프로필</span></a></li>
+                        <li><a href="running_record.html"><img src="../images/icon/profileView_tab_icon02.png" alt=""/><span>나의주행기록</span></a></li>
+                        <li><a href="my_repair_list.html"><img src="../images/icon/profileView_tab_icon03.png" alt=""/><span>리페어 현황</span></a></li>
+                        <li class="on"><a href="edit_my_information.html"><img src="../images/icon/profileView_tab_icon04.png" alt=""/><span>회원정보 수정</span></a></li>
+                    </ul>
+                </div>
+                <div class="table-contents__table-wrap box_shadow">
+                    <div class="table-tit">필수정보 수정</div>
+                    <table class="table01">
+                        <caption>필수정보 수정</caption>
+                        <colgroup>
+                            <col style="width:20%;">
+                            <col style="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>성명</td>
+                                <td>김기호</td>
+                            </tr>
+                            <tr>
+                                <td>아이디</td>
+                                <td>ZNSXK1489</td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호</td>
+                                <td><input type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호 확인</td>
+                                <td><input type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
+                            </tr>
+                            <tr>
+                                <td>이메일</td>
+                                <td>
+                                    <input type="text"><em>@</em><input type="text" class="email">
+                                    <select>
+                                        <option>직접입력</option>
+                                        <option>naver.com</option>
+                                        <option>daum.net</option>
+                                        <option>google.com</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>휴대폰 번호</td>
+                                <td>
+                                    <select class="phone-number">
+                                        <option>010</option>
+                                        <option>011</option>
+                                        <option>017</option>
+                                        <option>019</option>
+                                    </select>
+                                    <input type="text">
+                                    <input type="text">
+                                    <button type="button">본인인증</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>본인인증</td>
+                                <td><input type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
+                            </tr>
+                            <tr>
+                                <td>전화번호</td>
+                                <td>
+                                    <select class="phone-number">
+                                        <option>02</option>
+                                        <option>031</option>
+                                        <option>070</option>
+                                    </select>
+                                    <input type="text">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
           </div>
         </div>
