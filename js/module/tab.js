@@ -5,7 +5,6 @@ define([],function () {
 			this.btnList= $(options.btnList, this.btnWrap);
 			this.btn= $(options.btn, this.btnList);
 			this.tabList = $(options.tabList, this.wrap);
-			console.log(this.tabList.size())
 			this.oldTemp=0;	//default active tab number
 			this.newTemp;
 

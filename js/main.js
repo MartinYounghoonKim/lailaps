@@ -21,6 +21,8 @@ require.config({
         ,'MyRepairList':'controller/MyRepairList'
         ,'MyRepairView':'controller/MyRepairView'
         ,'EditMyInformation':'controller/EditMyInformation'
+        ,'RepairServiceInformation':'controller/RepairServiceInformation'
+        ,'CommonLogin':'controller/CommonLogin'
 
     	//Function Module
         ,'checkDevice':'constant/device'
