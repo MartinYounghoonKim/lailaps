@@ -385,6 +385,38 @@ $btnColor04: #2FC600;
         font-size:35px;
         line-height:38px;
     }
+    /**********************************************************************************
+        공통 탭 가이드
+    **********************************************************************************/
+    .tab-list{
+        overflow:hidden;
+        ul{
+            li{
+                &:first-child{
+                    a{
+                        @include crossBrowsing("transform",translateX(10px));
+                    }
+                }
+                &:last-child{
+                    a{
+                        @include crossBrowsing("transform",translateX(-11px));
+                    }
+                }
+                a{
+                    span{
+                        display:block;
+                        margin-top:5px;
+                        font-size:14px;
+                        line-height:17px;
+                    }
+                    img {
+                        width:auto;
+                        height:24px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media all and (max-width:640px){
@@ -392,6 +424,38 @@ $btnColor04: #2FC600;
         margin-bottom:20px;
         font-size:25px;
         line-height:28px;
+    }
+    /**********************************************************************************
+        공통 탭 가이드
+    **********************************************************************************/
+    .tab-list{
+        overflow:hidden;
+        ul{
+            li{
+                &:first-child{
+                    a{
+                        @include crossBrowsing("transform",translateX(10px));
+                    }
+                }
+                &:last-child{
+                    a{
+                        @include crossBrowsing("transform",translateX(-11px));
+                    }
+                }
+                a{
+                    span{
+                        display:block;
+                        margin-top:5px;
+                        font-size:11px;
+                        line-height:13px;
+                    }
+                    img {
+                        width:auto;
+                        height:16px;
+                    }
+                }
+            }
+        }
     }
 
     /**********************************************************************************
