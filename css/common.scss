@@ -419,6 +419,39 @@ $btnColor04: #2FC600;
             }
         }
     }
+    .table02{
+        width:100%;
+        border-top:3px solid #212121;
+        font-size:17px;
+        line-height:19px;
+        thead th{
+            padding:18px 0 18px;
+            background-color:#fff;
+            border-bottom:1px solid #bcbcbc;
+            border-right:1px solid #bcbcbc;
+            &.last{
+                border-right:0;
+            }
+         }
+         tbody {
+             td{
+                 padding:18px 30px 18px;
+                 border-bottom:1px solid #bcbcbc;
+                 border-right:1px solid #bcbcbc;
+                 text-align:center;
+                 &.last{
+                     border-right:0;
+                 }
+                 &.text_left{
+                     text-align:left;
+                 }
+                 span{
+                     display:block;
+                 }
+             }
+         }
+    }
+
 }
 /**********************************************************************************
     공통 입력폼 가이드
@@ -567,6 +600,43 @@ $btnColor04: #2FC600;
             }
         }
     }
+}
+/**********************************************************************************
+    공통 리스트 가이드
+**********************************************************************************/
+.list01 {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #bcbcbc;
+  > li {
+    position: relative;
+    padding: 12px 0 15px 48px;
+    border-top: 1px solid #bcbcbc;
+    font-size: 17px;
+    line-height: 19px;
+    color: #222;
+    strong {
+      position: absolute;
+      left: 4px;
+      top: 9px;
+      width: 34px;
+      height: 22px;
+      padding-top: 5px;
+      background: url("../images/bar/list_bar.png") 0 0 no-repeat;
+      font-size: 15px;
+      line-height: 17px;
+      color: #fff;
+      text-align: center;
+    }
+    ul {
+      margin-top: 8px;
+      li {
+        padding: 0;
+        margin-bottom: 3px;
+        border-top: 0;
+        font-weight: 300;
+      }
+    }
+  }
 }
 /**********************************************************************************
     공통 레이아웃 스타일 Device : Tablet
@@ -774,6 +844,22 @@ $btnColor04: #2FC600;
                  }
              }
         }
+        .table02{
+            font-size:15px;
+            line-height:17px;
+            word-break:break-all;
+            thead {
+                th{
+                    padding:10px 0;
+                }
+            }
+            tbody {
+                td {
+                    padding:10px 5px;
+                }
+            }
+        }
+
     }
     /**********************************************************************************
         공통 댓글 입력폼 가이드
@@ -813,6 +899,26 @@ $btnColor04: #2FC600;
                     top:auto;
                     margin-top:12px;
                 }
+            }
+        }
+    }
+    /**********************************************************************************
+        공통 리스트 가이드
+    **********************************************************************************/
+    .list01 {
+        margin-bottom: 20px;
+        li {
+            padding-left: 28px;
+            font-size: 13px;
+            line-height: 16px;
+            strong {
+                top: 12px;
+                width: 20px;
+                height: 15px;
+                padding-top: 2px;
+                background-size: 100% auto;
+                font-size: 11px;
+                line-height: 11px;
             }
         }
     }
