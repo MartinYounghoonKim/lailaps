@@ -1801,7 +1801,7 @@ $edit-my-information : ".edit-my-information";
 $repair-service-information : ".repair-service-information";
 #{$repair-service-information} {
     .repair-service-information__contents{
-        
+
     }
 }
 
@@ -2282,6 +2282,33 @@ $repair-service-information : ".repair-service-information";
             }
         }
     }
+
+    /*
+    *********************************************************************************
+        프로필 보기 작성
+        작성일 : 2017.05.12
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    //$repair-service : ".repair-service";
+    #{$profile-view} {
+        .profile-view__profile-wrap{
+            width:100%;
+            padding:37px 20px 35px 20px;
+            box-sizing:border-box;
+            &__img{
+                width:100%;
+                height:auto;
+                padding:0;
+                margin-right:0;
+                border-right:0;
+            }
+            &__profile{
+                width:100%;
+            }
+        }
+    }
+    
 }
 
 @media all and (max-width:640px){
