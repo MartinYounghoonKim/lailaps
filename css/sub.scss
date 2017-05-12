@@ -1801,7 +1801,11 @@ $edit-my-information : ".edit-my-information";
 $repair-service-information : ".repair-service-information";
 #{$repair-service-information} {
     .repair-service-information__contents{
-
+        .table-contents__table-wrap{
+            margin-bottom:50px;
+            padding-bottom:0;
+            background:none;
+        }
     }
 }
 
@@ -2308,7 +2312,7 @@ $repair-service-information : ".repair-service-information";
             }
         }
     }
-    
+
 }
 
 @media all and (max-width:640px){

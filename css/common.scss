@@ -326,7 +326,6 @@ $btnColor04: #2FC600;
         @include crossBrowsing("transform", translateX(-5%));
         li{
             display:inline-block;
-            width:25%;
             @include crossBrowsing("transform", skew(-12deg));
             background-color:#777;
             vertical-align:top;
@@ -369,6 +368,14 @@ $btnColor04: #2FC600;
                 background-color: $basicColor;
             }
         }
+    }
+    &.is-list4{
+        ul{
+            li{
+                width:25%;
+            }
+        }
+
     }
 }
 
@@ -479,7 +486,7 @@ $btnColor04: #2FC600;
     }
     .table02{
         width:100%;
-        border-top:3px solid #212121;
+        border-top:3px solid $basicColor;
         font-size:17px;
         line-height:19px;
         thead th{
@@ -487,6 +494,7 @@ $btnColor04: #2FC600;
             background-color:#fff;
             border-bottom:1px solid #bcbcbc;
             border-right:1px solid #bcbcbc;
+            background-color:#fff;
             &.last{
                 border-right:0;
             }
