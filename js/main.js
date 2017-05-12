@@ -15,7 +15,6 @@ require.config({
         ,'Recommend':'controller/Recommend'
         ,'RecommendView':'controller/RecommendView'
         ,'ProfileView':'controller/ProfileView'
-        ,'ProfileWrite':'controller/ProfileWrite'
         ,'RunningRecord':'controller/RunningRecord'
         ,'RunningRecordView':'controller/RunningRecordView'
         ,'MyRepairList':'controller/MyRepairList'

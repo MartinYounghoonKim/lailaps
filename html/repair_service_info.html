@@ -117,7 +117,7 @@
       <!--// 헤더 영역 -->
       <hr/>
       <!-- 서브 키비쥬얼 영역 -->
-      <div id="sub-keyvisual" class="sub-keyvisual__news">
+      <div id="sub-keyvisual" class="sub-keyvisual__repair-service">
           <div class="sub-keyvisual__navigation">
               <div class="outer_wrap">
                   <ul>
@@ -140,11 +140,273 @@
       <!--// 서브 키비쥬얼 영역 -->
       <hr/>
         <!-- 컨텐츠 영역 -->
-        <div id="contents" class="sub news">
+        <div id="contents" class="sub repair-service-information">
           <div class="wrap">
-            <h2 class="tit01">NEWS</h2>
-            <div class="news__contents">
-                <!-- 컨텐츠 작업 시작 -->
+            <div class="repair-service-information__contents">
+                <!-- TODO: 모듈 탭 넣기 -->
+                <div class="repair-service-information__contents__cell-wrap">
+                    <!-- M-App 내용 -->
+                    <div class="repair-service-information__contents__cell-wrap__cell">
+                        <h2 class="tit01">M-App</h2>
+                    </div>
+                    <!--// M-App 내용 -->
+                    <!-- 진행절차 내용 -->
+                    <div class="repair-service-information__contents__cell-wrap__cell">
+                        <h2 class="tit01">진행절차</h2>
+                    </div>
+                    <!--// 진행절차 내용 -->
+                    <!-- 서비스 항목 및 가격표 내용 -->
+                    <div class="repair-service-information__contents__cell-wrap__cell">
+                        <h2 class="tit01">서비스 항목 및 가격표</h2>
+                        <div class="table-contents__table-wrap">
+							<table class="table02">
+								<caption>Repair 항목 및 가격에 대한 표</caption>
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="7" class="last">REPAIR 항목 및 가격</th>
+									</tr>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">제품상태</th>
+										<th scope="col" colspan="2">설명</th>
+										<th scope="col">기간</th>
+										<th scope="col">기간(부가세별도)</th>
+										<th scope="col" class="last">비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Case1</td>
+										<td>균열/찍힘</td>
+										<td colspan="2" class="text_left">표면 손상 수준. 강도저하 영향 無</td>
+										<td>5일</td>
+										<td>￦120,000</td>
+										<td rowspan="8" class="last">라인 및 무/유광클리어 작업 포함</td>
+									</tr>
+									<tr>
+										<td>Case2</td>
+										<td>크랙/틈새</td>
+										<td colspan="2" class="text_left">조각 미분리 또는 5cm 이하</td>
+										<td>5일</td>
+										<td>￦170,000</td>
+									</tr>
+									<tr>
+										<td>Case3</td>
+										<td>반파/분리</td>
+										<td colspan="2" class="text_left">일부 조각 분리 또는 5cm 이상</td>
+										<td>7일</td>
+										<td>￦220,000</td>
+									</tr>
+									<tr>
+										<td>Case4</td>
+										<td>파단/주요부파손</td>
+										<td colspan="2" class="text_left">제품 파단 및 분리, 주요부 파손 등</td>
+										<td>10일</td>
+										<td>￦350,000</td>
+									</tr>
+									<tr>
+										<td rowspan="4">Case5</td>
+										<td rowspan="4">길이연장</td>
+										<td rowspan="2" class="text_left">원형 형상</td>
+										<td class="text_left">0~50mm</td>
+										<td rowspan="4">10일</td>
+										<td>￦170,000</td>
+									</tr>
+									<tr>
+										<td class="text_left">50~100mm </td>
+										<td>￦200,000</td>
+									</tr>
+									<tr>
+										<td rowspan="2" class="text_left">Aero 형상</td>
+										<td class="text_left">0~50mm</td>
+										<td>￦200,000</td>
+									</tr>
+									<tr>
+										<td class="text_left">50~100mm </td>
+										<td>￦260,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+                        <div class="table-contents__table-wrap">
+							<table class="table02">
+								<caption>Reform 항목 및 가격에 대한 테이블</caption>
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="6" class="last">Reform 항목 및 가격(부가세별도)</th>
+									</tr>
+									<tr>
+										<th scope="col" rowspan="2">구분</th>
+										<th scope="col">전체 클리어  도색</th>
+										<th scope="col">1color</th>
+										<th scope="col">2color</th>
+										<th scope="col">3color</th>
+										<th scope="col" class="last">디자인</th>
+									</tr>
+									<tr>
+										<th scope="col"><em>전체 유광 도색, 스크래치 제거</em></th>
+										<th scope="col"><em>1color 도색,<br>유광 도색 마무리</em></th>
+										<th scope="col"><em>2color 도색,<br>유광 도색 마무리</em></th>
+										<th scope="col"><em>3color 도색,<br>유광 도색 마무리</em></th>
+										<th scope="col" class="last"><em>디자인을 이용,<br>직접 디자인 가능</em></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Frame</td>
+										<td>￦200,000</td>
+										<td>￦300,000</td>
+										<td>￦360,000</td>
+										<td>￦420,000</td>
+										<td rowspan="6" class="last">상담</td>
+									</tr>
+									<tr>
+										<td>Fork</td>
+										<td>￦100,000</td>
+										<td>￦120,000</td>
+										<td>￦150,000</td>
+										<td>￦180,000</td>
+									</tr>
+									<tr>
+										<td>Handle Bar</td>
+										<td>￦80,000</td>
+										<td>￦100,000</td>
+										<td>￦120,000</td>
+										<td>￦170,000</td>
+									</tr>
+									<tr>
+										<td>Rim</td>
+										<td>￦130,000</td>
+										<td>￦200,000</td>
+										<td>￦250,000</td>
+										<td>￦300,000</td>
+									</tr>
+									<tr>
+										<td>Seat post</td>
+										<td>￦80,000</td>
+										<td>￦100,000</td>
+										<td>￦120,000</td>
+										<td>￦170,000</td>
+									</tr>
+									<tr>
+										<td>Carbon seat</td>
+										<td>￦120,000</td>
+										<td>￦140,000</td>
+										<td>￦170,000</td>
+										<td>￦200,000</td>
+									</tr>
+									<tr>
+										<td>기간</td>
+										<td>3일</td>
+										<td>5일</td>
+										<td>7일</td>
+										<td>10일</td>
+										<td class="last">15일</td>
+									</tr>
+									<tr>
+										<td>비고</td>
+										<td colspan="5" class="last"><dfn>[주의사항]</dfn> 디자인 작업은 디자인 시안 확정 후 실시합니다. <span>전체 무광도색 경우는 30,000원 추가 비용이 발생합니다.</span> 기존 페인트를 제거작업은 별도 비용이 발생할 수 있습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+                        <div class="table-contents__table-wrap is-no-background">
+                            <table class="table02">
+								<caption>Decal 항목 및 가격</caption>
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="4" class="last">Decal 항목 및 가격</th>
+									</tr>
+									<tr>
+										<th scope="col" rowspan="2">구분</th>
+										<th scope="col">설명</th>
+										<th scope="col">개당 가격</th>
+										<th scope="col" class="last">비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>페인트데칼</td>
+										<td>페인트를 이용 글자 및 문양 삽입</td>
+										<td>￦120,000</td>
+										<td class="last">예) LAILAPS, CARBON</td>
+									</tr>
+									<tr>
+										<td>스티커데칼</td>
+										<td>전사지를 이용 글자 및 문양 삽입</td>
+										<td>￦30,000</td>
+										<td class="last">예) 로고, 컬러라인 </td>
+									</tr>
+									<tr>
+										<td>비고</td>
+										<td colspan="3" class="last"><dfn>[주의사항]</dfn> 데칼 및 로고는 단색 작업을 기본으로 합니다.<span>데칼 작업 특성상 5x5mm 이하 사이즈는 작업이  불가능할 수도 있습니다. </span> 데칼의 디자인은 난이도에 따라 가격 변동이 있으며 사전 협의 진행 가능합니다.</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+
+                    </div>
+                    <!--// 서비스 항목 및 가격표 내용 -->
+                    <!-- 주의사항 및 리페어 운영팀 업무 시간내용 -->
+                    <div class="repair-service-information__contents__cell-wrap__cell">
+                        <h2 class="tit01">주의사항</h2>
+                        <ul class="list01">
+							<li>
+								<strong>1</strong><em>제품을 보내실 때는 모든 부품을 탈거 하신 후 보내주셔야 수리 중 발생할 수 있는 2차 손상 및 부품의 분실을 방지할 수 있습니다.  탈거가 되지 않는 제품은 부품 탈거로 인한 추가 비용이 발생할 수 있고 수리 후 성능상의 조율이 힘들거나 심지어 리페어가 불가능 할 수도 있으니 반드시 부품을 탈거 후 보내주시기 바랍니다.</em>
+							</li>
+							<li>
+								<strong>2</strong><em>견적을 요청하신 제품은 결제 후 작업이 시작됩니다. 그러므로 견적요청 순서가 아닌 결제 순서에 따라 작업이 이루어집니다. 또한 요청하신 견적은 사진판별로 이루어진 견적이므로 최종 실차검수 견적과 상이할 수 있습니다.</em>
+							</li>
+							<li>
+								<strong>3</strong><em>라일랍스의 리페어 시스템은 성능복원을 원칙으로 리페어를 진행하고 있습니다. 원칙적으로 라이더님의 안전상의 문제가 있는 경우에는 복원이 불가능 합니다.</em>
+							</li>
+							<li>
+								<strong>4</strong><em>라일랍스의 리페어 시스템은 라이더님의 요구에 부합하도록 최대한으로 원형에 가깝게 복원을 하기위해 노력을 합니다. 그러나 리페어 특성상 완벽한 원형 복원은 힘들기 때문에 리페어 후 외형상의 흔적이 남는 것은 자연스런 현상 입니다.</em>
+							</li>
+							<li>
+								<strong>5</strong><em>REPAIR A/S 정책</em>
+								<ul>
+									<li>- REPAIR 완료 후 REPAIR 부위에 한해서 6개월 무상 보증처리 됩니다(단, 외부 충격에 의한 손상은 제외)</li>
+									<li>- 카본 휠의 경우 브레이크 패드와 마찰되는 부위는 REPAIR 특성상 브레이크 작동 시 소음, 또는 유격이 발생할 수 있으며 높은 압력을 받는 부위이므로 보증대상에서 제외됩니다</li>
+								</ul>
+							</li>
+							<li>
+								<strong>6</strong><em>견적완료 후 견적 유효기간은 15일입니다. 15일 이내에 택배 또는 직접 내방하시어 제품을 입고시켜 주셔야 하며 택배 입고 시 택배비용은 소비자 부담입니다. 제품 수령 시에는 택배비용은 무상입니다.</em>
+							</li>
+							<li>
+								<strong>7</strong><em>고객님의 안전한 라이딩과 정확한 견적산출을 위하여 반드시 실차검수가 필요하며, 실차검수가 이뤄지지 않은 견적은 가 견적이므로 실제 견적과 다를 수 있습니다. 그러나 큰 틀에서 견적의 변화가 발생되지 않도록 최선을 다하겠습니다.</em>
+							</li>
+							<li>
+								<strong>8</strong><em>주의사항은 반드시 숙지하셔야 하며, 미 숙지로 인해 발생한 문제는 본사에서 책임지지 아니합니다.</em>
+							</li>
+						</ul>
+                        <h2 class="tit01">리페어 운영팀 업무시간</h2>
+                    </div>
+                    <!--// 주의사항 및 리페어 운영팀 업무 시간 내용 -->
+                </div>
             </div>
           </div>
         </div>
