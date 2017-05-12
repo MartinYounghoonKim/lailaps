@@ -143,7 +143,7 @@
           <div class="wrap">
             <h2 class="tit01">MY PAGE</h2>
             <div data-module-tab="wrap">
-                <div class="edit-my-information_tab-list">
+                <div class="tab-list">
                     <ul data-module-tabBtn="wrap">
                         <li><a href="profile_view.html"><img src="../images/icon/profileView_tab_icon01.png" alt=""/><span>프로필</span></a></li>
                         <li><a href="running_record.html"><img src="../images/icon/profileView_tab_icon02.png" alt=""/><span>나의주행기록</span></a></li>
@@ -220,6 +220,35 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="table-contents__table-wrap table02-wrap box_shadow">
+                    <div class="table-tit">필수정보 수정</div>
+                    <table class="table01">
+                        <caption>필수정보 수정</caption>
+                        <colgroup>
+                            <col style="width:20%;">
+                            <col style="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>주소정보</td>
+                                <td>
+                                    <input type="text" class="address"><button type="button">우편번호</button>
+                                    <input type="text" class="address2">
+                                    <input type="text" class="detail-address" placeholder="상세주소 입력">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn_wrap">
+                  <!-- 수정버튼 클릭안했을 경우 -->
+                  <a class="btn btn-xs btn-color-type01 btn-line cancel" href="#none"><span class="btn-inner"><span>취소</span></span></a>
+                  <a class="btn btn-xs btn-color-type01 btn-line modify" href="#none"><span class="btn-inner"><span>수정</span></span></a>
+                  <!-- //수정버튼 클릭안했을 경우 -->
+                  <!-- 수정버튼 클릭했을 경우 -->
+                  <!-- <a class="btn btn-xs btn-color-type01 btn-line" href="#none"><span class="btn-inner"><span>저장</span></span></a> -->
+                  <!-- //수정버튼 클릭했을 경우 -->
                 </div>
             </div>
           </div>

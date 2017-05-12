@@ -313,6 +313,64 @@ $btnColor04: #2FC600;
   box-shadow:1px 1px 1px 1px #f0f0f0;
 }
 
+/**********************************************************************************
+    공통 탭 가이드
+**********************************************************************************/
+.tab-list{
+    overflow:hidden;
+    ul{
+        width:110%;
+        margin-bottom:30px;
+        text-align:center;
+        @include removeBetween;
+        @include crossBrowsing("transform", translateX(-5%));
+        li{
+            display:inline-block;
+            width:25%;
+            @include crossBrowsing("transform", skew(-12deg));
+            background-color:#777;
+            vertical-align:top;
+            &:first-child{
+                a{
+                    @include crossBrowsing("transform",translateX(27px));
+                }
+            }
+            &:last-child{
+                a{
+                    @include crossBrowsing("transform",translateX(-22px));
+                }
+            }
+            a{
+                display:block;
+                width:100%;
+                padding:15px 0;
+                color:#fff;
+                span{
+                    display:inline-block;
+                    margin-left:8px;
+                    vertical-align:middle;
+                    font-size:18px;
+                    line-height:20px;
+                }
+                img {
+                    display:inline-block;
+                    vertical-align:middle;
+                    @include crossBrowsing("transform", skew(12deg));
+                }
+                &:hover{
+                    img {
+                        @include crossBrowsing("transform",translateY(0px) skew(12deg) );
+                        animation:tabAnimation 2s ease-in-out infinite;
+                    }
+                }
+
+            }
+            &.on{
+                background-color: $basicColor;
+            }
+        }
+    }
+}
 
 @media all and (max-width:800px){
     .tit01 {
