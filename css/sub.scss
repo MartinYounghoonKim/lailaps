@@ -1110,68 +1110,13 @@ $running-record : ".running-record";
 */
 
 $my-repair-list : ".my-repair-list";
-@keyframes tabAnimation{
-    50%{
-        transform:translateY(-6px) skew(12deg);
-    }
-    100%{
-        transform:translateY(0) skew(12deg);
-    }
-}
 #{$my-repair-list} {
-    .my-repair-list_tab-list{
-        overflow:hidden;
-        ul{
-            width:110%;
-            margin-bottom:30px;
-            text-align:center;
-            @include removeBetween;
-            @include crossBrowsing("transform", translateX(-5%));
-            li{
-                display:inline-block;
-                width:25%;
-                @include crossBrowsing("transform", skew(-12deg));
-                background-color:#777;
-                vertical-align:top;
-                a{
-                    display:block;
-                    width:100%;
-                    padding:15px 0;
-                    color:#fff;
-                    span{
-                        display:inline-block;
-                        margin-left:8px;
-                        vertical-align:middle;
-                        font-size:18px;
-                        line-height:20px;
-                    }
-                    img {
-                        display:inline-block;
-                        vertical-align:middle;
-                        @include crossBrowsing("transform", skew(12deg));
-                    }
-                    &:hover{
-                        img {
-                            @include crossBrowsing("transform",translateY(0px) skew(12deg) );
-                            animation:tabAnimation 2s ease-in-out infinite;
-                        }
-                    }
-
-                }
-                &.on{
-                    background-color: $basicColor;
-                }
-            }
-        }
-    }
-}
-
-.my-repair-list{
     .table-contents__table-wrap{
+        padding:45px 0 30px 0;
         border-top:8px solid $mainColor;
         .table-tit{
             display:block;
-            padding:45px 0 40px 0;
+            padding-bottom:40px;
             text-align:center;
             font-size:24px;
             line-height:26px;
