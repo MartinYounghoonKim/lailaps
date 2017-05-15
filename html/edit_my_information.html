@@ -169,17 +169,17 @@
                                 <td>ZNSXK1489</td>
                             </tr>
                             <tr>
-                                <td>비밀번호</td>
-                                <td><input type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
+                                <td><label for="password">비밀번호</label></td>
+                                <td><input id="password" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
                             </tr>
                             <tr>
-                                <td>비밀번호 확인</td>
-                                <td><input type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
+                                <td><label for="password2">비밀번호 확인</label></td>
+                                <td><input id="password2" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
                             </tr>
                             <tr>
-                                <td>이메일</td>
+                                <td><label for="email">이메일</label></td>
                                 <td>
-                                    <input type="text"><em>@</em><input type="text" class="email">
+                                    <input id="email" type="text"><em>@</em><input type="text" class="email">
                                     <select>
                                         <option>직접입력</option>
                                         <option>naver.com</option>
@@ -189,7 +189,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>휴대폰 번호</td>
+                                <td><label for="phone_number">휴대폰 번호</label></td>
                                 <td>
                                     <select class="phone-number">
                                         <option>010</option>
@@ -197,24 +197,24 @@
                                         <option>017</option>
                                         <option>019</option>
                                     </select>
-                                    <input type="text">
+                                    <input id="phone_number" type="text">
                                     <input type="text">
                                     <button type="button">본인인증</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>본인인증</td>
-                                <td><input type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
+                                <td><label for="certify">본인인증</label></td>
+                                <td><input id="certify" type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
                             </tr>
                             <tr>
-                                <td>전화번호</td>
+                                <td><label for="number">전화번호</label></td>
                                 <td>
                                     <select class="phone-number">
                                         <option>02</option>
                                         <option>031</option>
                                         <option>070</option>
                                     </select>
-                                    <input type="text">
+                                    <input id="number" type="text">
                                     <input type="text">
                                 </td>
                             </tr>
