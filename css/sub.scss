@@ -708,236 +708,118 @@ $recommend-view : ".recommend-view";
 */
 
 $profile-view : ".profile-view";
-@keyframes tabAnimation{
-    50%{
-        transform:translateY(-6px) skew(12deg);
-    }
-    100%{
-        transform:translateY(0) skew(12deg);
-    }
-}
 #{$profile-view} {
-    .profile-view_tab-list{
+    .profile-view__profile-wrap{
+        margin-bottom:15px;
+        padding:37px 47px 35px 35px;
+        border-top:8px solid $basicColor;
         overflow:hidden;
-        ul{
-            width:110%;
-            margin-bottom:30px;
-            text-align:center;
-            @include removeBetween;
-            @include crossBrowsing("transform", translateX(-5%));
-            li{
-                display:inline-block;
-                width:25%;
-                @include crossBrowsing("transform", skew(-12deg));
-                background-color:#777;
-                vertical-align:top;
-                a{
-                    display:block;
-                    width:100%;
-                    padding:15px 0;
-                    color:#fff;
-                    span{
-                        display:inline-block;
-                        margin-left:8px;
-                        vertical-align:middle;
-                        font-size:18px;
-                        line-height:20px;
-                    }
-                    img {
-                        display:inline-block;
-                        vertical-align:middle;
-                        @include crossBrowsing("transform", skew(12deg));
-                    }
-                    &:hover{
-                        img {
-                            @include crossBrowsing("transform",translateY(0px) skew(12deg) );
-                            animation:tabAnimation 2s ease-in-out infinite;
-                        }
-                    }
-
-                }
-                &.on{
-                    background-color: $basicColor;
-                }
+        background-color:#fff;
+        .profile-view__profile-wrap__img{
+            float:left;
+            box-sizing:border-box;
+            height:391px;
+            margin-right:34px;
+            padding:27px 34px 30px 0;
+            border-right:1px solid #e5e5e5;
+            overflow:hidden;
+            img{
+                width:100%;
+                height:auto;
+            }
+            .dim {
+                position:absolute;
+                width:450px;
+                height:333px;
+                background:#000 url("../images/icon/dim_icon.png") no-repeat center center;
+                opacity:.6;
             }
         }
-    }
-    .profile-view_tab-contents{
-        >div{
-            display:none;
-            .profile-view__contents-title{
-                padding-top:61px;
-                margin-bottom:34px;
-                background:url("../images/icon/winner_title_icon.png") center top no-repeat;
-                text-align:center;
+        .profile-view__profile-wrap__profile{
+            float:left;
+            width:439px;
+            box-sizing:border-box;
+            padding:27px 0 35px;
+            > strong{
+                display:block;
+                margin-bottom:21px;
+                text-overflow:ellipsis;
+                white-space:nowrap;
                 font-size:24px;
                 line-height:26px;
-                text-transform:uppercase;
-                @include fontStyle("noto-bold",600, italic);
-            }
-            .profile-view_thumnail-list-wrap{
-                padding:0 75px;
-                margin-bottom:83px;
-                ol{
-                    @include removeBetween;
-                    li{
-                        position:relative;
-                        display:inline-block;
-                        width:280px;
-                        height:330px;
-                        overflow:hidden;
-                        > img{
-                            width:100%;
-                            height:auto;
-                        }
-                        div{
-                            position:absolute;
-                            left:0;
-                            top:0;
-                            box-sizing:border-box;
-                            width:100%;
-                            height:100%;
-                            padding:200px 20px 0;
-                            text-align:center;
-                            color:#fff;
-                            background:url("../images/bg/winner_thumnail_bg01.png") 0 bottom no-repeat;
-                            strong{
-                                display:block;
-                                margin:10px 0 5px;
-                                font-size:24px;
-                                line-height:26px;
-                                @include fontStyle("noto-bold", 600, italic);
-                            }
-                            span{
-                                font-size:14px;
-                                line-height:16px;
-                                @include fontStyle("noto-regular", 100, italic);
-                            }
-                        }
-                        &:nth-child(2){
-                            margin:0 25px;
-                        }
-                    }
-                }
-            }
-            &.on{
-                display:block;
-            }
-        }
-    }
-}
-.profile-view__profile-wrap{
-    margin-bottom:15px;
-    padding:37px 47px 35px 35px;
-    border-top:8px solid $basicColor;
-    overflow:hidden;
-    background-color:#fff;
-    .profile-view__profile-wrap__img{
-        float:left;
-        box-sizing:border-box;
-        height:391px;
-        margin-right:34px;
-        padding:27px 34px 30px 0;
-        border-right:1px solid #e5e5e5;
-        overflow:hidden;
-        img{
-            width:100%;
-            height:auto;
-        }
-        .dim {
-            position:absolute;
-            width:450px;
-            height:333px;
-            background:#000 url("../images/icon/dim_icon.png") no-repeat center center;
-            opacity:.6;
-        }
-    }
-    .profile-view__profile-wrap__profile{
-        float:left;
-        width:439px;
-        box-sizing:border-box;
-        padding:27px 0 35px;
-        > strong{
-            display:block;
-            margin-bottom:21px;
-            text-overflow:ellipsis;
-            white-space:nowrap;
-            font-size:24px;
-            line-height:26px;
-            @include fontStyle("noto-bold", 600, italic);
-            em{
                 @include fontStyle("noto-bold", 600, italic);
+                em{
+                    @include fontStyle("noto-bold", 600, italic);
+                }
             }
-        }
-        p{
-            height:148px;
-            overflow:hidden;
-            font-size:14px;
-            line-height:21px;
-        }
-        .profile_textarea01 {
-            padding:15px 0 0 15px;
-            margin-bottom:10px;
-            height:83px;
-            width:100%;
-            border:1px solid #e5e5e5;
-            box-sizing:border-box;
-        }
-        .profile_textarea02 {
-            padding:15px 0 0 15px;
-            margin-bottom:40px;
-            width:100%;
-            border:1px solid #e5e5e5;
-            box-sizing:border-box;
-        }
-        ul{
-            @include removeBetween;
-            text-align:center;
-            li{
-                display:inline-block;
-                width:136px;
-                dfn{
-                    display:block;
-                    margin-bottom:10px;
-                    @include basicFontSize;
-                }
-                div{
-                    box-sizing:border-box;
-                    height:101px;
-                    padding-top:56px;
-                    color:#fff;
-                    font-size:14px;
-                    line-height:16px;
-                    background-color:$basicColor;
-                    background-position:center 15px;
-                    background-repeat:no-repeat;
-                    @include crossBrowsing("transform", skew(-10deg));
-                    strong{
+            p{
+                height:148px;
+                overflow:hidden;
+                font-size:14px;
+                line-height:21px;
+            }
+            .profile_textarea01 {
+                padding:15px 0 0 15px;
+                margin-bottom:10px;
+                height:83px;
+                width:100%;
+                border:1px solid #e5e5e5;
+                box-sizing:border-box;
+            }
+            .profile_textarea02 {
+                padding:15px 0 0 15px;
+                margin-bottom:40px;
+                width:100%;
+                border:1px solid #e5e5e5;
+                box-sizing:border-box;
+            }
+            ul{
+                @include removeBetween;
+                text-align:center;
+                li{
+                    display:inline-block;
+                    width:136px;
+                    dfn{
                         display:block;
-                        margin-bottom:4px;
+                        margin-bottom:10px;
+                        @include basicFontSize;
                     }
-                }
-                &:nth-child(1){
                     div{
-                        background-image:url("../images/icon/winner_profile_icon01.png");
+                        box-sizing:border-box;
+                        height:101px;
+                        padding-top:56px;
+                        color:#fff;
+                        font-size:14px;
+                        line-height:16px;
+                        background-color:$basicColor;
+                        background-position:center 15px;
+                        background-repeat:no-repeat;
+                        @include crossBrowsing("transform", skew(-10deg));
+                        strong{
+                            display:block;
+                            margin-bottom:4px;
+                        }
                     }
-                }
-                &:nth-child(2){
-                    margin:0 8px;
-                    div{
-                        background-image:url("../images/icon/winner_profile_icon02.png");
+                    &:nth-child(1){
+                        div{
+                            background-image:url("../images/icon/winner_profile_icon01.png");
+                        }
                     }
-                }
-                &:nth-child(3){
-                    div{
-                        background-image:url("../images/icon/winner_profile_icon03.png");
+                    &:nth-child(2){
+                        margin:0 8px;
+                        div{
+                            background-image:url("../images/icon/winner_profile_icon02.png");
+                        }
+                    }
+                    &:nth-child(3){
+                        div{
+                            background-image:url("../images/icon/winner_profile_icon03.png");
+                        }
                     }
                 }
             }
         }
     }
-}
-.profile-view {
     .btn_wrap {
         text-align:center;
         .profile-view_modify {
@@ -958,146 +840,145 @@ $profile-view : ".profile-view";
 
 $running-record : ".running-record";
 #{$running-record} {
-.running-record-view__wrap__list-contents{
-    margin-bottom:15px;
-    padding:34px 17px 54px 16px;
-    border-top:8px solid $basicColor;
-    background-color:#fff;
-    .running-record-view__wrap__list-contents__map{
-        margin-bottom:40px;
-    }
-    .running-record-view__wrap__list-contents__info{
-        overflow:hidden;
-        .running-record-view__wrap__list-contents__info__left{
-            position:relative;
-            float:left;
-            box-sizing:border-box;
-            width:503px;
-            padding-left:103px;
-            .running-record-view__wrap__list-contents__info__left__user-img{
-                position:absolute;
-                left:34px;
-                top:0;
-                width:54px;
-                height:54px;
-                border-radius:50%;
-                overflow:hidden;
-                img{
-                    width:100%;
-                }
-            }
-            .running-record-view__wrap__list-contents__info__left__title{
-                overflow:hidden;
-                display:block;
-                height:57px;
-                margin-bottom:20px;
-                font-size:24px;
-                line-height:30px;
-                @include fontStyle("noto-bold",600,italic);
-            }
-            .running-record-view__wrap__list-contents__info__left__user-name{
-                display:block;
-                margin-bottom:50px;
-                text-overflow:ellipsis;
-                white-space:nowrap;
-                overflow:hidden;
-            }
-            .running-record-view__wrap__list-contents__info__left__icon{
-                .icon{
-                    margin-right:16px;
-                    padding-top:4px;
-                    &.chatting{
-                        margin-right:20px;
-                        background-position:left 5px;
+    .running-record-view__wrap__list-contents{
+        margin-bottom:15px;
+        padding:34px 17px 54px 16px;
+        border-top:8px solid $basicColor;
+        background-color:#fff;
+        .running-record-view__wrap__list-contents__map{
+            margin-bottom:40px;
+        }
+        .running-record-view__wrap__list-contents__info{
+            overflow:hidden;
+            .running-record-view__wrap__list-contents__info__left{
+                position:relative;
+                float:left;
+                box-sizing:border-box;
+                width:503px;
+                padding-left:103px;
+                .running-record-view__wrap__list-contents__info__left__user-img{
+                    position:absolute;
+                    left:34px;
+                    top:0;
+                    width:54px;
+                    height:54px;
+                    border-radius:50%;
+                    overflow:hidden;
+                    img{
+                        width:100%;
                     }
                 }
-                a{
-                    margin-right:5px;
+                .running-record-view__wrap__list-contents__info__left__title{
+                    overflow:hidden;
+                    display:block;
+                    height:57px;
+                    margin-bottom:20px;
+                    font-size:24px;
+                    line-height:30px;
+                    @include fontStyle("noto-bold",600,italic);
+                }
+                .running-record-view__wrap__list-contents__info__left__user-name{
+                    display:block;
+                    margin-bottom:50px;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    overflow:hidden;
+                }
+                .running-record-view__wrap__list-contents__info__left__icon{
+                    .icon{
+                        margin-right:16px;
+                        padding-top:4px;
+                        &.chatting{
+                            margin-right:20px;
+                            background-position:left 5px;
+                        }
+                    }
+                    a{
+                        margin-right:5px;
+                    }
                 }
             }
-        }
-        .running-record-view__wrap__list-contents__info__right{
-            float:left;
-            box-sizing:border-box;
-            width:503px;
-            padding-left:50px;
-            border-left:1px solid #ddd;
-            dl{
-                position:relative;
-                margin-bottom:15px;
-                padding-left:90px;
-                dt{
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    font-size:14px;
-                    line-height:16px;
-                    color:#999;
+            .running-record-view__wrap__list-contents__info__right{
+                float:left;
+                box-sizing:border-box;
+                width:503px;
+                padding-left:50px;
+                border-left:1px solid #ddd;
+                dl{
+                    position:relative;
+                    margin-bottom:15px;
+                    padding-left:90px;
+                    dt{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        font-size:14px;
+                        line-height:16px;
+                        color:#999;
+                    }
                 }
             }
         }
     }
-}
-.running-record-view__wrap__list-thumnail{
-    margin-bottom:10px;
-    padding:40px 17px 35px 16px;
-    background-color:#fff;
-    .running-record-view__wrap__list-thumnail__img{
-        position:relative;
-        cursor:pointer;
-        &:hover{
-            .dim{
-                display:block;
+    .running-record-view__wrap__list-thumnail{
+        margin-bottom:10px;
+        padding:40px 17px 35px 16px;
+        background-color:#fff;
+        .running-record-view__wrap__list-thumnail__img{
+            position:relative;
+            cursor:pointer;
+            &:hover{
+                .dim{
+                    display:block;
+                }
+            }
+            .dim {
+                display:none;
+                position:absolute;
+                width:100%;
+                height:100%;
+                background:#000 url("../images/icon/dim_icon.png") no-repeat center center;
+                opacity:.6;
+            }
+            img{
+                width:100%;
+                height:auto;
             }
         }
-        .dim {
-            display:none;
-            position:absolute;
-            width:100%;
-            height:100%;
-            background:#000 url("../images/icon/dim_icon.png") no-repeat center center;
-            opacity:.6;
-        }
-        img{
-            width:100%;
-            height:auto;
-        }
+        .running-record-view__wrap__list-thumnail__paragraph{
+            position:relative;
+            margin-bottom:42px;
+            text-align:left;
+            border:1px solid #e5e5e5;
+            }
+            .last {
+                margin-bottom:0;
+            }
+            span {
+                display:inline-block;
+                padding:15px;
+                width:90%;
+                color:#555;
+                box-sizing:border-box;
+            }
+            button{
+                position:absolute;
+                right:0;
+                width:10%;
+                height:100%;
+                border-left:1px solid #e5e5e5;
+                color:#999;
+            }
+
     }
-    .running-record-view__wrap__list-thumnail__paragraph{
-        position:relative;
-        margin-bottom:42px;
-        text-align:left;
-        border:1px solid #e5e5e5;
-        }
-        .last {
-            margin-bottom:0;
-        }
-        span {
-            display:inline-block;
-            padding:15px;
-            width:90%;
-            color:#555;
-            box-sizing:border-box;
-        }
-        button{
-            position:absolute;
-            right:0;
-            width:10%;
-            height:100%;
-            border-left:1px solid #e5e5e5;
+    .btn_wrap {
+        margin-bottom:30px;
+        text-align:center;
+        .profile-view_modify {
             color:#999;
+            border:2px solid #999;
         }
-
-}
-.btn_wrap {
-    margin-bottom:30px;
-    text-align:center;
-    .profile-view_modify {
-        color:#999;
-        border:2px solid #999;
     }
-}
-
 }
 
 
@@ -1151,63 +1032,7 @@ $my-repair-list : ".my-repair-list";
 */
 
 $my-repair-list_view : ".my-repair-list_view";
-@keyframes tabAnimation{
-    50%{
-        transform:translateY(-6px) skew(12deg);
-    }
-    100%{
-        transform:translateY(0) skew(12deg);
-    }
-}
 #{$my-repair-list_view} {
-    .my-repair-list_view_tab-list{
-        overflow:hidden;
-        ul{
-            width:110%;
-            margin-bottom:30px;
-            text-align:center;
-            @include removeBetween;
-            @include crossBrowsing("transform", translateX(-5%));
-            li{
-                display:inline-block;
-                width:25%;
-                @include crossBrowsing("transform", skew(-12deg));
-                background-color:#777;
-                vertical-align:top;
-                a{
-                    display:block;
-                    width:100%;
-                    padding:15px 0;
-                    color:#fff;
-                    span{
-                        display:inline-block;
-                        margin-left:8px;
-                        vertical-align:middle;
-                        font-size:18px;
-                        line-height:20px;
-                    }
-                    img {
-                        display:inline-block;
-                        vertical-align:middle;
-                        @include crossBrowsing("transform", skew(12deg));
-                    }
-                    &:hover{
-                        img {
-                            @include crossBrowsing("transform",translateY(0px) skew(12deg) );
-                            animation:tabAnimation 2s ease-in-out infinite;
-                        }
-                    }
-
-                }
-                &.on{
-                    background-color: $basicColor;
-                }
-            }
-        }
-    }
-}
-
-.my-repair-list_view{
     .table-contents__table-wrap{
         padding:45px 52px 30px;
         border-top:8px solid $mainColor;
@@ -1294,7 +1119,7 @@ $my-repair-list_view : ".my-repair-list_view";
             }
             .process-list{
                 padding:0 27px;
-                span{
+                li{
                     display:inline-block;
                     width:143px;
                     height:25px;
@@ -1349,6 +1174,7 @@ $my-repair-list_view : ".my-repair-list_view";
         }
     }
 }
+
 /*
 *********************************************************************************
     리페어 서비스 작성
@@ -2197,13 +2023,8 @@ $repair-service-information : ".repair-service-information";
         .running-record-view__wrap__list-thumnail__img{
             position:relative;
             cursor:pointer;
-            &:hover{
-                .dim{
-                    display:block;
-                }
-            }
             .dim {
-                display:none;
+                display:block;
                 position:absolute;
                 width:100%;
                 height:100%;
@@ -2252,6 +2073,218 @@ $repair-service-information : ".repair-service-information";
 
     }
 
+
+    /*
+    *********************************************************************************
+        my-repair-list 페이지
+        작성일 : 2017.05.15
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    $my-repair-list : ".my-repair-list";
+    #{$my-repair-list} {
+        .table-contents__table-wrap{
+            padding:45px 0 30px 0;
+            border-top:8px solid $mainColor;
+            .table-tit{
+                display:block;
+                padding-bottom:40px;
+                text-align:center;
+                font-size:24px;
+                line-height:26px;
+                font-weight:bold;
+                span{
+                    color:$mainColor;
+                }
+            }
+            .table01{
+                colgroup{
+                    col{
+                        &:first-child{
+                            width:8% !important;
+                        }
+                        &:nth-child(6),&:nth-child(7){
+                            display:none;
+                        }
+                    }
+                }
+                thead{
+                    th{
+                        &:nth-child(6),&:nth-child(7){
+                            display:none;
+                        }
+                    }
+                }
+                tbody{
+                    td{
+                        font-size:14px;
+                        line-height:16px;
+                        &:nth-child(6),&:nth-child(7){
+                            display:none;
+                        }
+                        .photo{
+                            width:100%;
+                            height:auto;
+                        }
+                        .btn-xl {
+                            padding:9px 33px 11px;
+                        }
+                    }
+                }
+            }
+            .photo{
+                width:115px;
+                height:68px;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        my-repair-list_view 페이지
+        작성일 : 2017.05.15
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    $my-repair-list_view : ".my-repair-list_view";
+    #{$my-repair-list_view} {
+        .table-contents__table-wrap{
+            padding:25px;
+            .table-tit{
+                padding-bottom:25px;
+                span{
+                    color:$mainColor;
+                }
+            }
+            &__photo{
+                overflow:visible;
+                margin-bottom:30px;
+                .photo-left{
+                    float:none;
+                    width:100%;
+                    height:auto;
+                    margin-bottom:5px;
+                }
+                .photo-right{
+                    float:none;
+                    img{
+                        width:100%;
+                        height:auto;
+                        margin-bottom:5px;
+                        &:last-child{
+                            margin-bottom:0;
+                        }
+                    }
+                }
+            }
+            &__table{
+                border:1px solid #bcbcbc;
+                border-top:1px solid #212121;
+                margin-bottom:30px;
+                .table01{
+                    margin-bottom:0;
+                    td,th{
+                        border-right:1px solid #bcbcbc;
+                        border-bottom:1px solid #bcbcbc;
+                        font-family:'noto-medium';
+                        &:last-child{
+                            border-right:0;
+                        }
+                    }
+                    th{
+                        color:#000;
+                    }
+                    td{
+                        color:#444;
+                    }
+                    .total,.total_price{
+                        color:$mainColor;
+                        border-bottom:0;
+                    }
+                }
+            }
+            &__request{
+                margin-bottom:30px;
+                .tit{
+                    margin-bottom:10px;
+                    font-size:18px;
+                    line-height:20px;
+                    font-weight:bold;
+                }
+                textarea{
+                    width:100%;
+                    height:64px;
+                    padding:18px;
+                    box-sizing:border-box;
+                }
+            }
+            &__process{
+                margin-bottom:50px;
+                .tit{
+                    margin-bottom:30px;
+                    font-size:18px;
+                    line-height:20px;
+                    font-weight:bold;
+                }
+                .process-list{
+                    padding:0 27px;
+                    li{
+                        display:inline-block;
+                        width:143px;
+                        height:25px;
+                        padding:12px 0 11px;
+                        padding-right:100px;
+                        background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
+                        background-size:143px 48px, 100px 21px;
+                        font-size:17px;
+                        line-height:19px;
+                        text-align:center;
+                        color:#fff;
+                        &.last{
+                            padding-right:0;
+                            background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0;
+                            background-size:143px 48px;
+                        }
+                        &.on{
+                            background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
+                            background-size:143px 48px, 100px 21px;
+                        }
+                    }
+                }
+            }
+            &__send-number{
+                .tit{
+                    margin-bottom:10px;
+                    font-size:18px;
+                    line-height:20px;
+                    font-weight:bold;
+                }
+                input{
+                    padding:0 22px;
+                    border:1px solid #ccc;
+                    width:250px;
+                    height:42px;
+                    &.last{
+                        width:150px;
+                    }
+                }
+                .number-search{
+                    width:130px;
+                    height:44px;
+                    background-color:#32b44a;
+                    color:#fff;
+                }
+                .txt{
+                    display:block;
+                    margin-top:15px;
+                    padding-left:7px;
+                    color:#555;
+                }
+            }
+        }
+    }
 
 }
 
@@ -2417,4 +2450,93 @@ $repair-service-information : ".repair-service-information";
           }
         }
     }
+
+    /*
+    *********************************************************************************
+        my-repair-list 페이지
+        작성일 : 2017.05.15
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    $my-repair-list : ".my-repair-list";
+    #{$my-repair-list} {
+        .table-contents__table-wrap{
+            padding:25px 0;
+            .table-tit{
+                font-size:18px;
+                line-height:20px;
+                span{
+                }
+            }
+            .table01{
+                tbody{
+                    td{
+                        font-size:11px;
+                        line-height:13px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        my-repair-list 페이지
+        작성일 : 2017.05.15
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    $my-repair-list : ".my-repair-list";
+    #{$my-repair-list} {
+        .table-contents__table-wrap{
+            padding:25px 0;
+            .table-tit{
+                padding-bottom:25px;
+                font-size:18px;
+                line-height:20px;
+            }
+            .table01{
+                colgroup{
+                    col{
+                        &:first-child{
+                            width:8% !important;
+                        }
+                        &:nth-child(6),&:nth-child(7){
+                            display:none;
+                        }
+                    }
+                }
+                thead{
+                    th{
+                        &:nth-child(6),&:nth-child(7){
+                            display:none;
+                        }
+                    }
+                }
+                tbody{
+                    td{
+                        font-size:11px;
+                        line-height:13px;
+                        &:nth-child(6),&:nth-child(7){
+                            display:none;
+                        }
+                        .photo{
+                            width:100%;
+                            height:auto;
+                        }
+                        .btn-xl {
+                            padding:9px 10px 11px;
+                        }
+                    }
+                }
+            }
+            .photo{
+                width:115px;
+                height:68px;
+            }
+        }
+    }
+
 }
