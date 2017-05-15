@@ -1271,6 +1271,35 @@ $repair-service : ".repair-service";
     }
 }
 
+/*
+*********************************************************************************
+    리페어 리스트 작성
+    작성일 : 2017.05.15
+    작성자 : 정진배
+*********************************************************************************
+*/
+$repair-list : ".repair-list";
+#{$repair-list} {
+    .table-contents__title{
+        margin-bottom:50px;
+        em{
+            font-style:italic;
+        }
+    }
+    .table-contents__table-wrap{
+        tbody{
+            tr{
+                td{
+                    .photo{
+                        width:115px;
+                        height:68px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 /*
