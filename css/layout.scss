@@ -961,7 +961,7 @@ $certification : ".contents_certification";
         }
         dl{
             display:inline-block;
-            margin-bottom:12px;
+            // margin-bottom:12px;
             font-size:0;
             line-height:0;
             dt{
@@ -984,6 +984,7 @@ $certification : ".contents_certification";
             font-size:16px;
             line-height:18px;
             @include fontStyle(noto-light, 100, normal);
+            margin-top:10px;
         }
     }
 }
