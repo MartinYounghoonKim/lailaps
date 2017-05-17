@@ -1614,6 +1614,7 @@ $products : ".products";
                         display:block;
                         padding:52px 22px;
                         color:#999;
+                        text-align:center;
                         &:hover{
                             color:#2ea7ee;
                         }
@@ -1690,6 +1691,7 @@ $products : ".products";
                             text-align:center;
                         }
                         img{
+                            width:100%;
                             margin-bottom:35px;
                         }
                         strong{
@@ -2726,6 +2728,137 @@ $products : ".products";
         }
     }
 
+    /*
+    *********************************************************************************
+        프로덕트 메인 페이지 작성
+        작성일 : 2017.05.16
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $products : ".products";
+    #{$products} {
+        padding:16px 0 0;
+        &__contents{
+            margin-bottom:16px;
+        }
+        &__tab{
+            ul{
+                width:100%;
+                margin-left:0;
+                li{
+                    position:relative;
+                    height:0;
+                    padding-top:47.1%;
+                    @include crossBrowsing("transform", skew(0));
+                    &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){
+                        width:100%;
+                    }
+                    div{
+                        position:absolute;
+                        left:0;
+                        top:28%;
+                        width:100%;
+                        padding-top:0;
+                        @include crossBrowsing("transform", skew(0) !important);
+                        dfn{
+                            padding-top:45.5px;
+                            font-size:25px;
+                            line-height:27px;
+                            background-size:45px auto;
+                            br{
+                                display:none;
+                            }
+                        }
+                        .btn{
+                            opacity:1;
+                            @include crossBrowsing("transform", translateX(0) translateY(20px) skew(-8deg));
+                        }
+                    }
+                    &:hover{
+                        div{
+                            dfn{
+                                @include crossBrowsing("transform", translateY(0));
+                            }
+                            .btn{
+                                @include crossBrowsing("transform", translateX(0) translateY(20px) skew(-8deg));
+                            }
+                        }
+                    }
+                    &:after{
+                        width:100%;
+                        left:0;
+                        background-size:100% auto;
+                        @include crossBrowsing("transform", skew(0));
+                    }
+                    &:nth-child(1):after{
+                        background-image:url("../images/img/m_product_banner_img01.png");
+                    }
+                }
+            }
+        }
+        &-list{
+            padding-bottom:35px;
+            &__detail-tab{
+                height:auto;
+                ul{
+                    width:100%;
+                }
+            }
+            &__detail-list{
+                margin-bottom:35px;
+                ul{
+                    &:after{
+                        @include afterClear;
+                    }
+                    li{
+                        float:left;
+                        width:49%;
+                        margin:10px 2% 0 0;
+                        &:nth-child(3n){
+                            margin-right:2%;
+                        }
+                        &:nth-child(2n){
+                            margin-right:0;
+                        }
+                        a{
+                            padding:16px;
+                            img{
+                                width:100%;
+                                margin-bottom:35px;
+                            }
+                            strong{
+                                margin-bottom:10px;
+                            }
+                            dfn{
+                                color:#7e7e7e;
+                            }
+                            &:hover{
+                                .hover_box{
+                                    padding-top:43%;
+                                    background:#2ea7ee url("../images/icon/main_product_icon02.png") no-repeat center 15%;
+                                    .product_icon{
+                                        margin:0 auto;
+                                        margin-bottom:38px;
+                                        padding-top:90px;
+                                    }
+                                    span{
+                                        display:block;
+                                        margin-bottom:13px;
+                                        @include fontStyle(noto-bold,600,normal);
+                                        font-size:20px;
+                                        line-height:22px;
+                                        color:#fff;
+                                        text-align:center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @media all and (max-width:640px){
@@ -3087,4 +3220,109 @@ $products : ".products";
             }
         }
     }
+
+    /*
+    *********************************************************************************
+        프로덕트 메인 페이지 작성
+        작성일 : 2017.05.16
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $products : ".products";
+    #{$products} {
+        &__tab{
+            ul{
+                li{
+                    top:15%;
+                    div{
+                        dfn{
+                            padding-top:30px;
+                            font-size:18px;
+                            line-height:20px;
+                            background-size:30px auto;
+                        }
+                        .btn{
+                            @include crossBrowsing("transform",translateX(0) translateY(7px) skew(-8deg));
+                        }
+                    }
+                    &:hover{
+                        div{
+                            .btn{
+                                @include crossBrowsing("transform",translateX(0) translateY(7px) skew(-8deg));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-list{
+            &__tab{
+                ul{
+                    width:100%;
+                    li{
+                        width:20%;
+                        top:15%;
+                        a{
+                            padding:26px 0;
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                    }
+                }
+            }
+            .tit01{
+                padding-top:33px;
+                margin-bottom:33px;
+                font-size:23px;
+                line-height:25px;
+            }
+            &__detail-list{
+                margin-bottom:35px;
+                ul{
+                    &:after{
+                        @include afterClear;
+                    }
+                    li{
+                        width:100%;
+                        margin:10px 2% 0 0;
+                        a{
+                            padding:16px;
+                            img{
+                                width:100%;
+                                margin-bottom:35px;
+                            }
+                            strong{
+                                margin-bottom:10px;
+                            }
+                            dfn{
+                                color:#7e7e7e;
+                            }
+                            &:hover{
+                                .hover_box{
+                                    padding-top:43%;
+                                    background:#2ea7ee url("../images/icon/main_product_icon02.png") no-repeat center 15%;
+                                    .product_icon{
+                                        margin:0 auto;
+                                        margin-bottom:38px;
+                                        padding-top:90px;
+                                    }
+                                    span{
+                                        display:block;
+                                        margin-bottom:13px;
+                                        @include fontStyle(noto-bold,600,normal);
+                                        font-size:20px;
+                                        line-height:22px;
+                                        color:#fff;
+                                        text-align:center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
