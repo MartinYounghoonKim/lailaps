@@ -1360,7 +1360,7 @@ $edit-my-information : ".edit-my-information";
                     }
                     em{
                         display:inline-block;
-                        padding:13px 10px;
+                        padding:10px 10px;
                     }
                     select{
                         width:270px;
@@ -1815,7 +1815,7 @@ $inquiry-detail : ".inquiry-detail";
 }
 /*
 *********************************************************************************
-    문의하기 상세 페이지 작성
+    문의하기 작성 페이지 작성
     작성일 : 2017.05.18
     작성자 : 정진배
 *********************************************************************************
@@ -2797,7 +2797,7 @@ $inquiry-write : ".inquiry-write";
                         }
                         em{
                             display:inline-block;
-                            padding:13px 10px;
+                            padding:11px 10px;
                         }
                         select{
                             width:270px;
@@ -3079,6 +3079,107 @@ $inquiry-write : ".inquiry-write";
               text-align:left;
             }
           }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        문의하기 작성 페이지 작성
+        작성일 : 2017.05.18
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $inquiry-write : ".inquiry-write";
+    #{$inquiry-write} {
+        .table-contents__table-wrap{
+            padding:25px;
+            margin-bottom:14px;
+            .table-tit{
+                margin-bottom:20px;
+                font-size:24px;
+                line-height:26px;
+                font-weight:bold;
+                color:#222;
+                text-align:center;
+            }
+            .table01{
+                tr{
+                    height:45px;
+                    border-top:1px solid #e5e5e5;
+                    td{
+                        border-bottom:0;
+                        font-size:16px;
+                        line-height:20px;
+                        text-align:left;
+                        font-style:normal;
+                        &.txt-title{
+                            vertical-align:top;
+                            padding-top:26px;
+                        }
+                        &:first-child{
+                            padding-left:0;
+                            font-style:italic;
+                        }
+                        &:last-child{
+                            padding-right:30px;
+                        }
+                        .full-width{
+                            width:100%;
+                        }
+                        input{
+                            width:130px;
+                            height:40px;
+                            padding-left:12px;
+                            border:1px solid #ccc;
+                            box-sizing:border-box;
+                            font-size:16px;
+                            line-height:18px;
+                            &.email{
+                                width:170px;
+                                margin-bottom:5px;
+                            }
+                            &.certify{
+                                margin-right:5px;
+                            }
+                        }
+                        span{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                        em{
+                            display:inline-block;
+                            padding:10px 13px;
+                        }
+                        select{
+                            width:270px;
+                            height:40px;
+                            padding-left:12px;
+                            vertical-align:top;
+                            border:1px solid #ccc;
+                            font-size:17px;
+                            line-height:19px;
+                            option{
+                                font-size:17px;
+                                line-height:19px;
+                            }
+                        }
+                        textarea{
+                            width:100%;
+                            height:185px;
+                            padding:16px 20px;
+                            border:1px solid #e6e9eb;
+                            box-sizing:border-box;
+                            font-size:14px;
+                            line-height:16px;
+                            outline:none;
+                            background-color:#edeff1;
+                        }
+                    }
+                }
+            }
+        }
+        .btn_wrap{
+            text-align:center;
         }
     }
 
@@ -3392,7 +3493,7 @@ $inquiry-write : ".inquiry-write";
                         }
                         em{
                             display:inline-block;
-                            padding:13px 10px;
+                            padding:11px 10px;
                         }
                         select{
                             width:100%;
@@ -3589,6 +3690,107 @@ $inquiry-write : ".inquiry-write";
               text-align:left;
             }
           }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        문의하기 작성 페이지 작성
+        작성일 : 2017.05.18
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $inquiry-write : ".inquiry-write";
+    #{$inquiry-write} {
+        .table-contents__table-wrap{
+            padding:25px;
+            margin-bottom:14px;
+            .table-tit{
+                margin-bottom:20px;
+                font-size:24px;
+                line-height:26px;
+                font-weight:bold;
+                color:#222;
+                text-align:center;
+            }
+            .table01{
+                tr{
+                    height:45px;
+                    border-top:1px solid #e5e5e5;
+                    td{
+                        border-bottom:0;
+                        font-size:12px;
+                        line-height:14px;
+                        text-align:left;
+                        font-style:normal;
+                        &.txt-title{
+                            vertical-align:top;
+                            padding-top:26px;
+                        }
+                        &:first-child{
+                            padding-left:0;
+                            font-style:italic;
+                        }
+                        &:last-child{
+                            padding-right:30px;
+                        }
+                        .full-width{
+                            width:100%;
+                        }
+                        input{
+                            width:100%;
+                            height:40px;
+                            padding-left:12px;
+                            border:1px solid #ccc;
+                            box-sizing:border-box;
+                            font-size:12px;
+                            line-height:14px;
+                            &.email{
+                                width:100%;
+                                margin-bottom:5px;
+                            }
+                            &.certify{
+                                margin-right:5px;
+                            }
+                        }
+                        span{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                        em{
+                            display:inline-block;
+                            padding:10px 13px;
+                        }
+                        select{
+                            width:100%;
+                            height:40px;
+                            padding-left:12px;
+                            vertical-align:top;
+                            border:1px solid #ccc;
+                            font-size:12px;
+                            line-height:14px;
+                            option{
+                                font-size:12px;
+                                line-height:14px;
+                            }
+                        }
+                        textarea{
+                            width:100%;
+                            height:185px;
+                            padding:16px 20px;
+                            border:1px solid #e6e9eb;
+                            box-sizing:border-box;
+                            font-size:12px;
+                            line-height:14px;
+                            outline:none;
+                            background-color:#edeff1;
+                        }
+                    }
+                }
+            }
+        }
+        .btn_wrap{
+            text-align:center;
         }
     }
 
