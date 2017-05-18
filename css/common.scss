@@ -90,7 +90,7 @@ $guide : ".guide";
 /* 버튼 색상 */
 $btnColor01: #00afff;
 $btnColor02: #fff;
-$btnColor03: #E70B2F;
+$btnColor03: #fff;
 $btnColor04: #2FC600;
 /* 버튼 사이즈 */
 @mixin btnXS{
@@ -195,10 +195,16 @@ $btnColor04: #2FC600;
     &-color-type03{
         background-color: $btnColor03;
         @include fontStyle(noto-regular, 600, normal);
+        @include crossBrowsing("transition", all .5s ease);
         &.btn-line{
-            border:2px solid $btnColor03;
-            color:$btnColor03;
+            border:2px solid #999;
+            color:#999;
             background:none;
+            &:hover{
+                background-color:$btnColor01;
+                border:2px solid $btnColor01;
+                color:#fff;
+            }
         }
     }
     &-color-type04{
@@ -885,10 +891,16 @@ $btnColor04: #2FC600;
         &-color-type03{
             background-color: $btnColor03;
             @include fontStyle(noto-regular, 600, normal);
+            @include crossBrowsing("transition", all .5s ease);
             &.btn-line{
-                border:2px solid $btnColor03;
-                color:$btnColor03;
+                border:2px solid #ccc;
+                color:#ccc;
                 background:none;
+                &:hover{
+                    background-color:$btnColor01;
+                    border:2px solid $btnColor01;
+                    color:#fff;
+                }
             }
         }
         &-color-type04{
