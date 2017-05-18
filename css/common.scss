@@ -548,6 +548,12 @@ $btnColor04: #2FC600;
                 border-bottom:1px solid #e5e5e5;
                 @include basicFontSize;
                 @include fontStyle("noto-regular", 100, italic);
+                .btn-xl{
+                    box-sizing:border-box;
+                    width:105px;
+                    height:43px;
+                    padding:13px 0 6px;
+                }
                 img{
                     vertical-align:middle;
                 }
