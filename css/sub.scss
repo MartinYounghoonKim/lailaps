@@ -715,7 +715,7 @@ $profile-view : ".profile-view";
         border-top:8px solid $basicColor;
         overflow:hidden;
         background-color:#fff;
-        .profile-view__profile-wrap__img{
+        &__img{
             float:left;
             box-sizing:border-box;
             height:391px;
@@ -735,7 +735,7 @@ $profile-view : ".profile-view";
                 opacity:.6;
             }
         }
-        .profile-view__profile-wrap__profile{
+        &__profile{
             float:left;
             width:439px;
             box-sizing:border-box;
