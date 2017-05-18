@@ -960,6 +960,10 @@ $running-record : ".running-record";
                 width:90%;
                 color:#555;
                 box-sizing:border-box;
+                textarea{
+                    width:100%;
+                    border:0;
+                }
             }
             button{
                 position:absolute;
