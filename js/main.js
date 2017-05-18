@@ -34,6 +34,7 @@ require.config({
         ,'accodian' :'module/accodian'
         ,'productBannerAnimation' :'module/productBannerAnimation'
         ,'tab' :'module/tab'
+        ,'parellaxTab' :'module/parellaxTab'
     },
     shim:{
         'jquery':{
