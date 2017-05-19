@@ -10,12 +10,14 @@ define([],function () {
             "gnbOneDeptBtn" : "[data-gnb-hover]"
         }).divideDeviceEvent();
     });
+    
     require([
         'jquery'
         ,'slide'
 	],function($, slide){
         slide($("[data-ui-name='visual_rolling']"));
     });
+
     require([
         'navigation'
     ], function(navigation){
@@ -27,6 +29,7 @@ define([],function () {
             }).init();
         }
     });
+
     require([
         'showAnimation'
     ], function(showAnimation){
@@ -35,13 +38,13 @@ define([],function () {
             "child" : "> img"
         }).init();
     });
-    // TODO: PC와 Mobile의 기능 분리하기
+
     require([
         'productBannerAnimation'
     ], function(productBannerAnimation){
-        new productBannerAnimation({
+        new productBannerAnimation.init({
             "wrap" : "[data-ui-banner-animation='wrap']",
             "child" : "> li"
-        })
+        });
     });
 });
