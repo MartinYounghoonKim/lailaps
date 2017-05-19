@@ -12,7 +12,7 @@ define([
 ],function ($,wheel) {
 	var parellaxTab = function(){
 		function init(options){
-			var wrapper = $(options.wrapper);
+			var wrapper = $(setSelector(options).wrapper);
 			var tabListWrap = $(options.tabListWrap, wrapper);
 			var tabList = $(options.tabList, tabListWrap);
 			var tabButton = $(options.tabButton, tabList);
@@ -22,22 +22,34 @@ define([
 			var contentsY = wrapper.offset().top;
 			var diff = contentsY-bodyScrollY;
 			var tabIndex = 0;
-
+			var flag;
 			$(window).scroll( function(){
 				bodyScrollY = document.body.scrollTop || document.documentElement.scrollTop;
 				diff = contentsY-bodyScrollY;
 				tabIndex = 1 + currentPosition(contentsWrap,contentsCell,bodyScrollY).getIndexNum();
 
 				bannerPosition(wrapper, diff);
-				activeTabList(tabIndex);
+				activeTabList(tabListWrap, tabList, tabIndex, flag, );
+				flag = tabIndex;
 			});
 			tabIndex = 1 + currentPosition(contentsWrap,contentsCell,bodyScrollY).getIndexNum();
 
 			bannerPosition(wrapper, diff);
-			activeTabList(tabIndex);
+			activeTabList(tabListWrap, tabList, tabIndex, flag);
 			bindEvents({
 				tabButton : tabButton
 			})
+		}
+
+		function setSelector(selecotr){
+			return{
+				"wrapper" : selecotr.wrapper,
+				"tabListWrap" : selecotr.tabListWrap,
+				"tabList" : selecotr.tabList,
+				"tabButton" : selecotr.tabButton,
+				"contentsWrap" : selecotr.contentsWrap,
+				"contentsCell" : selecotr.contentsCell
+			}
 		}
 
 		function bannerPosition(target, diff){
@@ -55,14 +67,20 @@ define([
 			})
 		}
 
-		function activeTabList(){
+		function activeTabList(tabListWrap, tabList, idx, flag){
+			if(idx == flag){
+				return false;
+			}
+			tabListWrap.find("li").removeClass("on");
+			tabList.eq(idx).addClass("on");
 
 		}
 
 		function moveTarget(me){
 			var location = me.attr("href");
 			var scollY = $(location).offset().top - 100;
-			$('document,body').stop().animate({
+
+			$('body, html').stop().animate({
 				scrollTop : scollY
 			})
 		}
