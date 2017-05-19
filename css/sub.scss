@@ -2752,44 +2752,14 @@ $support-as : ".support-as";
         padding:40px 17px 35px 16px;
         background-color:#fff;
         #{$running-record}-view__wrap__list-thumnail__img{
-            position:relative;
-            cursor:pointer;
             .dim {
                 display:block;
-                position:absolute;
-                width:100%;
-                height:100%;
-                background:#000 url("../images/icon/dim_icon.png") no-repeat center center;
-                opacity:.6;
-            }
-            img{
-                width:100%;
-                height:auto;
             }
         }
         #{$running-record}-view__wrap__list-thumnail__paragraph{
-            position:relative;
-            margin-bottom:42px;
-            text-align:left;
-            border:1px solid #e5e5e5;
             }
             .last {
                 margin-bottom:0;
-            }
-            span {
-                display:inline-block;
-                padding:15px;
-                width:90%;
-                color:#555;
-                box-sizing:border-box;
-            }
-            button{
-                position:absolute;
-                right:0;
-                width:10%;
-                height:100%;
-                border-left:1px solid #e5e5e5;
-                color:#999;
             }
 
     }
@@ -2890,8 +2860,6 @@ $support-as : ".support-as";
                 }
             }
             &__photo{
-                overflow:visible;
-                margin-bottom:30px;
                 .photo-left{
                     float:none;
                     width:100%;
@@ -2903,36 +2871,6 @@ $support-as : ".support-as";
                     img{
                         width:100%;
                         height:auto;
-                        margin-bottom:5px;
-                        &:last-child{
-                            margin-bottom:0;
-                        }
-                    }
-                }
-            }
-            &__table{
-                border:1px solid #bcbcbc;
-                border-top:1px solid #212121;
-                margin-bottom:30px;
-                .table01{
-                    margin-bottom:0;
-                    td,th{
-                        border-right:1px solid #bcbcbc;
-                        border-bottom:1px solid #bcbcbc;
-                        font-family:'noto-medium';
-                        &:last-child{
-                            border-right:0;
-                        }
-                    }
-                    th{
-                        color:#000;
-                    }
-                    td{
-                        color:#444;
-                    }
-                    .total,.total_price{
-                        color:$mainColor;
-                        border-bottom:0;
                     }
                 }
             }
@@ -2940,9 +2878,6 @@ $support-as : ".support-as";
                 margin-bottom:30px;
                 .tit{
                     margin-bottom:10px;
-                    font-size:18px;
-                    line-height:20px;
-                    font-weight:bold;
                 }
                 textarea{
                     width:100%;
@@ -2972,10 +2907,6 @@ $support-as : ".support-as";
                         margin:0 auto;
                         background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow_mo.png") no-repeat center bottom;
                         background-size:147px 43px, 9px 51px;
-                        font-size:17px;
-                        line-height:19px;
-                        text-align:center;
-                        color:#fff;
                         &.last{
                             padding-right:0;
                             padding-bottom:0;
@@ -2994,18 +2925,10 @@ $support-as : ".support-as";
                 }
             }
             &__send-number{
-                .tit{
-                    margin-bottom:10px;
-                    font-size:18px;
-                    line-height:20px;
-                    font-weight:bold;
-                }
                 input{
                     padding:0 12px;
                     margin-bottom:5px;
-                    border:1px solid #ccc;
                     width:100%;
-                    height:42px;
                     &.last{
                         width:60%;
                     }
@@ -3013,17 +2936,8 @@ $support-as : ".support-as";
                 .number-search{
                     float:right;
                     width:39%;
-                    height:42px;
-                    background-color:#32b44a;
-                    color:#fff;
                     font-size:12px;
                     line-height:14px;
-                }
-                .txt{
-                    display:block;
-                    margin-top:15px;
-                    padding-left:7px;
-                    color:#555;
                 }
             }
         }
@@ -3044,8 +2958,6 @@ $support-as : ".support-as";
             .table-tit{
                 padding-left:0;
                 margin-bottom:25px;
-                font-size:24px;
-                line-height:26px;
             }
             .table01{
                 tr{
@@ -3054,21 +2966,13 @@ $support-as : ".support-as";
                         border-bottom:0;
                         font-size:16px;
                         line-height:18px;
-                        text-align:left;
                         &:first-child{
                             padding-left:0;
                         }
                         input{
                             width:130px;
-                            height:40px;
-                            padding-left:12px;
-                            border:1px solid #ccc;
                             &.email{
                                 width:170px;
-                                margin-bottom:5px;
-                            }
-                            &.certify{
-                                margin-right:5px;
                             }
                         }
                         span{
@@ -3079,28 +2983,14 @@ $support-as : ".support-as";
                             color:#b4b4b4;
                         }
                         em{
-                            display:inline-block;
                             padding:11px 10px;
                         }
                         select{
-                            width:270px;
-                            height:40px;
-                            padding-left:12px;
-                            vertical-align:top;
-                            border:1px solid #ccc;
                             box-sizing:border-box;
-                            option{
-                                font-size:17px;
-                                line-height:19px;
-                            }
                             &.phone-number{
                                 width:100px;
                                 margin-bottom:5px;
                             }
-                        }
-                        button{
-                            width:100px;
-                            height:40px;
                         }
                     }
                 }
@@ -3108,18 +2998,6 @@ $support-as : ".support-as";
         }
         .table-contents__table-wrap{
             &.table02-wrap{
-                border-top:0;
-                margin-bottom:20px;
-                td{
-                    &:first-child{
-                        padding-top:30px;
-                        vertical-align:top;
-                    }
-                }
-                input.address{
-                    margin-right:5px;
-                    margin-bottom:5px;
-                }
                 .address2{
                     width:100%;
                     margin-bottom:5px;
@@ -3260,7 +3138,6 @@ $support-as : ".support-as";
             }
         }
         #{$products}-list{
-            padding-bottom:35px;
             &__detail-tab{
                 height:auto;
                 ul{
@@ -3285,34 +3162,10 @@ $support-as : ".support-as";
                         }
                         a{
                             padding:16px;
-                            img{
-                                width:100%;
-                                margin-bottom:35px;
-                            }
-                            strong{
-                                margin-bottom:10px;
-                            }
-                            dfn{
-                                color:#7e7e7e;
-                            }
                             &:hover{
                                 .hover_box{
                                     padding-top:43%;
-                                    background:#2ea7ee url("../images/icon/main_product_icon02.png") no-repeat center 15%;
-                                    .product_icon{
-                                        margin:0 auto;
-                                        margin-bottom:38px;
-                                        padding-top:90px;
-                                    }
-                                    span{
-                                        display:block;
-                                        margin-bottom:13px;
-                                        @include fontStyle(noto-bold,600,normal);
-                                        font-size:20px;
-                                        line-height:22px;
-                                        color:#fff;
-                                        text-align:center;
-                                    }
+                                    background-position: center 20%;
                                 }
                             }
                         }
@@ -3766,36 +3619,6 @@ $support-as : ".support-as";
     $my-repair-list : ".my-repair-list";
     #{$my-repair-list} {
         .table-contents__table-wrap{
-            padding:25px 0;
-            .table-tit{
-                font-size:18px;
-                line-height:20px;
-                span{
-                }
-            }
-            .table01{
-                tbody{
-                    td{
-                        font-size:11px;
-                        line-height:13px;
-                    }
-                }
-            }
-        }
-    }
-
-    /*
-    *********************************************************************************
-        my-repair-list 페이지
-        작성일 : 2017.05.15
-        작성자 : 정진배
-    *********************************************************************************
-    */
-
-    $my-repair-list : ".my-repair-list";
-    #{$my-repair-list} {
-        .table-contents__table-wrap{
-            padding:25px 0;
             .table-tit{
                 padding-bottom:25px;
                 font-size:18px;
@@ -3854,25 +3677,15 @@ $support-as : ".support-as";
     $edit-my-information : ".edit-my-information";
     #{$edit-my-information} {
         .table-contents__table-wrap{
-            padding:25px;
-            margin-bottom:10px;
             .table-tit{
-                padding-left:0;
-                margin-bottom:25px;
                 font-size:18px;
                 line-height:20px;
             }
             .table01{
                 tr{
-                    height:45px;
                     td{
-                        border-bottom:0;
                         font-size:12px;
                         line-height:14px;
-                        text-align:left;
-                        &:first-child{
-                            padding-left:0;
-                        }
                         &:last-child{
                             *:last-child{
                                 margin-bottom:0;
@@ -3880,16 +3693,9 @@ $support-as : ".support-as";
                         }
                         input{
                             width:100%;
-                            height:40px;
-                            padding-left:12px;
                             margin-bottom:5px;
-                            border:1px solid #ccc;
                             &.email{
                                 width:100%;
-                                margin-bottom:5px;
-                            }
-                            &.certify{
-                                margin-right:5px;
                             }
                         }
                         span{
@@ -3899,55 +3705,13 @@ $support-as : ".support-as";
                             line-height:14px;
                             color:#b4b4b4;
                         }
-                        em{
-                            display:inline-block;
-                            padding:11px 10px;
-                        }
                         select{
                             width:100%;
-                            height:40px;
-                            padding-left:12px;
-                            vertical-align:top;
-                            border:1px solid #ccc;
-                            box-sizing:border-box;
-                            option{
-                                font-size:17px;
-                                line-height:19px;
-                            }
-                            &.phone-number{
-                                width:100px;
-                                margin-bottom:5px;
-                            }
                         }
                         button{
-                            width:100px;
-                            height:40px;
                             margin-bottom:5px;
                         }
                     }
-                }
-            }
-        }
-        .table-contents__table-wrap{
-            &.table02-wrap{
-                border-top:0;
-                margin-bottom:20px;
-                td{
-                    &:first-child{
-                        padding-top:30px;
-                        vertical-align:top;
-                    }
-                }
-                input.address{
-                    margin-right:5px;
-                    margin-bottom:5px;
-                }
-                .address2{
-                    width:100%;
-                    margin-bottom:5px;
-                }
-                .detail-address{
-                    width:100%;
                 }
             }
         }
@@ -3962,7 +3726,7 @@ $support-as : ".support-as";
     */
     $products : ".products";
     #{$products} {
-        &__tab{
+        #{$products}__tab{
             ul{
                 li{
                     top:15%;
@@ -3987,7 +3751,7 @@ $support-as : ".support-as";
                 }
             }
         }
-        &-list{
+        #{$products}-list{
             &__tab{
                 ul{
                     width:100%;
@@ -4008,48 +3772,10 @@ $support-as : ".support-as";
                 font-size:23px;
                 line-height:25px;
             }
-            &__detail-list{
-                margin-bottom:35px;
+            #{$products}-list__detail-list{
                 ul{
-                    &:after{
-                        @include afterClear;
-                    }
                     li{
                         width:100%;
-                        margin:10px 2% 0 0;
-                        a{
-                            padding:16px;
-                            img{
-                                width:100%;
-                                margin-bottom:35px;
-                            }
-                            strong{
-                                margin-bottom:10px;
-                            }
-                            dfn{
-                                color:#7e7e7e;
-                            }
-                            &:hover{
-                                .hover_box{
-                                    padding-top:43%;
-                                    background:#2ea7ee url("../images/icon/main_product_icon02.png") no-repeat center 15%;
-                                    .product_icon{
-                                        margin:0 auto;
-                                        margin-bottom:38px;
-                                        padding-top:90px;
-                                    }
-                                    span{
-                                        display:block;
-                                        margin-bottom:13px;
-                                        @include fontStyle(noto-bold,600,normal);
-                                        font-size:20px;
-                                        line-height:22px;
-                                        color:#fff;
-                                        text-align:center;
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }

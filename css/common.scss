@@ -399,7 +399,6 @@ $btnColor04: #2FC600;
         공통 탭 가이드
     **********************************************************************************/
     .tab-list{
-        overflow:hidden;
         ul{
             li{
                 &:first-child{
@@ -440,23 +439,11 @@ $btnColor04: #2FC600;
         공통 탭 가이드
     **********************************************************************************/
     .tab-list{
-        overflow:hidden;
         ul{
             li{
-                &:first-child{
-                    a{
-                        @include crossBrowsing("transform",translateX(10px));
-                    }
-                }
-                &:last-child{
-                    a{
-                        @include crossBrowsing("transform",translateX(-11px));
-                    }
-                }
                 a{
                     span{
                         display:block;
-                        margin-top:5px;
                         font-size:11px;
                         line-height:13px;
                     }
@@ -474,9 +461,7 @@ $btnColor04: #2FC600;
     **********************************************************************************/
 
     .paging {
-      text-align:center;
         div {
-          display:inline-block;
         >a {
           width:25px;
           height:25px;
@@ -1122,7 +1107,6 @@ $btnColor04: #2FC600;
 
     .table-contents__table-wrap{
         .table01{
-            word-break:break-all;
              thead{
                  th{
                      padding:8px 4px;
