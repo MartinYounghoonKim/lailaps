@@ -3056,6 +3056,57 @@ $products : ".products";
             }
         }
     }
+    /*
+    *********************************************************************************
+        리페어 서비스 서비스 안내 페이지 작성
+        작성일 : 2017.05.19
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$repair-service-information : ".repair-service-information";
+    #{$repair-service-information} {
+        .repair-service-information__contents{
+            .tab-list{
+                width:100%;
+                &.is-fix{
+                    left:0;
+                    width:100%;
+                    margin-left:0;
+                }
+            }
+            .repair-service-information__contents__cell-wrap{
+                .repair-service-information__contents__cell-wrap__cell{
+                    .repair-service-information__contents__cell-wrap__cell__m-app{
+                        > div{
+                            strong{
+                                margin-bottom:20px;
+                                em{
+                                    font-size:24px;
+                                    line-height:26px;
+                                }
+                            }
+                            p{
+                                margin-bottom:20px;
+                                &.last{
+                                    margin-bottom:40px;
+                                }
+                            }
+                        }
+                        padding-left:0;
+                        text-align:center;
+                        img{
+                            position:relative;
+                            left:auto;
+                            top:auto;
+                            width:70%;
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 }
 
