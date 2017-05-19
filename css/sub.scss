@@ -2952,9 +2952,9 @@ $support-as : ".support-as";
                 }
             }
             &__process{
-                margin-bottom:50px;
+                margin-bottom:20px;
                 .tit{
-                    margin-bottom:10px;
+                    margin-bottom:20px;
                     font-size:18px;
                     line-height:20px;
                     font-weight:bold;
@@ -2963,21 +2963,24 @@ $support-as : ".support-as";
                     overflow:hidden;
                     padding:0;
                     li{
-                        display:inline-block;
-                        width:88px;
-                        height:25px;
+                        display:block;
+                        width:148px;
+                        height:45px;
                         padding:0;
-                        padding-right:50px;
-                        background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
-                        background-size:87px 24px, 51px 9px;
+                        padding-top:10px;
+                        padding-bottom:50px;
+                        margin:0 auto;
+                        background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow_mo.png") no-repeat center bottom;
+                        background-size:147px 43px, 9px 51px;
                         font-size:17px;
                         line-height:19px;
                         text-align:center;
                         color:#fff;
                         &.last{
                             padding-right:0;
+                            padding-bottom:0;
                             background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0;
-                            background-size:87px 24px;
+                            background-size:147px 43px;
                         }
                         &.on{
                             background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
@@ -2994,21 +2997,23 @@ $support-as : ".support-as";
                     font-weight:bold;
                 }
                 input{
-                    padding:0 22px;
+                    padding:0 12px;
                     margin-bottom:5px;
                     border:1px solid #ccc;
                     width:100%;
                     height:42px;
                     &.last{
-                        width:64%;
+                        width:60%;
                     }
                 }
                 .number-search{
                     float:right;
-                    width:35%;
+                    width:39%;
                     height:42px;
                     background-color:#32b44a;
                     color:#fff;
+                    font-size:12px;
+                    line-height:14px;
                 }
                 .txt{
                     display:block;
