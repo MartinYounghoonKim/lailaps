@@ -24,6 +24,7 @@ require.config({
         ,'CommonLogin':'controller/CommonLogin'
         ,'RepairView':'controller/RepairView'
         ,'Products':'controller/Products'
+        ,'InquiryList':'controller/InquiryList'
 
     	//Function Module
         ,'checkDevice':'constant/device'
