@@ -25,6 +25,7 @@ require.config({
         ,'RepairView':'controller/RepairView'
         ,'Products':'controller/Products'
         ,'InquiryList':'controller/InquiryList'
+        ,'InquiryDetail':'controller/InquiryDetail'
 
     	//Function Module
         ,'checkDevice':'constant/device'
