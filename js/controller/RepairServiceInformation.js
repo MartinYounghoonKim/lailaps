@@ -20,17 +20,15 @@ define([],function () {
     });
     require([
         'jquery'
-        ,'tab'
-    ], function($,tab){
-        var element = $("[data-module-tab='wrap']");
-        for(var i=0; i<element.size();i++){
-            new tab({
-				"wrap":element[i],
-				"btnWrap":"[data-module-tabBtn='wrap']",
-				"btnList":">li",
-				"btn":">button",
-				"tabList":"[data-module-tab='contentsList']"
-			}).bindEvents();
-        }
+        ,'parellaxTab'
+    ], function($,parellaxTab){
+        new parellaxTab().init({
+            "wrapper" : "[data-parellax-fix-tab='wrap']",
+            "tabListWrap" : ">ul",
+            "tabList" : ">li",
+            "tabButton" : "a",
+            "contentsWrap" : "[data-parellax-contents='wrap']",
+            "contentsCell" : ">div"
+        })
     });
 });

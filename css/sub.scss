@@ -960,6 +960,10 @@ $running-record : ".running-record";
                 width:90%;
                 color:#555;
                 box-sizing:border-box;
+                textarea{
+                    width:100%;
+                    border:0;
+                }
             }
             button{
                 position:absolute;
@@ -1430,6 +1434,199 @@ $edit-my-information : ".edit-my-information";
 $repair-service-information : ".repair-service-information";
 #{$repair-service-information} {
     .repair-service-information__contents{
+        position:relative;
+        padding-top:150px;
+        .tab-list{
+            position:absolute;
+            top:0;
+            width:1040px;
+            z-index:100;
+            &.is-fix{
+                position:fixed;
+                left:50%;
+                margin-left:-520px;
+            }
+        }
+        .repair-service-information__contents__cell-wrap{
+            .repair-service-information__contents__cell-wrap__cell{
+                margin-bottom:120px;
+                /* 섹션 m-app */
+                .repair-service-information__contents__cell-wrap__cell__m-app{
+                    position:relative;
+                    padding-left:625px;
+                    > img{
+                        position:absolute;
+                        top:30px;
+                        left:10px;
+                    }
+                    > div{
+                        strong {
+                            display:block;
+                            margin-bottom:42px;
+                            em{
+                                font-size:46px;
+                                line-height:48px;
+                                @include fontStyle("noto-bold",600, normal);
+                                color:$basicColor;
+                            }
+                        }
+                        > p{
+                            margin-bottom:28px;
+                            &.last{
+                                margin-bottom:108px;
+                            }
+                        }
+                        div{
+                            position:relative;
+                            padding:26px 30px 25px 229px;
+                            background-color:$basicColor;
+                            img{
+                                position:absolute;
+                                top:49px;
+                                left:24px;
+                                width:179px;
+                                height:auto;
+                            }
+                            p{
+                                margin-bottom:13px;
+                                color:#fff;
+                                font-size:14px;
+                                line-height:19px;
+                            }
+                        }
+                    }
+                }
+                .repair-service-information__contents__cell-wrap__cell__process{
+                    position:relative;
+                    padding:60px 0;
+                    border-top:3px solid $basicColor;
+                    background-color:#fff;
+                    ul{
+                        overflow:hidden;
+                        li{
+                            float:left;
+                            margin-left:-6px;
+                            padding-right:63px;
+                            background:url("../images/bar/repair_service_info_bar.png") right 51px no-repeat;
+                            div{
+                                width:138px;
+                                padding:22px 0 17px;
+                                @include crossBrowsing("transform",skew(-12deg));
+                                background-color:#999;
+                                color:#fff;
+                                text-align:center;
+                                span{
+                                    display:block;
+                                    padding-top:47px;
+                                    @include crossBrowsing("transform",skew(12deg)  translateX(-4px));
+                                    background-position:54px top;
+                                    background-repeat:no-repeat;
+                                    font-size:18px;
+                                    line-height:20px;
+                                    @include fontStyle("noto-regular",100, italic);
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li01{
+                                margin-bottom:34px;
+                                padding-left:63px;
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon01.png");
+                                        background-position:58px top;
+                                    }
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li02{
+                                margin-bottom:34px;
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon02.png");
+                                    }
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li03{
+                                margin-bottom:34px;
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon03.png");
+                                    }
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li04{
+                                margin-bottom:34px;
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon04.png");
+                                    }
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li05{
+                                margin-bottom:34px;
+                                padding-right:65px;
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon05.png");
+                                    }
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li06{
+                                background-repeat:repeat-x;
+                                padding-left:63px;
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon06.png");
+                                        background-position:58px top;
+                                    }
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li07{
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon03.png");
+                                    }
+                                }
+                            }
+                            &.repair-service-information__contents__cell-wrap__cell__process__li08{
+                                background-image:none;
+                                div{
+                                    span{
+                                        background-image:url("../images/icon/repair_service_info_icon02.png");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn{
+                        position:absolute;
+                        right:52px;
+                        bottom:60px;
+                    }
+                }
+                .repair-service-information__contents__cell-wrap__cell__running-time{
+                    position:relative;
+                    padding:45px 40px;
+                    border-top:3px solid $basicColor;
+                    background-color:#fff;
+                    dl{
+                        font-size:17px;
+                        line-height:19px;
+                        overflow:hidden;
+                        dt{
+                            float:left;
+                        }
+                        dd{
+                            float:left;
+                            margin-right:40px;
+                        }
+                    }
+                    .btn{
+                        position:absolute;
+                        right:180px;
+                        top:34px;
+                    }
+                }
+            }
+        }
         .table-contents__table-wrap{
             margin-bottom:50px;
             padding-bottom:0;
@@ -1702,18 +1899,19 @@ $products : ".products";
                         }
                         .hover_box{
                             display:none;
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            box-sizing:border-box;
+                            width:100%;
+                            height:100%;
+                            padding-top:176px;
+                            background:#2ea7ee url("../images/icon/main_product_icon02.png") no-repeat center 90px;
+                            opacity:.95;
                         }
                         &:hover{
                             .hover_box{
                                 display:block;
-                                position:absolute;
-                                top:0;
-                                left:0;
-                                width:100%;
-                                height:100%;
-                                padding-top:176px;
-                                background:#2ea7ee url("../images/icon/main_product_icon02.png") no-repeat center 90px;
-                                opacity:.95;
                                 .product_icon{
                                     margin:0 auto;
                                     margin-bottom:38px;
