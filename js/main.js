@@ -26,6 +26,7 @@ require.config({
         ,'Products':'controller/Products'
         ,'InquiryList':'controller/InquiryList'
         ,'InquiryDetail':'controller/InquiryDetail'
+        ,'InquiryWrite':'controller/InquiryWrite'
 
     	//Function Module
         ,'checkDevice':'constant/device'
