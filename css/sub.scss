@@ -2141,20 +2141,54 @@ $inquiry-write : ".inquiry-write";
 */
 $support-as : ".support-as";
 #{$support-as} {
+    background: url(../images/bg/as_policy_bg.png) no-repeat center 0;
+    background-size: cover;
     &__contents{
-        background-image:url("/assets/img/bg/as_policy_bg.png");
-        .as_policy .sub_contents__img_wrap{ background-image:url("/assets/img/bg/as_policy_bg_bottom.png");  }
-        h3{ padding-top:95px; margin-bottom:50px; font-size:27px; line-height:29px; color:#222; font-weight:800; background:url("../images/icon/policy_icon.png") center top no-repeat; text-align:center; }
-        .as_policy h3 span{ display:block; }
-        .as_policy h3 span:nth-child(2){ margin:3px 0 20px; }
-        .as_policy h3 span a{ color:#222; }
-        .as_policy .as_policy__info_box{ padding:30px 45px 30px; background-color:#f6f6f6; overflow:hidden; }
-        .as_policy .as_policy__info_box strong{ display:block; margin-bottom:30px; font-size:27px; line-height:29px; font-weight:700; }
-        .as_policy .as_policy__info_box div{ float:left; padding-top:8px; }
-        .as_policy .as_policy__info_box div dl { float:left; margin-right:40px; overflow:hidden; font-size:17px; line-height:19px; }
-        .as_policy .as_policy__info_box div dl dt,
-        .as_policy .as_policy__info_box div dl dd{ float:left; }
-        .as_policy .as_policy__info_box a{ float:left; }
+        h3{
+            padding-top:95px;
+            margin-bottom:50px;
+            font-size:27px;
+            line-height:29px;
+            color:#222;
+            font-weight:800;
+            background:url("../images/icon/policy_icon.png") center top no-repeat;
+            text-align:center;
+            span{
+                display:block;
+                &:nth-child(2){
+                    margin:3px 0 20px;
+                }
+            }
+        }
+        &__info_box{
+            padding:30px 45px 30px;
+            background-color:#fff;
+            overflow:hidden;
+            strong{
+                display:block;
+                margin-bottom:30px;
+                font-size:27px;
+                line-height:29px;
+                font-weight:700;
+            }
+            div{
+                float:left;
+                padding-top:8px;
+                dl{
+                    float:left;
+                    margin-right:40px;
+                    overflow:hidden;
+                    font-size:17px;
+                    line-height:19px;
+                    dt,dd{
+                        float:left;
+                    }
+                }
+            }
+            a{
+                float:left;
+            }
+        }
     }
 }
 
@@ -2918,9 +2952,9 @@ $support-as : ".support-as";
                 }
             }
             &__process{
-                margin-bottom:50px;
+                margin-bottom:20px;
                 .tit{
-                    margin-bottom:10px;
+                    margin-bottom:20px;
                     font-size:18px;
                     line-height:20px;
                     font-weight:bold;
@@ -2929,21 +2963,24 @@ $support-as : ".support-as";
                     overflow:hidden;
                     padding:0;
                     li{
-                        display:inline-block;
-                        width:88px;
-                        height:25px;
+                        display:block;
+                        width:148px;
+                        height:45px;
                         padding:0;
-                        padding-right:50px;
-                        background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
-                        background-size:87px 24px, 51px 9px;
+                        padding-top:10px;
+                        padding-bottom:50px;
+                        margin:0 auto;
+                        background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow_mo.png") no-repeat center bottom;
+                        background-size:147px 43px, 9px 51px;
                         font-size:17px;
                         line-height:19px;
                         text-align:center;
                         color:#fff;
                         &.last{
                             padding-right:0;
+                            padding-bottom:0;
                             background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0;
-                            background-size:87px 24px;
+                            background-size:147px 43px;
                         }
                         &.on{
                             background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
@@ -2960,21 +2997,23 @@ $support-as : ".support-as";
                     font-weight:bold;
                 }
                 input{
-                    padding:0 22px;
+                    padding:0 12px;
                     margin-bottom:5px;
                     border:1px solid #ccc;
                     width:100%;
                     height:42px;
                     &.last{
-                        width:64%;
+                        width:60%;
                     }
                 }
                 .number-search{
                     float:right;
-                    width:35%;
+                    width:39%;
                     height:42px;
                     background-color:#32b44a;
                     color:#fff;
+                    font-size:12px;
+                    line-height:14px;
                 }
                 .txt{
                     display:block;
@@ -3158,10 +3197,10 @@ $support-as : ".support-as";
     $products : ".products";
     #{$products} {
         padding:16px 0 0;
-        &__contents{
+        #{$products}__contents{
             margin-bottom:16px;
         }
-        &__tab{
+        #{$products}__tab{
             ul{
                 width:100%;
                 margin-left:0;
@@ -3216,7 +3255,7 @@ $support-as : ".support-as";
                 }
             }
         }
-        &-list{
+        #{$products}-list{
             padding-bottom:35px;
             &__detail-tab{
                 height:auto;
@@ -3278,57 +3317,6 @@ $support-as : ".support-as";
             }
         }
     }
-    /*
-    *********************************************************************************
-        리페어 서비스 서비스 안내 페이지 작성
-        작성일 : 2017.05.19
-        작성자 : 김영훈
-    *********************************************************************************
-    */
-    //$repair-service-information : ".repair-service-information";
-    #{$repair-service-information} {
-        .repair-service-information__contents{
-            .tab-list{
-                width:100%;
-                &.is-fix{
-                    left:0;
-                    width:100%;
-                    margin-left:0;
-                }
-            }
-            .repair-service-information__contents__cell-wrap{
-                .repair-service-information__contents__cell-wrap__cell{
-                    .repair-service-information__contents__cell-wrap__cell__m-app{
-                        > div{
-                            strong{
-                                margin-bottom:20px;
-                                em{
-                                    font-size:24px;
-                                    line-height:26px;
-                                }
-                            }
-                            p{
-                                margin-bottom:20px;
-                                &.last{
-                                    margin-bottom:40px;
-                                }
-                            }
-                        }
-                        padding-left:0;
-                        text-align:center;
-                        img{
-                            position:relative;
-                            left:auto;
-                            top:auto;
-                            width:70%;
-                            margin-bottom:20px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
 
     /*
     *********************************************************************************
@@ -3473,6 +3461,60 @@ $support-as : ".support-as";
             text-align:center;
         }
     }
+
+    /*
+    *********************************************************************************
+        A/S 정책 페이지 작성
+        작성일 : 2017.05.19
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $support-as : ".support-as";
+    #{$support-as} {
+        &__contents{
+            h3{
+                padding-top:95px;
+                margin-bottom:50px;
+                font-size:20px;
+                line-height:23px;
+                span{
+                    &:nth-child(2){
+                        margin:3px 0 20px;
+                    }
+                }
+            }
+            &__info_box{
+                padding:20px;
+                text-align:center;
+                strong{
+                    margin-bottom:10px;
+                    font-size:20px;
+                    line-height:23px;
+                    text-align:left;
+                }
+                div{
+                    float:left;
+                    padding:0;
+                    margin-bottom:10px;
+                    dl{
+                        float:left;
+                        margin-right:15px;
+                        margin-bottom:5px;
+                        font-size:13px;
+                        line-height:15px;
+                        dt,dd{
+                            float:left;
+                        }
+                    }
+                }
+                a{
+                    float:none;
+                    padding-top:10px;
+                }
+            }
+        }
+    }
+
 
 }
 
