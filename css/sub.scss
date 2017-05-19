@@ -709,7 +709,7 @@ $recommend-view : ".recommend-view";
 
 $profile-view : ".profile-view";
 #{$profile-view} {
-    .profile-view__profile-wrap{
+    #{$profile-view}__profile-wrap{
         margin-bottom:15px;
         padding:37px 47px 35px 35px;
         border-top:8px solid $basicColor;
@@ -822,7 +822,7 @@ $profile-view : ".profile-view";
     }
     .btn_wrap {
         text-align:center;
-        .profile-view_modify {
+        #{$profile-view}_modify {
             color:#999;
             border:2px solid #999;
         }
@@ -840,23 +840,23 @@ $profile-view : ".profile-view";
 
 $running-record : ".running-record";
 #{$running-record} {
-    .running-record-view__wrap__list-contents{
+    #{$running-record}-view__wrap__list-contents{
         margin-bottom:15px;
         padding:34px 17px 54px 16px;
         border-top:8px solid $basicColor;
         background-color:#fff;
-        .running-record-view__wrap__list-contents__map{
+        #{$running-record}-view__wrap__list-contents__map{
             margin-bottom:40px;
         }
-        .running-record-view__wrap__list-contents__info{
+        #{$running-record}-view__wrap__list-contents__info{
             overflow:hidden;
-            .running-record-view__wrap__list-contents__info__left{
+            #{$running-record}-view__wrap__list-contents__info__left{
                 position:relative;
                 float:left;
                 box-sizing:border-box;
                 width:503px;
                 padding-left:103px;
-                .running-record-view__wrap__list-contents__info__left__user-img{
+                #{$running-record}-view__wrap__list-contents__info__left__user-img{
                     position:absolute;
                     left:34px;
                     top:0;
@@ -868,7 +868,7 @@ $running-record : ".running-record";
                         width:100%;
                     }
                 }
-                .running-record-view__wrap__list-contents__info__left__title{
+                #{$running-record}-view__wrap__list-contents__info__left__title{
                     overflow:hidden;
                     display:block;
                     height:57px;
@@ -877,14 +877,14 @@ $running-record : ".running-record";
                     line-height:30px;
                     @include fontStyle("noto-bold",600,italic);
                 }
-                .running-record-view__wrap__list-contents__info__left__user-name{
+                #{$running-record}-view__wrap__list-contents__info__left__user-name{
                     display:block;
                     margin-bottom:50px;
                     text-overflow:ellipsis;
                     white-space:nowrap;
                     overflow:hidden;
                 }
-                .running-record-view__wrap__list-contents__info__left__icon{
+                #{$running-record}-view__wrap__list-contents__info__left__icon{
                     .icon{
                         margin-right:16px;
                         padding-top:4px;
@@ -898,7 +898,7 @@ $running-record : ".running-record";
                     }
                 }
             }
-            .running-record-view__wrap__list-contents__info__right{
+            #{$running-record}-view__wrap__list-contents__info__right{
                 float:left;
                 box-sizing:border-box;
                 width:503px;
@@ -920,11 +920,11 @@ $running-record : ".running-record";
             }
         }
     }
-    .running-record-view__wrap__list-thumnail{
+    #{$running-record}-view__wrap__list-thumnail{
         margin-bottom:10px;
         padding:40px 17px 35px 16px;
         background-color:#fff;
-        .running-record-view__wrap__list-thumnail__img{
+        #{$running-record}-view__wrap__list-thumnail__img{
             position:relative;
             cursor:pointer;
             &:hover{
@@ -945,7 +945,7 @@ $running-record : ".running-record";
                 height:auto;
             }
         }
-        .running-record-view__wrap__list-thumnail__paragraph{
+        #{$running-record}-view__wrap__list-thumnail__paragraph{
             position:relative;
             margin-bottom:42px;
             text-align:left;
@@ -1406,7 +1406,7 @@ $edit-my-information : ".edit-my-information";
                 margin-bottom:5px;
             }
             .address2{
-                width:63%;
+                width:65%;
             }
             .detail-address{
                 width:30%;
@@ -1646,10 +1646,10 @@ $products : ".products";
 #{$products} {
     padding:115px 0 0;
     background-color:#fff;
-    &__contents{
+    #{$products}__contents{
         margin-bottom:115px;
     }
-    &__tab{
+    #{$products}__tab{
         overflow:hidden;
         text-align:center;
         ul{
@@ -1788,7 +1788,7 @@ $products : ".products";
             }
         }
     }
-    &-list{
+    #{$products}-list{
         padding-bottom:87px;
         background-color:#f6f6f6;
         &__tab{
@@ -2685,7 +2685,7 @@ $support-as : ".support-as";
     */
     //$profile-view : ".profile-view";
     #{$profile-view} {
-        .profile-view__profile-wrap{
+        #{$profile-view}__profile-wrap{
             width:100%;
             padding:37px 20px 2px 20px;
             box-sizing:border-box;
@@ -2713,28 +2713,28 @@ $support-as : ".support-as";
 
     $running-record : ".running-record";
     #{$running-record} {
-    .running-record-view__wrap__list-contents{
-        .running-record-view__wrap__list-contents__map{
+    #{$running-record}-view__wrap__list-contents{
+        #{$running-record}-view__wrap__list-contents__map{
             overflow:hidden;
             margin-bottom:20px;
             img{
                 width:100%;
             }
         }
-        .running-record-view__wrap__list-contents__info{
+        #{$running-record}-view__wrap__list-contents__info{
             overflow:hidden;
-            .running-record-view__wrap__list-contents__info__left{
+            #{$running-record}-view__wrap__list-contents__info__left{
                 width:auto;
                 float:none;
                 margin-bottom:20px;
                 padding-left:80px;
-                .running-record-view__wrap__list-contents__info__left__user-img{
+                #{$running-record}-view__wrap__list-contents__info__left__user-img{
                     left:5px;
                     img{
                         width:100%;
                     }
                 }
-                .running-record-view__wrap__list-contents__info__left__title{
+                #{$running-record}-view__wrap__list-contents__info__left__title{
                     margin-bottom:8px;
                     height:auto;
                     font-size:18px;
@@ -2742,11 +2742,11 @@ $support-as : ".support-as";
                     text-overflow:ellipsis;
                     white-space:nowrap;
                 }
-                .running-record-view__wrap__list-contents__info__left__user-name{
+                #{$running-record}-view__wrap__list-contents__info__left__user-name{
                     margin-bottom:20px;
                 }
             }
-            .running-record-view__wrap__list-contents__info__right{
+            #{$running-record}-view__wrap__list-contents__info__right{
                 float:none;
                 width:auto;
                 padding-left:0;
@@ -2754,11 +2754,11 @@ $support-as : ".support-as";
             }
         }
     }
-    .running-record-view__wrap__list-thumnail{
+    #{$running-record}-view__wrap__list-thumnail{
         margin-bottom:10px;
         padding:40px 17px 35px 16px;
         background-color:#fff;
-        .running-record-view__wrap__list-thumnail__img{
+        #{$running-record}-view__wrap__list-thumnail__img{
             position:relative;
             cursor:pointer;
             .dim {
@@ -2774,7 +2774,7 @@ $support-as : ".support-as";
                 height:auto;
             }
         }
-        .running-record-view__wrap__list-thumnail__paragraph{
+        #{$running-record}-view__wrap__list-thumnail__paragraph{
             position:relative;
             margin-bottom:42px;
             text-align:left;
@@ -2975,7 +2975,7 @@ $support-as : ".support-as";
                         height:45px;
                         padding:0;
                         padding-top:10px;
-                        padding-bottom:50px;
+                        padding-bottom:40px;
                         margin:0 auto;
                         background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow_mo.png") no-repeat center bottom;
                         background-size:147px 43px, 9px 51px;
@@ -2990,8 +2990,12 @@ $support-as : ".support-as";
                             background-size:147px 43px;
                         }
                         &.on{
-                            background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
-                            background-size:87px 24px, 51px 9px;
+                            background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow_mo.png") no-repeat center bottom;
+                            background-size:147px 43px, 9px 51px;
+                        }
+                        &.last.on{
+                            background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0;
+                            background-size:147px 43px;
                         }
                     }
                 }
@@ -3517,6 +3521,76 @@ $support-as : ".support-as";
                 a{
                     float:none;
                     padding-top:10px;
+                }
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        리페어 서비스 서비스 안내 페이지 작성
+        작성일 : 2017.05.19
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$repair-service-information : ".repair-service-information";
+    #{$repair-service-information} {
+        .repair-service-information__contents{
+            .tab-list{
+                width:100%;
+                &.is-fix{
+                    left:0;
+                    width:100%;
+                    margin-left:0;
+                }
+            }
+            .repair-service-information__contents__cell-wrap{
+                .repair-service-information__contents__cell-wrap__cell{
+                    .repair-service-information__contents__cell-wrap__cell__m-app{
+                        > div{
+                            strong{
+                                margin-bottom:20px;
+                                em{
+                                    font-size:24px;
+                                    line-height:26px;
+                                }
+                            }
+                            p{
+                                margin-bottom:20px;
+                                &.last{
+                                    margin-bottom:40px;
+                                }
+                            }
+                            div{
+                                padding:15px;
+                                img{
+                                    display:block;
+                                    position:relative;
+                                    left:50%;
+                                    top:auto;
+                                    margin-bottom:20px;
+                                    margin-left:-89.5px;
+                                }
+                            }
+                        }
+                        padding-left:0;
+                        text-align:center;
+                        img{
+                            position:relative;
+                            left:auto;
+                            top:auto;
+                            width:70%;
+                            margin-bottom:20px;
+                        }
+                    }
+                    .repair-service-information__contents__cell-wrap__cell__process{
+                        padding:30px 0;
+                        ul{
+                            li{
+                                padding:0 20px;
+                            }
+                        }
+                    }
                 }
             }
         }
