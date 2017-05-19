@@ -2968,7 +2968,7 @@ $support-as : ".support-as";
                         height:45px;
                         padding:0;
                         padding-top:10px;
-                        padding-bottom:50px;
+                        padding-bottom:40px;
                         margin:0 auto;
                         background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow_mo.png") no-repeat center bottom;
                         background-size:147px 43px, 9px 51px;
@@ -2983,8 +2983,12 @@ $support-as : ".support-as";
                             background-size:147px 43px;
                         }
                         &.on{
-                            background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
-                            background-size:87px 24px, 51px 9px;
+                            background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0, url("../images/arrow/process_arrow_mo.png") no-repeat center bottom;
+                            background-size:147px 43px, 9px 51px;
+                        }
+                        &.last.on{
+                            background:url("../images/bg/sub_mypage_process_bg_on.png") no-repeat 0 0;
+                            background-size:147px 43px;
                         }
                     }
                 }
