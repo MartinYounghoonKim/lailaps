@@ -5,9 +5,15 @@
   <meta name="Author" content="Madeweb">
   <meta name="Keywords" content="라일랍스, ">
   <meta name="Description" content="">
-  <title>프로필 | 마이페이지 | 라일랍스</title>
+  <title>A/S 정책 | SUPPORT | 라일랍스</title>
   <link rel="stylesheet" href="../css/index.min.css"/>
  </head>
+ <!--
+    서브페이지 작성시 유의 사항
+    1. title 태그의 제목 변경 ex) 서비스 안내 | Repair | 라일랍스
+    2. 비쥬얼 영역의 navigation 및 제목 변경
+    3. 페이지의 Controller 변경
+ -->
  <body data-reference="Main">
     <div id="wrapper">
       <hr/>
@@ -117,136 +123,83 @@
       <!--// 헤더 영역 -->
       <hr/>
       <!-- 서브 키비쥬얼 영역 -->
-      <div id="sub-keyvisual" class="sub-keyvisual__news">
+      <div id="sub-keyvisual" class="sub-keyvisual__support-as">
           <div class="sub-keyvisual__navigation">
               <div class="outer_wrap">
                   <ul>
                       <li><a href="#none">home</a></li>
-                      <li><a href="#none">MY PAGE</a></li>
+                      <li><a href="#none">SUPPORT</a></li>
+                      <li><strong>A/S정책</strong></li>
                   </ul>
               </div>
           </div>
           <div class="sub-keyvisual__title" data-ui-show-animation="wrap" data-ui-show-animation-direction="left">
               <div class="wrap">
-                  <dfn>LAILAPS</dfn>
+                  <dfn>고객센터</dfn>
               </div>
-              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>MY PAGE</strong></div></div>
+              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>A/S 정책</strong></div></div>
               <div class="wrap">
-                  <p>LEARN TO MAKE YOURSELF HAPPY</p>
+                  <p>HAVE A GOOD TIME WITH LAILAPS</p>
               </div>
           </div>
       </div>
       <!--// 서브 키비쥬얼 영역 -->
       <hr/>
         <!-- 컨텐츠 영역 -->
-        <div id="contents" class="sub edit-my-information">
+        <div id="contents" class="sub support-as">
           <div class="wrap">
-            <h2 class="tit01">MY PAGE</h2>
-            <div data-module-tab="wrap">
-                <div class="tab-list is-list4">
-                    <ul data-module-tabBtn="wrap">
-                        <li><a href="#none"><img src="../images/icon/profileView_tab_icon01.png" alt=""/><span>프로필</span></a></li>
-                        <li><a href="#none"><img src="../images/icon/profileView_tab_icon02.png" alt=""/><span>나의주행기록</span></a></li>
-                        <li><a href="#none"><img src="../images/icon/profileView_tab_icon03.png" alt=""/><span>리페어 현황</span></a></li>
-                        <li class="on"><a href="#none"><img src="../images/icon/profileView_tab_icon04.png" alt=""/><span>회원정보 수정</span></a></li>
-                    </ul>
-                </div>
-                <div class="table-contents__table-wrap box_shadow">
-                    <div class="table-tit">필수정보 수정</div>
-                    <table class="table01">
-                        <caption>필수정보 수정</caption>
-                        <colgroup>
-                            <col style="width:20%;">
-                            <col style="">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <td>성명</td>
-                                <td>김기호</td>
-                            </tr>
-                            <tr>
-                                <td>아이디</td>
-                                <td>ZNSXK1489</td>
-                            </tr>
-                            <tr>
-                                <td><label for="password">비밀번호</label></td>
-                                <td><input id="password" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
-                            </tr>
-                            <tr>
-                                <td><label for="password2">비밀번호 확인</label></td>
-                                <td><input id="password2" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="email">이메일</label></td>
-                                <td>
-                                    <input id="email" type="text"><em>@</em><input type="text" class="email">
-                                    <select>
-                                        <option>직접입력</option>
-                                        <option>naver.com</option>
-                                        <option>daum.net</option>
-                                        <option>google.com</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="phone_number">휴대폰 번호</label></td>
-                                <td>
-                                    <select class="phone-number">
-                                        <option>010</option>
-                                        <option>011</option>
-                                        <option>017</option>
-                                        <option>019</option>
-                                    </select>
-                                    <input id="phone_number" type="text">
-                                    <input type="text">
-                                    <button type="button">본인인증</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="certify">본인인증</label></td>
-                                <td><input id="certify" type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
-                            </tr>
-                            <tr>
-                                <td><label for="number">전화번호</label></td>
-                                <td>
-                                    <select class="phone-number">
-                                        <option>02</option>
-                                        <option>031</option>
-                                        <option>070</option>
-                                    </select>
-                                    <input id="number" type="text">
-                                    <input type="text">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-contents__table-wrap table02-wrap box_shadow">
-                    <div class="table-tit">필수정보 수정</div>
-                    <table class="table01">
-                        <caption>필수정보 수정</caption>
-                        <colgroup>
-                            <col style="width:20%;">
-                            <col style="">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <td>주소정보</td>
-                                <td>
-                                    <input type="text" class="address"><button type="button">우편번호</button>
-                                    <input type="text" class="address2">
-                                    <input type="text" class="detail-address" placeholder="상세주소 입력">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="btn_wrap">
-                  <!-- 수정버튼 클릭안했을 경우 -->
-                  <a class="btn btn-xs btn-color-type03 btn-line" href="#none"><span class="btn-inner"><span>취소</span></span></a>
-                  <a class="btn btn-xs btn-color-type03 btn-line" href="#none"><span class="btn-inner"><span>수정</span></span></a>
-                  <!-- //수정버튼 클릭안했을 경우 -->
-                </div>
+            <h2 class="tit01">A/S 정책</h2>
+            <div class="support-as__contents">
+                <!-- 컨텐츠 작업 시작 -->
+				<span class="sub-title">라일랍스는 소비자 보호원(www.cpb.co.kr)의 소비자 피해 보상규정에<br>의거하여 보증 제도를 충실히 이행합니다.</span>
+				<div class="content_area">
+					<img src="assets/img/images/as01.png" alt="" class="as_img">
+					<span>
+						<img src="assets/img/arrow/as02.png" alt="1"> 라일랍스 카본 프레임의 품질보증기간은 구매일로부터 5년이며, 알루미늄(알루미늄+카본 포함)프레임 경우 3년입니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as03.png" alt="2"> 업계 최초 모든 구매자 “카본프레임 무상수리 실시!!!”
+						<p>- 카본프레임의 경우 구입 후 최초 1년 동안은 소비자 과실인 경우에도 1회에 한해서 무상수리를 해드립니다.</p>
+						<p>(단, 수리 후 성능복원이 불가능한 경우나 안전에 중대한 영향을 미치는 경우는 제외합니다.</p>
+						<p>- 1회 수리라 함은 수리를 요구하는 부위가 1곳인 경우를 말하며, 2부위 이상부터는 무상수리에서 제외)</p>
+					</span>
+					<span>
+						<img src="assets/img/arrow/as04.png" alt="3">REPAIR A/S 정책
+						<p>- REPAIR 완료 후 REPAIR 부위에 한해서 6개월 무상 보증처리 됩니다(단, 외부 충격에 의한 손상은 제외)</p>
+						<p>- 카본 휠의 경우 브레이크 패드와 마찰되는 부위는 REPAIR 특성상 브레이크 작동 시 소음,</p>
+						<p>또는 유격이 발생할 수 있으며 높은 압력을 받는 부위이므로 보증대상에서 제외됩니다.</p>
+					</span>
+					<span>
+						<img src="assets/img/arrow/as05.png" alt="4"> 품질보증기간 이내에 정상적인 사용상태에서 발생한 성능. 기능상의 하자로 인한 피해
+						<p>- 하자 발생시 : 무상수리</p>
+						<p>- 수리 불가능 시 : 제품교환</p>
+						<p>- 동일 하자에 대해 3회까지 수리하였으나 결함이 재발 (4회째) : 제품교환 또는 구입가 환급</p><p>- 여러 부위의 고장으로 총 4회 수리 받았으나 결함이 재발 (5회째) : 제품교환 또는 구입가 환급</p><p></p>
+					</span>
+					<span>
+						<img src="assets/img/arrow/as06.png" alt="5"> 피해보상은 물품의 제조사에게 요청을 할 수 있으며, 제품교환 또는 구입가 환급의 경우에 소비자가 원하는 것을 선택할 수 있습니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as07.png" alt="6"> 라일랍스 본사와 협의되지 않은 직접수리 및 타 업체에서 수리를 받는 동안 일어나는 모든 제반 사항은 본사에서 책임지지 않습니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as08.png" alt="7"> 천재지변으로 인한 고장은 보증기간 중이라도 무상 수리에서 제외 됩니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as09.png" alt="8"> 단순 반품 및 교환 요청 시 이중포장 및 출고 시와 동일한 재포장을 해주셔야 하며, 제품의 상품성이 떨어지는 경우(스크래치, 오염, 파손 등)는 반품 및 교환이 불가능합니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as10.png" alt="9"> 제품을 수령 후 안전사고의 미연 방지를 위해서 전문가에게 의뢰하여 조립을 하실 것을 권장해 드리며, 오 조립으로 일어나는 모든 문제에 대하여 본사는 책임지지 않습니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as11.png" alt="10"> 단순 변심으로 반품 시 배송료 5,000원. 교환 시 왕복배송료 10,000원을 부담하셔야 하며 반드시 선불로 지불하셔야 합니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as12.png" alt="11"> 구매자의 단순 변심, 불량, 오 배송 등으로 교환 및 반품을 원하실 경우 상품수령일 이후 7일 이내 신청이 가능하며, 구매자의 사유로 인한 배송료는 구매자 부담입니다.
+					</span>
+					<span>
+						<img src="assets/img/arrow/as13.png" alt="12"> 교환 및 환불처리는 반드시 사전 협의를 거치셔야 하며 사전협의 없는 교환 및 환불처리로 인한 제반비용은 구매자 부담입니다.
+					</span>
+				</div>
             </div>
           </div>
         </div>
@@ -309,7 +262,7 @@
         		</dl>
         		<dl class="footer_company_info">
         			<dt>연락처</dt>
-        			<dd>053-523-5768</dd>
+        			<dd>053-523-5760</dd>
         		</dl>
         		<dl class="footer_company_info">
         			<dt>팩스</dt>
@@ -328,7 +281,7 @@
     <script data-main="../js/main" src="../js/require.js"></script>
     <script>
         //Controller 변수 선언
-        var CONTROLLER_TYPE = "EditMyInformation";
+        var CONTROLLER_TYPE = "MyRepairList";
         console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
     </script>
  </body>

@@ -5,9 +5,15 @@
   <meta name="Author" content="Madeweb">
   <meta name="Keywords" content="라일랍스, ">
   <meta name="Description" content="">
-  <title>프로필 | 마이페이지 | 라일랍스</title>
+  <title>문의하기 | SUPPORT | 라일랍스</title>
   <link rel="stylesheet" href="../css/index.min.css"/>
  </head>
+ <!--
+    서브페이지 작성시 유의 사항
+    1. title 태그의 제목 변경 ex) 서비스 안내 | Repair | 라일랍스
+    2. 비쥬얼 영역의 navigation 및 제목 변경
+    3. 페이지의 Controller 변경
+ -->
  <body data-reference="Main">
     <div id="wrapper">
       <hr/>
@@ -117,137 +123,111 @@
       <!--// 헤더 영역 -->
       <hr/>
       <!-- 서브 키비쥬얼 영역 -->
-      <div id="sub-keyvisual" class="sub-keyvisual__news">
+      <div id="sub-keyvisual" class="sub-keyvisual__inquiry">
           <div class="sub-keyvisual__navigation">
               <div class="outer_wrap">
                   <ul>
                       <li><a href="#none">home</a></li>
-                      <li><a href="#none">MY PAGE</a></li>
+                      <li><a href="#none">SUPPORT</a></li>
+                      <li><strong>문의하기</strong></li>
                   </ul>
               </div>
           </div>
           <div class="sub-keyvisual__title" data-ui-show-animation="wrap" data-ui-show-animation-direction="left">
               <div class="wrap">
-                  <dfn>LAILAPS</dfn>
+                  <dfn>고객센터</dfn>
               </div>
-              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>MY PAGE</strong></div></div>
+              <div class="sub-keyvisual__title_tit"><div class="wrap"><strong>문의하기</strong></div></div>
               <div class="wrap">
-                  <p>LEARN TO MAKE YOURSELF HAPPY</p>
+                  <p>HAVE A GOOD TIME WITH LAILAPS</p>
               </div>
           </div>
       </div>
       <!--// 서브 키비쥬얼 영역 -->
       <hr/>
         <!-- 컨텐츠 영역 -->
-        <div id="contents" class="sub edit-my-information">
+        <div id="contents" class="sub inquiry-detail">
           <div class="wrap">
-            <h2 class="tit01">MY PAGE</h2>
-            <div data-module-tab="wrap">
-                <div class="tab-list is-list4">
-                    <ul data-module-tabBtn="wrap">
-                        <li><a href="#none"><img src="../images/icon/profileView_tab_icon01.png" alt=""/><span>프로필</span></a></li>
-                        <li><a href="#none"><img src="../images/icon/profileView_tab_icon02.png" alt=""/><span>나의주행기록</span></a></li>
-                        <li><a href="#none"><img src="../images/icon/profileView_tab_icon03.png" alt=""/><span>리페어 현황</span></a></li>
-                        <li class="on"><a href="#none"><img src="../images/icon/profileView_tab_icon04.png" alt=""/><span>회원정보 수정</span></a></li>
-                    </ul>
-                </div>
-                <div class="table-contents__table-wrap box_shadow">
-                    <div class="table-tit">필수정보 수정</div>
-                    <table class="table01">
-                        <caption>필수정보 수정</caption>
-                        <colgroup>
-                            <col style="width:20%;">
-                            <col style="">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <td>성명</td>
-                                <td>김기호</td>
-                            </tr>
-                            <tr>
-                                <td>아이디</td>
-                                <td>ZNSXK1489</td>
-                            </tr>
-                            <tr>
-                                <td><label for="password">비밀번호</label></td>
-                                <td><input id="password" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
-                            </tr>
-                            <tr>
-                                <td><label for="password2">비밀번호 확인</label></td>
-                                <td><input id="password2" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="email">이메일</label></td>
-                                <td>
-                                    <input id="email" type="text"><em>@</em><input type="text" class="email">
-                                    <select>
-                                        <option>직접입력</option>
-                                        <option>naver.com</option>
-                                        <option>daum.net</option>
-                                        <option>google.com</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="phone_number">휴대폰 번호</label></td>
-                                <td>
-                                    <select class="phone-number">
-                                        <option>010</option>
-                                        <option>011</option>
-                                        <option>017</option>
-                                        <option>019</option>
-                                    </select>
-                                    <input id="phone_number" type="text">
-                                    <input type="text">
-                                    <button type="button">본인인증</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="certify">본인인증</label></td>
-                                <td><input id="certify" type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
-                            </tr>
-                            <tr>
-                                <td><label for="number">전화번호</label></td>
-                                <td>
-                                    <select class="phone-number">
-                                        <option>02</option>
-                                        <option>031</option>
-                                        <option>070</option>
-                                    </select>
-                                    <input id="number" type="text">
-                                    <input type="text">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-contents__table-wrap table02-wrap box_shadow">
-                    <div class="table-tit">필수정보 수정</div>
-                    <table class="table01">
-                        <caption>필수정보 수정</caption>
-                        <colgroup>
-                            <col style="width:20%;">
-                            <col style="">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <td>주소정보</td>
-                                <td>
-                                    <input type="text" class="address"><button type="button">우편번호</button>
-                                    <input type="text" class="address2">
-                                    <input type="text" class="detail-address" placeholder="상세주소 입력">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="btn_wrap">
-                  <!-- 수정버튼 클릭안했을 경우 -->
-                  <a class="btn btn-xs btn-color-type03 btn-line" href="#none"><span class="btn-inner"><span>취소</span></span></a>
-                  <a class="btn btn-xs btn-color-type03 btn-line" href="#none"><span class="btn-inner"><span>수정</span></span></a>
-                  <!-- //수정버튼 클릭안했을 경우 -->
-                </div>
+            <h2 class="tit01">문의하기</h2>
+            <div class="inquiry-detail__view__box box_shadow">
+              <div class="tit">어플 연동 사용 관련해서 문의드립니다.</div>
+              <div class="date">Septemb 09, 2017</div>
+              <div class="innerWrap">
+                <p class="list_view_text">문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용<br />문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용 문의내용</p>
+                <a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>목록</span></span></a>
+              </div>
             </div>
+            <div class="reply-wrap box_shadow">
+                    <form>
+                        <fildset>
+                            <legend>댓글 입력하기</legend>
+                            <div class="reply-wrap__text-area">
+                                <div><textarea placeholder="답변을 입력하세요"></textarea></div>
+                                <button type="button">답변</button>
+                            </div>
+                            <div class="reply-wrap__reply-area">
+                                <div class="reply-wrap__reply-area__list">
+                                    <strong>관리자</strong>
+                                    <span>답변내용 답변내용 답변내용 답변내용 관리자 답변내용입니다.</span>
+                                    <div class="reply-wrap__reply-area__list__edit-btn">
+                                        <ul>
+                                            <li><a href="#none">수정</a></li>
+                                            <li><a href="#none">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reply-wrap__reply-area__list">
+                                    <strong>ang871224</strong>
+                                    <span>아름다운 풍경 잘 감상했습니다. 다음에 같이 라이딩 해요~~</span>
+                                    <div class="reply-wrap__reply-area__list__edit-btn">
+                                        <ul>
+                                            <li><a href="#none">수정</a></li>
+                                            <li><a href="#none">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reply-wrap__reply-area__list">
+                                    <strong>ang871224</strong>
+                                    <span>아름다운 풍경 잘 감상했습니다. 다음에 같이 라이딩 해요~~</span>
+                                </div>
+                                <div class="reply-wrap__reply-area__list">
+                                    <strong>ang871224</strong>
+                                    <span>아름다운 풍경 잘 감상했습니다. 다음에 같이 라이딩 해요~~</span>
+                                </div>
+                                <div class="reply-wrap__reply-area__list">
+                                    <strong>ang871224</strong>
+                                    <span>아름다운 풍경 잘 감상했습니다. 다음에 같이 라이딩 해요~~</span>
+                                </div>
+                                <!-- <p class="reply-wrap__reply-area__list no-reply">등록된 댓글이 없습니다.</p> -->
+                            </div>
+
+
+                            <div class="paging">
+                                <div>
+                                    <a href="#none" class="most_prev">
+                                        <img src="../images/btn/most_prev.png" alt="맨 앞으로 이동">
+                                    </a>
+                                    <a href="#none" class="prev">
+                                        <img src="../images/btn/prev.png" alt="이전으로 이동">
+                                    </a>
+                                    <ul>
+                                        <li class="first"><strong>1</strong></li>
+                                        <li><a href="#none">2</a></li>
+                                        <li><a href="#none">3</a></li>
+                                        <li><a href="#none">4</a></li>
+                                        <li class="last"><a href="#none">5</a></li>
+                                    </ul>
+                                    <a href="#none" class="most_next">
+                                        <img src="../images/btn/next.png" alt="다음으로 이동">
+                                    </a>
+                                    <a href="#none" class="next">
+                                        <img src="../images/btn/most_next.png" alt="맨 뒤로 이동">
+                                    </a>
+                                </div>
+                            </div>
+                        </fildset>
+                    </form>
+                </div>
           </div>
         </div>
         <!--// 컨텐츠 영역 -->
@@ -309,7 +289,7 @@
         		</dl>
         		<dl class="footer_company_info">
         			<dt>연락처</dt>
-        			<dd>053-523-5768</dd>
+        			<dd>053-523-5760</dd>
         		</dl>
         		<dl class="footer_company_info">
         			<dt>팩스</dt>
@@ -328,7 +308,7 @@
     <script data-main="../js/main" src="../js/require.js"></script>
     <script>
         //Controller 변수 선언
-        var CONTROLLER_TYPE = "EditMyInformation";
+        var CONTROLLER_TYPE = "MyRepairList";
         console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
     </script>
  </body>

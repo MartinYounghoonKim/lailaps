@@ -90,7 +90,7 @@ $guide : ".guide";
 /* 버튼 색상 */
 $btnColor01: #00afff;
 $btnColor02: #fff;
-$btnColor03: #E70B2F;
+$btnColor03: #fff;
 $btnColor04: #2FC600;
 /* 버튼 사이즈 */
 @mixin btnXS{
@@ -199,10 +199,16 @@ $btnColor04: #2FC600;
     &-color-type03{
         background-color: $btnColor03;
         @include fontStyle(noto-regular, 600, normal);
+        @include crossBrowsing("transition", all .5s ease);
         &.btn-line{
-            border:2px solid $btnColor03;
-            color:$btnColor03;
+            border:2px solid #999;
+            color:#999;
             background:none;
+            &:hover{
+                background-color:$btnColor01;
+                border:2px solid $btnColor01;
+                color:#fff;
+            }
         }
     }
     &-color-type04{
@@ -546,6 +552,12 @@ $btnColor04: #2FC600;
                 border-bottom:1px solid #e5e5e5;
                 @include basicFontSize;
                 @include fontStyle("noto-regular", 100, italic);
+                .btn-xl{
+                    box-sizing:border-box;
+                    width:105px;
+                    height:43px;
+                    padding:13px 0 6px;
+                }
                 img{
                     vertical-align:middle;
                 }
@@ -889,10 +901,16 @@ $btnColor04: #2FC600;
         &-color-type03{
             background-color: $btnColor03;
             @include fontStyle(noto-regular, 600, normal);
+            @include crossBrowsing("transition", all .5s ease);
             &.btn-line{
-                border:2px solid $btnColor03;
-                color:$btnColor03;
+                border:2px solid #ccc;
+                color:#ccc;
                 background:none;
+                &:hover{
+                    background-color:$btnColor01;
+                    border:2px solid $btnColor01;
+                    color:#fff;
+                }
             }
         }
         &-color-type04{
@@ -1121,8 +1139,9 @@ $btnColor04: #2FC600;
                          height:auto;
                      }
                      .btn-xl{
+                         width:50px;
                          height:auto;
-                         padding:9px 4px 11px;
+                         padding:4px 0px 4px;
                      }
                  }
              }
