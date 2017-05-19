@@ -1917,6 +1917,28 @@ $inquiry-write : ".inquiry-write";
     }
 }
 
+/*
+*********************************************************************************
+    A/S 정책 페이지 작성
+    작성일 : 2017.05.19
+    작성자 : 정진배
+*********************************************************************************
+*/
+$support-as : ".support-as";
+#{$support-as} {
+    &__contents{
+        .sub-title{
+            display:block;
+            font-size:24px;
+            line-height:26px;
+            font-weight:bold;
+            text-align:center;
+        }
+        .content_area{
+
+        }
+    }
+}
 
 @media all and (max-width:800px){
     /*
