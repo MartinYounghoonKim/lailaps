@@ -22,6 +22,7 @@ require.config({
         ,'EditMyInformation':'controller/EditMyInformation'
         ,'RepairServiceInformation':'controller/RepairServiceInformation'
         ,'CommonLogin':'controller/CommonLogin'
+        ,'RepairList':'controller/RepairList'
         ,'RepairView':'controller/RepairView'
         ,'Products':'controller/Products'
         ,'InquiryList':'controller/InquiryList'
