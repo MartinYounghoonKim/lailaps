@@ -2141,20 +2141,54 @@ $inquiry-write : ".inquiry-write";
 */
 $support-as : ".support-as";
 #{$support-as} {
+    background: url(../images/bg/as_policy_bg.png) no-repeat 0 0;
+    background-size: cover;
     &__contents{
-        background-image:url("/assets/img/bg/as_policy_bg.png");
-        .as_policy .sub_contents__img_wrap{ background-image:url("/assets/img/bg/as_policy_bg_bottom.png");  }
-        h3{ padding-top:95px; margin-bottom:50px; font-size:27px; line-height:29px; color:#222; font-weight:800; background:url("../images/icon/policy_icon.png") center top no-repeat; text-align:center; }
-        .as_policy h3 span{ display:block; }
-        .as_policy h3 span:nth-child(2){ margin:3px 0 20px; }
-        .as_policy h3 span a{ color:#222; }
-        .as_policy .as_policy__info_box{ padding:30px 45px 30px; background-color:#f6f6f6; overflow:hidden; }
-        .as_policy .as_policy__info_box strong{ display:block; margin-bottom:30px; font-size:27px; line-height:29px; font-weight:700; }
-        .as_policy .as_policy__info_box div{ float:left; padding-top:8px; }
-        .as_policy .as_policy__info_box div dl { float:left; margin-right:40px; overflow:hidden; font-size:17px; line-height:19px; }
-        .as_policy .as_policy__info_box div dl dt,
-        .as_policy .as_policy__info_box div dl dd{ float:left; }
-        .as_policy .as_policy__info_box a{ float:left; }
+        h3{
+            padding-top:95px;
+            margin-bottom:50px;
+            font-size:27px;
+            line-height:29px;
+            color:#222;
+            font-weight:800;
+            background:url("../images/icon/policy_icon.png") center top no-repeat;
+            text-align:center;
+            span{
+                display:block;
+                &:nth-child(2){
+                    margin:3px 0 20px;
+                }
+            }
+        }
+        &__info_box{
+            padding:30px 45px 30px;
+            background-color:#fff;
+            overflow:hidden;
+            strong{
+                display:block;
+                margin-bottom:30px;
+                font-size:27px;
+                line-height:29px;
+                font-weight:700;
+            }
+            div{
+                float:left;
+                padding-top:8px;
+                dl{
+                    float:left;
+                    margin-right:40px;
+                    overflow:hidden;
+                    font-size:17px;
+                    line-height:19px;
+                    dt,dd{
+                        float:left;
+                    }
+                }
+            }
+            a{
+                float:left;
+            }
+        }
     }
 }
 
@@ -3422,6 +3456,60 @@ $support-as : ".support-as";
             text-align:center;
         }
     }
+
+    /*
+    *********************************************************************************
+        A/S 정책 페이지 작성
+        작성일 : 2017.05.19
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $support-as : ".support-as";
+    #{$support-as} {
+        &__contents{
+            h3{
+                padding-top:95px;
+                margin-bottom:50px;
+                font-size:20px;
+                line-height:23px;
+                span{
+                    &:nth-child(2){
+                        margin:3px 0 20px;
+                    }
+                }
+            }
+            &__info_box{
+                padding:20px;
+                text-align:center;
+                strong{
+                    margin-bottom:10px;
+                    font-size:20px;
+                    line-height:23px;
+                    text-align:left;
+                }
+                div{
+                    float:left;
+                    padding:0;
+                    margin-bottom:10px;
+                    dl{
+                        float:left;
+                        margin-right:15px;
+                        margin-bottom:5px;
+                        font-size:13px;
+                        line-height:15px;
+                        dt,dd{
+                            float:left;
+                        }
+                    }
+                }
+                a{
+                    float:none;
+                    padding-top:10px;
+                }
+            }
+        }
+    }
+
 
 }
 
