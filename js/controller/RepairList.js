@@ -18,4 +18,18 @@ define([],function () {
             "child" : "> div"
         }).init();
     });
+    requirejs([
+		'RepairListData'
+	], function(RepairListData){
+		var fieldValue = [
+			{"Authorization" : "850dfe67287dc1dff9fae137ec9341cc"},
+			{"contentType": "application/json; charset=utf-8"}
+		];
+		RepairListData.init({
+			"url" : "repairs",
+			"dataType" : "json",
+			"type":"get",
+			"fieldValue" : fieldValue
+		});
+	});
 });

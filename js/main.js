@@ -5,6 +5,7 @@ require.config({
         ,'jqueryEasing':'lib/jquery.easing.min'
         ,'jqueryUI': 'lib/jquery-ui'
         ,'wheel': 'lib/wheel'
+        ,'handlebars': 'lib/handlebars-v4.0.8'
         //controller
         ,'Main':'controller/Main'
         ,'News':'controller/News'
@@ -31,6 +32,7 @@ require.config({
 
     	//Function Module
         ,'checkDevice':'constant/device'
+        ,'getData':'constant/getData'
         ,'responsive':'module/responsive'
         ,'gnb' :'module/gnb'
         ,'slide' :'module/slide'
@@ -40,6 +42,11 @@ require.config({
         ,'productBannerAnimation' :'module/productBannerAnimation'
         ,'tab' :'module/tab'
         ,'parellaxTab' :'module/parellaxTab'
+        ,'dataControll' :'module/dataControll'
+
+        //dataController
+        ,'RepairListData' : "data/RepairListData"
+
     },
     shim:{
         'jquery':{
