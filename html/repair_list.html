@@ -146,70 +146,73 @@
             <h2 class="tit01">신청현황</h2>
             <div data-module-tab="wrap">
                 <div class="on" data-module-tab="contentsList">
-                    <div class="table-contents">
-                    <h4 class="table-contents__title"><span>총 의뢰건수 <em>11,213</em>건</span></h4>
-                    <div class="table-contents__table-wrap box_shadow">
-                        <table class="table01">
-                        <caption>위너 주행기록 테이블</caption>
-                        <colgroup>
-                            <col style="width:10%;">
-                            <col style="width:16%;">
-                            <col style="width:16%;">
-                            <col style="width:25%;">
-                            <col style="width:16%;">
-                            <col style="width:8%;">
-                            <col style="width:13%;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">NO</th>
-                                <th scope="col">신청 사진</th>
-                                <th scope="col">모델명/부위</th>
-                                <th scope="col">수리내역</th>
-                                <th scope="col">진행상태</th>
-                                <th scope="col">조회</th>
-                                <th scope="col">완료일</th>
-                            </tr>
-                        </thead>
-                        <tbody data-bind-target="wrap">
-                            <script type="text/x-handlebars-template" id="repairListData">
-				 {{#repairs}}
-                                <tr>
-                                    <td>{{order_id}}</td>
-                                    <td><img src="../images/temp/temp07.png" class="photo" alt="신청사진"></td>
-                                    <td>{{model}}<br>{{parts}}</td>
-                                    <td>리페어 처리가 완료되었습니다.</td>
-                                    <td><a class="btn btn-xl btn-color-type01" href="#none"><span class="btn-inner"><span>상세내역</span></span></a></td>
-                                    <td>14</td>
-                                    <td>{{created_at}}</td>
-                                </tr>
-				{{/repairs}}
-                            </script>
-                        </tbody>
-                    </table>
-                        <div class="paging">
-                            <div>
-                            <a href="#none" class="most_prev">
-                                <img src="../images/btn/most_prev.png" alt="맨 앞으로 이동">
-                            </a>
-                            <a href="#none" class="prev">
-                                <img src="../images/btn/prev.png" alt="이전으로 이동">
-                            </a>
-                            <ul>
-                                <li class="first"><strong>1</strong></li>
-                                <li><a href="#none">2</a></li>
-                                <li><a href="#none">3</a></li>
-                                <li><a href="#none">4</a></li>
-                                <li class="last"><a href="#none">5</a></li>
-                            </ul>
-                            <a href="#none" class="most_next">
-                                <img src="../images/btn/next.png" alt="다음으로 이동">
-                            </a>
-                            <a href="#none" class="next">
-                                <img src="../images/btn/most_next.png" alt="맨 뒤로 이동">
-                            </a>
-                            </div>
-                        </div>
+                    <div class="table-contents" data-bind-target="wrap">
+					  <script type="text/x-handlebars-template" id="repairListData">
+						<div class="table-contents">
+							<h4 class="table-contents__title"><span>총 의뢰건수 <em>{{repairs.length}}</em>건</span></h4>
+							<div class="table-contents__table-wrap box_shadow">
+								<table class="table01">
+									<caption>위너 주행기록 테이블</caption>
+									<colgroup>
+										<col style="width:10%;">
+										<col style="width:16%;">
+										<col style="width:16%;">
+										<col style="width:25%;">
+										<col style="width:16%;">
+										<col style="width:8%;">
+										<col style="width:13%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">NO</th>
+											<th scope="col">신청 사진</th>
+											<th scope="col">모델명/부위</th>
+											<th scope="col">수리내역</th>
+											<th scope="col">진행상태</th>
+											<th scope="col">조회</th>
+											<th scope="col">완료일</th>
+										</tr>
+									</thead>
+									<tbody>
+									   {{#repairs}}
+											<tr>
+												<td>{{@index}} / {{order_id}}</td>
+												<td><img class="photo" alt="신청사진" src="{{profile_image}}"></td>
+												<td>{{model}}<br>{{parts}}</td>
+												<td>리페어 처리가 완료되었습니다.</td>
+												<td><a class="btn btn-xl btn-color-type01" href="#none"><span class="btn-inner"><span>{{progress}}</span></span></a></td>
+												<td>14</td>
+												<td>{{created_at}}</td>
+											</tr>
+										{{/repairs}}
+									</tbody>
+								</table>
+								<div class="paging">
+									<div>
+										<a href="#none" class="most_prev">
+											<img src="../images/btn/most_prev.png" alt="맨 앞으로 이동">
+										</a>
+										<a href="#none" class="prev">
+											<img src="../images/btn/prev.png" alt="이전으로 이동">
+										</a>
+										<ul>
+											<li class="first"><strong>1</strong></li>
+											<li><a href="#none">2</a></li>
+											<li><a href="#none">3</a></li>
+											<li><a href="#none">4</a></li>
+											<li class="last"><a href="#none">5</a></li>
+										</ul>
+										<a href="#none" class="most_next">
+											<img src="../images/btn/next.png" alt="다음으로 이동">
+										</a>
+										<a href="#none" class="next">
+											<img src="../images/btn/most_next.png" alt="맨 뒤로 이동">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						</script>
                     </div>
                   </div>
                 </div>
@@ -298,5 +301,6 @@
          var CONTROLLER_TYPE = "RepairList";
          console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
     </script>
+
  </body>
 </html>
