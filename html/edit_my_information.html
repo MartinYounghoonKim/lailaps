@@ -152,99 +152,110 @@
                     </ul>
                 </div>
                 <div class="table-contents__table-wrap box_shadow">
-                    <div class="table-tit">필수정보 수정</div>
-                    <table class="table01">
-                        <caption>필수정보 수정</caption>
-                        <colgroup>
-                            <col style="width:20%;">
-                            <col style="">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <td>성명</td>
-                                <td>김기호</td>
-                            </tr>
-                            <tr>
-                                <td>아이디</td>
-                                <td>ZNSXK1489</td>
-                            </tr>
-                            <tr>
-                                <td><label for="password">비밀번호</label></td>
-                                <td><input id="password" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
-                            </tr>
-                            <tr>
-                                <td><label for="password2">비밀번호 확인</label></td>
-                                <td><input id="password2" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="email">이메일</label></td>
-                                <td>
-                                    <input id="email" type="text"><em>@</em><input type="text" class="email">
-                                    <select>
-                                        <option>직접입력</option>
-                                        <option>naver.com</option>
-                                        <option>daum.net</option>
-                                        <option>google.com</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="phone_number">휴대폰 번호</label></td>
-                                <td>
-                                    <select class="phone-number">
-                                        <option>010</option>
-                                        <option>011</option>
-                                        <option>017</option>
-                                        <option>019</option>
-                                    </select>
-                                    <input id="phone_number" type="text">
-                                    <input type="text">
-                                    <button type="button">본인인증</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="certify">본인인증</label></td>
-                                <td><input id="certify" type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
-                            </tr>
-                            <tr>
-                                <td><label for="number">전화번호</label></td>
-                                <td>
-                                    <select class="phone-number">
-                                        <option>02</option>
-                                        <option>031</option>
-                                        <option>070</option>
-                                    </select>
-                                    <input id="number" type="text">
-                                    <input type="text">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-tit">회원정보 수정</div>
+                    <form method="">
+                        <!-- input hidden 영역 -->
+                        <input type="hidden"/>
+                        <!--// input hidden 영역 -->
+                        <fieldset>
+                            <legend>회원정보 입력폼</legend>
+                            <table class="table01">
+                            <caption>회원정보 수정</caption>
+                            <colgroup>
+                                <col style="width:20%;">
+                                <col style="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>성명</td>
+                                    <td>김기호</td>
+                                </tr>
+                                <tr>
+                                    <td>아이디</td>
+                                    <td>ZNSXK1489</td>
+                                </tr>
+                                <tr>
+                                    <td><label for="password">비밀번호</label></td>
+                                    <td><input id="password" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="password2">비밀번호 확인</label></td>
+                                    <td><input id="password2" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">이메일</label></td>
+                                    <td>
+                                        <input id="email" type="text"><em>@</em><input type="text" class="email">
+                                        <select>
+                                            <option>직접입력</option>
+                                            <option>naver.com</option>
+                                            <option>daum.net</option>
+                                            <option>google.com</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="phone_number">휴대폰 번호</label></td>
+                                    <td>
+                                        <select class="phone-number">
+                                            <option>010</option>
+                                            <option>011</option>
+                                            <option>017</option>
+                                            <option>019</option>
+                                        </select>
+                                        <input id="phone_number" type="text">
+                                        <input type="text">
+                                        <button type="button">본인인증</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="certify">본인인증</label></td>
+                                    <td><input id="certify" type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="number">전화번호</label></td>
+                                    <td>
+                                        <select class="phone-number">
+                                            <option>02</option>
+                                            <option>031</option>
+                                            <option>070</option>
+                                        </select>
+                                        <input id="number" type="text">
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </fieldset>
+                    </form>
                 </div>
-                <!--
-                    NOTE: 수정사항
-                    1. 테이블 제목 기획서랑 매칭이 안됨
-                    2. 주소입력창 디자인과 다름
-                -->
                 <div class="table-contents__table-wrap table02-wrap box_shadow">
-                    <div class="table-tit">필수정보 수정</div>
-                    <table class="table01">
-                        <caption>필수정보 수정</caption>
-                        <colgroup>
-                            <col style="width:20%;">
-                            <col style="">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <td>주소정보</td>
-                                <td>
-                                    <input type="text" class="address"><button type="button">우편번호</button>
-                                    <input type="text" class="address2">
-                                    <input type="text" class="detail-address" placeholder="상세주소 입력">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-tit">추가정보</div>
+                    <form method="">
+                        <!-- input hidden 영역 -->
+                        <input type="hidden"/>
+                        <!--// input hidden 영역 -->
+                        <fieldset>
+                            <legend>추가정보 입력폼</legend>
+                            <table class="table01">
+                            <caption>추가정보</caption>
+                            <colgroup>
+                                <col style="width:20%;">
+                                <col style="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td><label for="address">주소정보</label></td>
+                                    <td>
+                                        <input type="text" class="address" id="address"><button type="button">우편번호</button>
+                                        <input type="text" class="address2">
+                                        <input type="text" class="detail-address" placeholder="상세주소 입력">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </fieldset>
+                    </form>
                 </div>
                 <div class="btn_wrap">
                   <!-- 수정버튼 클릭안했을 경우 -->
