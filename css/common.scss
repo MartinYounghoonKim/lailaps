@@ -41,6 +41,7 @@ $guide : ".guide";
             width:100%;
             border-top:1px solid #ececec;
             border-bottom:1px solid #ececec;
+            background-color:#ececec;
             th, td{
                 padding:10px;
             }
@@ -769,6 +770,111 @@ $btnColor04: #2FC600;
       }
     }
   }
+}
+/**********************************************************************************
+    공통 팝업 가이드
+**********************************************************************************/
+.dim{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:999;
+    background:url("../images/bg/layer_pop_dim.png") 0 0 repeat;
+}
+.layer-pop{
+    display:none;
+    position:fixed;
+    left:50%;
+    background-color:#fff;
+    z-index:1000;
+    .contents{
+        .layer-pop__close-btn{
+            position:absolute;
+            right:11px;
+            top:12px;
+            overflow:hidden;
+            width:21px;
+            height:18px;
+            background:url("../images/btn/layer_pop_close_btn.png") 0 0 no-repeat;
+            text-indent:-10000em;
+        }
+    }
+    &.is-system{
+        top:300px;
+        width:347px;
+        margin-left:-173.5px;
+        .contents{
+            min-height:100%;
+            height:100%;
+            .layer-pop__inner-wrap{
+                width:100%;
+                height:100%;
+                text-align:center;
+                .layer-pop__inner-wrap__title{
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    box-sizing:border-box;
+                    width:100%;
+                    height:40px;
+                    padding:0 5px;
+                    background-color:#222;
+                    color:#fff;
+                    font-size:16px;
+                    line-height:40px;
+                }
+                .layer-pop__inner-wrap__paragraph{
+                    display:table;
+                    box-sizing:border-box;
+                    width:100%;
+                    height:207px;
+                    padding:0 0 40px;
+                    span{
+                        display:table-cell;
+                        box-sizing:border-box;
+                        width:100%;
+                        padding:0 20px;
+                        vertical-align:middle;
+                        font-size:22px;
+                        line-height:24px;
+                        strong{
+                            color:$basicColor;
+                        }
+                    }
+                }
+                .layer-pop__inner-wrap__btn-wrap{
+                    position:absolute;
+                    left:0;
+                    bottom:0;
+                    width:100%;
+                    height:40px;
+                    button{
+                        width:100%;
+                        height:100%;
+                        font-size:16px;
+                        line-height:40px;
+                    }
+                    .is-black{
+                        background-color:#222;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+    &.have-title{
+        .contents{
+            .layer-pop__inner-wrap{
+                .layer-pop__inner-wrap__paragraph{
+                    padding-top:40px;
+                }
+            }
+        }
+    }
+
+
 }
 /**********************************************************************************
     공통 레이아웃 스타일 Device : Tablet

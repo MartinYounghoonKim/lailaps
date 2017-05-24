@@ -33,4 +33,13 @@ define([],function () {
 			}).bindEvents();
         }
     });
+    require([
+        'layerPop'
+    ], function(layerPop){
+        layerPop.init({
+            "wrapper" : "[data-layer-pop]",
+            "openBtn" : "[data-open-layer]",
+            "closeBtn" : "[data-close-layer]"
+        });
+    });
 });

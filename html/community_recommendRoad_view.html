@@ -157,7 +157,7 @@
                             <dfn class="recommend-view__wrap__list-contents__info__left__title"><strong>서울 근교에 초보 라이딩족을 위한 추천길입니다.</strong></dfn>
                             <em class="recommend-view__wrap__list-contents__info__left__user-name"><span>madeweb</span> 님</em>
                             <div class="recommend-view__wrap__list-contents__info__left__icon">
-                                <a href="#none" class="icon favorite">300</a>
+                                <a href="#none" data-open-layer="popular" class="icon favorite">300</a>
                                 <a href="#none" class="icon chatting">10</a>
                                 <a href="#none"><img src="../images/icon/facebook-btn.png" alt="Facebook"/></a>
                                 <a href="#none"><img src="../images/icon/twitter-btn.png" alt="Twitter"/></a>
@@ -338,7 +338,7 @@
                     <li><a href="#none">A/S정책</a></li>
                     <li><a href="#none">문의하기</a></li>
                 </ul>
-<dl class="footer_company_info">
+                <dl class="footer_company_info">
         			<dt>상호명</dt>
         			<dd>주식회사 티포엘</dd>
         		</dl>
@@ -377,11 +377,29 @@
         <!--// 푸터 영역 -->
         <hr/>
     </div>
+    <div class="layer-pop is-system have-title" id="popular" data-layer-pop='{"clickable":"true"}'>
+        <div class="contents">
+            <div class="layer-pop__inner-wrap">
+                <strong class="layer-pop__inner-wrap__title">알림</strong>
+                <p class="layer-pop__inner-wrap__paragraph"><span>인기평가는 <strong>1회만</strong> 가능합니다.</span></p>
+                <div class="layer-pop__inner-wrap__btn-wrap">
+                    <button type="button" class="is-black" data-close-layer>확인</button>
+                </div>
+            </div>
+            <button type="button" class="layer-pop__close-btn" data-close-layer>닫기</button>
+        </div>
+    </div>
     <script data-main="../js/main" src="../js/require.js"></script>
     <script>
          //Controller 변수 선언
          var CONTROLLER_TYPE = "RecommendView";
          console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
+    </script>
+    <script>
+        // require(['layerPop'],function(layerPop){
+        //     var layerOptions = '{"type":"system","clickable":"true", "title":"제목","contents" : "테스트중입니다.","closeBtn":"true"}'
+        //     layerPop.openLayer("","test",layerOptions)
+        // })
     </script>
  </body>
 </html>

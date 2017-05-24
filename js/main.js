@@ -43,6 +43,7 @@ require.config({
         ,'tab' :'module/tab'
         ,'parellaxTab' :'module/parellaxTab'
         ,'dataControll' :'module/dataControll'
+        ,'layerPop' :'module/layerPop'
 
         //dataController
         ,'RepairListData' : "data/RepairListData"
@@ -64,11 +65,12 @@ require.config({
 			deps: ['jquery','jqueryEasing'],
 			exports :'wheel'
 		},
-    },
-    map: {
-      '*': {
-        'css': 'lib/css'
-      }
+        'jquery':{
+            exports:'$'
+        },
+        'layerPop': {
+          exports: 'layerPop'
+        }
     }
 });
 requirejs([CONTROLLER_TYPE]);
