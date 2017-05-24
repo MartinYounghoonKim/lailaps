@@ -42,6 +42,7 @@ require.config({
         ,'productBannerAnimation' :'module/productBannerAnimation'
         ,'tab' :'module/tab'
         ,'parellaxTab' :'module/parellaxTab'
+        ,'productParellaxTab' : 'module/productParellaxTab'
         ,'dataControll' :'module/dataControll'
 
         //dataController

@@ -1782,6 +1782,11 @@ $products : ".products";
                         opacity:1;
                     }
                 }
+                button{
+                    display:block;
+                    width:100%;
+                    height:100%;
+                }
             }
             &:after{
                 @include afterClear;
