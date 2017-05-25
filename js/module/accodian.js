@@ -13,43 +13,62 @@ define([
 		this.wrap = $(element.wrap);
 		this.btn = $(element.btn,this.wrap);
 		this.contents = $(element.contents,this.wrap);
+		this.btnBox = $(element.btnBox,this.btn);
 	}
 	accodian.prototype={
 		bindEvents:function(){
 			var that = this;
 			var oldTemp=0;
 			var newTemp;
+			var slideTemp;
 			this.contents.on("click",function(e){
 				e.stopPropagation();
 			})
 			this.btn.on("click",function(e){
 				newTemp = $(this).index();
+				slideTemp = $(this).children(".contents_wrap").children();
 				e.preventDefault();
-				that.events(newTemp, oldTemp);
+				that.events(newTemp, oldTemp, slideTemp);
 				oldTemp = newTemp;
 			})
 		},
-		events:function(newTemp, oldTemp){
+		events:function(newTemp, oldTemp, slideTemp){
 			var that =this;
 			if(newTemp !== oldTemp){	//다른 버튼을 클릭할 경우
 				if(oldTemp !== undefined){
-					close();
+					close(slideTemp);
 				}
-				open();
+				open(slideTemp);
 			} else {	//같은 버튼을 클릭할 경우
 				if(this.btn.eq(oldTemp).hasClass("on")){
-					close();
+					close(slideTemp);
 				} else{
-					open();
+					open(slideTemp);
 				}
 			}
-			function open(){
+			function open(slideTemp){
+				height = slideTemp.outerHeight();
+				that.btn.removeClass("on");
+				that.btnBox.next().stop().animate({
+					"height" : 0
+				},{
+					duration : 1000
+				})
 				that.btn.eq(newTemp).addClass("on");
-				that.btn.eq(newTemp).find(".promotion_contents").stop().slideDown(1000);
+				that.btn.eq(newTemp).find(".contents_wrap").stop().animate({
+					"height" : height+"px"
+				},{
+					duration : 1000
+				});
 			}
-			function close(){
+			function close(slideTemp){
+				height = slideTemp.outerHeight();
 				that.btn.eq(oldTemp).removeClass("on");
-				that.btn.eq(oldTemp).find(".promotion_contents").stop().slideUp(1000);
+				that.btn.eq(newTemp).find(".contents_wrap").stop().animate({
+					"height" : 0
+				},{
+					duration : 1000
+				});
 			}
 		}
 	}
