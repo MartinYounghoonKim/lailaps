@@ -262,6 +262,7 @@
             width:32px;
             height:15px;
             background:url("../images/arrow/arrow02.png") 0 0 no-repeat;
+            background-size:cover;
             text-indent:-10000em;
             overflow:hidden;
           }
@@ -309,6 +310,7 @@
       &.on{
           .promotion_box a .arrow{
               background:url("../images/arrow/arrow02_on.png") 0 0 no-repeat;
+              background-size:cover;
           }
       }
     }
@@ -2204,6 +2206,55 @@ $support-as : ".support-as";
     }
 }
 
+/*
+*********************************************************************************
+    ABOUT_US 회사소개 페이지 작성
+    작성일 : 2017.05.25
+    작성자 : 정진배
+*********************************************************************************
+*/
+$about-us : ".about-us";
+#{$about-us} {
+    .about-us__contents__greeting{
+        margin-bottom:120px;
+        p{
+            font-size:17px;
+            line-height:24px;
+            margin-bottom:27px;
+            &.last{
+                margin-bottom:0;
+                span{
+                    display:block;
+                }
+            }
+        }
+    }
+    .about-us__contents__vision{
+        margin-bottom:120px;
+        div{
+            text-align:center;
+        }
+    }
+    .about-us__contents__location{
+        .about-us__contents__location__map{
+            margin-bottom:10px;
+            text-align:center;
+        }
+        .view_map{
+            margin-bottom:50px;
+            margin-right:33px;
+            text-align:right;
+        }
+    }
+    &__contents{
+        .reply-wrap__reply-area{
+            .reply-wrap{
+                padding:0;
+            }
+        }
+    }
+}
+
 @media all and (max-width:800px){
     /*
     *********************************************************************************
@@ -2363,7 +2414,6 @@ $support-as : ".support-as";
             }
           }
           .promotion_contents{
-            display:none;
             padding:40px 18px;
             border-top:1px solid $mainColor;
             background-color:#fff;
@@ -3725,7 +3775,6 @@ $support-as : ".support-as";
             }
           }
           .promotion_contents{
-            display:none;
             padding:40px 18px;
             border-top:1px solid $mainColor;
             background-color:#fff;
