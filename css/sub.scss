@@ -3659,6 +3659,64 @@ $about-us : ".about-us";
         }
     }
 
+    /*
+    *********************************************************************************
+        ABOUT_US 회사소개 페이지 작성
+        작성일 : 2017.05.25
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $about-us : ".about-us";
+    #{$about-us} {
+        .about-us__contents__greeting{
+            margin-bottom:60px;
+            p{
+                font-size:15px;
+                line-height:20px;
+                margin-bottom:15px;
+            }
+        }
+        .about-us__contents__vision{
+            margin-bottom:60px;
+            div{
+                img{
+                    width:100%;
+                }
+            }
+        }
+        .about-us__contents__location{
+            .about-us__contents__location__map{
+                img{
+                    width:100%;
+                }
+            }
+        }
+        &__contents{
+            .reply-wrap__reply-area{
+                .reply-wrap{
+                    .reply-wrap__reply-area__list{
+                        strong{
+                            margin-top:0;
+                            font-size:15px;
+                            line-height:17px;
+                        }
+                        >span{
+                            @include fontStyle(noto-light, 300, normal);
+                            font-size:15px;
+                            line-height:17px;
+                            color:#222;
+                        }
+                        .reply-wrap__reply-area__list__edit-btn{
+                            position:absolute;
+                            right:0;
+                            top:50%;
+                            margin-top:-16.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -4146,6 +4204,38 @@ $about-us : ".about-us";
         }
         .btn_wrap{
             text-align:center;
+        }
+    }
+
+    /*
+    *********************************************************************************
+        ABOUT_US 회사소개 페이지 작성
+        작성일 : 2017.05.25
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $about-us : ".about-us";
+    #{$about-us} {
+        .about-us__contents__location{
+            .view_map{
+                margin-right:0;
+                text-align:center;
+            }
+        }
+        &__contents{
+            .reply-wrap__reply-area{
+                .reply-wrap{
+                    .reply-wrap__reply-area__list{
+                        .reply-wrap__reply-area__list__edit-btn{
+                            position:initial;
+                            right:0;
+                            top:50%;
+                            margin:0 auto;
+                            margin-top:10px;
+                        }
+                    }
+                }
+            }
         }
     }
 
