@@ -1346,7 +1346,8 @@ $edit-my-information : ".edit-my-information";
                         width:176px;
                         height:40px;
                         padding-left:12px;
-                        border:1px solid #ccc;
+                        border-width:1px;
+                        border-style:solid;
                         box-sizing:border-box;
                         &.email{
                             width:270px;
@@ -1782,6 +1783,11 @@ $products : ".products";
                         opacity:1;
                     }
                 }
+                button{
+                    display:block;
+                    width:100%;
+                    height:100%;
+                }
             }
             &:after{
                 @include afterClear;
@@ -1966,15 +1972,8 @@ $inquiry : ".inquiry";
             tbody{
                 tr{
                     td{
-                        a{
-                            display:block;
-                            text-overflow:ellipsis;
-                            white-space:nowrap;
-                            overflow:hidden;
-                        }
                         &:nth-child(2){
                             padding-left:20px;
-                            padding-right:20px;
                             text-align:left;
                         }
                     }
@@ -2084,7 +2083,8 @@ $inquiry-write : ".inquiry-write";
                         width:190px;
                         height:40px;
                         padding-left:12px;
-                        border:1px solid #ccc;
+                        border-width:1px;
+                        border-style:solid;
                         box-sizing:border-box;
                         font-size:17px;
                         line-height:19px;
@@ -3438,10 +3438,145 @@ $support-as : ".support-as";
                     }
                     .repair-service-information__contents__cell-wrap__cell__process{
                         padding:30px 0;
+                        text-align:center;
                         ul{
+                            margin-bottom:15px;
                             li{
-                                padding:0 20px;
+                                width:49%;
+                                padding:0 !important;
+                                background-position:right 80%;
+                                background-size:140px;
+                                &.repair-service-information__contents__cell-wrap__cell__process__li01{
+                                    margin-bottom:34px;
+                                    padding-left:16px;
+                                    padding-right:30px;
+                                    div{
+                                        width:98px;
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon01.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &.repair-service-information__contents__cell-wrap__cell__process__li02{
+                                    margin-bottom:34px;
+                                    div{
+                                        width:98px;
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon02.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &.repair-service-information__contents__cell-wrap__cell__process__li03{
+                                    margin-bottom:34px;
+                                    div{
+                                        width:98px;
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon03.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &.repair-service-information__contents__cell-wrap__cell__process__li04{
+                                    margin-bottom:34px;
+                                    padding-right:5%;
+                                    background:none;
+                                    div{
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon04.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &.repair-service-information__contents__cell-wrap__cell__process__li05{
+                                    margin-bottom:34px;
+                                    padding-left:30px;
+                                    padding-right:30px;
+                                    div{
+                                        width:98px;
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon05.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &.repair-service-information__contents__cell-wrap__cell__process__li06{
+                                    background-repeat:repeat-x;
+                                    padding-left:0;
+                                    div{
+                                        width:98px;
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon06.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &.repair-service-information__contents__cell-wrap__cell__process__li07{
+                                    div{
+                                        width:98px;
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon03.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &.repair-service-information__contents__cell-wrap__cell__process__li08{
+                                    background-image:none;
+                                    div{
+                                        width:98px;
+                                        padding:7px 0;
+                                        span{
+                                            background-image:url("../images/icon/repair_service_info_icon02.png");
+                                            background-position:60% top;
+                                        }
+                                    }
+                                }
+                                &:nth-child(2n-1){
+                                    padding-left:16px !important;
+                                }
+                                &:nth-child(2n){
+                                    background:none;
+                                }
+                                div{
+                                    width:90% !important;
+                                    span{
+                                        font-size:13px;
+                                        line-height:15px;
+                                    }
+                                }
                             }
+                        }
+                        .btn{
+                            position:initial;
+                            height:15px;
+                        }
+                    }
+                    .repair-service-information__contents__cell-wrap__cell__running-time{
+                        overflow:hidden;
+                        padding:20px;
+                        text-align:center;
+                        dl{
+                            float:left;
+                             padding:0;
+                             margin-bottom:10px;
+                             font-size:13px;
+                             line-height:15px;
+                             dd{
+                                 margin-right:15px;
+                             }
+                        }
+                        .btn{
+                            position:initial;
+                            float:none;
+                            padding-top:10px;
                         }
                     }
                 }

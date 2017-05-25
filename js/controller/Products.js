@@ -19,13 +19,25 @@ define([],function () {
             "child" : "> div"
         }).init();
     });
-    
+
     require([
         'productBannerAnimation'
     ], function(productBannerAnimation){
         new productBannerAnimation.init({
             "wrap" : "[data-ui-banner-animation='wrap']",
             "child" : "> li"
+        });
+    });
+    require([
+        'jquery'
+        ,'productParellaxTab'
+    ], function($,productParellaxTab){
+        productParellaxTab.init({
+            "wrapper" : ".products__tab",
+            "tabWrap" : ">ul",
+            "tabList" : ">li",
+            "targetWrap" : ".products-list__tab",
+            "targetList" : ">ul > li"
         });
     });
 });
