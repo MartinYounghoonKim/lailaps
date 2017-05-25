@@ -25,10 +25,8 @@ define([
 				e.stopPropagation();
 			})
 			this.btn.on("click",function(e){
-				console.log($(this).children(".contents_wrap").children().outerHeight());
 				newTemp = $(this).index();
 				slideTemp = $(this).children(".contents_wrap").children();
-				console.log(slideTemp.outerHeight())
 				e.preventDefault();
 				that.events(newTemp, oldTemp, slideTemp);
 				oldTemp = newTemp;
