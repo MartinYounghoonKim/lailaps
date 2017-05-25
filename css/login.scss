@@ -106,11 +106,9 @@
                     }
                 }
             }
+            /* 삭제 예정 */
             .login-check-box{
-                position:relative;
                 display:inline-block;
-                width:31px;
-                height:31px;
                 vertical-align:middle;
                 label{
                     position:absolute;
@@ -135,7 +133,6 @@
                     background-position:0 0;
                 }
                 &.have-text{
-                    width:auto;
                     label{
                         position:relative;
                         left:auto;
@@ -251,7 +248,7 @@
                     font-weight:normal;
                     color:$basicColor;
                 }
-                .login-check-box{
+                .check-box{
                     float:right;
                 }
             }
@@ -459,21 +456,6 @@
                                 font-size:14px;
                                 line-height:16px;
                             }
-                        }
-                    }
-                }
-                .login-check-box{
-                    width:21px;
-                    height:21px;
-                    label{
-                        background-position:0 -36px;
-                        background-size:20px auto;
-                    }
-                    &.have-text{
-                        label{
-                            padding-left:29px;
-                            font-size:14px;
-                            line-height:18px;
                         }
                     }
                 }
