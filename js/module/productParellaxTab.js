@@ -24,13 +24,14 @@ define([
 			var that = this;
 			var idx;
 			this.tabList.on("click", function(){
+				that.location = that.targetWrap.offset().top;
 				idx = $(this).index();
 				that.getContentsIndex(idx);
 				that.moveContents(idx);
 			});
 		},
 		moveContents:function(){
-			$("body").animate({
+			$("body,html").animate({
 				scrollTop:this.location
 			},1000);
 			//움직이는 부분

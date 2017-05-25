@@ -130,78 +130,83 @@
                 </ul>
                 <div class="login__put-information">
                     <div class="login-contents__put-area">
-                        <span class="input-text-outer-wrap is-login-text">
-                        	<span class="is-text-inner-wrap">
-                        		<input placeholder="이름" type="text" data-text-module>
-                        	</span>
-                        </span>
-                        <span class="input-text-outer-wrap is-login-text have-right-section">
-                        	<span class="is-text-inner-wrap is-login-text">
-                        		<input placeholder="아이디" type="text" data-text-module>
-                        	</span>
-                        	<span class="input-text-outer-wrap__right-section">
-                        		<a href="#none">중복확인</a>
-                        	</span>
-                        </span>
-                        <span class="input-text-outer-wrap is-login-text is-confirm">
-                        	<span class="is-text-inner-wrap">
-                        		<input placeholder="비밀번호(8자 이상 16자 이하)" type="password" data-text-module>
-                        	</span>
-                        </span>
-                        <span class="input-text-outer-wrap is-login-text">
-                        	<span class="is-text-inner-wrap">
-                        		<input placeholder="비밀번호 확인" type="password" data-text-module>
-                        	</span>
-                        </span>
-                        <span class="input-text-outer-wrap is-login-text have-email-letter">
-                        	<span class="is-text-inner-wrap">
-                        		<input placeholder="이메일" type="text" data-text-module>
-                        		<i>@</i>
-                        	</span>
-                        </span>
-                        <span class="input-text-outer-wrap is-login-text have-right-section is-select">
-                        	<span class="is-text-inner-wrap is-login-text">
-                        		<select>
-                        			<option></option>
-                        			<option>naver.com</option>
-                        			<option>daum.net</option>
-                        			<option>선택3</option>
-                        		</select>
-                        	</span>
-                        	<span class="input-text-outer-wrap__right-section">
-                        		<a href="#none">직접입력</a>
-                        	</span>
-                        </span>
-                        <span class="input-text-outer-wrap is-login-text have-left-section have-right-section">
-                        	<span class="input-text-outer-wrap__left-section">
-                        		<select>
-                        			<option></option>
-                        			<option>010</option>
-                        			<option>011</option>
-                                    <option>016</option>
-                                    <option>017</option>
-                        			<option>018</option>
-                        		</select>
-                        	</span>
-                        	<span class="is-text-inner-wrap is-login-text">
-                        		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
-                        	</span>
-                        	<span class="input-text-outer-wrap__right-section">
-                        		<a href="#none">본인인증</a>
-                        	</span>
-                        </span>
-                        <span class="input-text-outer-wrap is-login-text have-right-section">
-                        	<span class="is-text-inner-wrap is-login-text">
-                        		<input placeholder="인증번호를 입력해주세요" type="text" data-text-module>
-                        	</span>
-                        	<span class="input-text-outer-wrap__right-section">
-                        		<a href="#none">확인</a>
-                        	</span>
-                        </span>
-                        <div class="login-btn-wrap">
-                            <a href="#none" class="is-white">취소</a>
-                            <a href="#none" class="is-blue">회원가입</a>
-                        </div>
+                        <form>
+                            <fieldset>
+                                <legend>회원가입 정보입력폼</legend>
+                                <span class="input-text-outer-wrap is-login-text">
+                                	<span class="is-text-inner-wrap">
+                                		<input placeholder="이름" type="text" data-text-module>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text have-right-section">
+                                	<span class="is-text-inner-wrap is-login-text">
+                                		<input placeholder="아이디" type="text" data-text-module>
+                                	</span>
+                                	<span class="input-text-outer-wrap__right-section">
+                                		<a href="#none">중복확인</a>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text is-confirm">
+                                	<span class="is-text-inner-wrap">
+                                		<input placeholder="비밀번호(8자 이상 16자 이하)" type="password" data-text-module>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text">
+                                	<span class="is-text-inner-wrap">
+                                		<input placeholder="비밀번호 확인" type="password" data-text-module>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text have-email-letter">
+                                	<span class="is-text-inner-wrap">
+                                		<input placeholder="이메일" type="text" data-text-module>
+                                		<i>@</i>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text have-right-section is-select">
+                                	<span class="is-text-inner-wrap is-login-text">
+                                		<select>
+                                			<option></option>
+                                			<option>naver.com</option>
+                                			<option>daum.net</option>
+                                			<option>선택3</option>
+                                		</select>
+                                	</span>
+                                	<span class="input-text-outer-wrap__right-section">
+                                		<a href="#none">직접입력</a>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text have-left-section have-right-section">
+                                	<span class="input-text-outer-wrap__left-section">
+                                		<select>
+                                			<option></option>
+                                			<option>010</option>
+                                			<option>011</option>
+                                            <option>016</option>
+                                            <option>017</option>
+                                			<option>018</option>
+                                		</select>
+                                	</span>
+                                	<span class="is-text-inner-wrap is-login-text">
+                                		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+                                	</span>
+                                	<span class="input-text-outer-wrap__right-section">
+                                		<a href="#none">본인인증</a>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text have-right-section">
+                                	<span class="is-text-inner-wrap is-login-text">
+                                		<input placeholder="인증번호를 입력해주세요" type="text" data-text-module>
+                                	</span>
+                                	<span class="input-text-outer-wrap__right-section">
+                                		<a href="#none">확인</a>
+                                	</span>
+                                </span>
+                                <div class="login-btn-wrap">
+                                    <a href="#none" class="is-white">취소</a>
+                                    <button type="button" class="is-blue">회원가입</button>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -74,7 +74,7 @@
             .login-btn-wrap{
                 text-align:center;
                 overflow:hidden;
-                a{
+                a, button{
                     display:inline-block;
                     box-sizing:border-box;
                     width:49%;
@@ -100,7 +100,7 @@
                     }
                 }
                 &.have-one{
-                    a{
+                    a, button{
                         float:none;
                         width:100%;
                     }
@@ -296,7 +296,7 @@
                     }
                 }
                 .login-btn-wrap{
-                    a{
+                    a,button{
                         padding:12px 0 10px;
                         font-size:16px;
                         line-height:21px;
