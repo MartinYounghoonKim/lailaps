@@ -2250,6 +2250,26 @@ $about-us : ".about-us";
         .reply-wrap__reply-area{
             .reply-wrap{
                 padding:0;
+                background-color:#f6f6f6;
+                .reply-wrap__reply-area__list{
+                    strong{
+                        margin-top:-30px;
+                        left:0;
+                        font-size:17px;
+                        line-height:60px;
+                    }
+                    >span{
+                        @include fontStyle(noto-light, 300, normal);
+                        font-size:17px;
+                        line-height:19px;
+                        color:#222;
+                    }
+                    .reply-wrap__reply-area__list__edit-btn{
+                        margin-top:-16.5px;
+                        width:190px;
+                        overflow:visible;
+                    }
+                }
             }
         }
     }
