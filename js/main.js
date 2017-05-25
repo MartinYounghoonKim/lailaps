@@ -44,6 +44,7 @@ require.config({
         ,'parellaxTab' :'module/parellaxTab'
         ,'dataControll' :'module/dataControll'
         ,'layerPop' :'module/layerPop'
+        ,'inputFunction' :'module/inputFunction'
 
         //dataController
         ,'RepairListData' : "data/RepairListData"

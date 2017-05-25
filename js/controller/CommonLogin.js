@@ -10,4 +10,9 @@ define([],function () {
             "gnbOneDeptBtn" : "[data-gnb-hover]"
         }).divideDeviceEvent();
     });
+    require([
+        'inputFunction'
+	],function(inputFunction){
+        
+    });
 });
