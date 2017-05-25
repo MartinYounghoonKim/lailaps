@@ -24,6 +24,7 @@ define([],function () {
         new accodian({
             "wrap" : "[data-ui-accodian='wrap']",
             "btn" : ".promotion_wrap",
+            "btnBox" : "> .promotion_box",
             "contents":".promotion_contents"
         }).bindEvents();
     });

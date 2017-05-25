@@ -204,7 +204,9 @@
 .promotion{
     .promotion_wrap{
       margin-bottom:20px;
-      &.last{margin-bottom:35px;}
+      &.last{
+          margin-bottom:35px;
+      }
       .promotion_box{
         position:relative;
         background-color:#fff;
@@ -271,35 +273,38 @@
         }
 
       }
-      .promotion_contents{
-        display:none;
-        padding:40px 18px;
-        border-top:1px solid $mainColor;
-        background-color:#fff;
-        text-align:center;
-        &.on {
-          display:block;
-          box-shadow:1px 1px 1px 1px #f0f0f0;
-        }
-        .promotion_view{
-            width:100%;
-            height:auto;
-            margin-bottom:40px;
-        }
-        strong {
-            display:block;
-      @include fontStyle(noto-bold, 600, italic);
-      font-size:18px;
-      color:#444;
-      margin-bottom:25px;
-        }
-        span{
-          display:block;
-          @include fontStyle(noto-regular, 100, italic);
-          font-size:14px;
-          line-heighT:17px;
-          color:#555;
-        }
+      .contents_wrap{
+          height:0;
+          overflow:hidden;
+          .promotion_contents{
+            padding:40px 18px;
+            border-top:1px solid $mainColor;
+            background-color:#fff;
+            text-align:center;
+            &.on {
+              display:block;
+              box-shadow:1px 1px 1px 1px #f0f0f0;
+            }
+            .promotion_view{
+                width:100%;
+                height:auto;
+                margin-bottom:40px;
+            }
+            strong {
+                display:block;
+                  @include fontStyle(noto-bold, 600, italic);
+                  font-size:18px;
+                  color:#444;
+                  margin-bottom:25px;
+            }
+            span{
+              display:block;
+              @include fontStyle(noto-regular, 100, italic);
+              font-size:14px;
+              line-heighT:17px;
+              color:#555;
+            }
+          }
       }
       &.on{
           .promotion_box a .arrow{
@@ -3652,7 +3657,9 @@ $support-as : ".support-as";
     .promotion{
         .promotion_wrap{
           margin-bottom:20px;
-          &.last{margin-bottom:35px;}
+          &.last{
+              margin-bottom:35px;
+          }
           .promotion_box{
             position:relative;
             background-color:#fff;
