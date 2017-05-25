@@ -99,6 +99,244 @@
 			</tbody>
 		</table>
 	</div>
+	<div class="guide_wrap">
+		<h1 class="guide_title">탭에 대한 가이드</h1>
+		<ul class="guide_info">
+			<li>· 탭3개</li>
+		</ul>
+		<textarea class="guide_textarea" readonly="readonly"></textarea>
+
+	</div>
+	<div class="guide_wrap">
+		<h1 class="guide_title">체크박스에 대한 가이드</h1>
+		<h2 class="guide_title02">텍스트가 없는 경우</h2>
+		<span class="check-box">
+			<input type="checkbox" id="agree-chk01"/>
+			<label for="agree-chk01">저장</label>
+		</span>
+		<h2 class="guide_title02">텍스트가 있는 경우</h2>
+		<span class="check-box have-text">
+			<input type="checkbox" id="agree-chk02"/>
+			<label for="agree-chk02">저장</label>
+		</span>
+		<textarea class="guide_textarea" readonly="readonly" style="height:180px;">
+<!--텍스트가 없는 경우 -->
+<span class="check-box">
+	<input type="checkbox" id="agree-chk01"/>
+	<label for="agree-chk01">저장</label>
+</span>
+<!--텍스트가 있는 경우 -->
+<span class="check-box have-text">
+	<input type="checkbox" id="agree-chk02"/>
+	<label for="agree-chk02">저장</label>
+</span>
+		</textarea>
+	</div>
+	<div class="guide_wrap">
+		<h1 class="guide_title">입력 폼에 대한 가이드</h1>
+		<h2 class="guide_title02">로그인 입력 폼</h2>
+		<!-- 기본 입력폼 -->
+		<span class="input-text-outer-wrap is-login-text">
+			<span class="is-text-inner-wrap">
+				<input placeholder="로그인 입력폼입니다." type="text" data-text-module>
+			</span>
+		</span>
+		<!--// 기본 입력폼 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:130px">
+<span class="input-text-outer-wrap is-login-text">
+	<span class="is-text-inner-wrap">
+		<input placeholder="로그인 입력폼입니다." type="text" data-text-module>
+	</span>
+</span>
+</textarea>
+		<!-- 이메일 입력폼 -->
+		<span class="input-text-outer-wrap is-login-text have-email-letter">
+			<span class="is-text-inner-wrap">
+				<input placeholder="이메일 입력폼입니다." type="text" data-text-module>
+				<i>@</i>
+			</span>
+		</span>
+		<!--// 이메일 입력폼 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:150px">
+<span class="input-text-outer-wrap is-login-text have-email-letter">
+	<span class="is-text-inner-wrap">
+		<input placeholder="이메일 입력폼입니다." type="text" data-text-module>
+		<i>@</i>
+	</span>
+</span>
+</textarea>
+		<!-- 확인된 입력폼 -->
+		<span class="input-text-outer-wrap is-login-text is-checked">
+			<span class="is-text-inner-wrap is-login-text">
+				<input value="기본 입력폼입니다." type="text" readonly="readonly" data-text-module>
+			</span>
+		</span>
+		<!--// 확인된 입력폼 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:130px">
+<span class="input-text-outer-wrap is-login-text is-checked">
+	<span class="is-text-inner-wrap is-login-text">
+		<input value="기본 입력폼입니다." type="text" readonly="readonly" data-text-module>
+	</span>
+</span>
+</textarea>
+		<!-- 틀린 글자에 대한 입력폼 -->
+		<span class="input-text-outer-wrap is-login-text is-wrong">
+			<span class="is-text-inner-wrap is-login-text">
+				<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+			</span>
+		</span>
+		<!--// 틀린 글자에 대한 입력폼 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:130px">
+<span class="input-text-outer-wrap is-login-text is-wrong">
+	<span class="is-text-inner-wrap is-login-text">
+		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+	</span>
+</span>
+</textarea>
+		<!-- 오른쪽 버튼이 들어갈 경우 -->
+		<span class="input-text-outer-wrap is-login-text have-right-section">
+			<span class="is-text-inner-wrap is-login-text">
+				<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+			</span>
+			<span class="input-text-outer-wrap__right-section">
+				<a href="#none">버튼</a>
+			</span>
+		</span>
+		<!--// 오른쪽 버튼이 들어갈 경우 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:180px">
+<span class="input-text-outer-wrap is-login-text have-right-section">
+	<span class="is-text-inner-wrap is-login-text">
+		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+	</span>
+	<span class="input-text-outer-wrap__right-section">
+		<a href="#none">버튼</a>
+	</span>
+</span>
+</textarea>
+		<!--입력창에 텍스트 영역이 나오고, 오른쪽 버튼이 들어갈 경우 -->
+		<span class="input-text-outer-wrap is-login-text have-right-section is-select">
+			<span class="is-text-inner-wrap is-login-text">
+				<select>
+					<option></option>
+					<option>선택1</option>
+					<option>선택2</option>
+					<option>선택3</option>
+				</select>
+			</span>
+			<span class="input-text-outer-wrap__right-section">
+				<a href="#none">버튼</a>
+			</span>
+		</span>
+		<!--//입력창에 텍스트 영역이 나오고, 오른쪽 버튼이 들어갈 경우 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:260px">
+<span class="input-text-outer-wrap is-login-text have-right-section is-select">
+	<span class="is-text-inner-wrap is-login-text">
+		<select>
+			<option></option>
+			<option>선택1</option>
+			<option>선택2</option>
+			<option>선택3</option>
+		</select>
+	</span>
+	<span class="input-text-outer-wrap__right-section">
+		<a href="#none">버튼</a>
+	</span>
+</span>
+		</textarea>
+		<!-- 오른쪽 체크박스가 들어갈 경우 -->
+		<span class="input-text-outer-wrap is-login-text have-right-section have-checkbox">
+			<span class="is-text-inner-wrap is-login-text">
+				<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+			</span>
+			<span class="input-text-outer-wrap__right-section">
+				<span class="check-box have-text">
+					<input type="checkbox" id="agree-chk03"/>
+					<label for="agree-chk03">저장</label>
+				</span>
+			</span>
+		</span>
+		<!--// 오른쪽 버튼이 들어갈 경우 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:230px">
+<span class="input-text-outer-wrap is-login-text have-right-section have-checkbox">
+	<span class="is-text-inner-wrap is-login-text">
+		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+	</span>
+	<span class="input-text-outer-wrap__right-section">
+		<span class="check-box have-text">
+			<input type="checkbox" id="agree-chk03"/>
+			<label for="agree-chk03">저장</label>
+		</span>
+	</span>
+</span>
+		</textarea>
+		<!-- 왼쪽에 selectbox가 들어갈 경우 -->
+		<span class="input-text-outer-wrap is-login-text have-left-section">
+			<span class="input-text-outer-wrap__left-section">
+				<select>
+					<option></option>
+					<option>선택1</option>
+					<option>선택2</option>
+					<option>선택3</option>
+				</select>
+			</span>
+			<span class="is-text-inner-wrap is-login-text">
+				<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+			</span>
+		</span>
+		<!--// 왼쪽에 selectbox가 들어갈 경우 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:250px">
+<span class="input-text-outer-wrap is-login-text have-left-section">
+	<span class="input-text-outer-wrap__left-section">
+		<select>
+			<option></option>
+			<option>선택1</option>
+			<option>선택2</option>
+			<option>선택3</option>
+		</select>
+	</span>
+	<span class="is-text-inner-wrap is-login-text">
+		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+	</span>
+</span>
+		</textarea>
+		<!-- 왼쪽에 selectbox, 오른쪽에 버튼이 들어갈 경우 -->
+		<span class="input-text-outer-wrap is-login-text have-left-section have-right-section">
+			<span class="input-text-outer-wrap__left-section">
+				<select>
+					<option></option>
+					<option>선택1</option>
+					<option>선택2</option>
+					<option>선택3</option>
+				</select>
+			</span>
+			<span class="is-text-inner-wrap is-login-text">
+				<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+			</span>
+			<span class="input-text-outer-wrap__right-section">
+				<a href="#none">버튼</a>
+			</span>
+		</span>
+		<!--// 왼쪽에 selectbox, 오른쪽에 버튼이 들어갈 경우 -->
+		<textarea class="guide_textarea" readonly="readonly" style="height:300px">
+<span class="input-text-outer-wrap is-login-text have-left-section have-right-section">
+	<span class="input-text-outer-wrap__left-section">
+		<select>
+			<option></option>
+			<option>선택1</option>
+			<option>선택2</option>
+			<option>선택3</option>
+		</select>
+	</span>
+	<span class="is-text-inner-wrap is-login-text">
+		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+	</span>
+	<span class="input-text-outer-wrap__right-section">
+		<a href="#none">버튼</a>
+	</span>
+</span>
+		</textarea>
+
+	</div>
 	<script src="https://use.fontawesome.com/f8389ee17b.js"></script>
 	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">

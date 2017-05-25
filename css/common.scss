@@ -17,67 +17,65 @@
     가이드 스타일
 **********************************************************************************/
 $guide : ".guide";
-#{$guide}{
-    &_wrap{
-        width:1200px;
-        margin:0 auto;
-        #{$guide}_title{
-            padding-bottom:20px;
-            margin-bottom:30px;
-            border-bottom:2px solid #ececec;
-            font-size:20px;
-            line-height:22px;
-            text-align:center;
-            color:#666;
-        }
-        #{$guide}_title02{
-            padding-bottom:8px;
-            margin-bottom:12px;
-            border-bottom:1px solid #ececec;
-            font-size:15px;
-            line-height:17px;
-        }
-        #{$guide}_table{
-            width:100%;
-            border-top:1px solid #ececec;
-            border-bottom:1px solid #ececec;
-            background-color:#ececec;
-            th, td{
-                padding:10px;
-            }
-        }
-        #{$guide}_info{
-            margin-bottom:20px;
-            li{
-                font-size:15px;
-                line-height:17px;
-            }
-            &.table{
-                overflow:hidden;
-                li{
-                    float:left;
-                    margin-right:10px;
-                }
-            }
-        }
-        #{$guide}_textarea{
-            box-sizing:border-box;
-            width:100%;
+.guide_wrap{
+    width:1200px;
+    margin:0 auto;
+    .guide_title{
+        padding-bottom:20px;
+        margin-bottom:30px;
+        border-bottom:2px solid #ececec;
+        font-size:20px;
+        line-height:22px;
+        text-align:center;
+        color:#666;
+    }
+    .guide_title02{
+        padding-bottom:8px;
+        margin-bottom:12px;
+        border-bottom:1px solid #ececec;
+        font-size:15px;
+        line-height:17px;
+    }
+    .guide_table{
+        width:100%;
+        border-top:1px solid #ececec;
+        border-bottom:1px solid #ececec;
+        background-color:#ececec;
+        th, td{
             padding:10px;
-            margin-bottom:10px;
+        }
+    }
+    .guide_info{
+        margin-bottom:20px;
+        li{
             font-size:15px;
             line-height:17px;
-            color:#333;
-            border:0;
-            background-color:#ececec;
-            &.table{
-                height:300px;
+        }
+        &.table{
+            overflow:hidden;
+            li{
+                float:left;
+                margin-right:10px;
             }
         }
-        #{$guide}_font{
-            p{
-                margin-bottom:10px;
-            }
+    }
+    .guide_textarea{
+        box-sizing:border-box;
+        width:100%;
+        padding:10px;
+        margin-bottom:10px;
+        font-size:15px;
+        line-height:17px;
+        color:#333;
+        border:0;
+        background-color:#ececec;
+        &.table{
+            height:300px;
+        }
+    }
+    .guide_font{
+        p{
+            margin-bottom:10px;
         }
     }
 }
@@ -326,11 +324,185 @@ $btnColor04: #2FC600;
 /**********************************************************************************
     input 가이드
 **********************************************************************************/
-input.is-checked{
-    border-color:#70cc29;
+.input-text-outer-wrap{
+    position:relative;
+    display:block;
+    margin-bottom:10px;
+    .is-text-inner-wrap{
+        display:block;
+        position:relative;
+        box-sizing:border-box;
+        border:1px solid #ccc;
+        input[type="text"], input[type="password"]{
+            width:100%;
+            height:100%;
+            border:0;
+            background:none;
+        }
+    }
+    /* 로그인 입력폼 */
+    &.is-login-text{
+        .is-text-inner-wrap{
+            height:70px;
+            padding:15px;
+            input[type="text"], input[type="password"]{
+                font-size:22px;
+                line-height:24px;
+            }
+            select{
+                width:100%;
+                height:100%;
+                border:0;
+                font-size:22px;
+                line-height:24px;
+            }
+            &.have-select{
+                padding:0;
+            }
+        }
+    }
+    &.is-checked{
+        .is-text-inner-wrap{
+            padding-right:65px;
+            border-color:#70cc29;
+            background-image:url("../images/btn/input_correct_btn.png");
+            background-color:#eefbe4;
+            background-position: 98% center;
+            background-repeat: no-repeat;
+            input[type="text"], input[type="password"]{
+                color:#4d6a32;
+            }
+        }
+    }
+    &.is-wrong{
+        .is-text-inner-wrap{
+            padding-right:65px;
+            border-color:#ec2626;
+            background-color:#f8e8e8;
+            background-image:url("../images/btn/input_wrong_btn.png");
+            background-position:98% center;
+            background-repeat:no-repeat;
+            input[type="text"], input[type="password"]{
+                color:#ec2626;
+            }
+        }
+    }
+    &.have-email-letter{
+        .is-text-inner-wrap{
+            padding-right:60px;
+            i{
+                position:absolute;
+                right:22px;
+                top:22px;
+                font-style:normal;
+                font-size:22px;
+                line-height:24px;
+            }
+        }
+    }
+    &.have-right-section{
+        padding-right:110px;
+        .input-text-outer-wrap__right-section{
+            position:absolute;
+            right:0;
+            top:0;
+            box-sizing:border-box;
+            width:111px;
+            height:100%;
+            border:1px solid #ccc;
+            button, a{
+                display:block;
+                box-sizing:border-box;
+                width:100%;
+                height:100%;
+                padding-top:24px;
+                font-size:20px;
+                line-height:22px;
+                text-align:center;
+                color:#fff;
+                background-color:#cbcbcb;
+            }
+        }
+        /* 오른쪽 체크 박스 영역 */
+        &.have-checkbox{
+            .input-text-outer-wrap__right-section{
+                padding:20px 0 0 15px;
+            }
+        }
+    }
+    &.have-left-section{
+        padding-left:120px;
+        .input-text-outer-wrap__left-section{
+            position:absolute;
+            left:0;
+            top:0;
+            box-sizing:border-box;
+            width:121px;
+            height:100%;
+            border:1px solid #ccc;
+            select{
+                width:100%;
+                height:100%;
+                padding-left:15px;
+                border:0;
+                font-size:22px;
+                line-height:24px;
+            }
+        }
+
+    }
+    &.is-confirm{
+        margin-bottom:-1px;
+    }
+    &.is-select{
+        .is-text-inner-wrap{
+            padding:0;
+        }
+    }
 }
-input.is-wrong{
-    border-color:#ec2626;
+/**********************************************************************************
+    체크박스 가이드
+**********************************************************************************/
+.check-box{
+    position:relative;
+    display:inline-block;
+    width:31px;
+    height:31px;
+    label{
+        position:absolute;
+        left:0;
+        top:0;
+        overflow:hidden;
+        display:inline-block;
+        width:100%;
+        height:100%;
+        text-indent:-10000em;
+        background-image:url("../images/btn/login_check_btn.png");
+        background-position:0 -58px;
+        background-repeat:no-repeat;
+    }
+    input[type="checkbox"]{
+        visibility:hidden;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    input[type="checkbox"]:checked ~label{
+        background-position:0 0;
+    }
+    &.have-text{
+        width:auto;
+        label{
+            position:relative;
+            left:auto;
+            top:auto;
+            text-indent:0;
+            padding-left:38px;
+            color:#7d7d7d;
+            font-size:20px;
+            line-height:31px;
+        }
+    }
 }
 
 /**********************************************************************************
@@ -883,7 +1055,6 @@ input.is-wrong{
         }
     }
 
-
 }
 /**********************************************************************************
     공통 레이아웃 스타일 Device : Tablet
@@ -1175,7 +1346,100 @@ input.is-wrong{
             }
         }
     }
+    /**********************************************************************************
+        input 가이드
+    **********************************************************************************/
+    .input-text-outer-wrap{
+        .is-text-inner-wrap{
+        }
+        /* 로그인 입력폼 */
+        &.is-login-text{
+            .is-text-inner-wrap{
+                height:45px;
+                padding:10px;
+                input[type="text"], input[type="password"]{
+                    font-size:14px;
+                    line-height:16px;
+                }
+                select{
+                    width:100%;
+                    height:100%;
+                    border:0;
+                    font-size:14px;
+                    line-height:16px;
+                }
+            }
+        }
+        &.is-checked{
+            .is-text-inner-wrap{
+                padding-right:40px;
+                background-size:18px auto;
+            }
+        }
+        &.is-wrong{
+            .is-text-inner-wrap{
+                padding-right:40px;
+                background-size:18px auto;
+            }
+        }
+        &.have-email-letter{
+            .is-text-inner-wrap{
+                padding-right:35px;
+                i{
+                    right:15px;
+                    top:15px;
+                    font-size:14px;
+                    line-height:16px;
+                }
+            }
+        }
+        &.have-right-section{
+            padding-right:79px;
+            .input-text-outer-wrap__right-section{
+                width:80px;
+                button, a{
+                    padding-top:14px;
+                    font-size:14px;
+                    line-height:16px;
+                }
+            }
+            /* 오른쪽 체크 박스 영역 */
+            &.have-checkbox{
+                .input-text-outer-wrap__right-section{
+                    padding:11px 0 0 15px;
+                }
+            }
+        }
+        &.have-left-section{
+            padding-left:80px;
+            .input-text-outer-wrap__left-section{
+                width:80px;
+                select{
+                    padding-left:10px;
+                    font-size:14px;
+                    line-height:16px;
+                }
+            }
 
+        }
+    }
+
+    /**********************************************************************************
+        체크박스 가이드
+    **********************************************************************************/
+    .check-box{
+        label{
+            background-position:0 -36px;
+            background-size:20px auto;
+        }
+        &.have-text{
+            label{
+                padding-left:29px;
+                font-size:14px;
+                line-height:18px;
+            }
+        }
+    }
 }
 
 @media all and (max-width:640px){

@@ -130,34 +130,74 @@
                 </ul>
                 <div class="login__put-information">
                     <div class="login-contents__put-area">
-                        <span class="login-contents__put-area__text"><input type="text" placeholder="이름"/></span>
-                        <span class="login-contents__put-area__text have-button"><input type="text" placeholder="아이디"/><a href="#none" class="login-contents__put-area__text__btn">중복확인</a></span>
-                        <span class="login-contents__put-area__text is-confirm"><input type="password" placeholder="비밀번호(8자 이상 16자 이하)"/></span>
-                        <span class="login-contents__put-area__text"><input type="password" placeholder="비밀번호 확인"/></span>
-                        <span class="login-contents__put-area__text is-email is-confirm"><input type="text" placeholder="이메일"/><i>@</i></span>
-                        <span class="login-contents__put-area__text have-button have-email-select">
-                            <!-- 직접 입력 버튼 클릭 하지 않은 기본 상태 -->
-                            <select>
-                                <option></option>
-                                <option>naver.com</option>
-                                <option>daum.net</option>
-                                <option>google.com</option>
-                            </select>
-                            <!-- 직접 입력 버튼 클릭시 노출
-                            <input type="text" placeholder="직접 입력"/> -->
-                            <a href="#none" class="login-contents__put-area__text__btn">직접입력</a>
+                        <span class="input-text-outer-wrap is-login-text">
+                        	<span class="is-text-inner-wrap">
+                        		<input placeholder="이름" type="text" data-text-module>
+                        	</span>
                         </span>
-                        <span class="login-contents__put-area__text have-button have-phone-select is-confirm">
-                            <select>
-                                <option>010</option>
-                                <option>011</option>
-                                <option>016</option>
-                                <option>017</option>
-                            </select>
-                            <input type="text" placeholder="휴대폰번호"/>
-                            <a href="#none" class="login-contents__put-area__text__btn">본인인증</a>
+                        <span class="input-text-outer-wrap is-login-text have-right-section">
+                        	<span class="is-text-inner-wrap is-login-text">
+                        		<input placeholder="아이디" type="text" data-text-module>
+                        	</span>
+                        	<span class="input-text-outer-wrap__right-section">
+                        		<a href="#none">중복확인</a>
+                        	</span>
                         </span>
-                        <span class="login-contents__put-area__text have-button is-confirm"><input type="text" placeholder="인증번호를 입력해주세요."/><a href="#none" class="login-contents__put-area__text__btn have-line">확인</a></span>
+                        <span class="input-text-outer-wrap is-login-text is-confirm">
+                        	<span class="is-text-inner-wrap">
+                        		<input placeholder="비밀번호(8자 이상 16자 이하)" type="password" data-text-module>
+                        	</span>
+                        </span>
+                        <span class="input-text-outer-wrap is-login-text">
+                        	<span class="is-text-inner-wrap">
+                        		<input placeholder="비밀번호 확인" type="password" data-text-module>
+                        	</span>
+                        </span>
+                        <span class="input-text-outer-wrap is-login-text have-email-letter">
+                        	<span class="is-text-inner-wrap">
+                        		<input placeholder="이메일" type="text" data-text-module>
+                        		<i>@</i>
+                        	</span>
+                        </span>
+                        <span class="input-text-outer-wrap is-login-text have-right-section is-select">
+                        	<span class="is-text-inner-wrap is-login-text">
+                        		<select>
+                        			<option></option>
+                        			<option>naver.com</option>
+                        			<option>daum.net</option>
+                        			<option>선택3</option>
+                        		</select>
+                        	</span>
+                        	<span class="input-text-outer-wrap__right-section">
+                        		<a href="#none">직접입력</a>
+                        	</span>
+                        </span>
+                        <span class="input-text-outer-wrap is-login-text have-left-section have-right-section">
+                        	<span class="input-text-outer-wrap__left-section">
+                        		<select>
+                        			<option></option>
+                        			<option>010</option>
+                        			<option>011</option>
+                                    <option>016</option>
+                                    <option>017</option>
+                        			<option>018</option>
+                        		</select>
+                        	</span>
+                        	<span class="is-text-inner-wrap is-login-text">
+                        		<input placeholder="기본 입력폼입니다." type="text" data-text-module>
+                        	</span>
+                        	<span class="input-text-outer-wrap__right-section">
+                        		<a href="#none">본인인증</a>
+                        	</span>
+                        </span>
+                        <span class="input-text-outer-wrap is-login-text have-right-section">
+                        	<span class="is-text-inner-wrap is-login-text">
+                        		<input placeholder="인증번호를 입력해주세요" type="text" data-text-module>
+                        	</span>
+                        	<span class="input-text-outer-wrap__right-section">
+                        		<a href="#none">확인</a>
+                        	</span>
+                        </span>
                         <div class="login-btn-wrap">
                             <a href="#none" class="is-white">취소</a>
                             <a href="#none" class="is-blue">회원가입</a>

@@ -47,7 +47,7 @@ define([
 				}
 			}
 			function open(slideTemp){
-				height = slideTemp.outerHeight();
+				var height = slideTemp.outerHeight();
 				that.btn.removeClass("on");
 				that.btnBox.next().stop().animate({
 					"height" : 0
@@ -62,7 +62,7 @@ define([
 				});
 			}
 			function close(slideTemp){
-				height = slideTemp.outerHeight();
+				var height = slideTemp.outerHeight();
 				that.btn.eq(oldTemp).removeClass("on");
 				that.btn.eq(newTemp).find(".contents_wrap").stop().animate({
 					"height" : 0
