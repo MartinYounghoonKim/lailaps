@@ -1394,7 +1394,7 @@ $btnColor04: #2FC600;
             }
         }
         &.have-right-section{
-            padding-right:80px;
+            padding-right:79px;
             .input-text-outer-wrap__right-section{
                 width:80px;
                 button, a{
@@ -1406,7 +1406,7 @@ $btnColor04: #2FC600;
             /* 오른쪽 체크 박스 영역 */
             &.have-checkbox{
                 .input-text-outer-wrap__right-section{
-                    padding:20px 0 0 15px;
+                    padding:11px 0 0 15px;
                 }
             }
         }
@@ -1421,14 +1421,6 @@ $btnColor04: #2FC600;
                 }
             }
 
-        }
-        &.is-confirm{
-            margin-bottom:-1px;
-        }
-        &.is-select{
-            .is-text-inner-wrap{
-                padding:0;
-            }
         }
     }
 
