@@ -176,16 +176,39 @@
                                 </tr>
                                 <tr>
                                     <td><label for="password">비밀번호</label></td>
-                                    <td><input id="password" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"><span>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</span></td>
+                                    <td>
+										<span class="input-text-outer-wrap is-normal-text">
+											<span class="is-text-inner-wrap">
+												<input id="password" type="password" maxlength="16" data-text-module>
+											</span>
+										</span>
+										<p>비밀번호는 8자 이상 16자 이하로 만들어 주세요.</p>
+									</td>
                                 </tr>
                                 <tr>
                                     <td><label for="password2">비밀번호 확인</label></td>
-                                    <td><input id="password2" type="password" maxlength=16 placeholder="＊＊＊＊＊＊＊"></td>
+                                    <td>
+                                        <span class="input-text-outer-wrap is-normal-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="password2" type="password" maxlength="16" data-text-module>
+                                            </span>
+                                        </span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><label for="email">이메일</label></td>
                                     <td>
-                                        <input id="email" type="text"><em>@</em><input type="text" class="email">
+                                        <span class="input-text-outer-wrap is-normal-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="email" type="text" data-text-module>
+                                            </span>
+                                        </span>
+                                        <em>@</em>
+                                        <span class="input-text-outer-wrap is-normal-text is-email-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input type="text" data-text-module>
+                                            </span>
+                                        </span>
                                         <select>
                                             <option>직접입력</option>
                                             <option>naver.com</option>
@@ -203,14 +226,29 @@
                                             <option>017</option>
                                             <option>019</option>
                                         </select>
-                                        <input id="phone_number" type="text">
-                                        <input type="text">
+                                        <span class="input-text-outer-wrap is-normal-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="phone_number" type="text" data-text-module>
+                                            </span>
+                                        </span>
+                                        <span class="input-text-outer-wrap is-normal-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input type="text" data-text-module>
+                                            </span>
+                                        </span>
                                         <button type="button">본인인증</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label for="certify">본인인증</label></td>
-                                    <td><input id="certify" type="text" class="certify" placeholder="인증번호 입력"><button type="button">확인</button></td>
+                                    <td>
+                                        <span class="input-text-outer-wrap is-normal-text is-certify-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="certify" type="text" placeholder="인증번호 입력" data-text-module>
+                                            </span>
+                                        </span>
+                                        <button type="button">확인</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><label for="number">전화번호</label></td>
@@ -220,8 +258,16 @@
                                             <option>031</option>
                                             <option>070</option>
                                         </select>
-                                        <input id="number" type="text">
-                                        <input type="text">
+                                        <span class="input-text-outer-wrap is-normal-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="number" type="text" data-text-module>
+                                            </span>
+                                        </span>
+                                        <span class="input-text-outer-wrap is-normal-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input type="text" data-text-module>
+                                            </span>
+                                        </span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -247,9 +293,22 @@
                                 <tr>
                                     <td><label for="address">주소정보</label></td>
                                     <td>
-                                        <input type="text" class="address" id="address"><button type="button">우편번호</button>
-                                        <input type="text" class="address2">
-                                        <input type="text" class="detail-address" placeholder="상세주소 입력">
+                                        <span class="input-text-outer-wrap is-normal-text is-address-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="certify" type="text" data-text-module>
+                                            </span>
+                                        </span>
+                                        <button type="button">우편번호</button>
+                                        <span class="input-text-outer-wrap is-normal-text is-address2-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="certify" type="text" data-text-module>
+                                            </span>
+                                        </span>
+                                        <span class="input-text-outer-wrap is-normal-text is-detail-address-text">
+                                            <span class="is-text-inner-wrap">
+                                                <input id="certify" type="text" placeholder="상세주소 입력" data-text-module>
+                                            </span>
+                                        </span>
                                     </td>
                                 </tr>
                             </tbody>

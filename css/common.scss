@@ -459,6 +459,65 @@ $btnColor04: #2FC600;
             padding:0;
         }
     }
+
+    /* 일반게시판 */
+    &.is-normal-text{
+        display:inline-block;
+        vertical-align:top;
+        margin-bottom:0;
+        .is-text-inner-wrap{
+            width:176px;
+            height:40px;
+            padding:0;
+            padding-right:35px;
+            padding-left:12px;
+            input[type="text"], input[type="password"]{
+                font-size:14px;
+                line-height:16px;
+                outline:none;
+            }
+        }
+    }
+    &.is-email-text{
+        .is-text-inner-wrap{
+            width:270px;
+        }
+    }
+    &.is-certify-text{
+        .is-text-inner-wrap{
+            margin-right:5px;
+        }
+    }
+    &.is-address-text{
+        margin-bottom:5px;
+        .is-text-inner-wrap{
+        }
+    }
+    &.is-address2-text{
+        width:65%;
+        .is-text-inner-wrap{
+            width:100%;
+        }
+    }
+    &.is-detail-address-text{
+        width:30%;
+        .is-text-inner-wrap{
+            width:100%;
+        }
+    }
+
+    /* 문의하기 */
+    &.is-title-text{
+        width:100%;
+        display:inline-block;
+        vertical-align:top;
+        margin-bottom:0;
+        .is-text-inner-wrap{
+            width:100%;
+            height:40px;
+            padding-left:12px;
+        }
+    }
 }
 /**********************************************************************************
     체크박스 가이드
@@ -1422,7 +1481,47 @@ $btnColor04: #2FC600;
             }
 
         }
+
         /* 일반게시판 */
+        &.is-normal-text{
+            display:inline-block;
+            vertical-align:top;
+            margin-bottom:0;
+            .is-text-inner-wrap{
+                width:176px;
+                height:40px;
+                padding-left:12px;
+                input[type="text"], input[type="password"]{
+                }
+            }
+        }
+        &.is-email-text{
+            .is-text-inner-wrap{
+                width:270px;
+            }
+        }
+        &.is-certify-text{
+            .is-text-inner-wrap{
+                margin-right:5px;
+            }
+        }
+        &.is-address-text{
+            margin-bottom:5px;
+            .is-text-inner-wrap{
+            }
+        }
+        &.is-address2-text{
+            width:65%;
+            .is-text-inner-wrap{
+                width:100%;
+            }
+        }
+        &.is-detail-address-text{
+            width:30%;
+            .is-text-inner-wrap{
+                width:100%;
+            }
+        }
     }
 
     /**********************************************************************************
@@ -1527,5 +1626,51 @@ $btnColor04: #2FC600;
             }
         }
 
+    }
+
+    /**********************************************************************************
+        input 가이드
+    **********************************************************************************/
+    .input-text-outer-wrap{
+        position:relative;
+        display:block;
+        margin-bottom:10px;
+
+        /* 일반게시판 */
+        &.is-normal-text{
+            width:100%;
+            margin-bottom:5px;
+            .is-text-inner-wrap{
+                width:100%;
+            }
+        }
+        &.is-email-text{
+            .is-text-inner-wrap{
+                width:100%;
+            }
+        }
+        &.is-certify-text{
+            .is-text-inner-wrap{
+                margin-right:5px;
+            }
+        }
+        &.is-address-text{
+            width:100%;
+            margin-bottom:5px;
+            .is-text-inner-wrap{
+            }
+        }
+        &.is-address2-text{
+            width:100%;
+            .is-text-inner-wrap{
+                width:100%;
+            }
+        }
+        &.is-detail-address-text{
+            width:100%;
+            .is-text-inner-wrap{
+                width:100%;
+            }
+        }
     }
 }
