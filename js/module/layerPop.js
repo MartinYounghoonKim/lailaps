@@ -55,7 +55,6 @@ define([
 			appendDim();
 			var layerTarget = sortLayerContents(evt, me, getOptions).target();
 			sortLayerContents(evt, me, getOptions).options();
-			layerTarget.show().attr("data-layer-index",LAYER_OPTIONS.index);
         }
 
 		function sortLayerContents(evt, me, getOptions){
@@ -65,6 +64,7 @@ define([
 
 				return {
 					target : function(){
+						layerTarget.clone().removeClass("layer-dummy").appendTo("body").attr("data-layer-index",LAYER_OPTIONS.index);
 						return layerTarget;
 					},
 					options : function(){
@@ -102,9 +102,9 @@ define([
 		function closeLayer(){
 			if(LAYER_OPTIONS.index == -1) return false;
 			var closeTarget = $("[data-layer-index='" + LAYER_OPTIONS.index + "']" );
-			LAYER_OPTIONS.index--;
-			closeTarget.hide().removeAttr("data-layer-index");
+			closeTarget.remove().removeAttr("data-layer-index");
 			removeDim();
+			LAYER_OPTIONS.index--;
 		}
 
         function appendDim(){
@@ -116,8 +116,9 @@ define([
         }
 
 		function removeDim(){
-			if(LAYER_OPTIONS.index ==-1){
-				$(".dim").remove();
+			console.log(111);
+			if(LAYER_OPTIONS.index > -1){
+				$(".dim")[LAYER_OPTIONS.index].remove();
 			}
 		}
 
@@ -137,7 +138,8 @@ define([
 
 		function dimClickable(){
 			var dim = $(".dim");
-			dim.on("click",function(){
+			dim.on("click",function(e){
+				e.stopPropagation();
 				closeLayer();
 			})
 		}
