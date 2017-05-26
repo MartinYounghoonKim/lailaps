@@ -339,6 +339,14 @@ $btnColor04: #2FC600;
             border:0;
             background:none;
         }
+        .clear-text-button{
+            position:absolute;
+            right:15px;
+            top:27px;
+            width:19px;
+            height:19px;
+            background:url("../images/btn/input_clear_btn.png") 0 0 no-repeat;
+        }
     }
     /* 로그인 입력폼 */
     &.is-login-text{

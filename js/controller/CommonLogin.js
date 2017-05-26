@@ -17,7 +17,7 @@ define([],function () {
         var element = $("[data-text-module]");
         for(var i=0; i<element.size(); i++){
             new inputFunction({
-                "wrapper" : element[i]
+                "textArea" : element[i]
             }).bindEvents();
         }
     });
