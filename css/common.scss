@@ -965,7 +965,6 @@ $btnColor04: #2FC600;
     background:url("../images/bg/layer_pop_dim.png") 0 0 repeat;
 }
 .layer-pop{
-    display:none;
     position:fixed;
     left:50%;
     background-color:#fff;
@@ -1053,6 +1052,9 @@ $btnColor04: #2FC600;
                 }
             }
         }
+    }
+    &.layer-dummy{
+        display:none;
     }
 
 }
@@ -1422,6 +1424,7 @@ $btnColor04: #2FC600;
             }
 
         }
+        /* 일반게시판 */
     }
 
     /**********************************************************************************

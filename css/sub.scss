@@ -262,6 +262,7 @@
             width:32px;
             height:15px;
             background:url("../images/arrow/arrow02.png") 0 0 no-repeat;
+            background-size:cover;
             text-indent:-10000em;
             overflow:hidden;
           }
@@ -309,6 +310,7 @@
       &.on{
           .promotion_box a .arrow{
               background:url("../images/arrow/arrow02_on.png") 0 0 no-repeat;
+              background-size:cover;
           }
       }
     }
@@ -1883,6 +1885,7 @@ $products : ".products";
                     @include afterClear;
                 }
                 li{
+                    width:31.9%;
                     float:left;
                     margin:30px 30px 0 0;
                     &:nth-child(3n){
@@ -1894,13 +1897,24 @@ $products : ".products";
                         display:block;
                         padding:27px 37px;
                         background-color:#fff;
+                        .img-wrap{
+                            position:relative;
+                            overflow:hidden;
+                            width:100%;
+                            height:0;
+                            margin:0 auto;
+                            margin-bottom:35px;
+                            padding-top:57%;
+                            img{
+                                position:absolute;
+                                top:0;
+                                left:0;
+                                width:100%;
+                            }
+                        }
                         img,strong,dfn{
                             display:block;
                             text-align:center;
-                        }
-                        img{
-                            width:100%;
-                            margin-bottom:35px;
                         }
                         strong{
                             margin-bottom:10px;
@@ -2204,6 +2218,75 @@ $support-as : ".support-as";
     }
 }
 
+/*
+*********************************************************************************
+    ABOUT_US 회사소개 페이지 작성
+    작성일 : 2017.05.25
+    작성자 : 정진배
+*********************************************************************************
+*/
+$about-us : ".about-us";
+#{$about-us} {
+    .about-us__contents__greeting{
+        margin-bottom:120px;
+        p{
+            font-size:17px;
+            line-height:24px;
+            margin-bottom:27px;
+            &.last{
+                margin-bottom:0;
+                span{
+                    display:block;
+                }
+            }
+        }
+    }
+    .about-us__contents__vision{
+        margin-bottom:120px;
+        div{
+            text-align:center;
+        }
+    }
+    .about-us__contents__location{
+        .about-us__contents__location__map{
+            margin-bottom:10px;
+            text-align:center;
+        }
+        .view_map{
+            margin-bottom:50px;
+            margin-right:33px;
+            text-align:right;
+        }
+    }
+    &__contents{
+        .reply-wrap__reply-area{
+            .reply-wrap{
+                padding:0;
+                background-color:#f6f6f6;
+                .reply-wrap__reply-area__list{
+                    strong{
+                        margin-top:-30px;
+                        left:0;
+                        font-size:17px;
+                        line-height:60px;
+                    }
+                    >span{
+                        @include fontStyle(noto-light, 300, normal);
+                        font-size:17px;
+                        line-height:19px;
+                        color:#222;
+                    }
+                    .reply-wrap__reply-area__list__edit-btn{
+                        margin-top:-16.5px;
+                        width:190px;
+                        overflow:visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media all and (max-width:800px){
     /*
     *********************************************************************************
@@ -2363,7 +2446,6 @@ $support-as : ".support-as";
             }
           }
           .promotion_contents{
-            display:none;
             padding:40px 18px;
             border-top:1px solid $mainColor;
             background-color:#fff;
@@ -3589,6 +3671,64 @@ $support-as : ".support-as";
         }
     }
 
+    /*
+    *********************************************************************************
+        ABOUT_US 회사소개 페이지 작성
+        작성일 : 2017.05.25
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    $about-us : ".about-us";
+    #{$about-us} {
+        .about-us__contents__greeting{
+            margin-bottom:60px;
+            p{
+                font-size:15px;
+                line-height:20px;
+                margin-bottom:15px;
+            }
+        }
+        .about-us__contents__vision{
+            margin-bottom:60px;
+            div{
+                img{
+                    width:100%;
+                }
+            }
+        }
+        .about-us__contents__location{
+            .about-us__contents__location__map{
+                img{
+                    width:100%;
+                }
+            }
+        }
+        &__contents{
+            .reply-wrap__reply-area{
+                .reply-wrap{
+                    .reply-wrap__reply-area__list{
+                        strong{
+                            margin-top:0;
+                            font-size:15px;
+                            line-height:17px;
+                        }
+                        >span{
+                            @include fontStyle(noto-light, 300, normal);
+                            font-size:15px;
+                            line-height:17px;
+                            color:#222;
+                        }
+                        .reply-wrap__reply-area__list__edit-btn{
+                            position:absolute;
+                            right:0;
+                            top:50%;
+                            margin-top:-16.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -3725,7 +3865,6 @@ $support-as : ".support-as";
             }
           }
           .promotion_contents{
-            display:none;
             padding:40px 18px;
             border-top:1px solid $mainColor;
             background-color:#fff;
@@ -4077,6 +4216,38 @@ $support-as : ".support-as";
         }
         .btn_wrap{
             text-align:center;
+        }
+    }
+
+    /*
+    *********************************************************************************
+        ABOUT_US 회사소개 페이지 작성
+        작성일 : 2017.05.25
+        작성자 : 정진배
+    *********************************************************************************
+    */
+    //$about-us : ".about-us";
+    #{$about-us} {
+        .about-us__contents__location{
+            .view_map{
+                margin-right:0;
+                text-align:center;
+            }
+        }
+        &__contents{
+            .reply-wrap__reply-area{
+                .reply-wrap{
+                    .reply-wrap__reply-area__list{
+                        .reply-wrap__reply-area__list__edit-btn{
+                            position:initial;
+                            right:0;
+                            top:50%;
+                            margin:0 auto;
+                            margin-top:10px;
+                        }
+                    }
+                }
+            }
         }
     }
 
