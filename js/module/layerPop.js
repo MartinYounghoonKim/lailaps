@@ -36,12 +36,13 @@ define([
             var openBtn = setSelector(options).openBtn;
 			var closeBtn = setSelector(options).closeBtn;
             openBtn.unbind("click").on("click", function(evt){
+				evt.stopPropagation();
                 openLayer(evt, $(this));
             });
 			closeBtn.unbind("click").on("click",function(){
 				closeLayer();
 			});
-			$('.dim').on('click', closeBtn, closeLayer);
+			$('body').unbind("click").on('click', closeBtn, closeLayer);
 			$(document).unbind("keydown").on("keydown",function(e){
 				if(e.keyCode == 27){
 					closeLayer();
@@ -54,12 +55,11 @@ define([
 			appendDim();
 			var layerTarget = sortLayerContents(evt, me, getOptions).target();
 			sortLayerContents(evt, me, getOptions).options();
-			console.log(layerTarget)
 			layerTarget.show().attr("data-layer-index",LAYER_OPTIONS.index);
         }
 
 		function sortLayerContents(evt, me, getOptions){
-			if(evt){	/* 버튼 클릭시, 레이어 팝업 활성화 */
+			if(evt.type=="click"){	/* 버튼 클릭시, 레이어 팝업 활성화 */
 				var temp = me.data("open-layer");
 				var layerTarget = $("#" + temp);
 
