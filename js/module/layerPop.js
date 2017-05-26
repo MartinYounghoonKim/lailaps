@@ -116,7 +116,6 @@ define([
         }
 
 		function removeDim(){
-			console.log(111);
 			if(LAYER_OPTIONS.index > -1){
 				$(".dim")[LAYER_OPTIONS.index].remove();
 			}
@@ -138,7 +137,7 @@ define([
 
 		function dimClickable(){
 			var dim = $(".dim");
-			dim.on("click",function(e){
+			dim.unbind("click").on("click",function(e){
 				e.stopPropagation();
 				closeLayer();
 			})
