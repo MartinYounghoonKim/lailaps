@@ -11,10 +11,6 @@ define([
             var that = this;
             this.textArea.on("focus",function(){
                 that.getCountVal($(this));
-                that.findTextFocus("on");
-            });
-            this.textArea.on("blur",function(){
-                that.findTextFocus("off");
             });
             this.textArea.on("keyup",function(e){
                 if(e.keyCode == 8 || e.keyCode==46){
@@ -23,9 +19,6 @@ define([
                         that.getCountVal($(this));
                     }
                 }
-            });
-            this.wrapper.on("click",function(e){
-                e.stopPropagation();
             });
         },
         getCountVal:function(me){
@@ -56,23 +49,9 @@ define([
         erasingText:function(){
             var that = this;
             $(".clear-text-button").on("click",function(){
-                that.textArea.val("").focus();
+                $(this).siblings("input").val("").focus();
                 that.removeErasingBtn();
             });
-            $(".clear-text-button").on("focus",function(){
-                that.findTextFocus("on");
-            });
-        },
-        findTextFocus:function(temp){
-            switch(temp){
-                case "on" : this.wrapper.attr("data-input-focus","");
-                break;
-                case "off" : this.wrapper.removeAttr("data-input-focus","");
-                break;
-            }
-            if(this.wrapper.attr("data-input-focus")==undefined){
-                this.removeErasingBtn();
-            }
         }
     }
     return inputValidator;
