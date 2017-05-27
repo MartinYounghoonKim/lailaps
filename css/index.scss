@@ -63,7 +63,7 @@ html{
         @include basicFont;
         margin:0;
         padding:0;
-        min-width:320px;
+        min-width:1400px;
     }
 }
 a{
@@ -180,4 +180,11 @@ textarea{
     padding:0;
     resize:none;
     @include basicFont;
+}
+@media all and (max-width:800px){
+    html{
+        body{
+            min-width:320px;
+        }
+    }
 }
