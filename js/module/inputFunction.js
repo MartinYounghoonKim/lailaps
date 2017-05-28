@@ -40,6 +40,7 @@ define([
                 str.setAttribute("type","button");
                 str.setAttribute("class","clear-text-button");
             me.parent().append(str);
+            me.closest(".input-text-outer-wrap").addClass("have-erase-button")
             this.erasingText();
         },
         removeErasingBtn:function(){
