@@ -10,9 +10,9 @@
 
 .news{
   padding-bottom:145px;
-  &__contents{
+  .news__contents{
     overflow:hidden;
-    &__leftBox{
+    .news__contents__leftBox{
       float:left;
       width:calc(50% - 13px);
       .thumbnail_list{
@@ -97,13 +97,13 @@
         }
       }
     }
-    &__rightBox{
+    .news__contents__rightBox{
       float:right;
       width:calc(50% - 15px);
       margin-left:25px;
       @include boxStyle;
       text-align:center;
-      &_wrap{
+      .news__contents__rightBox_wrap{
         padding:60px 35px 0 35px;
         .tit{
             span{
@@ -722,7 +722,7 @@ $profile-view : ".profile-view";
         border-top:8px solid $basicColor;
         overflow:hidden;
         background-color:#fff;
-        &__img{
+        #{$profile-view}__profile-wrap__img{
             float:left;
             box-sizing:border-box;
             height:391px;
@@ -742,7 +742,7 @@ $profile-view : ".profile-view";
                 opacity:.6;
             }
         }
-        &__profile{
+        #{$profile-view}__profile-wrap__profile{
             float:left;
             width:439px;
             box-sizing:border-box;
@@ -1058,7 +1058,7 @@ $my-repair-list_view : ".my-repair-list_view";
                 color:$mainColor;
             }
         }
-        &__photo{
+        .table-contents__table-wrap__photo{
             overflow:hidden;
             margin-bottom:30px;
             .photo-left{
@@ -1079,7 +1079,7 @@ $my-repair-list_view : ".my-repair-list_view";
                 }
             }
         }
-        &__table{
+        .table-contents__table-wrap__table{
             border:1px solid #bcbcbc;
             border-top:1px solid #212121;
             margin-bottom:30px;
@@ -1105,7 +1105,7 @@ $my-repair-list_view : ".my-repair-list_view";
                 }
             }
         }
-        &__request{
+        .table-contents__table-wrap__request{
             margin-bottom:30px;
             .tit{
                 margin-bottom:10px;
@@ -1120,7 +1120,7 @@ $my-repair-list_view : ".my-repair-list_view";
                 box-sizing:border-box;
             }
         }
-        &__process{
+        .table-contents__table-wrap__process{
             margin-bottom:50px;
             .tit{
                 margin-bottom:30px;
@@ -1154,7 +1154,7 @@ $my-repair-list_view : ".my-repair-list_view";
                 }
             }
         }
-        &__send-number{
+        .table-contents__table-wrap__send-number{
             .tit{
                 margin-bottom:10px;
                 font-size:18px;
@@ -1780,7 +1780,7 @@ $products : ".products";
     #{$products}-list{
         padding-bottom:87px;
         background-color:#f6f6f6;
-        &__tab{
+        #{$products}-list__tab{
             border-bottom:1px solid #e2e2e2;
             ul{
                 width:514px;
@@ -1817,7 +1817,7 @@ $products : ".products";
             font-weight:bold;
             @include fontStyle(noto-bold, 600, normal);
         }
-        &__detail-tab{
+        #{$products}-list__detail-tab{
             height:50px;
             margin-bottom:30px;
             background-color:#fff;
@@ -1854,7 +1854,7 @@ $products : ".products";
                 }
             }
         }
-        &__detail-list{
+        #{$products}-list__detail-list{
             margin-bottom:35px;
             ul{
                 &:after{
@@ -1962,7 +1962,7 @@ $products : ".products";
 */
 $inquiry : ".inquiry";
 #{$inquiry} {
-    &__contents{
+    #{$inquiry}__contents{
         .table01{
             tbody{
                 tr{
@@ -1987,7 +1987,7 @@ $inquiry : ".inquiry";
 */
 $inquiry-detail : ".inquiry-detail";
 #{$inquiry-detail} {
-    &__view__box {
+    .inquiry-detail__view__box {
       padding:60px 54px 40px;
       margin-bottom:10px;
       @include boxStyle;
@@ -2126,7 +2126,7 @@ $support-as : ".support-as";
 #{$support-as} {
     background: url(../images/bg/as_policy_bg.png) no-repeat center 0;
     background-size: cover;
-    &__contents{
+    #{$support-as}__contents{
         h3{
             padding-top:95px;
             margin-bottom:50px;
@@ -2143,7 +2143,7 @@ $support-as : ".support-as";
                 }
             }
         }
-        &__info_box{
+        #{$support-as}__contents__info_box{
             padding:30px 45px 30px;
             background-color:#fff;
             overflow:hidden;
@@ -2215,7 +2215,8 @@ $about-us : ".about-us";
             text-align:right;
         }
     }
-    &__contents{
+    .about-us__contents{
+        margin-bottom:140px;
         .reply-wrap__reply-area{
             .reply-wrap{
                 padding:0;
@@ -2262,8 +2263,8 @@ $about-us : ".about-us";
     *********************************************************************************
     */
     .news {
-        &__contents {
-            &__leftBox {
+        .news__contents {
+            .news__contents__leftBox {
                 width:100%;
                 .thumbnail_list {
                     li {
@@ -2288,7 +2289,7 @@ $about-us : ".about-us";
                     }
                 }
             }
-            &__rightBox {
+            .news__contents__rightBox {
                 display:none;
             }
         }
@@ -2733,14 +2734,14 @@ $about-us : ".about-us";
             width:100%;
             padding:37px 20px 2px 20px;
             box-sizing:border-box;
-            &__img{
+            .profile-view__profile-wrap__img{
                 width:100%;
                 height:auto;
                 padding:0;
                 margin-right:0;
                 border-right:0;
             }
-            &__profile{
+            .profile-view__profile-wrap__profile{
                 width:100%;
             }
         }
@@ -2910,7 +2911,7 @@ $about-us : ".about-us";
                     color:$mainColor;
                 }
             }
-            &__photo{
+            .table-contents__table-wrap__photo{
                 .photo-left{
                     float:none;
                     width:100%;
@@ -2925,7 +2926,7 @@ $about-us : ".about-us";
                     }
                 }
             }
-            &__request{
+            .table-contents__table-wrap__request{
                 margin-bottom:30px;
                 .tit{
                     margin-bottom:10px;
@@ -2937,7 +2938,7 @@ $about-us : ".about-us";
                     box-sizing:border-box;
                 }
             }
-            &__process{
+            .table-contents__table-wrap__process{
                 margin-bottom:20px;
                 .tit{
                     margin-bottom:20px;
@@ -2975,7 +2976,7 @@ $about-us : ".about-us";
                     }
                 }
             }
-            &__send-number{
+            .table-contents__table-wrap__send-number{
                 input{
                     padding:0 12px;
                     margin-bottom:5px;
@@ -3183,13 +3184,13 @@ $about-us : ".about-us";
             }
         }
         #{$products}-list{
-            &__detail-tab{
+            .products-list__detail-tab{
                 height:auto;
                 ul{
                     width:100%;
                 }
             }
-            &__detail-list{
+            .products-list__detail-list{
                 margin-bottom:35px;
                 ul{
                     &:after{
@@ -3229,7 +3230,7 @@ $about-us : ".about-us";
     */
     $inquiry-detail : ".inquiry-detail";
     #{$inquiry-detail} {
-        &__view__box {
+        .inquiry-detail__view__box {
           padding:30px;
           .tit{
             margin-bottom:20px;
@@ -3354,7 +3355,7 @@ $about-us : ".about-us";
     */
     $support-as : ".support-as";
     #{$support-as} {
-        &__contents{
+        .support-as__contents{
             h3{
                 padding-top:95px;
                 margin-bottom:50px;
@@ -3366,7 +3367,7 @@ $about-us : ".about-us";
                     }
                 }
             }
-            &__info_box{
+            .support-as__contents__info_box{
                 padding:20px;
                 text-align:center;
                 strong{
@@ -3635,7 +3636,7 @@ $about-us : ".about-us";
                 }
             }
         }
-        &__contents{
+        .about-us__contents{
             .reply-wrap__reply-area{
                 .reply-wrap{
                     .reply-wrap__reply-area__list{
@@ -3677,9 +3678,8 @@ $about-us : ".about-us";
     .news {
         padding-top:0;
         padding-bottom:40px;
-        &__contents {
-            &__leftBox {
-                width:100%;
+        .news__contents {
+            .news__contents__leftBox {
                 .thumbnail_list {
                     li {
                         a {
@@ -3711,9 +3711,6 @@ $about-us : ".about-us";
                         }
                     }
                 }
-            }
-            &__rightBox {
-                display:none;
             }
         }
     }
@@ -3965,7 +3962,7 @@ $about-us : ".about-us";
             }
         }
         #{$products}-list{
-            &__tab{
+            .products-list__tab{
                 ul{
                     width:100%;
                     li{
@@ -4004,7 +4001,7 @@ $about-us : ".about-us";
     */
     $inquiry-detail : ".inquiry-detail";
     #{$inquiry-detail} {
-        &__view__box {
+        .inquiry-detail__view__box {
           padding:20px;
           .tit{
             margin-bottom:20px;
@@ -4140,14 +4137,12 @@ $about-us : ".about-us";
                 text-align:center;
             }
         }
-        &__contents{
+        .about-us__contents{
             .reply-wrap__reply-area{
                 .reply-wrap{
                     .reply-wrap__reply-area__list{
                         .reply-wrap__reply-area__list__edit-btn{
                             position:initial;
-                            right:0;
-                            top:50%;
                             margin:0 auto;
                             margin-top:10px;
                         }
