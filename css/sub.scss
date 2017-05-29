@@ -1349,21 +1349,7 @@ $edit-my-information : ".edit-my-information";
                         padding-left:60px;
                         font-style:italic;
                     }
-                    input{
-                        width:176px;
-                        height:40px;
-                        padding-left:12px;
-                        border-width:1px;
-                        border-style:solid;
-                        box-sizing:border-box;
-                        &.email{
-                            width:270px;
-                        }
-                        &.certify{
-                            margin-right:5px;
-                        }
-                    }
-                    span{
+                    p{
                         display:inline-block;
                         padding:14px 0 14px 20px;
                         font-size:17px;
@@ -1408,16 +1394,6 @@ $edit-my-information : ".edit-my-information";
                     padding-top:30px;
                     vertical-align:top;
                 }
-            }
-            input.address{
-                margin-right:5px;
-                margin-bottom:5px;
-            }
-            .address2{
-                width:65%;
-            }
-            .detail-address{
-                width:30%;
             }
         }
     }
@@ -2095,26 +2071,7 @@ $inquiry-write : ".inquiry-write";
                     &:last-child{
                         padding-right:30px;
                     }
-                    .full-width{
-                        width:100%;
-                    }
-                    input{
-                        width:190px;
-                        height:40px;
-                        padding-left:12px;
-                        border-width:1px;
-                        border-style:solid;
-                        box-sizing:border-box;
-                        font-size:17px;
-                        line-height:19px;
-                        &.email{
-                            width:270px;
-                        }
-                        &.certify{
-                            margin-right:5px;
-                        }
-                    }
-                    span{
+                    p{
                         display:inline-block;
                         padding:14px 0 14px 20px;
                         font-size:17px;
@@ -3063,13 +3020,7 @@ $about-us : ".about-us";
                         &:first-child{
                             padding-left:0;
                         }
-                        input{
-                            width:130px;
-                            &.email{
-                                width:170px;
-                            }
-                        }
-                        span{
+                        p{
                             display:inline-block;
                             padding:14px 0 14px 20px;
                             font-size:12px;
@@ -3353,26 +3304,7 @@ $about-us : ".about-us";
                         &:last-child{
                             padding-right:30px;
                         }
-                        .full-width{
-                            width:100%;
-                        }
-                        input{
-                            width:130px;
-                            height:40px;
-                            padding-left:12px;
-                            border:1px solid #ccc;
-                            box-sizing:border-box;
-                            font-size:16px;
-                            line-height:18px;
-                            &.email{
-                                width:170px;
-                                margin-bottom:5px;
-                            }
-                            &.certify{
-                                margin-right:5px;
-                            }
-                        }
-                        span{
+                        p{
                             font-size: 12px;
                             line-height: 14px;
                         }
@@ -3979,16 +3911,9 @@ $about-us : ".about-us";
                                 margin-bottom:0;
                             }
                         }
-                        input{
-                            width:100%;
-                            margin-bottom:5px;
-                            &.email{
-                                width:100%;
-                            }
-                        }
-                        span{
+                        p{
                             display:inline-block;
-                            padding:14px 0 14px 20px;
+                            padding:14px 0;
                             font-size:12px;
                             line-height:14px;
                             color:#b4b4b4;
@@ -4159,26 +4084,7 @@ $about-us : ".about-us";
                         &:last-child{
                             padding-right:30px;
                         }
-                        .full-width{
-                            width:100%;
-                        }
-                        input{
-                            width:100%;
-                            height:40px;
-                            padding-left:12px;
-                            border:1px solid #ccc;
-                            box-sizing:border-box;
-                            font-size:12px;
-                            line-height:14px;
-                            &.email{
-                                width:100%;
-                                margin-bottom:5px;
-                            }
-                            &.certify{
-                                margin-right:5px;
-                            }
-                        }
-                        span{
+                        p{
                             font-size: 12px;
                             line-height: 14px;
                         }
