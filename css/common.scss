@@ -352,8 +352,9 @@ $btnColor04: #2FC600;
     &.is-login-text{
         .is-text-inner-wrap{
             height:70px;
-            padding:15px;
             input[type="text"], input[type="password"]{
+                box-sizing:border-box;
+                padding:15px;
                 font-size:22px;
                 line-height:24px;
             }
@@ -366,6 +367,12 @@ $btnColor04: #2FC600;
             }
             &.have-select{
                 padding:0;
+            }
+
+            &.have-erase-button{
+                input[type="text"], input[type="password"]{
+                    padding-right:40px;
+                }
             }
         }
     }
@@ -397,7 +404,12 @@ $btnColor04: #2FC600;
     }
     &.have-email-letter{
         .is-text-inner-wrap{
-            padding-right:60px;
+            input[type="text"], input[type="password"]{
+                padding-right:50px;
+            }
+            .clear-text-button{
+                right:50px;
+            }
             i{
                 position:absolute;
                 right:22px;
@@ -405,6 +417,11 @@ $btnColor04: #2FC600;
                 font-style:normal;
                 font-size:22px;
                 line-height:24px;
+            }
+            &.have-erase-button{
+                input[type="text"], input[type="password"]{
+                    padding-right:80px;
+                }
             }
         }
     }
