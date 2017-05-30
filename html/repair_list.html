@@ -146,11 +146,11 @@
             <h2 class="tit01">신청현황</h2>
             <div data-module-tab="wrap">
                 <div class="on" data-module-tab="contentsList">
-                    <div class="table-contents" data-bind-target="wrap">
-					  <script type="text/x-handlebars-template" id="repairListData">
+			<h4 class="table-contents__title"><span>총 의뢰건수 <em>111</em>건</span></h4>
+			<div class="table-contents box_shadow" data-bind-target="wrap">
+				  <script type="text/x-handlebars-template" id="repairListData">
 						<div class="table-contents">
-							<h4 class="table-contents__title"><span>총 의뢰건수 <em>{{repairs.length}}</em>건</span></h4>
-							<div class="table-contents__table-wrap box_shadow">
+							<div class="table-contents__table-wrap">
 								<table class="table01">
 									<caption>위너 주행기록 테이블</caption>
 									<colgroup>
@@ -187,32 +187,32 @@
 										{{/repairs}}
 									</tbody>
 								</table>
-								<div class="paging">
-									<div>
-										<a href="#none" class="most_prev">
-											<img src="../images/btn/most_prev.png" alt="맨 앞으로 이동">
-										</a>
-										<a href="#none" class="prev">
-											<img src="../images/btn/prev.png" alt="이전으로 이동">
-										</a>
-										<ul>
-											<li class="first"><strong>1</strong></li>
-											<li><a href="#none">2</a></li>
-											<li><a href="#none">3</a></li>
-											<li><a href="#none">4</a></li>
-											<li class="last"><a href="#none">5</a></li>
-										</ul>
-										<a href="#none" class="most_next">
-											<img src="../images/btn/next.png" alt="다음으로 이동">
-										</a>
-										<a href="#none" class="next">
-											<img src="../images/btn/most_next.png" alt="맨 뒤로 이동">
-										</a>
-									</div>
-								</div>
 							</div>
 						</div>
-						</script>
+					</script>
+					<div class="paging">
+						<div>
+							<a href="#none" class="most_prev">
+								<img src="../images/btn/most_prev.png" alt="맨 앞으로 이동">
+							</a>
+							<a href="#none" class="prev">
+								<img src="../images/btn/prev.png" alt="이전으로 이동">
+							</a>
+							<ul>
+								<li class="first"><strong data-pagination>1</strong></li>
+								<li><a href="#none" data-pagination>2</a></li>
+								<li><a href="#none" data-pagination>3</a></li>
+								<li><a href="#none" data-pagination>4</a></li>
+								<li class="last"><a href="#none" data-pagination>5</a></li>
+							</ul>
+							<a href="#none" class="most_next">
+								<img src="../images/btn/next.png" alt="다음으로 이동">
+							</a>
+							<a href="#none" class="next">
+								<img src="../images/btn/most_next.png" alt="맨 뒤로 이동">
+							</a>
+						</div>
+					</div>
                     </div>
                   </div>
                 </div>
