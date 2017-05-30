@@ -156,6 +156,19 @@
                                 		<input placeholder="비밀번호 확인" type="password" data-text-module>
                                 	</span>
                                 </span>
+                                <!-- 비밀번호가 일치 않을 경우 노출 -->
+                                <span class="input-text-outer-wrap is-login-text is-confirm is-wrong">
+                                	<span class="is-text-inner-wrap">
+                                		<input placeholder="비밀번호(8자 이상 16자 이하)" type="password" data-text-module>
+                                	</span>
+                                </span>
+                                <span class="input-text-outer-wrap is-login-text is-wrong">
+                                	<span class="is-text-inner-wrap">
+                                		<input placeholder="비밀번호 확인" type="password" data-text-module>
+                                	</span>
+                                </span>
+                                <p class="input-validator-text is-wrong">비밀번호가 일치 하지 않습니다.</p>
+                                <!--// 비밀번호가 일치 않을 경우 노출 -->
                                 <span class="input-text-outer-wrap is-login-text have-email-letter">
                                 	<span class="is-text-inner-wrap">
                                 		<input placeholder="이메일" type="text" data-text-module>
@@ -201,9 +214,21 @@
                                 		<a href="#none">확인</a>
                                 	</span>
                                 </span>
+                                <!-- 본인인증 완료시 노출-->
+                                <span class="input-text-outer-wrap is-login-text have-right-section is-checked">
+                                    <span class="is-text-inner-wrap is-login-text">
+                                        <input value="123456" type="text" readonly="readonly" data-text-module>
+                                    </span>
+                                    <span class="input-text-outer-wrap__right-section">
+                                        <a href="#none">확인</a>
+                                    </span>
+                                </span>
+                                <p class="input-validator-text is-right">인증이 완료되었습니다.</p>
+                                <!--// 본인인증 완료시 노출-->
                                 <div class="login-btn-wrap">
                                     <a href="#none" class="is-white">취소</a>
-                                    <button type="button" class="is-blue">회원가입</button>
+                                    <!-- 폼의 내용을 모두 입력하지 않았을 경우에 button 태그의 class에 is-disabled 추가와 속성 disabled="disabled" 추가 -->
+                                    <button type="button" class="is-blue is-disable" disabled="disabled">회원가입</button>
                                 </div>
                             </fieldset>
                         </form>
