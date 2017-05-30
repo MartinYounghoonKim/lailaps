@@ -400,6 +400,14 @@ $btnColor04: #2FC600;
             input[type="text"], input[type="password"]{
                 color:#ec2626;
             }
+            &.have-erase-button{
+                input[type="text"], input[type="password"]{
+                    padding-right:15px;
+                }
+                .clear-text-button{
+                    right:40px;
+                }
+            }
         }
     }
     &.have-email-letter{
@@ -1497,6 +1505,14 @@ $btnColor04: #2FC600;
             .is-text-inner-wrap{
                 padding-right:40px;
                 background-size:18px auto;
+                &.have-erase-button{
+                    input[type="text"], input[type="password"]{
+                        padding-right:15px;
+                    }
+                    .clear-text-button{
+                        right:35px;
+                    }
+                }
             }
         }
         &.have-email-letter{
