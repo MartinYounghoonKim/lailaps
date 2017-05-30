@@ -10,24 +10,12 @@ define([],function () {
             "gnbOneDeptBtn" : "[data-gnb-hover]"
         }).divideDeviceEvent();
     });
-    
+
     require([
         'jquery'
         ,'slide'
 	],function($, slide){
         slide($("[data-ui-name='visual_rolling']"));
-    });
-
-    require([
-        'navigation'
-    ], function(navigation){
-        var element = document.querySelectorAll("[data-parellax-ui]");
-        var i = 0;
-        for(; i<element.length; i++){
-            new navigation({
-                "wrap" : element[i]
-            }).init();
-        }
     });
 
     require([
@@ -38,13 +26,13 @@ define([],function () {
             "child" : "> img"
         }).init();
     });
-
     require([
-        'productBannerAnimation'
-    ], function(productBannerAnimation){
-        new productBannerAnimation.init({
-            "wrap" : "[data-ui-banner-animation='wrap']",
-            "child" : "> li"
+        'navigation'
+    ], function(navigation){
+        new navigation.init({
+            "wrapper" : "[data-parellax-ui='wrapper']",
+            "contents" : "[data-parellax-ui='contents']",
+            "tabNavigation" : "[data-parellax-ui='navigation']"
         });
     });
 });
