@@ -500,7 +500,6 @@ $btnColor04: #2FC600;
                 padding-left:12px;
                 font-size:14px;
                 line-height:16px;
-                outline:none;
             }
             .clear-text-button{
                 top:11px;
@@ -1457,13 +1456,20 @@ $btnColor04: #2FC600;
     **********************************************************************************/
     .input-text-outer-wrap{
         .is-text-inner-wrap{
+            .clear-text-button{
+                top:16px;
+                right:12px;
+                width:15px;
+                height:15px;
+                background-size:15px 15px;
+            }
         }
         /* 로그인 입력폼 */
         &.is-login-text{
             .is-text-inner-wrap{
                 height:45px;
-                padding:10px;
                 input[type="text"], input[type="password"]{
+                    padding:10px;
                     font-size:14px;
                     line-height:16px;
                 }
@@ -1473,6 +1479,11 @@ $btnColor04: #2FC600;
                     border:0;
                     font-size:14px;
                     line-height:16px;
+                }
+                &.have-erase-button{
+                    input[type="text"], input[type="password"]{
+                        padding-right:35px;
+                    }
                 }
             }
         }
@@ -1569,6 +1580,10 @@ $btnColor04: #2FC600;
                 width:100%;
             }
         }
+    }
+    .input-validator-text{
+        font-size:12px;
+        line-height:18px;
     }
 
     /**********************************************************************************
