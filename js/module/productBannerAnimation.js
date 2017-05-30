@@ -48,7 +48,7 @@ define([
 		function getOriginWidth(target){
 			var arr = [];
 			target.each( function(){
-				arr.push($(this).width());
+				arr.push($(this).data("banner-width"));
 			});
 			return arr;
 		}
@@ -89,40 +89,6 @@ define([
 		}
 
 	})();
-	/*
-	var bannerAnimation = function(element){
-		this.wrap=$(element.wrap);
-		this.child=$(element.child, this.wrap);
-		this.arr = [];
-	}
-	bannerAnimation.prototype={
-		init:function(){
-			var that = this;
-			this.child.each( function(){
-				that.arr.push($(this).width());
-			});
-			this.hoverFunc();
-		},
-		hoverFunc:function(){
-			var that =this;
-			this.child.on("mouseenter",function(){
-				that.child.stop().animate({
-					"width" : 18.4 + "%"
-				})
-				$(this).stop().animate({
-					"width" : 26 + "%"
-				})
-			})
-			this.wrap.on("mouseleave",function(){
-				that.child.each( function(idx){
-					$(this).stop().animate({
-						"width" : that.arr[idx] + "px"
-					})
-				})
-			})
-
-		}
-	}*/
 	return bannerAnimation;
 
 });
