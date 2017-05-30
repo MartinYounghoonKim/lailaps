@@ -10,6 +10,9 @@ define([
         bindEvents:function(){
             var that = this;
             this.textArea.on("focus",function(){
+                if($(this).prop("readonly") === true){
+                    return false;
+                }
                 that.getCountVal($(this));
             });
             this.textArea.on("keyup",function(e){
