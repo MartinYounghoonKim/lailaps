@@ -160,6 +160,13 @@
                                 		<a href="#none">본인인증</a>
                                 	</span>
                                 </span>
+                                <!--
+                                    번호 인증이 완료되는 경우
+                                    1. input-text-outer-wrap에 is-checked 클래스 추가
+                                    2. 해당 input 태그 (data-text-module )에 readonly="readonly" 프로퍼티 추가
+
+                                    ** 아래 노출되는 화면 참고 **
+                                -->
                                 <span class="input-text-outer-wrap is-login-text have-right-section">
                                 	<span class="is-text-inner-wrap is-login-text">
                                 		<input placeholder="인증번호를 입력해주세요." type="text" data-text-module>
@@ -168,6 +175,20 @@
                                 		<a href="#none">확인</a>
                                 	</span>
                                 </span>
+                                <!-- 번호 인증이 완료되었을 경우 노출되는 화면 -->
+                                <span class="input-text-outer-wrap is-login-text have-right-section is-checked">
+                                    <span class="is-text-inner-wrap is-login-text">
+                                        <input value="123456" readonly="readonly" data-text-module="" type="text">
+                                    </span>
+                                    <span class="input-text-outer-wrap__right-section">
+                                        <a href="#none">확인</a>
+                                    </span>
+                                </span>
+                                <p class="input-validator-text is-right">인증이 완료되었습니다.</p>
+                                <!-- 번호 인증이 완료되었을 경우 노출 -->
+                                <!-- 오류문구가 떠야할 경우 노출 -->
+                                <p class="input-validator-text is-wrong">비밀번호가 일치 하지 않습니다.</p>
+                                <!--// 오류문구가 떠야할 경우 노출 -->
                                 <div class="login-btn-wrap">
                                     <a href="#none" class="is-white">취소</a>
                                     <button type="button" class="is-blue">비밀번호 확인</button>

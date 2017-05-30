@@ -11,8 +11,14 @@ define([],function () {
         }).divideDeviceEvent();
     });
     require([
-        'inputFunction'
-	],function(inputFunction){
-        
+        'jquery'
+        ,'inputFunction'
+	],function($, inputFunction){
+        var element = $("[data-text-module]");
+        for(var i=0; i<element.size(); i++){
+            new inputFunction({
+                "textArea" : element[i]
+            }).bindEvents();
+        }
     });
 });

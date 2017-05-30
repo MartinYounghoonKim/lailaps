@@ -36,45 +36,60 @@ define([
             var openBtn = setSelector(options).openBtn;
 			var closeBtn = setSelector(options).closeBtn;
             openBtn.unbind("click").on("click", function(evt){
+				evt.stopPropagation();
                 openLayer(evt, $(this));
-            })
+            });
 			closeBtn.unbind("click").on("click",function(){
 				closeLayer();
-			})
+			});
+			$('body').unbind("click").on('click', closeBtn, closeLayer);
 			$(document).unbind("keydown").on("keydown",function(e){
 				if(e.keyCode == 27){
 					closeLayer();
 				}
-			})
+			});
         }
 
         function openLayer(evt, me, getOptions){
 			LAYER_OPTIONS.index++;
 			appendDim();
-			var layerTarget = sortLayerContents(evt, me, getOptions);
-			layerTarget.show().attr("data-layer-index",LAYER_OPTIONS.index);
+			var layerTarget = sortLayerContents(evt, me, getOptions).target();
+			sortLayerContents(evt, me, getOptions).options();
         }
 
 		function sortLayerContents(evt, me, getOptions){
-			if(evt){	/* 버튼 클릭시, 레이어 팝업 활성화 */
+			if(evt.type=="click"){	/* 버튼 클릭시, 레이어 팝업 활성화 */
 				var temp = me.data("open-layer");
 				var layerTarget = $("#" + temp);
-				getLayerOptions(layerTarget.data("layer-pop"));
 
-				return layerTarget;
+				return {
+					target : function(){
+						layerTarget.clone().removeClass("layer-dummy").appendTo("body").attr("data-layer-index",LAYER_OPTIONS.index);
+						return layerTarget;
+					},
+					options : function(){
+						getLayerOptions(layerTarget.data("layer-pop"))
+					}
+				}
 			} else {	/* 버튼 클릭을 사용하지 않고, 레이어 팝업 활성화 */
 				var temp = me;
 				var layerContents = layerStructure(temp);
-					$('body').append(layerContents);
-				var layerTarget = $("#" + temp);
-				LAYER_OPTIONS.newLayer = layerTarget;
-				getLayerOptions(getOptions);
-				return layerTarget;
+
+				return {
+					target : function(){
+						$('body').append(layerContents);
+						LAYER_OPTIONS.newLayer = $("[data-layer-index='" + LAYER_OPTIONS.index +"']");
+						return LAYER_OPTIONS.newLayer;
+					},
+					options : function(){
+						getLayerOptions(getOptions)
+					}
+				}
 			}
 		}
 
 		function layerStructure(temp){
-			var str = "<div class='layer-pop' id='"+ temp +"'>";
+			var str = "<div class='layer-pop "+ temp +"' data-layer-index='"+ LAYER_OPTIONS.index +"'>";
 				str +="		<div class='contents'>";
 				str +="			<div class='layer-pop__inner-wrap'>";
 				str +="			</div>";
@@ -87,9 +102,9 @@ define([
 		function closeLayer(){
 			if(LAYER_OPTIONS.index == -1) return false;
 			var closeTarget = $("[data-layer-index='" + LAYER_OPTIONS.index + "']" );
-			LAYER_OPTIONS.index--;
-			closeTarget.hide();
+			closeTarget.remove().removeAttr("data-layer-index");
 			removeDim();
+			LAYER_OPTIONS.index--;
 		}
 
         function appendDim(){
@@ -101,8 +116,8 @@ define([
         }
 
 		function removeDim(){
-			if(LAYER_OPTIONS.index ==-1){
-				$(".dim").remove();
+			if(LAYER_OPTIONS.index > -1){
+				$(".dim")[LAYER_OPTIONS.index].remove();
 			}
 		}
 
@@ -122,7 +137,8 @@ define([
 
 		function dimClickable(){
 			var dim = $(".dim");
-			dim.on("click",function(){
+			dim.unbind("click").on("click",function(e){
+				e.stopPropagation();
 				closeLayer();
 			})
 		}
