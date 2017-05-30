@@ -546,11 +546,20 @@ $btnColor04: #2FC600;
 }
 .input-validator-text{
     margin-bottom:15px;
-    padding-left:20px;
-    background:url("../images/icon/validator_icon.png") 0 0 no-repeat;
+    background-position:0 0;
+    background-repeat:no-repeat;
     font-size:14px;
-    line-height:16px;
-    color:#cc1414;
+    line-height:18px;
+    &.is-wrong{
+        padding-left:20px;
+        background-image:url("../images/icon/validator_icon_wrong.png");
+        color:#cc1414;
+    }
+    &.is-right{
+        padding-left:23px;
+        background-image:url("../images/icon/validator_icon_right.png");
+        color:#70CC29;
+    }
 }
 /**********************************************************************************
     체크박스 가이드

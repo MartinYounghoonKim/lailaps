@@ -91,6 +91,10 @@
                     &.is-blue{
                         background-color:$basicColor;
                         color:#fff;
+                        &.is-disable{
+                            background-color:#a5bcd3;
+                            color:#e1e1e1;
+                        }
                     }
                     &.is-white{
                         padding:21px 0 19px;
