@@ -15,7 +15,7 @@ define([
             this.textArea.on("keyup",function(e){
                 if(e.keyCode == 8 || e.keyCode==46){
                     if($(this).val().length ==0){
-                        that.removeErasingBtn();
+                        that.removeErasingBtn($(this).siblings(".clear-text-button"));
                         that.getCountVal($(this));
                     }
                 }
@@ -43,15 +43,15 @@ define([
             me.closest(".input-text-outer-wrap").addClass("have-erase-button")
             this.erasingText();
         },
-        removeErasingBtn:function(){
-            this.wrapper.children(".clear-text-button").remove();
+        removeErasingBtn:function(me){
+            me.remove();
             this.start=true;
         },
         erasingText:function(){
             var that = this;
             $(".clear-text-button").on("click",function(){
                 $(this).siblings("input").val("").focus();
-                that.removeErasingBtn();
+                that.removeErasingBtn($(this));
             });
         }
     }
