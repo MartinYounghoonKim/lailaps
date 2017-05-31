@@ -80,6 +80,9 @@ define([
 			var position = $(getId).offset().top;
 			$('body, html').animate({
 				scrollTop : position
+			},{
+				"duration" : 1000,
+				"easing" : "easeOutQuint"
 			})
 
 		}
