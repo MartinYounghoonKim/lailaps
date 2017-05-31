@@ -830,7 +830,7 @@ $certification : ".contents_certification";
                 }
                 .contents__repair__paragraph__app-wrap{
                     position:relative;
-                    height:92px;
+                    height:113px;
                     padding:27px 20px 22px 210px;
                     background-color:$basicColor;
                     img{
@@ -1486,11 +1486,31 @@ $certification : ".contents_certification";
                     img:nth-child(3){
                         left:60%
                     }
+                    &.mobile-version{
+                        img{
+                            opacity:1;
+                            top:0;
+                            left:0;
+                            width:100%;
+                        }
+                    }
                 }
                 .contents__repair__paragraph{
                     width:auto;
                     padding-right:0;
                     float:none;
+                    .contents__repair__paragraph__app-wrap{
+                        height:auto;
+                        padding:15px;
+                        img{
+                            position:relative;
+                            left:auto;
+                            top:auto;
+                            margin-bottom:10px; 
+                        }
+                        div{
+                        }
+                    }
 
                 }
             }
