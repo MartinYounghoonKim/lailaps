@@ -9,7 +9,8 @@
 define([
 	'jquery'
 	,'wheel'
-],function ($,wheel) {
+	,'responsive'
+],function ($,wheel,responsive) {
 	var parellaxTab = function(){
 		function init(options){
 			var wrapper = $(setSelector(options).wrapper);
@@ -23,6 +24,15 @@ define([
 			var diff = contentsY-bodyScrollY;
 			var tabIndex = 0;
 			var flag;
+			var oldTemp;
+			var newTemp=responsive.getDeviceSize();
+
+			$(window).resize( function(){
+				newTemp = responsive.getDeviceSize();
+				if(oldTemp!==newTemp){
+					oldTemp = newTemp;
+				}
+			});
 			$(window).scroll( function(){
 				bodyScrollY = document.body.scrollTop || document.documentElement.scrollTop;
 				diff = contentsY-bodyScrollY;

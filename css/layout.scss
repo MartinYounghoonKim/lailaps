@@ -273,6 +273,9 @@ $borderColor: #e2e2e2;
     &.sub-keyvisual__about-us{
         background:url("../images/bg/sub_keyvisual_about-us.png") center 0 no-repeat;
     }
+    &.sub-keyvisual__technology_braiding{
+        background:url("../images/bg/sub_keyvisual_technology_braiding.png") center 0 no-repeat;
+    }
     .sub-keyvisual__navigation{
         margin-bottom:140px;
         text-align:right;
@@ -1506,7 +1509,7 @@ $certification : ".contents_certification";
                             position:relative;
                             left:auto;
                             top:auto;
-                            margin-bottom:10px; 
+                            margin-bottom:10px;
                         }
                         div{
                         }
