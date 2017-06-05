@@ -48,6 +48,7 @@ require.config({
         ,'layerPop' :'module/layerPop'
         ,'inputFunction' :'module/inputFunction'
         ,'parellaxNavigation' :'module/parellaxNavigation'
+        ,'videoControll' :'module/videoControll'
 
         //dataController
         ,'RepairListData' : "data/RepairListData"
