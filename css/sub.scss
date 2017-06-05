@@ -2281,11 +2281,34 @@ $technology-braiding : ".technology-braiding";
         }
         .technology-braiding__contents__thumnail-img{
             overflow:hidden;
+            margin-bottom:80px;
             li{
                 float:left;
                 margin-right:20px;
                 &:last-child{
                     margin-right:0;
+                }
+            }
+        }
+        .technology-braiding__contents__video{
+            position:relative;
+            video{
+                width:100%;
+            }
+            .technology-braiding__contents__video__play-btn{
+                position:absolute;
+                left:50%;
+                top:50%;
+                overflow:hidden;
+                width:77px;
+                height:77px;
+                margin:-38.5px 0 0 -38.5px;
+                background:url("../images/btn/video_play_btn.png");
+                background-position:0 0;
+                background-repeat:no-repeat;
+                text-indent:-10000em;
+                &.pause{
+                    background-position:-91px 0;
                 }
             }
         }
@@ -3738,6 +3761,7 @@ $technology-braiding : ".technology-braiding";
                 }
             }
             .technology-braiding__contents__thumnail-img{
+                margin-bottom:20px;
                 li{
                     width:49%;
                     margin-bottom:10px;

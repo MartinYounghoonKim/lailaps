@@ -18,4 +18,13 @@ define([],function () {
             "child" : "> div"
         }).init();
     });
+    require([
+        'videoControll'
+    ], function(videoControll){
+        videoControll.init({
+            "wrapper" : "[data-video-controll='wrapper']",
+            "videoContents" : "> video",
+            "controllBtn" : ".technology-braiding__contents__video__play-btn"
+        })
+    });
 });
