@@ -1955,6 +1955,137 @@ $products : ".products";
 
 /*
 *********************************************************************************
+    프로덕트 상세보기 작성
+    작성일 : 2017.06.07
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$products-view : ".products-view";
+#{$products-view} {
+    .products-view__contents__price{
+        margin-bottom:60px;
+        dl{
+            overflow:hidden;
+            font-size:18px;
+            line-height:20px;
+            color:#444;
+            dt{
+                float:left;
+            }
+            dd{
+                float:left;
+                &:after{
+                    content:"/";
+                    margin:0 6px;
+                }
+                &:last-child:after{
+                    content:"";
+                    margin:0;
+                }
+            }
+        }
+    }
+    .products-view__contents__thumnail{
+        margin-bottom:75px;
+        .products-view__contents__thumnail__view-section{
+            position:relative;
+            height:606px;
+            border-top:8px solid $basicColor;
+            background-color:#fff;
+            .products-view__contents__thumnail__view-section__products-img{
+                box-sizing:border-box;
+                height:100%;
+                padding:76px 120px;
+                ul{
+                    position:relative;
+                    width:100%;
+                    height:100%;
+                    li{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:100%;
+                        img{
+                            width:100%;
+                        }
+                    }
+                }
+            }
+            .products-view__contents__thumnail__view-section__ctrl-btn{
+                position:absolute;
+                top:50%;
+                overflow:hidden;
+                margin-top:-36.5px;
+                width:49px;
+                height:73px;
+                text-indent:-10000em;
+                &.is-prev-btn{
+                    left:0;
+                    background:url("../images/btn/product_view_prev01.png") 0 0 no-repeat;
+                }
+                &.is-next-btn{
+                    right:0;
+                    background:url("../images/btn/product_view_next01.png") 0 0 no-repeat;
+                }
+                &.is-detail-btn{
+                    top:auto;
+                    bottom:15px;
+                    right:20px;
+                    width:38px;
+                    height:38px;
+                    margin-top:0;
+                    background:url("../images/btn/product_view_more.png") 0 0 no-repeat;
+                }
+            }
+        }
+        .products-view__contents__thumnail__controll-section{
+            position:relative;
+            padding:25px 38px;
+            .products-view__contents__thumnail__controll-section__ctrl-btn{
+                position:absolute;
+                top:50%;
+                overflow:hidden;
+                width:21px;
+                height:21px;
+                margin-top:-10.5px;
+                text-indent:-10000em;
+                &.is-prev-btn{
+                    left:0;
+                    background:url("../images/btn/product_view_prev02.png") 0 0 no-repeat;
+                }
+                &.is-next-btn{
+                    right:0;
+                    background:url("../images/btn/product_view_next02.png") 0 0 no-repeat;
+                }
+            }
+            .products-view__contents__thumnail__controll-section__thumnail-img{
+                overflow:hidden;
+                ul{
+                    width:200%;
+                    @include removeBetween;
+                    li{
+                        display:inline-block;
+                        box-sizing:border-box;
+                        width:175px;
+                        height:100px;
+                        margin-right:22px;
+                        background-color:#fff;
+                        border:2px solid #eee;
+                        &.on{
+                            border:2px solid $basicColor;
+                        }
+                        button{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+*********************************************************************************
     문의하기 리스트 페이지 작성
     작성일 : 2017.05.18
     작성자 : 정진배
