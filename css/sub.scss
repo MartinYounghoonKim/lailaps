@@ -2404,6 +2404,95 @@ $technology-carbon : ".technology-carbon";
 
 /*
 *********************************************************************************
+    Technology 제조기술 페이지 작성
+    작성일 : 2017.06.07
+    작성자 : 정진배
+*********************************************************************************
+*/
+
+$technology_manufacture : ".technology_manufacture";
+#{$technology_manufacture} {
+    padding-bottom:0;
+    .technology_manufacture__contents{
+        padding-bottom:120px;
+        .technology_manufacture__contents__paragraph{
+            margin-bottom:60px;
+            font-size:40px;
+            line-height:42px;
+            @include fontStyle("noto-demilight",600,normal);
+            text-align:left;
+            &.bottom-paragraph{
+                padding-top: 60px;
+                    border-top: 1px solid #d7d7d7;
+            }
+        }
+        .technology-carbon__contents__txt{
+            margin-bottom:40px;
+            font-size:14px;
+            line-height:26px;
+            color:#333;
+        }
+        >span{
+            display:block;
+            margin-bottom:27px;
+            font-size:14px;
+            line-height:20px;
+            color:#333;
+            &:last-child{
+                margin-bottom:0;
+            }
+        }
+    }
+    .technology-carbon__banner{
+        padding:71px 0 70px;
+        background:url("../images/bg/carbon_banner.png") no-repeat 0 0;
+        text-align:center;
+        strong{
+            display:block;
+            margin-bottom:25px;
+            @include fontStyle('noto-bold',600,normal);
+            font-size:60px;
+            line-height:71px;
+            color:#fff;
+            span{
+                display:block;
+                font-size:60px;
+                line-height:71px;
+                color:#00afff;
+            }
+        }
+        dfn{
+            @include fontStyle('noto-thin',100,normal);
+            font-size:24px;
+            line-height:26px;
+            color:#abacae;
+        }
+    }
+    .technology-carbon__bottom-contents{
+        padding-top:84px;
+        padding-bottom:93px;
+        background-image:url("../images/bg/carbon_bottom_contents_left.png"), url("../images/bg/carbon_bottom_contents_right.png");
+        background-position: left bottom, right top;
+        background-repeat:no-repeat;
+        background-size:580px 391px, 891px 554px;
+        img{
+            margin-bottom:20px;
+        }
+        span{
+            display:block;
+            margin-bottom:30px;
+            font-size:14px;
+            line-height:21px;
+            color:#333;
+            &:last-child{
+                margin-bottom:0;
+            }
+        }
+    }
+}
+
+/*
+*********************************************************************************
     about-us 글로벌 파트너 페이지 작성
     작성일 : 2017.06.07
     작성자 : 정진배
@@ -4088,8 +4177,6 @@ $global-patent : ".global-patent";
                 margin-bottom:30px;
                 font-size:18px;
                 line-height:20px;
-                text-align:left;
-                @include fontStyle("noto-bold",600,italic);
                 &.bottom-paragraph{
                     padding-top:60px;
                     border-top:1px solid #d7d7d7;
