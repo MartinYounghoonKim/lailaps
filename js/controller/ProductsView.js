@@ -19,6 +19,18 @@ define([],function () {
         }).init();
     });
     require([
+        'parellaxTab'
+    ], function(parellaxTab){
+        new parellaxTab().init({
+            "wrapper" : "[data-parellax-fix-tab='wrap']",
+            "tabListWrap" : ">ul",
+            "tabList" : ">li",
+            "tabButton" : "a",
+            "contentsWrap" : "[data-parellax-contents='wrap']",
+            "contentsCell" : ">div"
+        })
+    });
+    require([
         'productSlide'
     ], function(productSlide){
         new productSlide.init({

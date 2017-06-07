@@ -2092,6 +2092,37 @@ $products-view : ".products-view";
             }
         }
     }
+    .products-view__contents__information{
+        position:relative;
+        .tab-list{
+            position:absolute;
+            left:0;
+            top:0;
+            width:1040px;
+            &.is-fix{
+                position:fixed;
+                left:50%;
+                margin-left:-520px;
+            }
+        }
+        .products-view__contents__information__cell-wrap{
+            padding-top:150px;
+            .products-view__contents__information__cell-wrap__cell{
+                margin-bottom:115px;
+                div{
+                    img{
+                        width:100%;
+                    }
+                }
+                &.is-first{
+                    div{
+                        background-color:#fff;
+                        padding:100px 120px 75px;
+                    }
+                }
+            }
+        }
+    }
 }
 /*
 *********************************************************************************
