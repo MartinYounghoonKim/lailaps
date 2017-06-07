@@ -52,39 +52,3 @@ define([
 	}
 	return productParellaxTab;
 });
-/*
-var func = function(){
-
-}
-function func(){
-
-}
-func();
-(function(){
-
-}());
-
-var func = {
-	func1:funcion(){
-
-	},
-	func2:funcion(){
-
-	},
-	func3:funcion(){
-
-	}
-}
-func.func1();
-
-function (func(){
-	function init(){
-	}
-	function func1(){
-	}
-	return {
-		init;
-	}
-})();
-func.init()
-*/
