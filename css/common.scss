@@ -682,6 +682,64 @@ $btnColor04: #2FC600;
     }
 }
 
+/* 공통 썸네일 이미지 가이드 */
+.common_thumnail__detail{
+    position:relative;
+    height:320px;
+    margin-bottom:40px;
+    padding-left:532px;
+    img{
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    span{
+        display:block;
+        margin-bottom:20px;
+        font-size:14px;
+        line-height:20px;
+        color:#333;
+    }
+}
+.common__thumnail-img{
+    overflow:hidden;
+    margin-bottom:46px;
+    li{
+        float:left;
+        margin-right:20px;
+        width:23.5%;
+        .img-wrap{
+            overflow:hidden;
+            position:relative;
+            width:100%;
+            height:0;
+            margin:0 auto;
+            margin-bottom:20px;
+            padding-top:60%;
+            img{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+            }
+        }
+        strong{
+            display:block;
+            @include fontStyle("noto-bold",600,normal);
+            font-size:20px;
+            line-height:22px;
+        }
+        dfn{
+            font-size:15px;
+            line-height:24px;
+            color:#666;
+        }
+        &:last-child{
+            margin-right:0;
+        }
+    }
+}
+
 @media all and (max-width:800px){
     .tit01 {
         margin-bottom:30px;
@@ -720,6 +778,45 @@ $btnColor04: #2FC600;
             }
         }
     }
+
+    .common_thumnail__detail{
+        padding-left:0;
+        height:auto;
+        img{
+            position:relative;
+            margin-bottom:20px;
+            width:100%;
+        }
+        span{
+            font-size:12px;
+            line-height:14px;
+        }
+    }
+    .common__thumnail-img{
+        overflow:hidden;
+        margin-bottom:20px;
+        li{
+            float:left;
+            margin-right:0;
+            margin-bottom:10px;
+            width:49%;
+            &:nth-child(2n){
+                float:right;
+            }
+            .img-wrap{
+                margin-bottom:10px;
+            }
+            strong{
+                font-size:17px;
+                line-height:19px;
+            }
+            dfn{
+                font-size:15px;
+                line-height:24px;
+            }
+        }
+    }
+
 }
 
 @media all and (max-width:640px){
