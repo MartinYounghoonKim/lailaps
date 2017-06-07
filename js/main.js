@@ -26,6 +26,7 @@ require.config({
         ,'RepairList':'controller/RepairList'
         ,'RepairView':'controller/RepairView'
         ,'Products':'controller/Products'
+        ,'ProductsView':'controller/ProductsView'
         ,'InquiryList':'controller/InquiryList'
         ,'InquiryDetail':'controller/InquiryDetail'
         ,'InquiryWrite':'controller/InquiryWrite'
