@@ -2419,11 +2419,69 @@ $global-partner : ".global-partner";
             margin-bottom:60px;
             font-size:24px;
             line-height:26px;
-            @include fontStyle("noto-bold",600,italic);
             text-align:center;
+            @include fontStyle("noto-bold",600,italic);
             &.bottom-paragraph{
                 padding-top:60px;
                 border-top:1px solid #d7d7d7;
+            }
+        }
+    }
+}
+
+/*
+*********************************************************************************
+    about-us 특허 페이지 작성
+    작성일 : 2017.06.07
+    작성자 : 정진배
+*********************************************************************************
+*/
+
+$global-patent : ".global-patent";
+#{$global-patent} {
+    padding-bottom:0;
+    .global-patent__contents{
+        padding-bottom:120px;
+        .global-patent__contents__paragraph{
+            margin-bottom:60px;
+            font-size:24px;
+            line-height:26px;
+            text-align:left;
+            @include fontStyle("noto-bold",600,italic);
+            &.bottom-paragraph{
+                padding-top:60px;
+                border-top:1px solid #d7d7d7;
+            }
+        }
+        >span{
+            display:block;
+            margin-bottom:40px;
+            font-size:14px;
+            line-height:20px;
+            color:#333;
+        }
+        .global-patent__contents__registration{
+            overflow:hidden;
+            margin-bottom:45px;
+            li{
+                float:left;
+                width:31%;
+                margin-right:2.8%;
+                margin-bottom:50px;
+                &:nth-child(3n){
+                    margin-right:0;
+                }
+                .img-wrap{
+                    margin-bottom:20px;
+                    img{
+                        width:100%;
+                    }
+                }
+                dfn{
+                    font-size:20px;
+                    line-height:24px;
+                    @include fontStyle('noto-bold',600,normal);
+                }
             }
         }
     }
@@ -3903,6 +3961,11 @@ $global-partner : ".global-partner";
     #{$technology-carbon} {
         .technology-carbon__contents{
             padding-bottom:60px;
+            .technology-carbon__contents__paragraph{
+                margin-bottom:30px;
+                font-size:18px;
+                line-height:20px;
+            }
             .technology-carbon__contents__detail{
                 padding-left:0;
                 height:auto;
@@ -3980,6 +4043,87 @@ $global-partner : ".global-partner";
                 margin-bottom:20px;
                 font-size:12px;
                 line-height:18px;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        about-us 글로벌 파트너 페이지 작성
+        작성일 : 2017.06.07
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    $global-partner : ".global-partner";
+    #{$global-partner} {
+        padding-bottom:0;
+        .global-partner__contents{
+            padding-bottom:0;
+            .global-partner__contents__paragraph{
+                margin-bottom:30px;
+                font-size:18px;
+                line-height:20px;
+                &.bottom-paragraph{
+                    padding-top:40px;
+                }
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        about-us 특허 페이지 작성
+        작성일 : 2017.06.07
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    $global-patent : ".global-patent";
+    #{$global-patent} {
+        padding-bottom:0;
+        .global-patent__contents{
+            padding-bottom:120px;
+            .global-patent__contents__paragraph{
+                margin-bottom:30px;
+                font-size:18px;
+                line-height:20px;
+                text-align:left;
+                @include fontStyle("noto-bold",600,italic);
+                &.bottom-paragraph{
+                    padding-top:60px;
+                    border-top:1px solid #d7d7d7;
+                }
+            }
+            >span{
+                display:block;
+                margin-bottom:40px;
+                font-size:14px;
+                line-height:20px;
+                color:#333;
+            }
+            .global-patent__contents__registration{
+                overflow:hidden;
+                margin-bottom:45px;
+                li{
+                    width:47%;
+                    margin-bottom:30px;
+                    &:nth-child(3n){
+                        margin-right:2.8%;
+                    }
+                    &:nth-child(2n){
+                        margin-right:0;
+                    }
+                    .img-wrap{
+                        margin-bottom:10px;
+                    }
+                    dfn{
+                        display:block;
+                        font-size:14px;
+                        line-height:18px;
+                        text-align:center;
+                    }
+                }
             }
         }
     }
@@ -4540,6 +4684,58 @@ $global-partner : ".global-partner";
                 margin-bottom:20px;
                 font-size:12px;
                 line-height:18px;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        about-us 특허 페이지 작성
+        작성일 : 2017.06.07
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    $global-patent : ".global-patent";
+    #{$global-patent} {
+        padding-bottom:0;
+        .global-patent__contents{
+            padding-bottom:120px;
+            .global-patent__contents__paragraph{
+                &.bottom-paragraph{
+                    padding-top:60px;
+                    border-top:1px solid #d7d7d7;
+                }
+            }
+            >span{
+                display:block;
+                margin-bottom:40px;
+                font-size:14px;
+                line-height:20px;
+                color:#333;
+            }
+            .global-patent__contents__registration{
+                overflow:hidden;
+                margin-bottom:45px;
+                li{
+                    width:100%;
+                    margin-right:0;
+                    &:nth-child(3n){
+                        margin-right:2.8%;
+                    }
+                    &:nth-child(2n){
+                        margin-right:0;
+                    }
+                    .img-wrap{
+                        margin-bottom:10px;
+                    }
+                    dfn{
+                        display:block;
+                        font-size:14px;
+                        line-height:18px;
+                        text-align:center;
+                    }
+                }
             }
         }
     }
