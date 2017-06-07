@@ -19,9 +19,8 @@ define([],function () {
         }).init();
     });
     require([
-        'jquery'
-        ,'parellaxTab'
-    ], function($,parellaxTab){
+        'parellaxTab'
+    ], function(parellaxTab){
         new parellaxTab().init({
             "wrapper" : "[data-parellax-fix-tab='wrap']",
             "tabListWrap" : ">ul",
