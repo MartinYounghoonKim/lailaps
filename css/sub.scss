@@ -1955,6 +1955,226 @@ $products : ".products";
 
 /*
 *********************************************************************************
+    프로덕트 상세보기 작성
+    작성일 : 2017.06.07
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$products-view : ".products-view";
+#{$products-view} {
+    .products-view__contents__price{
+        margin-bottom:60px;
+        dl{
+            overflow:hidden;
+            font-size:18px;
+            line-height:20px;
+            color:#444;
+            dt{
+                float:left;
+            }
+            dd{
+                float:left;
+                &:after{
+                    content:"/";
+                    margin:0 6px;
+                }
+                &:last-child:after{
+                    content:"";
+                    margin:0;
+                }
+            }
+        }
+    }
+    .products-view__contents__thumnail{
+        margin-bottom:75px;
+        .products-view__contents__thumnail__view-section{
+            position:relative;
+            height:606px;
+            border-top:8px solid $basicColor;
+            background-color:#fff;
+            .products-view__contents__thumnail__view-section__products-img{
+                box-sizing:border-box;
+                height:100%;
+                padding:76px 120px;
+                ul{
+                    position:relative;
+                    width:100%;
+                    height:100%;
+                    li{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:100%;
+                        opacity:0;
+                        img{
+                            width:100%;
+                        }
+                        &.on{
+                            opacity:1;
+                        }
+                    }
+                }
+            }
+            .products-view__contents__thumnail__view-section__ctrl-btn{
+                position:absolute;
+                top:50%;
+                overflow:hidden;
+                margin-top:-36.5px;
+                width:49px;
+                height:73px;
+                text-indent:-10000em;
+                &.is-prev-btn{
+                    left:0;
+                    background:url("../images/btn/product_view_prev01.png") 0 0 no-repeat;
+                }
+                &.is-next-btn{
+                    right:0;
+                    background:url("../images/btn/product_view_next01.png") 0 0 no-repeat;
+                }
+                &.is-detail-btn{
+                    top:auto;
+                    bottom:15px;
+                    right:20px;
+                    width:38px;
+                    height:38px;
+                    margin-top:0;
+                    background:url("../images/btn/product_view_more.png") 0 0 no-repeat;
+                }
+            }
+        }
+        .products-view__contents__thumnail__controll-section{
+            position:relative;
+            padding:25px 38px;
+            .products-view__contents__thumnail__controll-section__ctrl-btn{
+                position:absolute;
+                top:50%;
+                overflow:hidden;
+                width:21px;
+                height:21px;
+                margin-top:-10.5px;
+                text-indent:-10000em;
+                &.is-prev-btn{
+                    left:0;
+                    background:url("../images/btn/product_view_prev02.png") 0 0 no-repeat;
+                }
+                &.is-next-btn{
+                    right:0;
+                    background:url("../images/btn/product_view_next02.png") 0 0 no-repeat;
+                }
+            }
+            .products-view__contents__thumnail__controll-section__thumnail-img{
+                overflow:hidden;
+                ul{
+                    position:relative;
+                    left:0;
+                    width:200%;
+                    @include removeBetween;
+                    li{
+                        display:inline-block;
+                        box-sizing:border-box;
+                        width:175px;
+                        height:100px;
+                        margin-right:19px;
+                        background-color:#fff;
+                        border:2px solid #eee;
+                        &.on{
+                            border:2px solid $basicColor;
+                        }
+                        button{
+                            width:100%;
+                            height:100%;
+                        }
+                        &:last-child{
+                            margin-right:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .products-view__contents__information{
+        position:relative;
+        .tab-list{
+            position:absolute;
+            left:0;
+            top:0;
+            width:1040px;
+            &.is-fix{
+                position:fixed;
+                left:50%;
+                margin-left:-520px;
+            }
+        }
+        .products-view__contents__information__cell-wrap{
+            padding-top:150px;
+            .products-view__contents__information__cell-wrap__cell{
+                margin-bottom:115px;
+                div{
+                    img{
+                        width:100%;
+                    }
+                }
+                &.is-first{
+                    div{
+                        background-color:#fff;
+                        padding:100px 120px 75px;
+                    }
+                }
+            }
+        }
+    }
+    .products-view__contents__relative-product{
+        .products-view__contents__relative-product__product-wrap{
+            margin-bottom:35px;
+            padding:30px 0;
+            border-top:1px solid #b6b6b6;
+            border-bottom:1px solid #b6b6b6;
+            ul{
+                @include removeBetween;
+                li{
+                    display:inline-block;
+                    width:330px;
+                    margin-right:25px;
+                    background-color:#fff;
+                    a{
+                        display:block;
+                        padding:20px;
+                        text-align:center;
+                        span{
+                            display:block;
+                            height:167px;
+                            overflow:hidden;
+                            margin-bottom:20px;
+                            img{
+                                width:100%;
+                                height:auto;
+                            }
+                        }
+                        strong{
+                            display:block;
+                            margin-bottom:6px;
+                            font-size:13px;
+                            line-height:15px;
+                            @include fontStyle("noto-bold", 600, italic);
+                        }
+                        em{
+                            display:block;
+                            color:#444;
+                            font-style:normal;
+                            font-size:13px;
+                            line-height:15px;
+                        }
+                    }
+                    &:last-child{
+                        margin-right:0;
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+*********************************************************************************
     문의하기 리스트 페이지 작성
     작성일 : 2017.05.18
     작성자 : 정진배
@@ -3620,6 +3840,143 @@ $global-patent : ".global-patent";
         }
     }
 
+    /*
+    *********************************************************************************
+        프로덕트 상세보기 작성
+        작성일 : 2017.06.07
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    //$products-view : ".products-view";
+    #{$products-view} {
+        .products-view__contents__price{
+            margin-bottom:20px;
+            dl{
+                font-size:14px;
+                line-height:16px;
+            }
+        }
+        .products-view__contents__thumnail{
+            margin-bottom:40px;
+            .products-view__contents__thumnail__view-section{
+                height:auto;
+                margin-bottom:20px;
+                .products-view__contents__thumnail__view-section__ctrl-btn{
+                    width:35px;
+                    height:53px;
+                    z-index:2;
+                    &.is-prev-btn{
+                        background-size:35px auto;
+                    }
+                    &.is-next-btn{
+                        background-size:35px auto;
+                    }
+                    &.is-detail-btn{
+                        width:20px;
+                        height:20px;
+                        background-size:20px 20px;
+                    }
+                }
+                .products-view__contents__thumnail__view-section__products-img{
+                    height:auto;
+                    padding:0 0 0 0;
+                    ul{
+                        position:relative;
+                        height:auto;
+                        padding-top:61%;
+                        li{
+                            box-sizing:border-box;
+                            padding:5%;
+                        }
+                    }
+                }
+
+            }
+            .products-view__contents__thumnail__controll-section{
+                padding:0;
+                .products-view__contents__thumnail__controll-section__thumnail-img{
+                    position:relative;
+                    height:0;
+                    padding-top:20%;
+                    ul{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        li{
+                            position:relative;
+                            box-sizing:border-box;
+                            width:10%;
+                            margin-right:0;
+                            height:0;
+                            padding-top:7%;
+                            button{
+                                position:absolute;
+                                left:0;
+                                top:0;
+                                width:100%;
+                                height:100%;
+                                img{
+                                    width:100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .products-view__contents__thumnail__controll-section__ctrl-btn{
+                    display:none;
+                }
+            }
+        }
+        .products-view__contents__information{
+            .tab-list{
+                width:100%;
+                z-index:3;
+                &.is-fix{
+                    left:0;
+                    margin-left:0;
+                }
+            }
+            .products-view__contents__information__cell-wrap{
+                padding-top:120px;
+                .products-view__contents__information__cell-wrap__cell{
+                    margin-bottom:40px;
+                    &.is-first{
+                        div{
+                            padding:40px 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .products-view__contents__relative-product{
+            .products-view__contents__relative-product__product-wrap{
+                ul{
+                    text-align:center;
+                    li{
+                        display:block;
+                        width:100%;
+                        margin-right:0;
+                        margin-bottom:20px;
+                        a{
+                            span{
+                                position:relative;
+                                overflow:hidden;
+                                height:0;
+                                padding-top:56%;
+                                img{
+                                    position:absolute;
+                                    left:0;
+                                    top:0;
+                                    width:100%;
+                                    height:auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     /*
     *********************************************************************************
         문의하기 상세 페이지 작성

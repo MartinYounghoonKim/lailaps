@@ -30,4 +30,21 @@ define([],function () {
             "contentsCell" : ">div"
         })
     });
+    require([
+        'productSlide'
+    ], function(productSlide){
+        new productSlide.init({
+            "wrapper" : "[data-slide='wrapper']",
+            "viewWrapper" : ".products-view__contents__thumnail__view-section",
+            "viewPrevBtn" : ".is-prev-btn",
+            "viewNextBtn" : ".is-next-btn",
+            "viewImgWrapper" : ".products-view__contents__thumnail__view-section__products-img",
+            "viewImgList" : ".products-view__contents__thumnail__view-section__products-img > ul > li",
+            "controllWrapper" : ".products-view__contents__thumnail__controll-section",
+            "controllPrev" : ".is-prev-btn",
+            "controllNext" : ".is-next-btn",
+            "thumnailWrapper" : ".products-view__contents__thumnail__controll-section__thumnail-img > ul",
+            "thumnailList" : ".products-view__contents__thumnail__controll-section__thumnail-img > ul > li",
+        })
+    });
 });

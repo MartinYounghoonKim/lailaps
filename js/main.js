@@ -26,6 +26,7 @@ require.config({
         ,'RepairList':'controller/RepairList'
         ,'RepairView':'controller/RepairView'
         ,'Products':'controller/Products'
+        ,'ProductsView':'controller/ProductsView'
         ,'InquiryList':'controller/InquiryList'
         ,'InquiryDetail':'controller/InquiryDetail'
         ,'InquiryWrite':'controller/InquiryWrite'
@@ -49,6 +50,7 @@ require.config({
         ,'inputFunction' :'module/inputFunction'
         ,'parellaxNavigation' :'module/parellaxNavigation'
         ,'videoControll' :'module/videoControll'
+        ,'productSlide' :'module/productSlide'
 
         //dataController
         ,'RepairListData' : "data/RepairListData"
