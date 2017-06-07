@@ -2190,6 +2190,7 @@ $about-us : ".about-us";
             font-size:17px;
             line-height:24px;
             margin-bottom:27px;
+            color:#333;
             &.last{
                 margin-bottom:0;
                 span{
@@ -2227,12 +2228,13 @@ $about-us : ".about-us";
                         left:0;
                         font-size:17px;
                         line-height:60px;
+                        color:#333;
                     }
                     >span{
                         @include fontStyle(noto-light, 300, normal);
                         font-size:17px;
                         line-height:19px;
-                        color:#222;
+                        color:#333;
                     }
                     .reply-wrap__reply-area__list__edit-btn{
                         margin-top:-16.5px;
