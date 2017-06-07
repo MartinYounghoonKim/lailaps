@@ -2276,7 +2276,7 @@ $technology-braiding : ".technology-braiding";
                 margin-bottom:20px;
                 font-size:14px;
                 line-height:20px;
-                color:#444;
+                color:#333;
             }
         }
         .technology-braiding__contents__thumnail-img{
@@ -2310,6 +2310,147 @@ $technology-braiding : ".technology-braiding";
                 &.pause{
                     background-position:-91px 0;
                 }
+            }
+        }
+    }
+}
+
+/*
+*********************************************************************************
+    Technology 탄소섬유 페이지 작성
+    작성일 : 2017.06.07
+    작성자 : 정진배
+*********************************************************************************
+*/
+
+$technology-carbon : ".technology-carbon";
+#{$technology-carbon} {
+    padding-bottom:0;
+    .technology-carbon__contents{
+        padding-bottom:120px;
+        .technology-carbon__contents__paragraph{
+            margin-bottom:60px;
+            font-size:24px;
+            line-height:26px;
+            @include fontStyle("noto-bold",600,italic);
+            text-align:center;
+        }
+        .technology-carbon__contents__detail{
+            position:relative;
+            height:320px;
+            margin-bottom:40px;
+            padding-left:532px;
+            img{
+                position:absolute;
+                left:0;
+                top:0;
+            }
+            span{
+                display:block;
+                margin-bottom:20px;
+                font-size:14px;
+                line-height:20px;
+                color:#333;
+            }
+        }
+        .technology-carbon__contents__txt{
+            margin-bottom:40px;
+            font-size:14px;
+            line-height:26px;
+            color:#333;
+        }
+        .technology-carbon__contents__thumnail-img{
+            overflow:hidden;
+            margin-bottom:46px;
+            li{
+                float:left;
+                margin-right:20px;
+                width:23.5%;
+                .img-wrap{
+                    overflow:hidden;
+                    position:relative;
+                    width:100%;
+                    height:0;
+                    margin:0 auto;
+                    margin-bottom:20px;
+                    padding-top:60%;
+                    img{
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                    }
+                }
+                strong{
+                    display:block;
+                    @include fontStyle("noto-bold",600,normal);
+                    font-size:20px;
+                    line-height:22px;
+                }
+                dfn{
+                    font-size:15px;
+                    line-height:24px;
+                    color:#666;
+                }
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        >span{
+            display:block;
+            margin-bottom:27px;
+            font-size:14px;
+            line-height:20px;
+            color:#333;
+            &:last-child{
+                margin-bottom:0;
+            }
+        }
+    }
+    .technology-carbon__banner{
+        padding:71px 0 70px;
+        background:url("../images/bg/carbon_banner.png") no-repeat 0 0;
+        text-align:center;
+        strong{
+            display:block;
+            margin-bottom:25px;
+            @include fontStyle('noto-bold',600,normal);
+            font-size:60px;
+            line-height:71px;
+            color:#fff;
+            span{
+                display:block;
+                font-size:60px;
+                line-height:71px;
+                color:#00afff;
+            }
+        }
+        dfn{
+            @include fontStyle('noto-thin',100,normal);
+            font-size:24px;
+            line-height:26px;
+            color:#abacae;
+        }
+    }
+    .technology-carbon__bottom-contents{
+        padding-top:84px;
+        padding-bottom:93px;
+        background-image:url("../images/bg/carbon_bottom_contents_left.png"), url("../images/bg/carbon_bottom_contents_right.png");
+        background-position: left bottom, right top;
+        background-repeat:no-repeat;
+        background-size:580px 391px, 891px 554px;
+        img{
+            margin-bottom:20px;
+        }
+        span{
+            display:block;
+            margin-bottom:30px;
+            font-size:14px;
+            line-height:21px;
+            color:#333;
+            &:last-child{
+                margin-bottom:0;
             }
         }
     }
@@ -3777,6 +3918,98 @@ $technology-braiding : ".technology-braiding";
         }
     }
 
+    /*
+    *********************************************************************************
+        Technology 탄소섬유 페이지 작성
+        작성일 : 2017.06.07
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    // $technology-carbon : ".technology-carbon";
+    #{$technology-carbon} {
+        .technology-carbon__contents{
+            padding-bottom:60px;
+            .technology-carbon__contents__detail{
+                padding-left:0;
+                height:auto;
+                img{
+                    position:relative;
+                    margin-bottom:20px;
+                    width:100%;
+                }
+                span{
+                    font-size:12px;
+                    line-height:14px;
+                }
+            }
+            .technology-carbon__contents__txt{
+                margin-bottom:20px;
+                font-size:12px;
+                line-height:14px;
+            }
+            .technology-carbon__contents__thumnail-img{
+                overflow:hidden;
+                margin-bottom:20px;
+                li{
+                    float:left;
+                    margin-right:0;
+                    margin-bottom:10px;
+                    width:49%;
+                    &:nth-child(2n){
+                        float:right;
+                    }
+                    .img-wrap{
+                        margin-bottom:10px;
+                    }
+                    strong{
+                        font-size:17px;
+                        line-height:19px;
+                    }
+                    dfn{
+                        font-size:15px;
+                        line-height:24px;
+                    }
+                }
+            }
+            >span{
+                margin-bottom:10px;
+                font-size:12px;
+                line-height:18px;
+            }
+        }
+        .technology-carbon__banner{
+            padding:41px 0 40px;
+            background-size:cover;
+            strong{
+                margin-bottom:15px;
+                font-size:30px;
+                line-height:41px;
+                span{
+                    font-size:30px;
+                    line-height:41px;
+                }
+            }
+            dfn{
+                font-size:14px;
+                line-height:16px;
+            }
+        }
+        .technology-carbon__bottom-contents{
+            padding-top:10%;
+            padding-bottom:35%;
+            background-size:50%;
+            img{
+                margin-bottom:20px;
+                width:50%;
+            }
+            span{
+                margin-bottom:20px;
+                font-size:12px;
+                line-height:18px;
+            }
+        }
+    }
 
 }
 
@@ -4263,6 +4496,77 @@ $technology-braiding : ".technology-braiding";
                         }
                     }
                 }
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        Technology 탄소섬유 페이지 작성
+        작성일 : 2017.06.07
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    // $technology-carbon : ".technology-carbon";
+    #{$technology-carbon} {
+        .technology-carbon__contents{
+            .technology-carbon__contents__detail{
+                margin-bottom:20px;
+            }
+            .technology-carbon__contents__thumnail-img{
+                li{
+                    float:left;
+                    margin-right:0;
+                    margin-bottom:10px;
+                    width:49%;
+                    &:nth-child(2n){
+                        float:right;
+                    }
+                    .img-wrap{
+                        margin-bottom:10px;
+                    }
+                    strong{
+                        font-size:15px;
+                        line-height:17px;
+                    }
+                    dfn{
+                        font-size:12px;
+                        line-height:21px;
+                        letter-spacing:-1px;
+                    }
+                }
+            }
+        }
+        .technology-carbon__banner{
+            padding:31px 0 30px;
+            background-size:cover;
+            strong{
+                margin-bottom:15px;
+                font-size:20px;
+                line-height:31px;
+                span{
+                    font-size:20px;
+                    line-height:31px;
+                }
+            }
+            dfn{
+                font-size:12px;
+                line-height:14px;
+            }
+        }
+        .technology-carbon__bottom-contents{
+            padding-top:10%;
+            padding-bottom:35%;
+            background-size:50%;
+            img{
+                margin-bottom:20px;
+                width:50%;
+            }
+            span{
+                margin-bottom:20px;
+                font-size:12px;
+                line-height:18px;
             }
         }
     }
