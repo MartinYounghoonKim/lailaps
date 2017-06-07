@@ -50,6 +50,7 @@ require.config({
         ,'inputFunction' :'module/inputFunction'
         ,'parellaxNavigation' :'module/parellaxNavigation'
         ,'videoControll' :'module/videoControll'
+        ,'productSlide' :'module/productSlide'
 
         //dataController
         ,'RepairListData' : "data/RepairListData"
