@@ -39,7 +39,7 @@ define([
 				tabIndex = 1 + currentPosition(contentsWrap,contentsCell,bodyScrollY).getIndexNum();
 
 				bannerPosition(wrapper, diff);
-				activeTabList(tabListWrap, tabList, tabIndex, flag, );
+				activeTabList(tabListWrap, tabList, tabIndex, flag);
 				flag = tabIndex;
 			});
 			tabIndex = 1 + currentPosition(contentsWrap,contentsCell,bodyScrollY).getIndexNum();
