@@ -2402,6 +2402,33 @@ $technology-carbon : ".technology-carbon";
     }
 }
 
+/*
+*********************************************************************************
+    about-us 글로벌 파트너 페이지 작성
+    작성일 : 2017.06.07
+    작성자 : 정진배
+*********************************************************************************
+*/
+
+$global-partner : ".global-partner";
+#{$global-partner} {
+    padding-bottom:0;
+    .global-partner__contents{
+        padding-bottom:120px;
+        .global-partner__contents__paragraph{
+            margin-bottom:60px;
+            font-size:24px;
+            line-height:26px;
+            @include fontStyle("noto-bold",600,italic);
+            text-align:center;
+            &.bottom-paragraph{
+                padding-top:60px;
+                border-top:1px solid #d7d7d7;
+            }
+        }
+    }
+}
+
 @media all and (max-width:800px){
     /*
     *********************************************************************************
