@@ -2466,6 +2466,66 @@ $about-us : ".about-us";
         }
     }
 }
+
+/*
+*********************************************************************************
+    Technology 메인 페이지 작성
+    작성일 : 2017.06.05
+    작성자 : 김영훈
+*********************************************************************************
+*/
+$technology-main : ".technology_main";
+#{$technology-main} {
+    background-color:#fff;
+    .technology_main_contents{
+        margin-bottom:15px;
+        &:after{
+            @include afterClear;
+        }
+        .technology_main_contents__left{
+            position:relative;
+            float:left;
+            background-color:#f8f8f8;
+        }
+        .technology_main_contents__right{
+            position:relative;
+            display:table;
+            float:right;
+            box-sizing:border-box;
+            width:675px;
+            height:345px;
+            padding-left:60px;
+            background:#f8f8f8 url("../images/logo/contents_logo.png") no-repeat 97% 95%;
+            >div{
+                display: table-cell;
+                vertical-align: middle;
+                dl{
+                    dt{
+                        margin-bottom:30px;
+                        font-size:24px;
+                        line-height:36px;
+                        color:#333;
+                        @include fontStyle('noto-medium',500,normal);
+                        span{
+                            display:block;
+                            font-size:12px;
+                            line-height:22px;
+                            color:#666;
+                        }
+                    }
+                    dd{
+                        display:block;
+                        padding-bottom:25px;
+                        font-size:14px;
+                        line-height:22px;
+                        color:#666;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*
 *********************************************************************************
     Technology 브레이딩 시스템 페이지 작성
@@ -4533,6 +4593,51 @@ $global-patent : ".global-patent";
             }
         }
     }
+
+    /*
+    *********************************************************************************
+        Technology 메인 페이지 작성
+        작성일 : 2017.06.05
+        작성자 : 김영훈
+    *********************************************************************************
+    */
+    // $technology-main : ".technology_main";
+    #{$technology-main} {
+        .technology_main__contents{
+            padding:5% 0;
+            .technology_main_contents{
+                margin-bottom:15px;
+                .technology_main_contents__left{
+                    overflow:hidden;
+                    img{
+                        width:110%;
+                    }
+                }
+                .technology_main_contents__right{
+                    width:100%;
+                    height:auto;
+                    padding:20px;
+                    text-align:center;
+                    background:#f8f8f8;
+                    >div{
+                        dl{
+                            dt{
+                                margin-bottom:20px;
+                                font-size:18px;
+                                line-height:26px;
+                            }
+                            dd{
+                                padding-bottom:15px;
+                                font-size:12px;
+                                line-height:20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     /*
     *********************************************************************************
         Technology 브레이딩 시스템 페이지 작성
