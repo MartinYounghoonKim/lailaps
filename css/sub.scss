@@ -2781,7 +2781,7 @@ $technology_certify : ".technology_certify";
 
 /*
 *********************************************************************************
-    Technology 기술인증 페이지 작성
+    Technology 리페어 시스템 페이지 작성
     작성일 : 2017.06.07
     작성자 : 정진배
 *********************************************************************************
@@ -2800,7 +2800,11 @@ $technology_repair-system : ".technology_repair-system";
             text-align:center;
             &.bottom-paragraph{
                 padding-top: 60px;
-                    border-top: 1px solid #d7d7d7;
+                border-top: 1px solid #d7d7d7;
+                @include fontStyle("noto-demilight",600,normal);
+                font-size:46px;
+                line-height:80px;
+                text-align:left;
             }
         }
         .common__thumnail-img{
@@ -2818,6 +2822,73 @@ $technology_repair-system : ".technology_repair-system";
             }
             &:last-of-type{
                 padding-bottom:0;
+            }
+        }
+        .album_wrap{
+            overflow:hidden;
+            padding:42px 28px;
+            margin-bottom:45px;
+            background-color:#fff;
+            border-top:4px solid $mainColor;
+            .album_list{
+                float:left;
+                margin-right:27px;
+                margin-bottom:25px;
+                &:nth-child(2n){
+                    margin-right:0;
+                }
+                &:nth-child(1),&:nth-child(2){
+                    span{
+                        padding-top:0;
+                        border-top:0;
+                    }
+                }
+                >span{
+                    display:block;
+                    padding-top:30px;
+                    margin-bottom:15px;
+                    @include fontStyle('noto-medium',600,normal)
+                    font-size:17px;
+                    line-height:19px;
+                    border-top:1px solid #d7d7d7;
+                }
+                li{
+                    float:left;
+                    margin-right:15px;
+                    &:last-child{
+                        margin-right:0;
+                    }
+                    img{
+                        margin-bottom:12px;
+                    }
+                    >span{
+                        display:block;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+        .technology_repair-system__app-wrap{
+            position:relative;
+            padding:40px 20px 40px 380px;
+            height:62px;
+            background-color:$mainColor;
+            img{
+                position:absolute;
+                left:172px;
+                top:50%;
+                margin-top:-31px;
+            }
+            p{
+                display:inline-block;
+                padding-top:15px;
+                color:#fff;
+            }
+            a{
+                position:absolute;
+                top:50%;
+                margin-top:-22px;
+                margin-left:50px;
             }
         }
     }
@@ -4746,6 +4817,109 @@ $global-patent : ".global-patent";
         }
     }
 
+    /*
+    *********************************************************************************
+        Technology 리페어 시스템 페이지 작성
+        작성일 : 2017.06.08
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    // $technology_repair-system : ".technology_repair-system";
+    #{$technology_repair-system} {
+        padding-bottom:0;
+        .technology_repair-system__contents{
+            padding-bottom:60px;
+            .technology_repair-system__contents__paragraph{
+                margin-bottom:30px;
+                font-size:18px;
+                line-height:20px;
+                &.bottom-paragraph{
+                    padding-top: 30px;
+                    font-size:26px;
+                    line-height:28px;
+                }
+            }
+            .common__thumnail-img{
+                &:nth-of-type(2),&:nth-of-type(3){
+                    margin-bottom:0;
+                }
+            }
+            >span{
+                display:block;
+                font-size:14px;
+                line-height:20px;
+                color:#333;
+                &:nth-of-type(3n){
+                    padding-bottom:50px;
+                }
+                &:last-of-type{
+                    padding-bottom:0;
+                }
+            }
+            .album_wrap{
+                padding:5%;
+                margin-bottom:45px;
+                .album_list{
+                    width:100%;
+                    margin-right:0;
+                    margin-bottom:25px;
+                    &:nth-child(2n){
+                        margin-right:0;
+                    }
+                    &:nth-child(1),&:nth-child(2){
+                        span{
+                            padding-top:0;
+                            border-top:0;
+                        }
+                    }
+                    >span{
+                        display:block;
+                        padding-top:30px;
+                        margin-bottom:15px;
+                        @include fontStyle('noto-medium',600,normal)
+                        font-size:17px;
+                        line-height:19px;
+                        border-top:1px solid #d7d7d7;
+                    }
+                    li{
+                        margin-right:1%;
+                        width:48%;
+                        &:nth-of-type(2n){
+                            float:right;
+                        }
+                        img{
+                            width:100%;
+                        }
+                        >span{
+                            display:block;
+                            text-align:center;
+                        }
+                    }
+                }
+            }
+            .technology_repair-system__app-wrap{
+                padding:30px 20px 30px 190px;
+                img{
+                    left:50px;
+                    margin-top:-20px;
+                    height:40px;
+                }
+                p{
+                    padding-top:0;
+                }
+                a{
+                    position:absolute;
+                    top:initial;
+                    right:50px;
+                    bottom:10px;
+                    margin-top:0;
+                    margin-left:0;
+                }
+            }
+        }
+    }
+
 }
 
 @media all and (max-width:640px){
@@ -5302,6 +5476,114 @@ $global-patent : ".global-patent";
                 margin-bottom:20px;
                 font-size:12px;
                 line-height:18px;
+            }
+        }
+    }
+
+    /*
+    *********************************************************************************
+        Technology 리페어 시스템 페이지 작성
+        작성일 : 2017.06.08
+        작성자 : 정진배
+    *********************************************************************************
+    */
+
+    // $technology_repair-system : ".technology_repair-system";
+    #{$technology_repair-system} {
+        padding-bottom:0;
+        .technology_repair-system__contents{
+            padding-bottom:60px;
+            .technology_repair-system__contents__paragraph{
+                margin-bottom:30px;
+                font-size:18px;
+                line-height:20px;
+                &.bottom-paragraph{
+                    padding-top: 30px;
+                    font-size:26px;
+                    line-height:28px;
+                }
+            }
+            .common__thumnail-img{
+                &:nth-of-type(2),&:nth-of-type(3){
+                    margin-bottom:0;
+                }
+            }
+            >span{
+                display:block;
+                font-size:14px;
+                line-height:20px;
+                color:#333;
+                &:nth-of-type(3n){
+                    padding-bottom:50px;
+                }
+                &:last-of-type{
+                    padding-bottom:0;
+                }
+            }
+            .album_wrap{
+                padding:5%;
+                margin-bottom:45px;
+                .album_list{
+                    width:100%;
+                    margin-right:0;
+                    margin-bottom:25px;
+                    &:nth-child(2n){
+                        margin-right:0;
+                    }
+                    &:nth-child(1),&:nth-child(2){
+                        span{
+                            padding-top:0;
+                            border-top:0;
+                        }
+                    }
+                    >span{
+                        display:block;
+                        padding-top:30px;
+                        margin-bottom:15px;
+                        @include fontStyle('noto-medium',600,normal)
+                        font-size:17px;
+                        line-height:19px;
+                        border-top:1px solid #d7d7d7;
+                    }
+                    li{
+                        margin-right:1%;
+                        width:48%;
+                        &:nth-of-type(2n){
+                            float:right;
+                        }
+                        img{
+                            width:100%;
+                        }
+                        >span{
+                            display:block;
+                            text-align:center;
+                        }
+                    }
+                }
+            }
+            .technology_repair-system__app-wrap{
+                padding:15px;
+                height:auto;
+                text-align:center;
+                img{
+                    display:block;
+                    position:relative;
+                    left:50%;
+                    top:auto;
+                    width:179px;
+                    height:auto;
+                    margin-top:0px;
+                    margin-bottom:20px;
+                    margin-left:-89.5px;
+                }
+                p{
+                    display:block;
+                    margin-bottom:13px;
+                    padding-top:0;
+                }
+                a{
+                    position:initial;
+                }
             }
         }
     }
