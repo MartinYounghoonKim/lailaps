@@ -192,6 +192,10 @@ $btnColor04: #2FC600;
             border:2px solid $btnColor02;
             color:$btnColor02;
             background:none;
+            &:hover{
+                background-color:#fff;
+                color:$btnColor01;
+            }
         }
 
     }
