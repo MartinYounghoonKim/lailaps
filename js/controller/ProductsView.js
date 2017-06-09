@@ -47,13 +47,24 @@ define([],function () {
             "thumnailList" : ".products-view__contents__thumnail__controll-section__thumnail-img > ul > li",
         })
     });
+    // require([
+    //     'layerPop'
+    // ], function(layerPop){
+    //     layerPop.init({
+    //         "wrapper" : "[data-layer-pop]",
+    //         "openBtn" : "[data-open-layer]",
+    //         "closeBtn" : "[data-close-layer]"
+    //     });
+    // });
     require([
-        'layerPop'
-    ], function(layerPop){
-        layerPop.init({
+        'productLayer'
+    ], function(productLayer){
+        productLayer({
             "wrapper" : "[data-layer-pop]",
             "openBtn" : "[data-open-layer]",
-            "closeBtn" : "[data-close-layer]"
+            "closeBtn" : "[data-close-layer]",
+            "contentsDestination" : ".layer-pop__inner-wrap",
+            "contents" : ".products-view__contents__thumnail__view-section__products-img > ul > li.on > img"
         });
     });
 });

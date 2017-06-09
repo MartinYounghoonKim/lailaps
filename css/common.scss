@@ -1264,7 +1264,18 @@ $btnColor04: #2FC600;
     &.layer-dummy{
         display:none;
     }
-
+    &.is-products{
+        width:0;
+        height:0;
+        overflow:hidden;
+        display:block;
+        left:50%;
+        top:50%;
+        .contents{
+            .layer-pop__inner-wrap{
+            }
+        }
+    }
 }
 /**********************************************************************************
     공통 레이아웃 스타일 Device : Tablet
