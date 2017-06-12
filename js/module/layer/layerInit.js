@@ -33,7 +33,7 @@ define([
                 openKey = $(this).data("open-layer");
                 layerMake.init(openKey);
                 target = layerMake.getTarget();
-                setLayerClass.init();   //진배 작업
+                setLayerClass.init(target);
             })
 
         }

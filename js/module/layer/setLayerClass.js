@@ -10,10 +10,17 @@ define([
     'jquery'
 ], function($){
     var setLayerClass = {
-        init:function(){
+        init:function(layerTarget){
+            this.target =layerTarget;
+            this.temp = this.target.data("layer-options").size;
+
+            this.setClass();
+        },
+        setClass :function(){
+            console.log(this.target);
+            this.target.addClass("is-" + this.temp);
         }
     }
-    return setLayerClass;
-    //마음 대로 쓰고
 
+    return setLayerClass;
 })
