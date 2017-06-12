@@ -6,6 +6,7 @@ require.config({
         ,'jqueryUI': 'lib/jquery-ui'
         ,'wheel': 'lib/wheel'
         ,'handlebars': 'lib/handlebars-v4.0.8'
+        ,'postApi': 'https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2'
         //controller
         ,'Main':'controller/Main'
         ,'News':'controller/News'
@@ -52,9 +53,11 @@ require.config({
         ,'videoControll' :'module/videoControll'
         ,'productSlide' :'module/productSlide'
         ,'layerInit' :'module/layer/layerInit'
+        ,'setLayerClass' :'module/layer/setLayerClass'
         ,'layerOptions' :'module/layer/layerOptions'
         ,'layerMake' :'module/layer/layerMake'
         ,'productLayer' :'module/productLayer'
+        ,'getPostApi' : 'module/getPostApi'
 
         //dataController
         ,'RepairListData' : "data/RepairListData"
@@ -81,6 +84,13 @@ require.config({
         },
         'layerPop': {
           exports: 'layerPop'
+        },
+         'postApi':{
+            deps: ['jquery'],
+            exports :'daum'
+        },
+        'layerMake' : {
+            exports: 'layerMake'
         }
     }
 });

@@ -9,10 +9,10 @@
 define([
     'jquery'
     ,'layerMake'
+    ,'setLayerClass'
     ,'layerOptions'
-], function($,layerMake,layerOptions){
+], function($,layerMake,setLayerClass,layerOptions){
     var layerInit = ( function(layerInit){
-
         function init(options){
             bindEvents(options);
         }
@@ -20,62 +20,26 @@ define([
         function setSelector(selector){
             return {
                 wrapper : $(selector.wrapper),
-                openBtn : $(selector.openBtn),
+                openButton : $(selector.openButton),
 				closeBtn : $(selector.closeBtn)
             }
         }
 
         function bindEvents(selector){
-            var openBtn = setSelector(selector).openBtn;
-            var options;
+            var openBtn= setSelector(selector).openButton;
+            var openKey;
+            var target;
             openBtn.on("click", function(){
-                getOptions(
-                    layerMake.init($(this)).getOptions(),
-                    layerMake.layerOptions
-                );
-            });
+                openKey = $(this).data("open-layer");
+                layerMake.init(openKey);
+                target = layerMake.getTarget();
+                setLayerClass.init();   //진배 작업
+            })
+
         }
-
-        function getOptions(options, constant){
-
-            var clickable = (function(){
-                if(options.clickable === "false"){
-                    return false;
-                }
-                $(".dim").on("click", function(){
-                    $(this).remove();
-                    closeLayer(constant);
-                })
-            }());
-            var title =(function(){
-                if(options.title){
-                    var target = constant.NEW_LAYER;
-                    if(constant.NEW_LAYER.find(".layer-pop__inner-wrap__title").size() > 0 ){
-                        return false;
-                    }
-                    var titleDom = "<strong class='layer-pop__inner-wrap__title'>" + options.title +"</strong>";
-                    constant.NEW_LAYER.find(".layer-pop__inner-wrap").append(titleDom);
-                }
-            }());
-            var data =(function(){
-                if(options.data){
-                    var target = constant.NEW_LAYER;
-                    var dataDom = $(options.data).clone();
-                    constant.NEW_LAYER.find(".layer-pop__inner-wrap").append(dataDom);
-                }
-            }());
-        }
-
-        function closeLayer(constant){
-            $("[data-layer-index='" + constant.INDEX +"']").remove();
-        }
-
-
-
-        return {
+        return{
             init : init
         }
-
     }());
     return layerInit;
 })
