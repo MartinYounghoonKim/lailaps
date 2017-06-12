@@ -110,12 +110,10 @@ define([
 
             viewImgList.eq(oldTemp).stop().animate({
                 "opacity" : 0
-            });
+            }).removeClass("on");
             viewImgList.eq(newTemp).stop().animate({
                 "opacity" : 1
-            })
-
-
+            }).addClass("on");
         }
 
         function activeThumnailList(selector, dir){

@@ -176,7 +176,7 @@
                                 </ul>
                             </div>
                             <button type="button" class="products-view__contents__thumnail__view-section__ctrl-btn is-next-btn">다음 슬라이드 보기</button>
-                            <button type="button" class="products-view__contents__thumnail__view-section__ctrl-btn is-detail-btn">상세보기</button>
+                            <button type="button" class="products-view__contents__thumnail__view-section__ctrl-btn is-detail-btn" data-open-layer="products">상세보기</button>
                         </div>
                         <div class="products-view__contents__thumnail__controll-section">
                             <button class="products-view__contents__thumnail__controll-section__ctrl-btn is-prev-btn" type="button">이전</button>
@@ -289,7 +289,8 @@
                             <li><a href="#none">Terms of Service</a></li>
                         </ul>
                     </div>
-                    <div class="sns">
+                    <!-- 2017-06-12 개발 요청으로 인해 삭제
+		    <div class="sns">
                         <ul>
                             <li><a href="#none"><img src="../images/btn/facebook_btn.png" alt="facebook"/></a></li>
                             <li><a href="#none"><img src="../images/btn/skype_btn.png" alt="Skype"/></a></li>
@@ -299,7 +300,7 @@
                             <li><a href="#none"><img src="../images/btn/twitter_btn.png" alt="Twitter"/></a></li>
                             <li><a href="#none"><img src="../images/btn/safari_btn.png" alt="facebook"/></a></li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="footer__bottom_wrap">
@@ -349,6 +350,15 @@
         <!--// 푸터 영역 -->
         <hr/>
     </div>
+    <!-- 제품 상세보기 레이어 팝업 -->
+    <div class="layer-pop layer-dummy is-products have-title" id="products">
+        <div class="contents">
+            <div class="layer-pop__inner-wrap">
+            </div>
+        </div>
+    </div>
+    <!--// 제품 상세보기 레이어 팝업 -->
+
     <script data-main="../js/main" src="../js/require.js"></script>
     <script>
         //Controller 변수 선언
