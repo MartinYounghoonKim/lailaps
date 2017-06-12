@@ -51,6 +51,10 @@ require.config({
         ,'parellaxNavigation' :'module/parellaxNavigation'
         ,'videoControll' :'module/videoControll'
         ,'productSlide' :'module/productSlide'
+        ,'layerInit' :'module/layer/layerInit'
+        ,'layerOptions' :'module/layer/layerOptions'
+        ,'layerMake' :'module/layer/layerMake'
+        ,'productLayer' :'module/productLayer'
 
         //dataController
         ,'RepairListData' : "data/RepairListData"
