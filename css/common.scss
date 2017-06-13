@@ -1300,6 +1300,30 @@ $btnColor04: #2FC600;
                 width:100%;
                 height:100%;
                 text-align:center;
+                .layer-pop__inner-wrap__paragraph{
+                    display:table;
+                    box-sizing:border-box;
+                    width:100%;
+                    height:207px;
+                    span{
+                        display:table-cell;
+                        box-sizing:border-box;
+                        width:100%;
+                        padding:0 20px;
+                        vertical-align:middle;
+                        font-size:22px;
+                        line-height:24px;
+                        strong{
+                            color:$basicColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.have-title{
+        .contents{
+            .layer-pop__inner-wrap{
                 .layer-pop__inner-wrap__title{
                     position:absolute;
                     left:0;
@@ -1314,24 +1338,14 @@ $btnColor04: #2FC600;
                     line-height:40px;
                 }
                 .layer-pop__inner-wrap__paragraph{
-                    display:table;
-                    box-sizing:border-box;
-                    width:100%;
-                    height:207px;
-                    padding:0 0 40px;
-                    span{
-                        display:table-cell;
-                        box-sizing:border-box;
-                        width:100%;
-                        padding:0 20px;
-                        vertical-align:middle;
-                        font-size:22px;
-                        line-height:24px;
-                        strong{
-                            color:$basicColor;
-                        }
-                    }
+                    padding-top:40px;
                 }
+            }
+        }
+    }
+    &.have-button{
+        .contents{
+            .layer-pop__inner-wrap{
                 .layer-pop__inner-wrap__btn-wrap{
                     position:absolute;
                     left:0;
@@ -1349,14 +1363,8 @@ $btnColor04: #2FC600;
                         color:#fff;
                     }
                 }
-            }
-        }
-    }
-    &.have-title{
-        .contents{
-            .layer-pop__inner-wrap{
                 .layer-pop__inner-wrap__paragraph{
-                    padding-top:40px;
+                    padding-bottom:40px;
                 }
             }
         }
@@ -1375,6 +1383,27 @@ $btnColor04: #2FC600;
             .layer-pop__inner-wrap{
             }
         }
+    }
+    &.is-xsmall {
+        top:300px;
+        width:347px;
+        margin-left:-173.5px;
+
+    }
+    &.is-small {
+
+    }
+    &.is-medium {
+        width:500px;
+        height:540px;
+        top:50%;
+        margin:-270px 0 0 -250px;
+    }
+    &.is-large {
+
+    }
+    &.is-xlarge {
+
     }
 }
 /**********************************************************************************

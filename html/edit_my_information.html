@@ -305,18 +305,18 @@
                                     <td>
                                         <span class="input-text-outer-wrap is-normal-text is-address-text">
                                             <span class="is-text-inner-wrap">
-                                                <input id="address" type="text" data-text-module>
+                                                <input id="address1" type="text" data-text-module>
                                             </span>
                                         </span>
                                         <button type="button" data-post-api="getApiButton" data-open-layer="postApi">우편번호</button>
                                         <span class="input-text-outer-wrap is-normal-text is-address2-text">
                                             <span class="is-text-inner-wrap">
-                                                <input id="address" type="text" data-text-module>
+                                                <input id="address2" type="text" data-text-module>
                                             </span>
                                         </span>
                                         <span class="input-text-outer-wrap is-normal-text is-detail-address-text">
                                             <span class="is-text-inner-wrap">
-                                                <input id="address" type="text" placeholder="상세주소 입력" data-text-module>
+                                                <input id="address3" type="text" placeholder="상세주소 입력" data-text-module>
                                             </span>
                                         </span>
                                     </td>
@@ -382,7 +382,7 @@
                     <li><a href="#none">A/S정책</a></li>
                     <li><a href="#none">문의하기</a></li>
                 </ul>
-<dl class="footer_company_info">
+                <dl class="footer_company_info">
         			<dt>상호명</dt>
         			<dd>주식회사 티포엘</dd>
         		</dl>
@@ -420,14 +420,11 @@
         </div>
         <!--// 푸터 영역 -->
         <hr/>
-        <div class="layer-pop layer-dummy is-system have-title" id="postApi" data-layer-options='{"size":"xs"}'>
+        <div class="layer-pop layer-dummy is-medium have-title" id="postApi" data-layer-options='{"size":"xs","clickable":"true"}'>
         <div class="contents">
             <div class="layer-pop__inner-wrap">
-                <strong class="layer-pop__inner-wrap__title">알림</strong>
-                <p class="layer-pop__inner-wrap__paragraph"><span>인기평가는 <strong>1회만</strong> 가능합니다.</span></p>
-                <div class="layer-pop__inner-wrap__btn-wrap">
-                    <button type="button" class="is-black" data-close-layer="">확인</button>
-                </div>
+                <strong class="layer-pop__inner-wrap__title">우편번호 검색</strong>
+                <p class="layer-pop__inner-wrap__paragraph"></p>
             </div>
             <button type="button" class="layer-pop__close-btn" data-close-layer="">닫기</button>
         </div>
@@ -438,20 +435,6 @@
         //Controller 변수 선언
         var CONTROLLER_TYPE = "EditMyInformation";
         console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
-    </script>
-    <!--autoload=false 파라미터를 이용하여 자동으로 로딩되는 것을 막습니다.-->
-    <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js?autoload=false"></script>
-    <script>
-        //load함수를 이용하여 core스크립트의 로딩이 완료된 후, 우편번호 서비스를 실행합니다.
-        // daum.postcode.load(function(){
-        //     new daum.Postcode({
-        //         oncomplete: function(data) {
-        //             // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
-        //             // 예제를 참고하여 다양한 활용법을 확인해 보세요.
-        //         }
-        //     }).open();
-        // });
-        //console.log(daum)
     </script>
  </body>
 </html>

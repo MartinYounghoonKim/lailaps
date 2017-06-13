@@ -21,22 +21,43 @@ define([
             return {
                 wrapper : $(selector.wrapper),
                 openButton : $(selector.openButton),
-				closeBtn : $(selector.closeBtn)
+				closeButton : $(selector.closeButton)
             }
         }
 
         function bindEvents(selector){
             var openBtn= setSelector(selector).openButton;
+            var closeBtn = setSelector(selector).closeButton;
             var openKey;
             var target;
             openBtn.on("click", function(){
                 openKey = $(this).data("open-layer");
                 layerMake.init(openKey);
                 target = layerMake.getTarget();
-                setLayerClass.init();   //진배 작업
-            })
-
+                setLayerClass.init();
+            });
+            closeBtn.on("click", function(){
+                closeLayerFunction.buttonClose(target);
+            });
         }
+        var closeLayerFunction = (function(){
+            function dimClose(){
+                $(".dim").on("click", function(){
+                    $(this).remove();
+                    getTarget().hide();
+                });
+            }
+
+            function buttonClose(target){
+                target.hide();
+                
+            }
+            return {
+                dimClose:dimClose,
+                buttonClose:buttonClose
+            }
+        }());
+
         return{
             init : init
         }

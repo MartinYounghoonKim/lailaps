@@ -19,7 +19,6 @@ define([
             } else {
                 appendLayerPop();
             }
-            controllDim();
         }
 
         //기존의 팝업이 있을 경우
@@ -27,7 +26,10 @@ define([
             LAYER_OPTIONS.INDEX++;
             var layerTarget= $("#" + value);
 
-            layerTarget.clone().removeClass("layer-dummy").appendTo("body").attr("data-layer-index",LAYER_OPTIONS.INDEX);
+            //layerTarget.clone().removeClass("layer-dummy").appendTo("body").attr("data-layer-index",LAYER_OPTIONS.INDEX);
+            layerTarget.removeClass("layer-dummy").attr("data-layer-index",LAYER_OPTIONS.INDEX);
+            controllDim();
+            bindCloseLayerEvent();
         }
 
         //팝업이 동적으로 생성되어야 하는 경우
@@ -40,8 +42,19 @@ define([
                 dim.setAttribute("class","dim");
                 $('body').append(dim);
         }
+
         function getTarget(){
             return $("[data-layer-index='" +LAYER_OPTIONS.INDEX + "']" );
+        }
+
+        function bindCloseLayerEvent(){
+            var temp = getTarget().data("layer-options").clickable;
+            if(temp==="true"){
+                $(".dim").on("click", function(){
+                    $(this).remove();
+                    getTarget().hide();
+                });
+            }
         }
         return {
             init : init,
