@@ -3315,6 +3315,27 @@ $brand : ".brand";
                          }
                      }
                 }
+                //TODO: 2017-06-13 위너 썸네일 이미지 교체 작업
+                .table-contents{
+                    .table-contents__table-wrap{
+                        .table01{
+                            tbody{
+                                tr{
+                                    td{
+                                        span{
+                                            display:block;
+                                            width:155px;
+                                            height:115px;
+                                            img{
+                                                width:100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .winners__profile-wrap{
