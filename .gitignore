@@ -2,6 +2,7 @@
 
 ### MicrosoftOffice ###
 *.tmp
+*.xlsx
 
 # Word temporary
 ~$*.doc*

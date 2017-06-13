@@ -568,9 +568,15 @@ $recommend : ".recommend";
                         @include fontStyle("noto-regular", 100, italic);
                     }
                     em{
+                        display:block;
+                        margin-bottom:5px;
                         font-size:14px;
                         line-height:16px;
                         color:#7e7e7e;
+                    }
+                    .date{
+                        font-size:15px;
+                        line-height:17px;
                     }
                 }
                 .recommend__thumnail-list-wrap__list__detail__info{
@@ -3308,6 +3314,27 @@ $brand : ".brand";
                              }
                          }
                      }
+                }
+                //TODO: 2017-06-13 위너 썸네일 이미지 교체 작업
+                .table-contents{
+                    .table-contents__table-wrap{
+                        .table01{
+                            tbody{
+                                tr{
+                                    td{
+                                        span{
+                                            display:block;
+                                            width:155px;
+                                            height:115px;
+                                            img{
+                                                width:100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

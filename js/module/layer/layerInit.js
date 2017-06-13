@@ -34,7 +34,7 @@ define([
                 openKey = $(this).data("open-layer");
                 layerMake.init(openKey);
                 target = layerMake.getTarget();
-                setLayerClass.init();
+                setLayerClass.init(target);
             });
             closeBtn.on("click", function(){
                 closeLayerFunction.buttonClose(target);
@@ -50,7 +50,7 @@ define([
 
             function buttonClose(target){
                 target.hide();
-                
+
             }
             return {
                 dimClose:dimClose,
