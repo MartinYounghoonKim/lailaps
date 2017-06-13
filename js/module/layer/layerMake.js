@@ -8,11 +8,9 @@
 */
 define([
     'jquery'
-], function($){
+    ,'layerOptions'
+], function($,LAYER){
     var layerMake = ( function(){
-        var LAYER_OPTIONS = {
-            INDEX : -1
-        }
         function init(key){
             if(key){
                 showLayerPop(key);
@@ -23,12 +21,12 @@ define([
 
         //기존의 팝업이 있을 경우
         function showLayerPop(value){
-            LAYER_OPTIONS.INDEX++;
+            LAYER.INDEX++;
+            console.log(LAYER.INDEX);
             var layerTarget= $("#" + value);
 
-            //layerTarget.clone().removeClass("layer-dummy").appendTo("body").attr("data-layer-index",LAYER_OPTIONS.INDEX);
-            layerTarget.removeClass("layer-dummy").attr("data-layer-index",LAYER_OPTIONS.INDEX);
-            controllDim();
+            layerTarget.removeClass("layer-dummy").attr("data-layer-index",LAYER.INDEX);
+            makeBackground();
             bindCloseLayerEvent();
         }
 
@@ -37,14 +35,15 @@ define([
 
         }
 
-        function controllDim(){
+        function makeBackground(){
             var dim = document.createElement("div");
                 dim.setAttribute("class","dim");
+                dim.setAttribute("data-dim-index", LAYER.INDEX);
                 $('body').append(dim);
         }
 
         function getTarget(){
-            return $("[data-layer-index='" +LAYER_OPTIONS.INDEX + "']" );
+            return $("[data-layer-index='" + LAYER.INDEX + "']" );
         }
 
         function bindCloseLayerEvent(){
@@ -52,7 +51,7 @@ define([
             if(temp==="true"){
                 $(".dim").on("click", function(){
                     $(this).remove();
-                    getTarget().hide();
+                    getTarget().addClass("layer-dummy");
                 });
             }
         }

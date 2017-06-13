@@ -11,7 +11,7 @@ define([
     ,'layerMake'
     ,'setLayerClass'
     ,'layerOptions'
-], function($,layerMake,setLayerClass,layerOptions){
+], function($,layerMake,setLayerClass,LAYER){
     var layerInit = ( function(layerInit){
         function init(options){
             bindEvents(options);
@@ -44,14 +44,16 @@ define([
             function dimClose(){
                 $(".dim").on("click", function(){
                     $(this).remove();
-                    getTarget().hide();
+                    getTarget().addClass("layer-dummy");
                 });
             }
 
             function buttonClose(target){
-                target.hide();
-
+                target.addClass("layer-dummy").removeAttr("data-layer-index");
+                $("[data-dim-index='" + LAYER.INDEX + "']").remove();
+                LAYER.INDEX--;
             }
+            
             return {
                 dimClose:dimClose,
                 buttonClose:buttonClose

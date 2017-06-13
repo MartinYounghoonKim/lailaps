@@ -17,7 +17,6 @@ define([
             this.setClass();
         },
         setClass :function(){
-            console.log(this.target);
             this.target.addClass("is-" + this.temp);
         }
     }
