@@ -10,8 +10,9 @@ define([
     'jquery'
     ,'layerMake'
     ,'setLayerClass'
-    ,'layerOptions'
-], function($,layerMake,setLayerClass,LAYER){
+    ,'setLayerOptions'
+    ,'layerClose'
+], function($,layerMake,setLayerClass,setLayerOptions,layerClose){
     var layerInit = ( function(layerInit){
         function init(options){
             bindEvents(options);
@@ -30,39 +31,23 @@ define([
             var closeBtn = setSelector(selector).closeButton;
             var openKey;
             var target;
+            var options;
             openBtn.on("click", function(){
                 openKey = $(this).data("open-layer");
-                layerMake.init(openKey);
-                target = layerMake.getTarget();
-                setLayerClass.init(target);
+                target = $("#" + openKey);
+                options = target.data("layer-options");
+
+                setLayerOptions(target, options);
             });
             closeBtn.on("click", function(){
-                closeLayerFunction.buttonClose(target);
+                layerClose.closeLayer(target);
             });
         }
-        var closeLayerFunction = (function(){
-            function dimClose(){
-                $(".dim").on("click", function(){
-                    $(this).remove();
-                    getTarget().addClass("layer-dummy");
-                });
-            }
-
-            function buttonClose(target){
-                target.addClass("layer-dummy").removeAttr("data-layer-index");
-                $("[data-dim-index='" + LAYER.INDEX + "']").remove();
-                LAYER.INDEX--;
-            }
-            
-            return {
-                dimClose:dimClose,
-                buttonClose:buttonClose
-            }
-        }());
 
         return{
             init : init
         }
     }());
+
     return layerInit;
 })
