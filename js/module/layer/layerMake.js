@@ -8,30 +8,46 @@
 */
 define([
     'jquery'
-    ,'layerOptions'
-], function($,LAYER){
+    ,'layerConstant'
+    ,'getPostApi'
+], function($,LAYER,getPostApi){
     var layerMake = ( function(){
-        function init(key){
-            if(key){
-                showLayerPop(key);
-            } else {
-                appendLayerPop();
-            }
-        }
 
         //기존의 팝업이 있을 경우
-        function showLayerPop(value){
+        function showLayerPop(target){
             LAYER.INDEX++;
-            console.log(LAYER.INDEX);
-            var layerTarget= $("#" + value);
+            var layerTarget= target;
 
             layerTarget.removeClass("layer-dummy").attr("data-layer-index",LAYER.INDEX);
             makeBackground();
             bindCloseLayerEvent();
         }
 
+        function dynamicLayerPop(target){
+            LAYER.INDEX++;
+            var layerTarget= target;
+
+            layerTarget.removeClass("layer-dummy").attr("data-layer-index",LAYER.INDEX);
+            makeBackground();
+            bindCloseLayerEvent();
+        }
+
+        //우편번호 찾기 전용 레이어 팝업
+        function getApiLayerPop(target){
+            LAYER.INDEX++;
+            var layerTarget= target;
+
+            layerTarget.removeClass("layer-dummy").attr("data-layer-index",LAYER.INDEX);
+            getPostApi.init({
+                "wrapper" : "#postApi",
+                "contents" : ".layer-pop__inner-wrap__paragraph"
+            });
+            makeBackground();
+            bindCloseLayerEvent();
+        }
+
         //팝업이 동적으로 생성되어야 하는 경우
-        function appendLayerPop(){
+        function appendLayerPop(target){
 
         }
 
@@ -56,8 +72,10 @@ define([
             }
         }
         return {
-            init : init,
-            getTarget : getTarget
+            showLayerPop :showLayerPop,
+            dynamicLayerPop : dynamicLayerPop,
+            appendLayerPop : appendLayerPop,
+            getApiLayerPop : getApiLayerPop
         }
     }());
 

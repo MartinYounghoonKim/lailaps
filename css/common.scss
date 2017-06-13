@@ -1988,4 +1988,26 @@ $btnColor04: #2FC600;
             }
         }
     }
+    .layer-pop{
+        &.is-medium{
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            margin:0;
+        }
+        &.is-post{
+            .contents{
+                .layer-pop__inner-wrap{
+                    .layer-pop__inner-wrap__paragraph{
+                        div{
+                            width:100% !important;
+                            height:96vh !important;
+                            min-width:auto !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

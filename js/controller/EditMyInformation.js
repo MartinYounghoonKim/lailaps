@@ -34,14 +34,6 @@ define([],function () {
         }
     });
     require([
-        'getPostApi'
-    ], function(getPostApi){
-        getPostApi.init({
-            "wrapper" : "postApi",
-            "contents" : ".layer-pop__inner-wrap__paragraph"
-        });
-    });
-    require([
         'layerInit'
     ], function(layerInit){
         layerInit.init({

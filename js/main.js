@@ -54,8 +54,10 @@ require.config({
         ,'productSlide' :'module/productSlide'
         ,'layerInit' :'module/layer/layerInit'
         ,'setLayerClass' :'module/layer/setLayerClass'
-        ,'layerOptions' :'module/layer/layerOptions'
+        ,'setLayerOptions' :'module/layer/setLayerOptions'
+        ,'layerConstant' :'module/layer/layerConstant'
         ,'layerMake' :'module/layer/layerMake'
+        ,'layerClose' :'module/layer/layerClose'
         ,'productLayer' :'module/productLayer'
         ,'getPostApi' : 'module/getPostApi'
 
