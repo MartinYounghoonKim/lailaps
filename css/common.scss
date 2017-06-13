@@ -2004,6 +2004,9 @@ $btnColor04: #2FC600;
                             width:100% !important;
                             height:96vh !important;
                             min-width:auto !important;
+                            iframe{
+                                overflow:scroll !important;
+                            }
                         }
                     }
                 }

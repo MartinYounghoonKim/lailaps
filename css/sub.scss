@@ -1953,6 +1953,9 @@ $products : ".products";
                             }
                         }
                     }
+                    &.is-no-product{
+                        background-color:#fff;
+                    }
                 }
             }
         }
@@ -4057,6 +4060,11 @@ $brand : ".brand";
                                     padding-top:43%;
                                     background-position: center 20%;
                                 }
+                            }
+                        }
+                        &.is-no-product{
+                            img{
+                                width:100%;
                             }
                         }
                     }
