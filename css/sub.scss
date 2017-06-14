@@ -433,6 +433,33 @@ $winner : ".winners";
                     }
                 }
             }
+            .table-contents{
+                .table-contents__table-wrap{
+                    .table01{
+                        colgroup{
+                            col{
+                                width:25%;
+                            }
+                        }
+                        tbody{
+                            td{
+                                padding:10px 0;
+                            }
+                            td.user-img-wrap{
+                                text-align:center;
+                                span{
+                                    display:inline-block;
+                                    width:100px;
+                                    height:74px;
+                                    img{
+                                        width:100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             &.on{
                 display:block;
             }
@@ -3322,16 +3349,29 @@ $brand : ".brand";
                 .table-contents{
                     .table-contents__table-wrap{
                         .table01{
+                            colgroup{
+                                col:nth-child(1){
+                                    width:12%;
+                                }
+                                col:nth-child(2){
+                                    width:25%;
+                                }
+                                col:nth-child(3){
+                                    width:12%;
+                                }
+                                col:nth-child(4){
+                                    width:12%;
+                                }
+                                col:nth-child(5){
+                                    width:25%;
+                                }
+                            }
                             tbody{
                                 tr{
-                                    td{
+                                    td.user-img-wrap{
                                         span{
-                                            display:block;
-                                            width:155px;
-                                            height:115px;
-                                            img{
-                                                width:100%;
-                                            }
+                                            width:50%;
+                                            height:auto;
                                         }
                                     }
                                 }
