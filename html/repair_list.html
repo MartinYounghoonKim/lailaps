@@ -159,8 +159,6 @@
 										<col style="width:16%;">
 										<col style="width:16%;">
 										<col style="width:25%;">
-										<col style="width:16%;">
-										<col style="width:8%;">
 										<col style="width:13%;">
 									</colgroup>
 									<thead>
@@ -169,8 +167,6 @@
 											<th scope="col">신청 사진</th>
 											<th scope="col">모델명/부위</th>
 											<th scope="col">수리내역</th>
-											<th scope="col">진행상태</th>
-											<th scope="col">조회</th>
 											<th scope="col">완료일</th>
 										</tr>
 									</thead>
@@ -181,8 +177,6 @@
 												<td><img class="photo" alt="신청사진" src="{{profile_image}}"></td>
 												<td>{{model}}<br>{{parts}}</td>
 												<td>리페어 처리가 완료되었습니다.</td>
-												<td><a class="btn btn-xl btn-color-type01" href="#none"><span class="btn-inner"><span>{{progress}}</span></span></a></td>
-												<td>14</td>
 												<td>{{created_at}}</td>
 											</tr>
 										{{/repairs}}
