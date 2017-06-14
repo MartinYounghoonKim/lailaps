@@ -67,4 +67,17 @@ define([],function () {
             "contents" : ".products-view__contents__thumnail__view-section__products-img > ul > li.on > img"
         });
     });
+    require([
+        'jquery'
+        ,'bxslider'
+    ], function($,bxslider){
+        $(document).ready(function(){
+          $('.slider1').bxSlider({
+            slideWidth: 320,
+            minSlides: 2,
+            maxSlides: 3,
+            slideMargin: 10
+          });
+        });
+    })
 });

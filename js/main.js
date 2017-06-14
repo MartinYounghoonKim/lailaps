@@ -7,6 +7,8 @@ require.config({
         ,'wheel': 'lib/wheel'
         ,'handlebars': 'lib/handlebars-v4.0.8'
         ,'postApi': 'https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2'
+        ,'bxslider' : 'lib/jquery.bxslider.min'
+
         //controller
         ,'Main':'controller/Main'
         ,'News':'controller/News'
@@ -93,7 +95,11 @@ require.config({
         },
         'layerMake' : {
             exports: 'layerMake'
-        }
+        },
+        'bxslider':{
+			deps: ['jquery'],
+			exports :'bxslider'
+		},
     }
 });
 requirejs([CONTROLLER_TYPE]);
