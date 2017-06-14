@@ -24,9 +24,10 @@ define([
                 }
                 that.getCountVal($(this));
             });
-            this.textArea.on("keyup",function(e){
+            this.textArea.unbind("keyup").on("keyup",function(e){
                 if(e.keyCode == 8 || e.keyCode==46){
                     if($(this).val().length ==0){
+                        console.log(11);
                         that.removeErasingBtn($(this).siblings(".clear-text-button"));
                         that.getCountVal($(this));
                     }
@@ -56,7 +57,7 @@ define([
             this.erasingText();
         },
         removeErasingBtn:function(me){
-            me.closest(".is-text-inner-wrap").removeClass("have-erase-button")
+            me.closest(".is-text-inner-wrap").removeClass("have-erase-button");
             me.remove();
             this.start=true;
         },
