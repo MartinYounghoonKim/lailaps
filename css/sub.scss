@@ -555,6 +555,72 @@ $winner : ".winners";
         }
     }
 }
+// TODO:수정 진행중
+.winners__thumnail-list-wrap{
+    margin-bottom:40px;
+    @include removeBetween;
+    .winners__thumnail-list-wrap__list{
+        display:inline-block;
+        width:329px;
+        .winners__thumnail-list-wrap__list__img{
+            width:100%;
+            height:184px;
+            overflow:hidden;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+        .winners__thumnail-list-wrap__list__detail{
+            background-color:#fff;
+            .winners__thumnail-list-wrap__list__detail__tit{
+                padding:22px 20px 27px;
+                text-align:left;
+                strong{
+                    display:block;
+                    height:42px;
+                    margin-bottom:12px;
+                    font-size:18px;
+                    line-height:20px;
+                    overflow:hidden;
+                    @include fontStyle("noto-regular", 100, italic);
+                }
+                em{
+                    display:block;
+                    margin-bottom:5px;
+                    font-size:14px;
+                    line-height:16px;
+                    color:#7e7e7e;
+                }
+                .date{
+                    font-size:15px;
+                    line-height:17px;
+                }
+            }
+            .winners__thumnail-list-wrap__list__detail__info{
+                overflow:hidden;
+                padding:10px 20px;
+                border-top:1px solid #e2e2e2;
+                a{
+                    float:left;
+                }
+                dfn{
+                    float:right;
+                    font-size:14px;
+                    line-height:16px;
+                    color:#999;
+                    @include fontStyle("noto-regular", 100, normal);
+                }
+            }
+        }
+        &:nth-child(3n-1){
+            margin:0 26px;
+        }
+        &:nth-child(1),&:nth-child(2),&:nth-child(3){
+            margin-bottom:27px;
+        }
+    }
+}
 /*
 *********************************************************************************
     recommend 페이지
@@ -3425,6 +3491,61 @@ $brand : ".brand";
                         }
                     }
                 }
+            }
+        }
+        .winners__thumnail-list-wrap{
+            margin-bottom:20px;
+            .winners__thumnail-list-wrap__list{
+                width:49%;
+                float:left;
+                &:nth-child(3n-1){
+                    margin:0;
+                }
+                &:nth-child(2n){
+                    float:right;
+                }
+                margin-bottom:15px;
+                &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                    margin-bottom:15px;
+                }
+                .winners__thumnail-list-wrap__list__img{
+                    position:relative;
+                    height:0;
+                    padding-top:40%;
+                    img{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                .winners__thumnail-list-wrap__list__detail{
+                    .winners__thumnail-list-wrap__list__detail__tit{
+                        padding:10px;
+                        strong{
+                            height:39px;
+                            margin-bottom:8px;
+                            font-size:14px;
+                            line-height:16px;
+                        }
+                        em{
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                    }
+                    .winners__thumnail-list-wrap__list__detail__info{
+                        padding:8px;
+                        dfn{
+                            font-size:12px;
+                            line-height:14px;
+                        }
+                    }
+                }
+
+            }
+            &:after{
+                @include afterClear;
             }
         }
     }
