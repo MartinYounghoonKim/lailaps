@@ -161,11 +161,16 @@
                       <!-- <strong class="table-tit">의뢰하신 리페어 수리가 <span>완료</span>되었습니다.</strong> -->
                       <!-- //리페어 수리가 완료 되었을경우 -->
                       <div class="table-contents__table-wrap__photo">
-                          <img src="../images/temp/temp08.png" class="photo-left" alt="">
-                          <div class="photo-right">
-                              <img src="../images/temp/temp09.png" alt="">
-                              <img src="../images/temp/temp10.png" alt="">
-                              <img src="../images/temp/temp11.png" alt="">
+                          <div class="table-contents__table-wrap__photo__left-section">
+                              <img src="../images/temp/temp08.png" class="photo-left" alt="">
+                          </div>
+                          <div class="table-contents__table-wrap__photo__right-section">
+                              <div class="table-contents__table-wrap__photo__right-section__inner">
+                                  <img src="../images/temp/temp09.png" alt="">
+                                  <img src="../images/temp/temp10.png" alt="">
+                                  <img src="../images/temp/temp11.png" alt="">
+                                  <img src="../images/temp/temp11.png" alt="">
+                              </div>
                           </div>
                       </div>
                       <!-- 리페어수리완료 될 경우 주석처리 -->
@@ -222,9 +227,11 @@
                       </div>
                       <div class="table-contents__table-wrap__process">
                           <div class="tit">진행절차</div>
+                          <!-- li의 class on을 붙이면 해당 프로세스에 해당하는 tab이 활성화됨 -->
                           <ul class="process-list">
                               <li>접수 중</li>
                               <li>견적 중</li>
+                              <li>결제대기</li>
                               <li>수리 중</li>
                               <li class="last">발송완료</li>
                           </ul>

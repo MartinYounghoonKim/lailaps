@@ -1160,20 +1160,31 @@ $my-repair-list_view : ".my-repair-list_view";
         .table-contents__table-wrap__photo{
             overflow:hidden;
             margin-bottom:30px;
-            .photo-left{
+            .table-contents__table-wrap__photo__left-section{
                 float:left;
-                width:685px;
-                height:454px;
-            }
-            .photo-right{
-                float:right;
+                overflow:hidden;
+                width:700px;
+                height:464px;
                 img{
-                    display:block;
-                    width:245px;
-                    height:148px;
-                    margin-bottom:5px;
-                    &:last-child{
-                        margin-bottom:0;
+                    width:100%;
+                    height:100%;
+                }
+            }
+            .table-contents__table-wrap__photo__right-section{
+                float:right;
+                width:224px;
+                height:464px;
+                overflow:hidden;
+                .table-contents__table-wrap__photo__right-section__inner{
+                    overflow-x:hidden;
+                    width:107%;
+                    height:100%;
+                    img{
+                        display:block;
+                        margin-bottom:10px;
+                        &:last-child{
+                            margin-bottom:0;
+                        }
                     }
                 }
             }
@@ -1233,8 +1244,7 @@ $my-repair-list_view : ".my-repair-list_view";
                     display:inline-block;
                     width:143px;
                     height:25px;
-                    padding:12px 0 11px;
-                    padding-right:100px;
+                    padding:12px 38px 11px 0;
                     background:url("../images/bg/sub_mypage_process_bg.png") no-repeat 0 0, url("../images/arrow/process_arrow.png") no-repeat right center;
                     background-size:143px 48px, 100px 21px;
                     font-size:17px;
@@ -3920,17 +3930,27 @@ $brand : ".brand";
                 }
             }
             .table-contents__table-wrap__photo{
-                .photo-left{
+                margin-bottom:20px;
+                .table-contents__table-wrap__photo__left-section{
                     float:none;
                     width:100%;
                     height:auto;
-                    margin-bottom:5px;
+                    margin-bottom:10px;
                 }
-                .photo-right{
+                .table-contents__table-wrap__photo__right-section{
                     float:none;
-                    img{
+                    width:100%;
+                    height:auto;
+                    .table-contents__table-wrap__photo__right-section__inner{
                         width:100%;
-                        height:auto;
+                        overflow:hidden;
+                        img{
+                            width:49%;
+                            float:left;
+                            &:nth-child(2n){
+                                float:right;
+                            }
+                        }
                     }
                 }
             }
