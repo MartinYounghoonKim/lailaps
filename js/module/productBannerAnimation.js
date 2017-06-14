@@ -11,7 +11,6 @@ define([
 	,'jqueryEasing'
 	,'responsive'
 ],function ($,easing, responsive) {
-	// TODO: 해상도(PC와 모바일)에 맞춰 기능 분리하기
 	var bannerAnimation = (function(){
 		function init(elements){
 			var wrap = $(setSelector(elements).wrap);
