@@ -26,9 +26,37 @@ define([
             if(me.hasClass("pause")){
                 me.removeClass("pause");
                 videoContents.play();
+                hideControllButton(options)
             } else {
                 me.addClass("pause");
                 videoContents.pause();
+            }
+        }
+
+        function hideControllButton(selector){
+            var wrapper = setSelector(selector).wrapper;
+            var controllBtn = setSelector(selector).controllBtn;
+            var setTime;
+            var time=1000;
+            var act;
+            wrapper.on("mouseleave",function(){
+                act = true;
+                setHideFunctionTime()
+            });
+            wrapper.on("mouseenter",function(){
+                controllBtn.fadeIn();
+                act =false;
+                setHideFunctionTime()
+            });
+
+            function setHideFunctionTime(){
+                setTime=setTimeout( function(){
+                    if(act===true){
+                        controllBtn.fadeOut();
+                    } else {
+                        clearInterval(setTime);
+                    }
+                },time)
             }
 
         }
