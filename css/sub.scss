@@ -1489,6 +1489,11 @@ $edit-my-information : ".edit-my-information";
                         height:40px;
                         background-color:#cbcbcb;
                         color:#fff;
+                        &.clear-text-button{
+                            width:19px;
+                            height:19px;
+                            background:url("../images/btn/input_clear_btn.png") 0 0 no-repeat;
+                        }
                     }
                 }
             }

@@ -40,5 +40,16 @@ define([],function () {
             "openButton" : "[data-open-layer]",
             "closeButton" : "[data-close-layer]"
         });
-    })
+    });
+    require([
+        'jquery'
+        ,'inputFunction'
+	],function($, inputFunction){
+        var element = $("[data-text-module]");
+        for(var i=0; i<element.size(); i++){
+            new inputFunction({
+                "textArea" : element[i]
+            }).bindEvents();
+        }
+    });
 });
