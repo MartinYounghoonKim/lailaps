@@ -7,7 +7,7 @@ require.config({
         ,'wheel': 'lib/wheel'
         ,'handlebars': 'lib/handlebars-v4.0.8'
         ,'postApi': 'https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2'
-        ,'bxslider' : 'lib/jquery.bxslider.min'
+        ,'bxslider' : 'lib/jquery.bxslider'
 
         //controller
         ,'Main':'controller/Main'
