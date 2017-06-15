@@ -32,6 +32,7 @@ define([
 
         function cloneLayerContents(){
             contentsTarget = $(".products-view__contents__thumnail__view-section__products-img > ul > li.on > img");
+			console.log(contentsTarget.attr("src"))
             contentsTarget.clone().appendTo(contentsDestination);
             var contents= $(".layer-pop__inner-wrap > img");
             openLayer( getLayerSize(contents) );
