@@ -47,15 +47,6 @@ define([],function () {
             "thumnailList" : ".products-view__contents__thumnail__controll-section__thumnail-img > ul > li",
         })
     });
-    // require([
-    //     'layerPop'
-    // ], function(layerPop){
-    //     layerPop.init({
-    //         "wrapper" : "[data-layer-pop]",
-    //         "openBtn" : "[data-open-layer]",
-    //         "closeBtn" : "[data-close-layer]"
-    //     });
-    // });
     require([
         'productLayer'
     ], function(productLayer){

@@ -20,10 +20,14 @@ define([
 
         bindEvents();
         function bindEvents(){
-            openButton.on("click", function(){
+			var dim = $(".dim");
+            openButton.unbind("click").on("click", function(){
                 temp = $(this).data("open-layer");
                 cloneLayerContents();
             })
+			dim.on("click", function(){
+				closeLayer($(this))
+			})
         }
 
         function cloneLayerContents(){
@@ -31,7 +35,7 @@ define([
             contentsTarget.clone().appendTo(contentsDestination);
             var contents= $(".layer-pop__inner-wrap > img");
             openLayer( getLayerSize(contents) );
-        }
+		}
 
         function getLayerSize(target){
             return {
@@ -57,7 +61,17 @@ define([
             var makeDim= ( function(){
                 $('body').append("<div class='dim'></div>")
             }());
+			bindEvents();
         }
+
+		function closeLayer(me){
+			me.remove();
+			$(".layer-pop__inner-wrap").find("img").remove();
+			$("#"+temp).stop().animate().css({
+				"width" : 0 + "px",
+                "height" : 0 + "px"
+			})
+		}
     };
     return productLayer;
 });
