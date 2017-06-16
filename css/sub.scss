@@ -1281,9 +1281,13 @@ $my-repair-list_view : ".my-repair-list_view";
                 }
             }
             .number-search{
+                display:inline-block;
+                box-sizing:border-box;
                 width:130px;
                 height:42px;
+                padding-top:12px;
                 background-color:#32b44a;
+                text-align:center;
                 color:#fff;
             }
             .txt{
@@ -3993,6 +3997,7 @@ $brand : ".brand";
                 .number-search{
                     float:right;
                     width:39%;
+                    padding-top:14px;
                     font-size:12px;
                     line-height:14px;
                 }
