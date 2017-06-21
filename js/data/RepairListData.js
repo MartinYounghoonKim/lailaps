@@ -54,6 +54,8 @@ define([
 				$(this).attr("data-pagination", idx+pageCount );
 			})
 			pageButton .on("click",function(){
+				pageButton.removeClass("on");
+				$(this).addClass("on");
 				pageCount = $(this).data("pagination");
 				fieldValue = [
 					{"Authorization" : "850dfe67287dc1dff9fae137ec9341cc"},
