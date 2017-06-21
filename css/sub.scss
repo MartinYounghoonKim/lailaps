@@ -2244,6 +2244,27 @@ $products-view : ".products-view";
                 }
             }
         }
+        .products-view__contents__information__paragraph{
+            display:block;
+            padding:19px 0 18px;
+            text-align:center;
+            font-size:18px;
+            line-height:20px;
+            background-color:#777;
+            img{
+                display:inline-block;
+                margin-right:12px;
+                vertical-align:middle;
+            }
+            span{
+                display:inline-block;
+                color:#fff;
+                font-style:italic;
+            }
+        }
+        .products-view__contents__information__cell-wrap2{
+            padding-top:80px;
+        }
     }
 }
 /*
