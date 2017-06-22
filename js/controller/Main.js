@@ -17,7 +17,14 @@ define([],function () {
 	],function($, slide){
         slide($("[data-ui-name='visual_rolling']"));
     });
-
+    require([
+        'productBannerAnimation'
+    ], function(productBannerAnimation){
+        new productBannerAnimation.init({
+            "wrap" : "[data-ui-banner-animation='wrap']",
+            "child" : "> li"
+        });
+    });
     require([
         'showAnimation'
     ], function(showAnimation){
