@@ -42,7 +42,9 @@ define([
 			closeBtn.unbind("click").on("click",function(){
 				closeLayer();
 			});
-			$('body').unbind("click").on('click', closeBtn, closeLayer);
+			/*
+				$('body').unbind("click").on('click', closeBtn, closeLayer);
+			*/
 			$(document).unbind("keydown").on("keydown",function(e){
 				if(e.keyCode == 27){
 					closeLayer();
