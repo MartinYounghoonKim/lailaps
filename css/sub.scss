@@ -434,6 +434,11 @@ $winner : ".winners";
                 }
             }
             .table-contents{
+                .contents-filter{
+                    .table-contents__select{
+                        margin-right:15px;
+                    }
+                }
                 .table-contents__table-wrap{
                     .table01{
                         colgroup{
@@ -2290,7 +2295,7 @@ $inquiry : ".inquiry";
             }
         }
         .btn_wrap{
-            margin-top:25px; 
+            margin-top:25px;
         }
     }
 }

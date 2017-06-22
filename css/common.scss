@@ -223,6 +223,9 @@ $btnColor04: #2FC600;
             background:none;
         }
     }
+    &.btn-square{
+        @include crossBrowsing("transform",skew(0));
+    }
 }
 .btn_wrap{
     &.center{
@@ -1112,7 +1115,7 @@ $btnColor04: #2FC600;
     .table-contents__select{
         display:inline-block;
         width:112px;
-        height:47px;
+        height:44px;
         text-align:right;
         vertical-align:top;
         span{
