@@ -553,6 +553,7 @@ $certification : ".contents_certification";
                     height:100%;
                     background-repeat:no-repeat;
                     background-position:0 0;
+                    background-size:cover;
                     transition:all 1.2s ease;
                 }
                 &:nth-child(1):after{
@@ -565,7 +566,12 @@ $certification : ".contents_certification";
                     background-image:url("../images/bg/main_feature_banner_bg03.png");
                 }
                 &:hover:after{
-                    transform:scale(1.1);
+                    /*
+                        2017-06-22 김영훈 IE-EDGE에서의 이슈로 인한 삭제
+                        transform:scale(1.1);
+                    */
+                    width:105%;
+                    height:105%;
                 }
             }
         }
