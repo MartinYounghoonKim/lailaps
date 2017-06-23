@@ -34,6 +34,7 @@ require.config({
         ,'InquiryDetail':'controller/InquiryDetail'
         ,'InquiryWrite':'controller/InquiryWrite'
         ,'TechnologyBraiding':'controller/TechnologyBraiding'
+        ,'AboutUs' :'controller/AboutUs'
 
     	//Function Module
         ,'checkDevice':'constant/device'

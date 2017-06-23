@@ -168,17 +168,16 @@
                 </div>
                 <div class="about-us__contents__location">
                     <h2 class="tit01">위치안내</h2>
-                    <div class="about-us__contents__location__map">
-                        <img src="../images/temp/temp05.png" alt="샘플이미지">
+                    <div class="about-us__contents__location__map" id="getApiWrapper">
                     </div>
                     <div class="view_map">
-                        <a class="btn btn-xs btn-color-type01" href="#none"><span class="btn-inner"><span>지도 크게보기</span></span></a>
+                        <a class="btn btn-xs btn-color-type01" href="http://map.daum.net/?urlX=913126&urlY=659701&urlLevel=3&itemId=12851608&q=%ED%8B%B0%ED%8F%AC%EC%97%98&srcid=12851608&map_type=TYPE_MAP" target="_blank"><span class="btn-inner"><span>지도 크게보기</span></span></a>
                     </div>
                 </div>
                 <div class="reply-wrap__reply-area">
                     <div class="reply-wrap">
                     <form>
-                        <fildset>
+                        <fieldset>
                             <div class="reply-wrap__reply-area">
                                 <div class="reply-wrap__reply-area__list">
                                     <strong>주소</strong>
@@ -198,7 +197,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </fildset>
+                        </fieldset>
                     </form>
                 </div>
             </div>
@@ -282,8 +281,27 @@
     <script data-main="../js/main" src="../js/require.js"></script>
     <script>
         //Controller 변수 선언
-        var CONTROLLER_TYPE = "MyRepairList";
+        var CONTROLLER_TYPE = "AboutUs";
         console.log(":::: Client Location : " + CONTROLLER_TYPE + " ::::")
     </script>
+    <!--회사 지도를 위한 api 스크립트 로드-->
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7868ab15c9e3b69c3a8249b900e0afcd"></script>
+    <script>
+	var wrapper = document.getElementById("getApiWrapper");
+	var mapOption = { 
+		center: new daum.maps.LatLng(35.8584900772, 128.82945186),
+		level: 3
+	};
+	var map = new daum.maps.Map(wrapper, mapOption); 
+	var markerPosition  = new daum.maps.LatLng(35.8584900772, 128.82945186); 
+
+	var marker = new daum.maps.Marker({
+	    position: markerPosition
+	});
+
+	// 마커가 지도 위에 표시되도록 설정합니다
+	marker.setMap(map);
+    </script>
+    <!--// 회사 지도를 위한 api 스크립트 로드-->
  </body>
 </html>
